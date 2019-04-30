@@ -1,0 +1,181 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Users_Update</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/css/x-admin.css" media="all">
+    <script src="/js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="x-body">
+        <form action="" method="post" class="layui-form layui-form-pane" id="form0">
+            <input type="hidden" name="CreateDate" />
+
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red">*</span>用户名
+                </label>
+                <div class="layui-input-inline">
+                    <input type="hidden" name="CreateDate" />
+                    <input type="text" id="UserName" name="UserName" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red">*</span>用户密码
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="UserPwd" name="UserPwd" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red">*</span>确认密码
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="UserPwd0" name="UserPwd0" required="" lay-verify="repass"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">
+                    选择角色
+                </label>
+                <table class="layui-table layui-input-block">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="layui-input-block" id="divTab">
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red">*</span>状态
+                </label>
+                <div class="layui-input-inline" id="state">
+                    <input type="radio" name="State" value="1" required="" lay-verify="repass"
+                           autocomplete="off" class="layui-input" title="启用" checked="checked" />
+                    <input type="radio" name="State" value="0" required="" lay-verify="repass"
+                           autocomplete="off" class="layui-input" title="禁用" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="button" class="layui-btn" lay-submit="" lay-filter="update" value="修改" />
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="/lib/layui/layui.js" charset="utf-8">
+    </script>
+    <script src="/js/x-layui.js" charset="utf-8">
+    </script>
+    <script>
+        $(function () {
+            //角色
+            $.ajax({
+                url: "/Admin_Users/GetRoles",
+                type: "post",
+                async: false,
+                dataType: "json",
+                success: function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        var tr = '<input name="id[]" type="checkbox" value="' + data[i].RoleId + '" pname="' + data[i].RoleName + '" />' + data[i].RoleName
+                        $("#divTab").append(tr);
+                    }
+                }
+            })
+
+             //返填
+            $.ajax({
+                url: "/Admin_Users/QueryById?Id="+location.search.substring(4),
+                type: "post",
+                async: false,
+                dataType: "json",
+                success: function (data) {
+                    $("[name=UserName]").val(data.Admin_UserName);
+                    $("[name=UserPwd]").val(data.Admin_UserPwd);
+                    $("[name=UserPwd0]").val(data.Admin_UserPwd);
+                    $("[name=CreateDate]").val(data.CreateDate);
+                    var arr = data.RoleIds.split(',');
+                    for (var i = 0; i < arr.length; i++) {
+                        $("#divTab").children("[value=" + arr[i] + "]").prop("checked", "checked");
+                    }
+                    $("#state").children("[value=" + data.State + "]").prop("checked","checked");
+
+                }
+            })
+        })
+
+        layui.use(['form', 'layer'], function () {
+            $ = layui.jquery;
+            var form = layui.form()
+                , layer = layui.layer;
+
+
+            //自定义验证规则
+            form.verify({
+                repass: function (value) {
+                    if ($("[name=UserPwd]").val() != $("[name=UserPwd0]").val()) {
+                        return '两次密码不一致';
+                    }
+                }
+            });
+
+            //监听提交
+            form.on('submit(update)', function () {
+                var ids = [];
+                var names = [];
+                $("[type=checkbox]:checked").each(function () {
+                    ids.push($(this).val());
+                    names.push($(this).attr("pname"));
+                })
+
+                $.ajax({
+                    url: "/Admin_Users/Update?Id="+location.search.substring(4)+"&UserName=" + $("[name=UserName]").val() + "&UserPwd=" + $("[name=UserPwd]").val() + "&RoleIds=" + ids + "&RoleNames=" + names + "&State="+$("[name=State]:checked").val(),
+                    type: "post",
+                    success: function (data) {
+                        if (data) {
+                            layer.alert("更新成功", { icon: 6 }, function () {
+                                // 获得frame索引
+                                var index = parent.layer.getFrameIndex(window.name);
+                                //关闭当前frame
+                                parent.layer.close(index);
+                                window.parent.location.reload();
+                            });
+                        }
+                        else {
+                            layer.msg('更新失败!', { icon: 2, time: 1000 });
+                        }
+                    },
+                    error: function (e) {
+                        console.log(e);
+                    }
+                })
+            });
+        });
+    </script>
+</body>
+</html>

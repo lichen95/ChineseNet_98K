@@ -1,0 +1,2825 @@
+﻿/*reset&clear*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, table, th, td, embed, object, button {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    word-wrap: break-word;
+}
+
+fieldset, img, abbr {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var, i, b {
+    font-weight: normal;
+    font-style: normal;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+a, a:link, a:active {
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+        color: #a20e21
+    }
+
+    a:focus, input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+        outline: none;
+    }
+
+textarea {
+    resize: none;
+}
+
+body {
+    font-family: arial,SimSun,helvetica
+}
+/*分隔*/
+.cl0, .cl5, .cl10, .cl15, .cl20, .line, .spline, .dbline {
+    clear: both;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+
+.cl0 {
+    height: 0px;
+}
+
+.cl5 {
+    height: 5px;
+}
+
+.cl10 {
+    height: 10px;
+}
+
+.cl15 {
+    height: 15px;
+}
+
+.cl20 {
+    height: 20px;
+}
+
+.line {
+    border-bottom: 1px solid #d8d8d8;
+    height: 1px;
+}
+
+.spline {
+    border-bottom: 1px dashed #d8d8d8;
+    height: 1px;
+}
+
+.dbline {
+    border-bottom: 2px solid #e1e1d9;
+    height: 2px;
+}
+/*字体 颜色*/
+.fs14, p .fs14 {
+    font-size: 14px !important;
+}
+
+.tl {
+    text-align: left;
+}
+
+.tc {
+    text-align: center;
+}
+
+.tr {
+    text-align: right;
+}
+
+.more {
+    font-size: 12px;
+    font-weight: normal;
+    color: #526584
+}
+
+    .more a {
+        color: #647988;
+    }
+
+.fred, a.fred:link, a.fred:visited {
+    color: #b01f2e;
+}
+
+.red, a.red:link, a.red:visited {
+    color: #ff0000;
+}
+
+.fblue, a.fblue:link, a.fblue:visited {
+    color: #526584;
+}
+
+.blue, a.blue:link, a.blue:visited {
+    color: #1067A0;
+}
+
+.fcyan, a.fcyan:link, a.fcyan:visited {
+    color: #587482;
+}
+
+.fbrown, a.fbrown:link, a.fbrown:visited {
+    color: #863402;
+}
+
+.fgreen, a.fgreen:link, a.fgreen:visited {
+    color: #0C0;
+}
+
+.fgreen1, a.fgreen1:link, a.fgreen1:visited {
+    color: #5a8b35;
+}
+
+.fgray, a.fgray:link, a.fgray:visited {
+    color: #777779;
+}
+
+.fyel, a.fyel:link, a.fyel:visited {
+    color: #8a632b;
+}
+
+/*DIV*/
+.wrap {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.box {
+    border: 1px solid #d8d8d8;
+    background: #fff
+}
+
+.rd5 {
+}
+
+.fl {
+    float: left;
+    display: inline
+}
+
+.fr {
+    float: right;
+    display: inline;
+}
+
+.fn {
+    float: none;
+}
+
+.fb {
+    font-weight: bold;
+}
+
+.bor_left {
+    border-left: 1px solid #d8d8d8;
+}
+
+.mt5 {
+    margin-top: 5px
+}
+
+.tx {
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    padding: 1px;
+    width: 50px;
+    height: 50px;
+    float: left;
+    background-color: #fff;
+    margin-right: 8px;
+}
+
+    .tx img {
+        width: 50px;
+        height: 50px;
+    }
+
+.watermark, .disnone {
+    display: none;
+}
+
+.marl {
+    margin-left: 10px;
+}
+
+.mar_right15 {
+    margin-right: 15px;
+}
+
+.mar_left15 {
+    margin-left: 15px;
+}
+
+.mar_right10 {
+    margin-right: 10px;
+}
+
+.mar_left10 {
+    margin-left: 10px;
+}
+/*ICO*/
+.logonbox .login span,
+.maillink,
+.logonbox .info .shelf .book,
+.zh_money,
+.logonbox .record i,
+.logonbox .mail_detail .title .closemail,
+.logonbox .quick_oprate .oprate_open em,
+.menu .money, .searchbar .search, .search .select em,
+.title span .triangle_down,
+em.list_icon,
+.tab .date em.current,
+.date .triangle_down,
+.jinghua, .ding,
+.member_in,
+.level_moon,
+.level_sun,
+.level_star,
+.send_mail,
+.add,
+.tj_ticket {
+    background: url(../images/icons.png) no-repeat;
+    zoom: 1;
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+}
+/*头部背景*/
+html {
+    _background-attachment: fixed;
+    _background-image: url(../images/nothing.txt);
+}
+
+body {
+    background: url(../images/bg.png) #fff repeat-x;
+    height: 100%;
+}
+
+.header {
+    padding-top: 37px;
+}
+/*加载中*/
+.loading {
+    background: url(../images/loading.gif) no-repeat 8px 5px;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    color: #483817;
+    font-weight: bold;
+    padding: 0 8px 0 40px;
+    border: 1px solid #d3c5a9;
+    border-radius: 3px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+/*底部*/
+.foot {
+    background: url(../images/foot_bg.gif) repeat-x 0 5px;
+    padding: 20px 0;
+    position: relative;
+    _z-index: 10;
+}
+
+    .foot .l_logo {
+        background: url(../images/icons.png) no-repeat 0 0;
+        left: 486px;
+        position: absolute;
+        top: 0;
+        height: 15px;
+        width: 15px;
+    }
+
+    .foot p {
+        color: #3C3C3C;
+        text-align: center;
+        line-height: 24px;
+    }
+
+        .foot p a {
+            color: #3C3C3C;
+            margin: 0 6px 0 1px;
+        }
+
+        .foot p em {
+            font-family: Arial;
+        }
+/*布局*/
+.main {
+    width: 740px;
+    float: left;
+}
+
+.side {
+    width: 215px;
+    float: right;
+}
+
+/*等级*/
+.vip_1, .vip_2, .vip_3, .vip_4, .vip_5 {
+    width: 16px;
+    height: 16px;
+    zoom: 1;
+    display: inline-block;
+    *display: inline;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.vip_1 {
+    background: url(../images/lv1.gif) no-repeat;
+}
+
+.vip_2 {
+    background: url(../images/lv2.gif) no-repeat;
+}
+
+.vip_3 {
+    background: url(../images/lv3.gif) no-repeat;
+}
+
+.vip_4 {
+    background: url(../images/lv4.gif) no-repeat;
+}
+
+.vip_5 {
+    background: url(../images/lv5.gif) no-repeat;
+}
+
+.vip, .member {
+    background: url(../images/icons.png) no-repeat;
+    zoom: 1;
+    display: inline-block;
+    *display: inline;
+    vertical-align: text-bottom;
+    overflow: hidden;
+    margin-top: -3px
+}
+
+.vip {
+    background-position: -60px -96px;
+    width: 17px;
+    height: 16px;
+}
+
+.member {
+    width: 18px;
+    height: 15px;
+    background-position: -242px -354px;
+}
+
+.member_in {
+    background-position: -137px -137px;
+    width: 14px;
+    height: 14px;
+}
+
+.level_sun {
+    width: 16px;
+    height: 16px;
+    background-position: 0 -120px;
+}
+
+.level_moon {
+    width: 16px;
+    height: 16px;
+    background-position: -30px -120px;
+}
+
+.level_star {
+    width: 16px;
+    height: 16px;
+    background-position: -60px -120px;
+}
+
+.send_mail {
+    height: 13px;
+    width: 18px;
+    background-position: -280px -105px;
+}
+
+.tj_ticket {
+    background-position: -60px -150px;
+    width: 11px;
+    height: 11px;
+    cursor: pointer;
+}
+
+.zh_money {
+    background: url(../images/author_icon.gif) no-repeat 0 -16px;
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/*更新等级图标*/
+.star_01, .star_02, .star_03, .star_04, .star_05, .star_06, .star_07, .star_08, .star_09, .star_10, .star_11, .star_12, .star_13, .star_14, .star_15, .star_16, .star_myself {
+    width: 72px;
+    height: 19px;
+    zoom: 1;
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+}
+
+.star_01 {
+    background: url(../images/star_1.gif) no-repeat;
+}
+
+.star_02 {
+    background: url(../images/star_2.gif) no-repeat;
+}
+
+.star_03 {
+    background: url(../images/star_3.gif) no-repeat;
+}
+
+.star_04 {
+    background: url(../images/star_4.gif) no-repeat;
+}
+
+.star_05 {
+    background: url(../images/star_5.gif) no-repeat;
+}
+
+.star_06 {
+    background: url(../images/star_6.gif) no-repeat;
+}
+
+.star_07 {
+    background: url(../images/star_7.gif) no-repeat;
+}
+
+.star_08 {
+    background: url(../images/star_8.gif) no-repeat;
+}
+
+.star_09 {
+    background: url(../images/star_9.gif) no-repeat;
+}
+
+.star_10 {
+    background: url(../images/star_10.gif) no-repeat;
+}
+
+.star_11 {
+    background: url(../images/star_11.gif) no-repeat;
+}
+
+.star_12 {
+    background: url(../images/star_12.gif) no-repeat;
+}
+
+.star_13 {
+    background: url(../images/star_13.gif) no-repeat;
+}
+
+.star_14 {
+    background: url(../images/star_14.gif) no-repeat;
+}
+
+.star_15 {
+    background: url(../images/star_15.gif) no-repeat;
+}
+
+.star_16 {
+    background: url(../images/star_16.gif) no-repeat;
+}
+
+.star_myself {
+    background: url(../images/myself.gif) no-repeat;
+}
+
+.unload, .load {
+    width: 300px;
+    float: right;
+}
+/*顶部登录条 待重写*/
+.logonbox {
+    background-color: #eef0f1;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    _position: absolute;
+    _top: expression(documentElement.scrollTop);
+}
+
+    .logonbox .wrap {
+        position: relative;
+    }
+
+    .logonbox .left_wrap {
+        float: left;
+        height: 34px;
+        position: relative;
+    }
+
+    .logonbox .right_wrap {
+        float: right;
+        height: 34px;
+        position: relative;
+    }
+
+    .logonbox .right_wrap_unlogin {
+        float: right;
+        height: 34px;
+        padding-right: 6px;
+        text-align: right
+    }
+
+    .logonbox .blackline {
+        height: 2px;
+        overflow: hidden;
+        background-color: #d2d4d5;
+        clear: both;
+    }
+
+    .logonbox .right_wrap_unlogin div {
+        float: left;
+        padding: 0 5px;
+        margin-left: 6px
+    }
+
+        .logonbox .right_wrap_unlogin div a {
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+            line-height: 35px;
+        }
+
+    .logonbox .info li {
+        float: left;
+        padding-top: 10px;
+        margin-right: 5px;
+        *margin-right: 3px;
+        display: inline;
+        _padding-bottom: 1px;
+    }
+
+        .logonbox .info li.shelf {
+            width: 50px;
+            padding-top: 7px
+        }
+
+    .logonbox .info .ver {
+        zoom: 1;
+        display: inline-block;
+        *display: inline;
+        width: 15px;
+    }
+
+    .logonbox .info .name {
+        padding-top: 3px;
+        padding-left: 5px;
+        margin-top: 1px;
+        margin-right: 0;
+        padding-right: 1px;
+        position: relative;
+        z-index: 1000
+    }
+
+        .logonbox .info .name a {
+            color: #666;
+            font-weight: bold;
+        }
+
+        .logonbox .info .name .ver {
+            width: 5px;
+        }
+
+        .logonbox .info .name img {
+            border: 1px solid #d8d8d8;
+            width: 25px;
+            height: 25px;
+            vertical-align: middle;
+            margin: 0 3px;
+        }
+
+        .logonbox .info .name .whitesj, .logonbox .d_menu .whitesj {
+            -moz-transition: transform .3s ease-in;
+            -webkit-transition: transform .3s ease-in;
+            -o-transition: transform .3s ease-in;
+            transition: transform .3s ease-in;
+            width: 9px;
+            height: 5px;
+            background: url(../images/icons.png) no-repeat -30px -45px;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle
+        }
+
+        .logonbox .info .name.menu_hover .whitesj, .logonbox .d_menu.mail_hover .whitesj {
+            -moz-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg)
+        }
+
+    .logonbox .d_menu .whitesj {
+        margin: 0 2px;
+    }
+
+    .logonbox .info .current {
+        background-color: #fff;
+        color: #3f3f3f;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        height: 34px;
+        float: left;
+    }
+
+        .logonbox .info .current a, .logonbox .userinfo a {
+            color: #3f3f3f;
+            font-weight: bold;
+        }
+
+        .logonbox .info .current .ver {
+            color: #fff;
+        }
+
+        .logonbox .info .current .whitesj {
+            background-position: -32px -8px;
+        }
+
+    .logonbox .info .mail .maillink, .logonbox .info .shelf .book {
+        cursor: pointer;
+    }
+
+    .logonbox .info .mail {
+        position: relative;
+        padding-right: 5px;
+        padding-left: 10px;
+        height: 23px;
+    }
+
+        .logonbox .info .mail.mail_hover {
+            padding: 8px 4px 0 9px;
+            margin-top: 1px;
+            border: 1px solid #c8c8c8;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom: 1px solid #fff;
+            z-index: 1000;
+            background: #fff;
+        }
+
+        .logonbox .info .mail .maillink {
+            background-position: -44px -30px;
+            width: 17px;
+            height: 13px;
+            vertical-align: middle;
+        }
+
+            .logonbox .info .mail .maillink.active {
+                background-position: -44px -45px;
+            }
+
+            .logonbox .info .mail .maillink em {
+                padding: 0;
+                display: none;
+            }
+
+            .logonbox .info .mail .maillink.active em {
+                background-color: #ae2433;
+                font-size: 10px;
+                font-family: "Tahoma";
+                color: #fff;
+                padding: 0 2px;
+                height: 15px;
+                line-height: 15px;
+                overflow: hidden;
+                position: absolute;
+                left: 27px;
+                top: 18px;
+                display: block;
+                _float: left;
+                _padding: 0 1px;
+                white-space: nowrap;
+            }
+
+        .logonbox .info .mail.mail_hover .maillink em {
+            left: 26px;
+            top: 16px;
+        }
+
+        .logonbox .info .mail .maillink em b {
+            background: url(../images/icons.png) no-repeat -278px -168px;
+            width: 4px;
+            height: 4px;
+            left: -4px;
+            top: 2px;
+            zoom: 1;
+            display: inline-block;
+            *display: inline;
+            position: absolute;
+        }
+
+    .logonbox .info .shelf a {
+        color: #666;
+        margin-left: 2px;
+        line-height: 20px
+    }
+
+    .logonbox .info .shelf .book {
+        width: 18px;
+        height: 18px;
+        background-position: -66px -30px;
+        vertical-align: middle;
+        cursor: auto;
+        margin-top: -2px
+    }
+
+    .logonbox .info .shelf .ver {
+        margin-top: -2px;
+    }
+
+    .logonbox .userinfo {
+        position: absolute;
+        background-color: #fff;
+        left: 0px;
+        top: 33px;
+        width: 235px;
+        padding: 10px 5px;
+        border-top-left-radius: 0;
+        display: none;
+        z-index: 999;
+    }
+
+        .logonbox .userinfo .tx_info {
+            float: left;
+            width: 64px;
+            margin-left: 10px;
+            border: 1px solid #d8d8d8;
+        }
+
+            .logonbox .userinfo .tx_info a {
+                width: 64px;
+                height: 64px;
+            }
+
+            .logonbox .userinfo .tx_info img {
+                width: 64px;
+                height: 64px;
+                border: none;
+            }
+
+        .logonbox .userinfo .set {
+            float: left;
+            width: 140px;
+            padding: 0 0 0 10px;
+        }
+
+            .logonbox .userinfo .set p {
+                line-height: 26px;
+                height: 26px;
+            }
+
+                .logonbox .userinfo .set p a {
+                    color: #787878;
+                    font-weight: normal;
+                }
+
+        .logonbox .userinfo .piao {
+            margin: 0px 10px;
+        }
+
+            .logonbox .userinfo .piao p {
+                color: #222222;
+                padding: 6px 5px;
+                border-bottom: 1px solid #cecccc;
+            }
+
+                .logonbox .userinfo .piao p.last {
+                    border-bottom: 0 none;
+                }
+
+                .logonbox .userinfo .piao p em {
+                    color: #b01f2e;
+                    padding-right: 2px;
+                    font-weight: bold;
+                }
+
+                .logonbox .userinfo .piao p a {
+                    font-weight: normal;
+                    color: #00ad14;
+                }
+
+            .logonbox .userinfo .set .level_sun, .logonbox .userinfo .piao .level_star, .logonbox .userinfo .piao .level_moon, .piao .tj_ticket, .piao .zh_money {
+                margin: 0px 2px;
+            }
+
+        .logonbox .userinfo .tc {
+            text-align: right;
+            padding-bottom: 10px;
+        }
+
+            .logonbox .userinfo .tc a, .logonbox .userinfo .tc a.setting {
+                color: #000;
+                cursor: pointer;
+                font-weight: normal;
+                margin: 0 5px;
+            }
+
+                .logonbox .userinfo .tc a:hover {
+                    text-decoration: underline;
+                }
+
+    .logonbox .mail_detail, .d_menu_detail {
+        position: absolute;
+        right: 60px;
+        *right: 56px;
+        top: 33px;
+        width: 200px;
+        background-color: #fff;
+        padding: 10px 10px 6px;
+        border: 1px solid #c8c8c8;
+        z-index: 999;
+    }
+
+        .logonbox .mail_detail .title {
+            background-color: #3f3f3f;
+            color: #fff;
+            height: 25px;
+            line-height: 25px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            display: none;
+        }
+
+            .logonbox .mail_detail .title .closemail {
+                float: right;
+                background-position: -294px -228px;
+                width: 12px;
+                height: 12px;
+                margin: 7px 7px 0 0;
+                cursor: pointer;
+            }
+
+            .logonbox .mail_detail .title h4 {
+                color: #fff;
+                padding-left: 14px;
+            }
+
+        .logonbox .mail_detail .con p {
+            line-height: 26px;
+            padding: 0 5px 0 10px;
+            color: #222222;
+        }
+
+            .logonbox .mail_detail .con p a {
+                display: inline;
+                padding: 0;
+                position: static;
+                font-weight: bold;
+                vertical-align: baseline;
+                color: #222;
+                float: right;
+                border-left: 1px solid #7a5d3b;
+                padding-left: 8px;
+                height: 14px;
+                line-height: 14px;
+                margin-top: 6px
+            }
+
+            .logonbox .mail_detail .con p em {
+                color: #b01f2e;
+                font-weight: bold
+            }
+
+    .logonbox .close, .logonbox .open {
+        background: url(../images/icons.png) no-repeat -30px 0;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 100;
+        position: absolute;
+        margin: 8px 0 0 5px;
+        overflow: hidden;
+        zoom: 1;
+        display: inline-block;
+        *display: inline;
+        vertical-align: middle;
+        float: right;
+        right: 10px
+    }
+
+    .logonbox .open {
+        background: url(../images/icons.png) no-repeat -60px 0;
+        overflow: hidden;
+        top: 28px
+    }
+
+    .logonbox .quick_oprate {
+        float: right;
+        color: #666;
+        padding-top: 10px;
+    }
+
+        .logonbox .quick_oprate a {
+            color: #666;
+            margin: 0 5px;
+        }
+
+        .logonbox .quick_oprate .fyellow {
+            color: #ead6b3;
+        }
+
+        .logonbox .quick_oprate .oprate_open {
+            cursor: pointer;
+            padding-left: 4px;
+            zoom: 1;
+            display: inline-block;
+            *display: inline;
+            width: 42px;
+            color: #ebdbba;
+        }
+
+            .logonbox .quick_oprate .oprate_open em {
+                background-position: -32px -15px;
+                height: 4px;
+                margin: 0 5px;
+                overflow: hidden;
+                width: 8px;
+            }
+
+            .logonbox .quick_oprate .oprate_open ul {
+                display: none;
+            }
+
+        .logonbox .quick_oprate .current {
+            position: relative;
+            width: 42px;
+            background-color: #fff;
+            height: 22px;
+            zoom: 1;
+            display: inline-block;
+            *display: inline;
+            color: #3f3f3f;
+            margin-top: -5px;
+            line-height: 22px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+
+            .logonbox .quick_oprate .current em {
+                background-position: -32px -8px;
+                position: absolute;
+                margin: 0px;
+                right: 4px;
+                top: 10px;
+            }
+
+            .logonbox .quick_oprate .current ul {
+                display: block;
+                position: absolute;
+                width: 110px;
+                padding: 5px 10px 15px;
+                background-color: #fff;
+                left: -68px;
+                top: 22px;
+                border-top-right-radius: 0;
+            }
+
+            .logonbox .quick_oprate .current li {
+                border-bottom: 1px solid #c3c3c3;
+            }
+
+                .logonbox .quick_oprate .current li a {
+                    color: #3f3f3f;
+                }
+
+                .logonbox .quick_oprate .current li .fyellow {
+                    color: #7b4900;
+                }
+
+    .logonbox .default_wrap {
+        float: left;
+        position: relative;
+        width: 225px;
+        line-height: 35px;
+        height: 35px;
+        color: #e5daad;
+        margin-right: 5px;
+        _margin-top: 3px;
+    }
+
+        .logonbox .default_wrap a {
+            color: #303030;
+            margin: 0 5px;
+        }
+
+            .logonbox .default_wrap a.charge {
+                color: #ff0000;
+            }
+
+    .logonbox .info .name.menu_hover {
+        background-color: #fff;
+        border: 1px solid #c8c8c8;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        padding-right: 0;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        border-bottom: 1px solid #fff
+    }
+
+        .logonbox .info .name.menu_hover a {
+            color: #002f4d;
+        }
+
+    .logonbox .userinfo .tx_info .setting {
+        height: 16px;
+        line-height: 16px;
+        border: 1px solid #99bcc9;
+        background-color: #c8e6f2;
+        text-align: center;
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+        -moz-opacity: 0.4;
+        -khtml-opacity: 0.4;
+        color: #000;
+        font-weight: normal;
+        position: relative;
+        margin: -13px 0 0;
+        width: 66px;
+    }
+
+    .logonbox .default_wrap .search_box {
+        text-decoration: none;
+        position: relative;
+        zoom: 1;
+        display: inline-block;
+        *display: inline;
+        margin: 1px 0 0;
+        *margin: 2px 0 0;
+        _margin: 0;
+        padding: 0 5px 7px;
+        height: 24px;
+        line-height: 27px;
+        overflow: hidden;
+        vertical-align: middle;
+        _padding-top: 9px;
+        _height: 15px;
+    }
+
+        .logonbox .default_wrap .search_box .whitesj {
+            background-image: none;
+            -moz-transition: transform .3s ease-in;
+            -webkit-transition: transform .3s ease-in;
+            -o-transition: transform .3s ease-in;
+            transition: transform .3s ease-in;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid #e5daad;
+        }
+
+        .logonbox .default_wrap .search_box.hover .whitesj {
+            border-top: 4px solid #002f4d;
+            -moz-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+            _border-top: 0 none;
+        }
+
+        .logonbox .default_wrap .search_box.hover {
+            color: #002f4d;
+            background-color: #fff;
+            border: 1px solid #c8c8c8;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom: 1px solid #fff;
+            z-index: 2000;
+        }
+
+        .logonbox .default_wrap .search_box.hover {
+            _margin-top: -1px;
+        }
+
+    .logonbox .default_wrap .search_box_detail {
+        position: absolute;
+        left: 220px;
+        top: 34px;
+        _top: 31px;
+        width: 280px;
+        background-color: #fff;
+        padding: 10px 20px;
+        border: 1px solid #c8c8c8;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+
+.search_box_detail .searchbar .search {
+    width: 280px;
+}
+
+    .search_box_detail .searchbar .search .sousuo {
+        background: url(../images/icons.png) no-repeat -431px 0;
+    }
+
+.logonbox .d_menu {
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    zoom: 1;
+    display: inline-block;
+    *display: inline;
+    margin-top: 8px;
+    padding: 0 5px 5px;
+    _padding-top: 3px;
+    line-height: 20px;
+    position: relative
+}
+
+    .logonbox .d_menu.mail_hover {
+        color: #002f4d;
+        margin-top: 1px;
+        padding: 6px 4px 5px;
+        _padding-top: 9px;
+        background-color: #fff;
+        border: 1px solid #c8c8c8;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom: 1px solid #fff;
+        z-index: 1000;
+    }
+
+.logonbox .dh_nav {
+    width: 48px;
+}
+
+    .logonbox .dh_nav, .logonbox .dh_nav a {
+        position: relative;
+        white-space: normal;
+    }
+
+.d_menu_detail {
+    right: 0;
+    width: 290px;
+    line-height: 20px;
+    position: absolute;
+}
+
+    .d_menu_detail .con h3 {
+        font-size: 12px;
+        padding: 0 0 2px 3px;
+    }
+
+    .d_menu_detail .con a {
+        color: #837f7f;
+        margin: 0 3px;
+        font-size: 12px;
+        font-weight: normal;
+        padding: 0;
+        display: inline;
+    }
+
+        .d_menu_detail .con a.fred {
+            color: #ff0000;
+        }
+
+.logonbox .newlink {
+    position: absolute;
+    left: 50%;
+    margin-left: -560px;
+    top: 8px;
+}
+
+    .logonbox .newlink a {
+        background: url(../images/btn.gif) no-repeat 0 -28px;
+        display: block;
+        width: 64px;
+        height: 19px;
+        line-height: 19px;
+        text-align: center;
+        color: #fff;
+    }
+
+        .logonbox .newlink a:hover {
+            text-decoration: none;
+        }
+/*头部*/
+.nav_left {
+    float: left;
+    width: 180px;
+    padding-top: 8px;
+}
+
+    .nav_left p {
+        text-align: center;
+        color: #a8202e;
+        padding: 0 0 5px;
+    }
+
+.top_gg {
+    width: 765px;
+    float: right;
+    padding-top: 11px;
+}
+
+.menu {
+    background: #f5e6c8;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0 20px 0 10px;
+}
+
+    .menu a {
+        color: #303030;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 0 19px;
+        display: inline-block;
+        border-top: 2px solid #f5e6c8;
+        line-height: 30px;
+    }
+
+        .menu a:hover, .menu a.gamecenter:hover, .menu a.girl:hover {
+            color: #b01f2e;
+            background-color: #fdf4e1;
+            border-top: 2px solid #fdf4e1;
+            text-decoration: none;
+        }
+
+        .menu a.current {
+            color: #b01f2e;
+            text-decoration: none;
+            border-top: 2px solid #a20e20;
+        }
+
+        .menu a.gamecenter {
+            background: url(../images/icons.png) 85px -56px no-repeat;
+            margin-right: 0;
+            zoom: 1;
+            display: inline-block;
+            *display: inline;
+            padding-right: 30px
+        }
+
+        .menu a.girl {
+            background: url(../images/icons.png) no-repeat 81px -86px;
+            padding-right: 27px
+        }
+
+    .menu .money em {
+        color: #eaff5a;
+        font-weight: bold;
+        font-size: 18px;
+        margin-right: 4px;
+    }
+
+.secondary {
+    background: #303030;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    padding-left: 9px;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0 10px
+}
+
+    .secondary a {
+        color: #fff;
+        padding: 0 16px;
+        display: inline-block;
+    }
+
+        .secondary a.current, .secondary a:hover {
+            text-decoration: none
+        }
+/*顶部搜索*/
+.searchbar {
+    padding-top: 4px;
+}
+
+    .searchbar .search {
+        background-position: -150px 0;
+        width: 346px;
+        height: 27px;
+        position: relative;
+        z-index: 9000;
+    }
+
+        .searchbar .search .select {
+            width: 63px;
+            border-right: 1px solid #c8c8c8;
+            margin: 3px 0 0;
+            _padding-top: 4px;
+            _height: 17px;
+            _margin-bottom: -8px;
+            text-align: center;
+            cursor: pointer;
+            line-height: 21px;
+            height: 21px;
+            float: left;
+        }
+
+            .searchbar .search .select em {
+                background-position: -30px -45px;
+                width: 9px;
+                height: 5px;
+                margin-left: 4px;
+                _margin-top: 3px;
+            }
+
+        .searchbar .search .input_text {
+            float: left;
+            margin-top: 1px;
+            padding-left: 10px;
+            height: 24px;
+            overflow: hidden;
+            width: 200px;
+        }
+
+            .searchbar .search .input_text input {
+                line-height: 24px;
+                height: 24px;
+                border: 0 none;
+                color: #666;
+                width: 200px;
+                outline: none;
+                background-color: transparent
+            }
+
+                .searchbar .search .input_text input:focus {
+                    color: #535353;
+                }
+
+        .searchbar .search .sousuo {
+            float: right;
+            cursor: pointer;
+            border: 0 none;
+            background: transparent;
+            color: #e8ecf1;
+            width: 65px;
+            height: 27px;
+        }
+
+.search .listpanel {
+    position: absolute;
+    width: 62px;
+    left: 0;
+    top: 23px;
+    background-color: #fff;
+    border: 1px solid #C8C8C8;
+    border-top: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+    .search .listpanel li {
+        height: 18px;
+        line-height: 18px;
+        padding: 3px 0;
+    }
+
+        .search .listpanel li a {
+            padding-left: 12px;
+            color: #535353;
+            display: block;
+        }
+
+            .search .listpanel li a:hover {
+                background-color: #dfdfdf;
+                text-decoration: none;
+            }
+
+.hot_search {
+    padding: 5px 8px 0 0;
+    *padding-top: 8px;
+}
+
+    .hot_search a {
+        color: #6b8697;
+        margin: 0 6px;
+    }
+
+        .hot_search a:hover {
+            font-weight: bold;
+            margin: 0 4px;
+        }
+/*榜单 通用*/
+.toplist {
+    zoom: 1
+}
+
+    .toplist h2 a {
+        display: block
+    }
+
+        .toplist h2 a:hover {
+            text-decoration: none
+        }
+
+.top_trlnk {
+    float: right;
+    line-height: 35px;
+    color: #647988;
+}
+
+.top_tab, .top_head {
+    height: 35px;
+    line-height: 35px;
+    background: #e4e8ea
+}
+
+    .top_tab h2, .top_head h2 {
+        font-weight: normal;
+        width: 106px;
+        float: left;
+        text-align: center;
+        font-size: 14px;
+        display: inline;
+        overflow: hidden
+    }
+
+        .top_tab h2 a, .top_head h2 a {
+            color: #333;
+            cursor: pointer
+        }
+
+        .top_tab h2.active {
+            color: #a20e20;
+            font-weight: bold;
+            background: #fff;
+            width: 107px
+        }
+
+            .top_tab h2.active a {
+                color: #a20e20
+            }
+/*头部，单白色*/
+.top_head {
+    background: #fff;
+    border-bottom: 1px solid #d8d8d8;
+    margin: 0 10px;
+    zoom: 1
+}
+
+    .top_head h2 {
+        font-weight: bold;
+        color: #a20e20
+    }
+
+        .top_head h2.tl {
+            text-align: left;
+        }
+
+/*头部，右侧日周月*/
+.top_tab .date {
+    padding-right: 20px;
+    line-height: 20px;
+    padding-top: 14px
+}
+
+    .top_tab .date:after, .top_tab .head:after {
+        display: block;
+        clear: both;
+        content: "";
+        visibility: hidden;
+        height: 0
+    }
+
+    .top_tab .date a {
+        color: #000;
+        font-size: 12px;
+        zoom: 1;
+        display: inline-block;
+        *display: inline;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 18px;
+        position: relative;
+        padding: 0;
+        _float: left;
+    }
+
+        .top_tab .date a.active {
+            background: #fff;
+        }
+
+        .top_tab .date a:hover {
+            text-decoration: none
+        }
+
+.toplist ul {
+    padding: 8px 12px
+}
+
+.toplist li {
+    line-height: 28px;
+    height: 28px;
+    border-bottom: 1px dashed #d8dce5;
+    clear: both;
+    overflow: hidden;
+}
+
+    .toplist li span {
+        float: right;
+        color: #a9aeb7;
+        font-family: Arial;
+    }
+
+    .toplist li a {
+        color: #526584;
+    }
+
+        .toplist li a.cat {
+            color: #787878;
+            margin-right: 5px;
+        }
+
+    .toplist li.last {
+        border-bottom: 0
+    }
+
+    .toplist li em.list_icon {
+        background-position: -30px -90px;
+        color: #fff;
+        margin: 6px 5px 0 0;
+        text-align: center;
+        line-height: 16px;
+        width: 16px;
+        height: 16px;
+        float: left;
+        overflow: hidden;
+        font-family: Arial;
+        font-size: 14px;
+    }
+
+    .toplist li em.top {
+        background-position: -30px -60px;
+    }
+
+.toplist .more {
+    border-top: 1px solid #d8d8d8;
+    padding: 10px 0;
+    margin: 0 12px;
+    text-align: right;
+}
+
+    .toplist .more a {
+        color: #647988;
+    }
+/*提示 确认 弹层*/
+.up_sure {
+    border-radius: 3px;
+    background-color: #3f3f3f;
+    padding-top: 22px;
+}
+
+    .up_sure .close {
+        background: url(../images/icons.png) no-repeat -423px -228px;
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+
+    .up_sure .con {
+        padding: 20px;
+        border: 1px solid #dbdbdb;
+        border-top: 0 none;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        background-color: #fff;
+    }
+
+        .up_sure .con p {
+            line-height: 24px;
+        }
+
+            .up_sure .con p em, .up_sure .con p a {
+                color: #7a4a04;
+            }
+
+            .up_sure .con p b {
+                color: #7a4a04;
+                font-weight: bold;
+            }
+
+            .up_sure .con p input {
+                vertical-align: middle;
+                margin: 0 5px;
+            }
+
+        .up_sure .con .tc {
+            padding-top: 10px;
+        }
+
+            .up_sure .con .tc .button, .up_sure .con .tc .cancel {
+                background: url(../images/button.gif) no-repeat;
+                border: 0 none;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: bold;
+                height: 23px;
+                margin: 0 20px;
+                width: 76px;
+                line-height: 23px;
+            }
+
+            .up_sure .con .tc .button {
+                background-position: -110px 0;
+                color: #e7e7e7;
+                font-weight: bold;
+            }
+
+            .up_sure .con .tc .cancel {
+                background-position: -194px 0;
+                color: #6d6d6d;
+                font-weight: bold;
+            }
+
+.alert {
+    width: 200px;
+}
+
+.confirm {
+    width: 300px;
+}
+
+.up_sure .con .btn {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    height: 30px;
+    background: #fff;
+    width: 180px;
+}
+
+    .up_sure .con .btn span {
+        float: left;
+        display: inline;
+        height: 24px;
+        background: url(../images/button.gif) no-repeat -110px 0;
+        font-size: 14px;
+        color: #fff;
+        font-weight: bold;
+        width: 76px;
+        text-align: center;
+        line-height: 24px;
+        cursor: pointer;
+    }
+
+    .up_sure .con .btn .redticket {
+        margin: 0 20px 0 0;
+    }
+
+/*快捷键*/
+#backToTop {
+    position: fixed;
+    _position: absolute;
+    right: 5px;
+    margin-left: 490px;
+    _top: expression(documentElement.scrollTop+380);
+    z-index: 999;
+    bottom: 270px;
+    width: 56px;
+    font-size: 14px;
+}
+
+    #backToTop a {
+        background: url(../images/btn_bg.png) no-repeat;
+        zoom: 1;
+        display: inline-block;
+        *display: inline;
+        width: 58px;
+        height: 60px;
+        margin-bottom: 1px;
+    }
+
+    #backToTop .returntop {
+        display: none;
+        width: 58px;
+        height: 60px;
+        margin-bottom: 1px;
+    }
+
+        #backToTop .returntop a {
+            background-position: -93px -140px;
+            margin-bottom: 0;
+        }
+
+            #backToTop .returntop a:hover {
+                background-position: 0 -140px;
+            }
+
+    #backToTop .comments a {
+        background-position: -93px -70px;
+    }
+
+        #backToTop .comments a:hover {
+            background-position: 0 -70px;
+        }
+
+    #backToTop #kf_btn {
+        position: relative;
+    }
+
+        #backToTop #kf_btn a.opkf {
+            background: #f5e6c8;
+            background-image: none;
+            text-align: center;
+            padding-top: 15px;
+            color: #575757;
+            font-size: 14px;
+            line-height: 16px;
+            height: 45px;
+            border-radius: 4px;
+            overflow: hidden
+        }
+
+            #backToTop #kf_btn a.opkf:hover {
+                text-decoration: none
+            }
+
+#sidekf {
+    background: #f5e6c8 url(../images/icon-kf.png) no-repeat;
+    width: 120px;
+    height: 259px;
+    position: absolute;
+    right: 54px;
+    bottom: 4px;
+    display: none
+}
+
+    #sidekf .tel {
+        padding-left: 15px;
+        font-weight: bold;
+        font-family: Arial;
+        color: #584527;
+        height: 28px;
+        overflow: hidden;
+    }
+
+        #sidekf .tel span {
+            color: #c9720e
+        }
+
+    #sidekf .lnk {
+        float: left;
+        width: 100px;
+        padding-left: 10px;
+    }
+
+    #sidekf .ovh {
+        float: right;
+        width: 35px;
+        height: 100px;
+        margin-top: 55px;
+    }
+
+    #sidekf a {
+        display: block;
+        width: 90px;
+        height: 30px;
+        margin: 0 auto 5px;
+        overflow: hidden;
+        background-image: none;
+    }
+
+        #sidekf a.sidekf_line {
+            height: 44px;
+            margin-top: 24px;
+        }
+
+    #sidekf .close {
+        width: 20px;
+        height: 20px;
+        right: 0;
+        top: 0;
+        position: absolute;
+        cursor: pointer;
+    }
+
+
+
+/*登陆*/
+#login_panel {
+    display: none;
+}
+
+#bind_panel {
+    width: 410px;
+    display: none;
+}
+/*弹层统一样式*/
+.log_reg_box {
+    background-color: #fff;
+}
+
+    .log_reg_box .tit {
+        height: 34px;
+        background-color: #c4c5c7;
+        padding-left: 20px;
+    }
+
+        .log_reg_box .tit .close {
+            background: url(../images/x.gif) no-repeat;
+            width: 14px;
+            height: 12px;
+            text-indent: -9999px;
+            cursor: pointer;
+            position: absolute;
+            overflow: hidden;
+            right: 13px;
+            top: 11px;
+        }
+
+        .log_reg_box .tit #udlg_tab {
+            top: 50px;
+            position: absolute;
+            color: #555;
+            font-size: 18px;
+            font-family: 微软雅黑;
+            float: left;
+        }
+
+            .log_reg_box .tit #udlg_tab span {
+                cursor: pointer;
+                margin: 0 10px;
+            }
+
+                .log_reg_box .tit #udlg_tab span.current {
+                    color: #a70f22;
+                }
+
+        .log_reg_box .tit h4 {
+            color: #f2e7d5;
+            font-size: 14px;
+            padding-top: 14px;
+        }
+
+    .log_reg_box .con {
+        padding: 20px;
+        padding-top: 65px;
+    }
+
+.baidupassinner {
+    width: 390px;
+    margin: 0 auto;
+    min-height: 310px;
+    background: url(../images/loading.gif) no-repeat center 100px;
+}
+/*登陆 注册 弹层*/
+.log_reg_box {
+    width: 470px;
+    overflow: hidden;
+}
+
+    .log_reg_box .con h6 {
+        color: #4c4c4c;
+        font-size: 14px;
+        padding: 10px 0 30px 50px;
+    }
+
+    .log_reg_box .con .login_box {
+        width: 350px;
+        margin: 0 auto;
+        min-height: 310px;
+    }
+
+#errorMsg {
+    color: red;
+    padding-bottom: 10px;
+}
+
+/*bdpass*/
+.tang-pass-login a, .tang-pass-login label, .tang-pass-login p, .tang-pass-login li, .tang-pass-login input {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+    .tang-pass-login input[type="submit"] {
+        -webkit-appearance: none;
+        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        -ms-box-sizing: content-box
+    }
+
+    .tang-pass-login input::-webkit-input-placeholder {
+        color: #ccc
+    }
+
+    .tang-pass-login input:-ms-input-placeholder {
+        color: #ccc
+    }
+
+    .tang-pass-login input:-moz-placeholder {
+        color: #ccc
+    }
+
+.tang-pass-login .pass-form-item {
+    margin-bottom: 15px
+}
+
+.tang-pass-login .pass-label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    padding-bottom: 10px;
+    display: none
+}
+
+.tang-pass-login label.pass-label-userName, .tang-pass-login label.pass-label-password, .tang-pass-login label.pass-label-smsPhone {
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 0;
+    height: 18px;
+    overflow: hidden;
+    padding: 0 0 0 18px;
+    background: url(../images/input_icons_16_dd88a7ec.png) no-repeat;
+    z-index: 20
+}
+
+.tang-pass-login label.pass-label-userName {
+    background-position: 4px -46px
+}
+
+.tang-pass-login label.pass-label-password {
+    background-position: 4px 1px
+}
+
+.tang-pass-login label.pass-label-smsPhone {
+    background-position: 4px -91px
+}
+
+.tang-pass-login .pass-form-item-userName label.pass-text-label-focus {
+    background-position: 4px -70px
+}
+
+.tang-pass-login .pass-form-item-password label.pass-text-label-focus {
+    background-position: 4px -23px
+}
+
+.tang-pass-login .pass-form-item-smsPhone label.pass-text-label-focus {
+    background-position: 4px -115px
+}
+
+.tang-pass-login {
+    padding: 0 20px 0px 20px;
+    background: #fff;
+}
+
+    .tang-pass-login a {
+        text-decoration: none;
+        color: #1b66c7
+    }
+
+        .tang-pass-login a:hover {
+            text-decoration: underline
+        }
+
+    .tang-pass-login .pass-generalErrorWrapper {
+        color: #fc4343
+    }
+
+    .tang-pass-login .pass-generalError {
+        display: block;
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+
+    .tang-pass-login .pass-form-item {
+        position: relative;
+        clear: both;
+        z-index: 18
+    }
+
+        .tang-pass-login .pass-form-item.pass-form-item-userName {
+            z-index: 21
+        }
+
+input::-ms-clear {
+    display: none
+}
+
+input::-ms-reveal {
+    display: none
+}
+
+.tang-pass-login .pass-form-item .pass-text-input {
+    position: relative;
+    z-index: 17;
+    display: block;
+    padding: 6px 10px;
+    margin: 0;
+    height: 26px;
+    width: 308px;
+    border: 1px solid #dedede;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    color: #555;
+    transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s
+}
+
+.tang-pass-login .pass-form-item .pass-zhinput-focus {
+    border-color: #a20e20
+}
+
+.tang-pass-login .pass-form-item .pass-text-input-focus {
+    border-color: #488ee7
+}
+
+.tang-pass-login .pass-form-item .pass-text-input-error {
+    border-color: #fc4343
+}
+
+.tang-pass-login .pass-form-item .pass-text-input-verifyCode {
+    width: 76px;
+    float: left
+}
+
+.tang-pass-login .pass-form-item input.pass-text-input-userName {
+    padding-left: 30px;
+}
+
+.tang-pass-login .pass-form-item input.pass-text-input-password {
+    padding-left: 30px;
+}
+
+.tang-pass-login .pass-form-item input.open {
+}
+
+.tang-pass-login .pass-form-item .pass-item-selectbtn-userName {
+    position: absolute;
+    display: block;
+    height: 16px;
+    width: 16px;
+    background: url(../images/pass_login_icons_a42ddced.png) no-repeat 0 -30px;
+    top: 6px;
+    right: 31px;
+    _right: 50px;
+    cursor: pointer
+}
+
+    .tang-pass-login .pass-form-item .pass-item-selectbtn-userName:hover {
+        background-position: 0 -46px
+    }
+
+.tang-pass-login .pass-form-item span.open {
+    background-position: -18px -30px
+}
+
+    .tang-pass-login .pass-form-item span.open:hover {
+        background-position: -18px -46px
+    }
+
+.tang-pass-login .pass-verifyCode {
+    width: 98px;
+    height: 38px;
+    background: url(../images/loading_16_bf37cfd7.gif) no-repeat center center;
+    border: 1px solid #DDD;
+    float: left;
+    margin-left: 5px
+}
+
+.tang-pass-login .pass-change-verifyCode {
+    padding-left: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    line-height: 38px;
+    float: left;
+    cursor: pointer
+}
+
+.tang-pass-login .pass-success-verifyCode {
+    display: none;
+    height: 16px;
+    width: 16px;
+    background: url(../images/right_16_9f315b0d.png) 0 0 no-repeat;
+    position: absolute;
+    right: inherit;
+    left: 75px;
+    top: 7px;
+    z-index: 1999
+}
+
+.tang-pass-login .pass-form-item .pass-placeholder {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1999;
+    display: block;
+    top: 1px;
+    left: 10px;
+    height: 40px;
+    line-height: 40px;
+    _line-height: 42px;
+    width: 180px;
+    padding-left: 23px;
+    font-size: 14px;
+    color: #ccc;
+    cursor: text
+}
+
+.tang-pass-login .pass-form-item .pass-placeholder-verifyCode {
+    width: 50px;
+    left: 0
+}
+
+.tang-pass-login .pass-form-item .pass-placeholder-userName, .tang-pass-login .pass-form-item .pass-placeholder-password {
+    left: 10px
+}
+
+.tang-pass-login .pass-form-item .pass-clearbtn {
+    position: absolute;
+    z-index: 20;
+    top: 12px;
+    right: 6px;
+    _right: 26px;
+    height: 16px;
+    width: 16px;
+    background: url(../images/pass_login_icons_a42ddced.png) no-repeat 0 0;
+    cursor: pointer
+}
+
+.tang-pass-login .pass-form-item span.pass-clearbtn-verifyCode {
+    right: inherit;
+    left: 75px;
+    z-index: 1999
+}
+
+.tang-pass-login .pass-form-item span.pass-clearbtn-smsVerifyCode {
+    right: inherit;
+    left: 90px
+}
+
+.tang-pass-login .pass-form-item .pass-clearbtn:hover {
+    background-position: 0 -16px
+}
+
+.tang-pass-login .pass-form-item-memberPass {
+    margin-bottom: 10px
+}
+
+    .tang-pass-login .pass-form-item-memberPass input {
+        vertical-align: middle
+    }
+
+    .tang-pass-login .pass-form-item-memberPass label {
+        color: #666;
+        margin-left: 5px
+    }
+
+.tang-pass-login .pass-form-item-submit {
+    position: relative;
+    height: 90px;
+    margin-bottom: 0px;
+}
+
+    .tang-pass-login .pass-form-item-submit input {
+        width: 350px;
+        height: 48px;
+        background: #3f89ec;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        transition: .3s;
+        -moz-transition: .3s;
+        -o-transition: .3s;
+        -webkit-transition: .3s;
+    }
+
+        .tang-pass-login .pass-form-item-submit input:hover {
+            background: #4490f7
+        }
+
+        .tang-pass-login .pass-form-item-submit input:focus {
+            background: #3a84e8
+        }
+
+    .tang-pass-login .pass-form-item-submit .pass-button-submit {
+        font-size: 20px;
+        font-family: 微软雅黑;
+        border: none;
+        color: #fff;
+        cursor: pointer
+    }
+
+    .tang-pass-login .pass-form-item-submit .pass-reglink, .tang-pass-login .pass-form-item-submit .pass-fgtpwd {
+        float: right;
+        margin-left: 10px;
+        line-height: 38px
+    }
+
+.tang-pass-login-phoenix {
+    margin: 0 20px;
+    border-top: 1px solid #eee;
+    padding: 0 2px 10px 2px
+}
+
+    .tang-pass-login-phoenix .pass-phoenix-title {
+        color: #666;
+        line-height: 28px;
+        height: 28px;
+        padding: 2px 0;
+        font-size: 12px
+    }
+
+    .tang-pass-login-phoenix .pass-phoenix-list {
+        clear: both;
+        line-height: 20px;
+        zoom: 1
+    }
+
+        .tang-pass-login-phoenix .pass-phoenix-list:after {
+            line-height: 20px;
+            content: '\20';
+            display: block;
+            height: 0;
+            clear: both
+        }
+
+        .tang-pass-login-phoenix .pass-phoenix-list .pass-phoenix-btn {
+            float: left
+        }
+
+        .tang-pass-login-phoenix .pass-phoenix-list .bd-acc-list, .tang-pass-login-phoenix .pass-phoenix-list .bd-acc-list li {
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+            .tang-pass-login-phoenix .pass-phoenix-list .bd-acc-list li {
+                width: 33px
+            }
+
+.pass-qrcode-btn, .pass-sms-btn, .pass-normal-btn, .pass-unamelogin-btn, .pass-emaillogin-btn {
+    float: left;
+    display: block;
+    margin-right: 15px;
+    color: #00C;
+    text-decoration: underline;
+    padding-left: 18px;
+    cursor: pointer;
+    font-size: 12px;
+    background: url('../images/pass_login_icons_a42ddced.png') no-repeat -181px -64px;
+    width: 0;
+    height: 18px;
+    overflow: hidden
+}
+
+.pass-normal-btn {
+    background-position: -217px -64px
+}
+
+.pass-unamelogin-btn {
+    background-position: -217px -64px
+}
+
+.pass-sms-btn {
+    background-position: -108px -64px
+}
+
+.tang-pass-login-phoenix .pass-phoenix-list .bd-acc-tsina .phoenix-btn-item {
+    background-position: 0 -64px
+}
+
+.tang-pass-login-phoenix .pass-phoenix-list .bd-acc-renren .phoenix-btn-item {
+    background-position: -72px -64px
+}
+
+.tang-pass-login-phoenix .pass-phoenix-list .bd-acc-qzone .phoenix-btn-item {
+    background-position: -36px -64px
+}
+
+.tang-pass-login-phoenix .pass-phoenix-list .bd-acc-tqq .phoenix-btn-item {
+    background-position: -143px -64px
+}
+
+.tang-pass-login-phoenix .pass-phoenix-list .bd-acc-weixin .phoenix-btn-item {
+    background-position: -108px -99px
+}
+
+.tang-pass-login-phoenix .pass-phoenix-list .phoenix-btn-item {
+    display: block;
+    margin-right: 15px;
+    color: #00C;
+    text-decoration: underline;
+    padding-left: 18px;
+    cursor: pointer;
+    font-size: 12px;
+    list-style: none;
+    background: url("../images/pass_login_icons_a42ddced.png") no-repeat;
+    width: 0;
+    height: 18px;
+    overflow: hidden
+}
+
+.choiceuser-article {
+    padding: 0 20px
+}
+
+    .choiceuser-article .choiceuser-msg {
+        margin-top: 10px;
+        font-size: 12px;
+        color: #666;
+        line-height: 24px
+    }
+
+    .choiceuser-article .choiceuser-back {
+        margin-top: 10px;
+        clear: both
+    }
+
+        .choiceuser-article .choiceuser-back a {
+            display: block;
+            text-align: right;
+            color: #1b66c7;
+            text-decoration: none
+        }
+
+    .choiceuser-article .choiceuser-btn:after {
+        content: '\20';
+        display: block;
+        height: 0;
+        clear: both
+    }
+
+    .choiceuser-article .choiceuser-btn {
+        padding-left: 20px;
+        zoom: 1
+    }
+
+        .choiceuser-article .choiceuser-btn input {
+            display: block;
+            float: left;
+            margin-right: 15px;
+            width: 80px;
+            height: 32px;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            transition: .3s;
+            -moz-transition: .3s;
+            -o-transition: .3s;
+            -webkit-transition: .3s;
+            border: none;
+            margin: 10px 10px 0 0;
+            cursor: pointer;
+            color: #666;
+            border: 1px solid #ddd;
+            background-color: #f7f7f7;
+            font-weight: bold
+        }
+
+            .choiceuser-article .choiceuser-btn input:hover {
+                background-color: #eee;
+                border-color: #dadada
+            }
+
+.tang-pass-qrcode .tang-pass-qrcode-title {
+    font-size: 14px;
+    text-align: center;
+    line-height: 36px;
+    padding-left: 0
+}
+
+.tang-pass-qrcode .tang-pass-qrcode-content {
+    margin-top: 5px;
+    height: 180px;
+    overflow: hidden;
+    text-align: center
+}
+
+    .tang-pass-qrcode .tang-pass-qrcode-content img {
+        width: 100px;
+        height: 100px
+    }
+
+.tang-pass-qrcode .tang-pass-qrcode-info {
+    color: #666;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    background: #f1f1f1;
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    margin: 10px 0 0 0
+}
+
+.tang-pass-qrcode .pass-qrcode-link-back {
+    float: right;
+    cursor: pointer
+}
+
+    .tang-pass-qrcode .pass-qrcode-link-back:hover {
+        text-decoration: underline
+    }
+
+.tang-pass-qrcode .pass-qrcode-scanSuccess {
+    padding-top: 94px;
+    color: #4ab930;
+    font-size: 18px;
+    line-height: 18px;
+    background: url(../images/ok_264288cd.png) no-repeat center 20px;
+    margin-bottom: 15px
+}
+
+.tang-pass-qrcode .pass-qrcode-successInfo {
+    line-height: 20px;
+    font-size: 12px;
+    color: #666
+}
+
+.tang-pass-sms {
+    display: none;
+    padding-bottom: 0
+}
+
+    .tang-pass-sms .pass-form-item-submit {
+        margin-bottom: 0
+    }
+
+    .tang-pass-sms .tang-pass-sms-title {
+        height: 30px;
+        line-height: 30px;
+        color: #666;
+        font-weight: bold;
+        display: none
+    }
+
+    .tang-pass-sms .tang-pass-sms-tip {
+        line-height: 24px;
+        color: #999;
+        font-weight: normal;
+        padding-bottom: 15px;
+    }
+
+    .tang-pass-sms p.pass-form-item-smsVerifyCode:after, .tang-pass-login p.pass-form-item-verifyCode:after {
+        line-height: 20px;
+        content: '\20';
+        display: block;
+        height: 0;
+        clear: both
+    }
+
+    .tang-pass-sms p.pass-form-item-smsVerifyCode, .tang-pass-login p.pass-form-item-verifyCode {
+        position: relative;
+        height: 40px;
+        margin-bottom: 15px;
+        zoom: 1
+    }
+
+    .tang-pass-sms .pass-form-item .pass-sms-link-back {
+        cursor: pointer;
+        float: right;
+        text-align: right;
+        padding-top: 10px
+    }
+
+    .tang-pass-sms .pass-form-item input.pass-text-input-smsPhone {
+        padding-left: 30px;
+        width: 308px;
+    }
+
+    .tang-pass-sms .pass-form-item input.pass-text-input-smsVerifyCode {
+        width: 180px;
+        float: left;
+        margin-right: 10px
+    }
+
+    .tang-pass-sms .pass-form-item span.pass-placeholder-smsPhone {
+        padding-left: 22px
+    }
+
+    .tang-pass-sms .pass-form-item span.pass-placeholder-smsVerifyCode {
+        width: 70px
+    }
+
+    .tang-pass-sms .pass-form-item span.pass-item-timer, .tang-pass-sms .pass-form-item span.pass-item-time-timing {
+        width: 138px
+    }
+
+    .tang-pass-sms .pass-form-item-smsPhone {
+        z-index: 20
+    }
+
+.tang-pass-login .pass-item-timer {
+    display: block;
+    padding: 0;
+    float: left;
+    height: 40px;
+    width: 138px;
+    font-size: 12px;
+    color: #666;
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s
+}
+
+    .tang-pass-login .pass-item-timer:hover {
+        background-color: #eee;
+        border-color: #dadada
+    }
+
+.tang-pass-login .pass-item-time-timing {
+    display: block;
+    padding: 0;
+    float: left;
+    height: 40px;
+    width: 138px;
+    font-size: 12px;
+    transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+    color: #999;
+    border: 1px solid #ebebeb;
+    background-color: #f6f6f6;
+    cursor: default
+}
+
+.tang-pass-login .pass-suggestion-list {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 21;
+    top: 40px;
+    _top: 41px;
+    left: 0;
+    border: 1px solid #dedede;
+    border-top: none;
+    background: #fff;
+    width: 348px
+}
+
+.tang-pass-login li.pass-item-suggsetion {
+    position: relative;
+    z-index: 2001;
+    line-height: 14px;
+    padding: 5px 0 5px 6px;
+    color: #888;
+    font-family: '宋体';
+    font-size: 12px;
+    color: #333;
+    cursor: pointer;
+    word-spacing: break-word;
+    word-break: break-all
+}
+
+    .tang-pass-login li.pass-item-suggsetion a {
+        position: absolute;
+        display: none;
+        top: 4px;
+        right: 4px;
+        height: 16px;
+        width: 16px;
+        background: url(../images/pass_login_icons_a42ddced.png) no-repeat 0 0
+    }
+
+.tang-pass-login li.pass-item-suggsetion_hover a {
+    display: block
+}
+
+.tang-pass-login li.pass-item-suggsetion a:hover {
+    background-position: 0 -16px
+}
+
+.tang-pass-login .pass-item-suggsetion_hover {
+    background-color: #f7f7f7
+}
+
+.tang-pass-login .pass-form-item-submit input, .choiceuser-article .choiceuser-btn input, .tang-pass-qrcode .tang-pass-qrcode-info {
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box
+}
+/*新用户弹出*/
+.sign_done_box {
+    background-color: #fff;
+    width: 575px;
+    overflow: hidden;
+    border: 1px solid #c4c5c7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+}
+
+    .sign_done_box .tit .close {
+        background: url(../images/x.gif) no-repeat center center #c4c5c7;
+        width: 35px;
+        height: 34px;
+        text-indent: -9999px;
+        cursor: pointer;
+        position: absolute;
+        overflow: hidden;
+        right: 0;
+        top: 0;
+        _right: -2px;
+    }
+
+    .sign_done_box .tit .zh_logo {
+        background: url(../images/zttop.gif) 0 -37px no-repeat;
+        width: 94px;
+        height: 30px;
+        position: absolute;
+        top: 20px;
+        left: 15px;
+    }
+
+    .sign_done_box .con {
+        padding: 65px 20px 20px;
+    }
+
+        .sign_done_box .con p {
+            font-size: 16px;
+            color: #333;
+            line-height: 30px;
+            padding-bottom: 30px;
+        }
+
+    .sign_done_box a.login {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+        .sign_done_box a.login b {
+            font-weight: normal;
+            font-size: 10px;
+            padding: 0 10px 0 5px;
+        }
+
+        .sign_done_box a.login:link, .sign_done_box a.login:visited {
+            color: #526585;
+        }
+
+    .sign_done_box .recommend {
+        background: #f5f5f5;
+        border: 1px dashed #c4c5c7;
+        width: 524px;
+        margin: 20px 0;
+        height: 180px;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .sign_done_box .recommend h3 {
+            width: 18px;
+            border-right: 1px dashed #c4c5c7;
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+            font-weight: normal;
+            padding: 0 5px;
+            height: 130px;
+            padding-top: 50px;
+            float: left;
+        }
+
+        .sign_done_box .recommend .icon {
+            position: absolute;
+            left: 28px;
+            top: 80px;
+            width: 10px;
+            height: 25px;
+        }
+
+    .sign_done_box .book_box {
+        float: left;
+        padding: 20px 0 0 8px;
+        width: 485px;
+        overflow: hidden;
+        height: 139px;
+    }
+
+        .sign_done_box .book_box li {
+            float: left;
+            margin-left: 14px;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            width: 104px;
+            height: 139px;
+            overflow: hidden;
+        }
+
+            .sign_done_box .book_box li img {
+                width: 104px;
+                height: 139px;
+            }
+
+    .sign_done_box .btn {
+        text-decoration: none;
+        background: #a20e21;
+        width: 221px;
+        height: 44px;
+        text-align: center;
+        line-height: 44px;
+        display: block;
+        margin: 0 auto;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+    .sign_done_box a.btn:link, .sign_done_box a.btn:visited {
+        color: #fff;
+    }
+
+.tang-pass-login p.pass-smsSwitchWrapper {
+    text-align: right;
+    margin: 0 0 10px 0;
+    zoom: 1;
+    float: right;
+    position: relative;
+    margin-top: -25px;
+}
+
+.tang-pass-sms-agreement {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #969696
+}
+
+.tang-pass-login .pass-smsSwitchWrapper .pass-sms-btn {
+    background: url(../images/smsswitchphone.png) no-repeat;
+    padding-left: 15px;
+    color: #666;
+    cursor: pointer;
+    width: auto;
+    height: 15px;
+    overflow: hidden
+}
+
+    .tang-pass-login .pass-smsSwitchWrapper .pass-sms-btn:hover {
+        color: #2e7fdb
+    }
+
+.tang-pass-login-color-blue .pass-smsSwitchWrapper .pass-sms-btn {
+    background-position: 0 0
+}
+
+.tang-pass-login-color-green .pass-smsSwitchWrapper .pass-sms-btn {
+    background-position: 0 -15px
+}
+
+.tang-pass-login-color-red .pass-smsSwitchWrapper .pass-sms-btn {
+    background-position: 0 -30px
+}
+
+.tang-pass-login .pass-button, .tang-pass-login .tang-pass-qrcode-info, .tang-pass-login .choiceuser-buttons .pass-button {
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box
+}

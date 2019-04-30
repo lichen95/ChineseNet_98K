@@ -1,0 +1,424 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>个人门户--98k小说中文网</title>
+    <link href="~/css/basic.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/author.css" rel="stylesheet" type="text/css" />
+</head>
+<body scriptSign="author">
+    <!-- 头部 -->
+    <!-- 登录部分 -->
+    <div class="logonbox" id="topnavbar">
+        <div class="close" id="hidetbar"></div>
+        <div class="wrap">
+            <div class="default_wrap">
+                <p>
+                    <a href="#" class="homemark">收藏本站</a>|
+                    <a href="#" target="_blank">手机看98k</a>|
+                    <a href="/Home/Index">98k首页</a>
+                </p>
+            </div>
+            <div class="searchbar fl">
+                <div class="search">
+                    <form name="searchForm" method="get" action="/" target="_blank" id="582455024">
+                        <input name="searchType" type="hidden" value="all">
+                        <span class="select">综合<em></em></span>
+                        <span class="input_text"><input name="keyword" type="text" defaultdatavalue="不败战神" autocomplete="off" disableautocomplete="" value=""></span>
+                        <input type="button" class="sousuo" value="搜&nbsp;索">
+                        <div class="listpanel" style="display: none;">
+                            <ul class="selecttext">
+                                <li><a href="javascript:void(0)" type="all">综合</a></li>
+                                <li><a href="javascript:void(0)" type="bookName">书名</a></li>
+                                <li><a href="javascript:void(0)" type="authorName">作者</a></li>
+                                <li><a href="javascript:void(0)" type="keyword">关键字</a></li>
+                                <li><a href="javascript:void(0)" type="description">描述</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--已登录部分 结束 -->
+            <div id="ui_top_nav_dialog" class="d_menu_detail" style="display: none;">
+                <div class="con">
+                    <h3>站点分类</h3>
+                    <p>
+                        <a class="fred" href="/Home/Index">98k首页</a>|
+                        <a href="http://big5.98k.com">繁体版</a>|
+                        <a href="http://m.98k.com">手机版</a>|
+                        <a href="http://www.mmzh.com">女生</a>|
+                        <a href="http://comic.98k.com">动漫</a>|
+                        <a href="http://game.98k.com">游戏中心</a>
+                    </p>
+                    <div class="cl5"></div>
+                    <div class="spline"></div>
+                    <div class="cl5"></div>
+                    <h3>分类频道</h3>
+                    <p>
+                        <a href="http://book.98k.com/category/1.html" target="_blank">奇幻·玄幻</a>|
+                        <a href="http://book.98k.com/category/3.html" target="_blank">武侠·仙侠</a>|
+                        <a href="http://book.98k.com/category/6.html" target="_blank">历史·军事</a>|
+                        <a href="http://book.98k.com/category/9.html" target="_blank">都市·娱乐</a>|
+                        <a href="http://book.98k.com/category/21.html" target="_blank">竞技·同人</a>|
+                        <a href="http://book.98k.com/category/15.html" target="_blank">科幻·游戏</a>|
+                        <a href="http://book.98k.com/category/18.html" target="_blank">悬疑·灵异</a>|
+                        <a href="http://pub.98k.com" target="_blank">图书频道</a>
+                    </p>
+                    <div class="cl5"></div>
+                    <div class="spline"></div>
+                    <div class="cl5"></div>
+                    <h3>互动功能</h3>
+                    <p>
+                        <a class="current" href="http://book.98k.com/vip.html" target="_blank" rel="nofollow">会员</a>|
+                        <a href="http://book.98k.com/store.html" target="_blank">书库</a>|
+                        <a href="http://book.98k.com/rank.html" target="_blank">排行榜</a>|
+                        <a href="http://news.98k.com" target="_blank">资讯</a>|
+                        <a href="http://bbs.98k.com" target="_blank">社区</a>|
+                        <a href="http://www.98k.com/xiu.html" target="_blank" rel="nofollow">美女秀场</a>
+                    </p>
+                    <p>
+                        <a class="user_register" href="javascript:void(0)" target="_blank" rel="nofollow">注册帐户</a>|
+                        <a class="forgot" href="javascript:void(0)" target="_blank" rel="nofollow">找回密码</a>|
+                        <a href="http://www.98k.com/help/index.html" target="_blank" rel="nofollow">帮助中心</a>
+                    </p>
+                    <div class="cl10"></div>
+                </div>
+            </div>
+            <div id="topbar_main">
+                <a id="ui_top_nav_button" class="mail d_menu fr" mail_hover="true" href="javascript:void(0);">导航<em class="whitesj"></em></a>
+                <div id="top-user-nav-bar" class="unload">
+                    <div class="right_wrap_unlogin">
+                        <div class="login"><a class="user_login" href="javascript:void(0);">登录</a></div>
+                        <div class="regist"><a class="user_register" href="javascript:void(0);">注册</a></div>
+                    </div>
+                </div>
+                <div id="top-user-nav-bar" class="load" style="display:none;">
+                    <div class="right_wrap">
+                        <div class="info">
+                            <ul>
+                                <li id="user_info" class="name">
+                                    <a class="userImage" href="//home.98k.com" target="_blank">
+                                        <img src="http://static.98k.com/userimage/default/image_120_120.gif">
+                                    </a>
+                                    <a class="nickName" href="//home.98k.com" title="逆骨苍狼" target="_blank">逆骨苍狼</a>
+                                    <em class="userType vip_1" style="display: none;" title="VIP1级用户"></em>
+                                    <em class="whitesj"></em>
+                                    <em class="ver"></em>
+                                </li>
+                                <li class="mail">
+                                    <a id="messagestatus" class="maillink" href="//home.98k.com/msgSys.do" target="_blank"><em class="ui-message-num">0</em></a>
+                                    <em class="ver"></em>
+                                </li>
+                                <li class="shelf">
+                                    <em class="book"></em>
+                                    <a href="//home.98k.com/favoritesBook.do" target="_blank">书架</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="user_info_dialog" class="userinfo box" style="display: none;">
+                            <div class="tx_info">
+                                <a class="userImage" href="//home.98k.com" target="_blank">
+                                    <img src="http://static.98k.com/userimage/default/image_120_120.gif">
+                                </a>
+                            </div>
+                            <div class="set">
+                                <div class="tc">
+                                    <a class="setting" href="//home.98k.com/setting/userInfo.do" target="_blank">账号设置</a>
+                                    <a class="logout" href="javascript:void(0)" onclick="UserManager.logout();return false;">退出</a>
+                                </div>
+                                <p>
+                                    <span class="leval" title="用户等级：2级">
+                                        <span class="level_star"></span>
+                                        <span class="level_star"></span>
+                                    </span>
+                                </p>
+                                <p>
+                                    <a href="//oldbook.98k.com/member/privilege.html" target="_blank">查看我的VIP特权&gt;&gt;</a>
+                                </p>
+                            </div>
+                            <div class="cl15"></div>
+                            <div class="piao">
+                                <p>
+                                    推荐票：<em class="voteNum">0</em>张
+                                    <a href="//oldwww.98k.com/help/zh93.html" target="_blank">
+                                        <span class="tj_ticket"></span>
+                                    </a>
+                                </p>
+                                <p>
+                                    纵横币：<em>0</em>
+                                    <span class="zh_money"></span>
+                                    <a href="http://pay.98k.com" target="_blank">[充值]</a>
+                                </p>    <p class="last">月票：<em id="userMonthTicket" data-loaded="1">0</em>张<a href="//oldwww.98k.com/help/zh93.html#q1" target="_blank"><span class="tj_ticket"></span></a></p>
+                            </div>
+                        </div>
+                        <div id="mail_detail" class="mail_detail" style="display: none;">
+                            <div class="title">
+                                <span class="closemail" onclick="$('#mail_detail').hide();"></span>
+                            </div>
+                            <div id="userMessageList" class="con">
+                                <p>
+                                    <a class="userMessageButton" href="//home.98k.com/msgIn.do" target="_blank">查看</a>有<em id="usermessage">(0)</em>条未读站内信息
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cl0"></div>
+                </div>
+            </div>
+            <div class="cl0"></div>
+        </div>
+        <div class="blackline"></div>
+    </div>
+    <!-- 登录部分 结束 -->
+    <!--header -->
+    <div class="header" id="zh_header">
+        <div class="wrap">
+            <div class="nav_left">
+                <p>&mdash; 纵 横 文 学 旗 下  &mdash;</p>
+                <div><a href="/Home/Index"><img src="~/picture/logos.png"></a></div>
+            </div>
+            <div class="top_gg">
+                <script type="text/javascript" src="~/js/137092332882.js"></script>
+            </div>
+            <div class="cl10"></div>
+            <div class="menu">
+                <a href="/Home/Index" rel="nofollow">首页</a>
+                <a href="http://book.98k.com/store.html">书库</a>
+                <a href="http://book.98k.com/rank.html">小说排行榜</a>
+                <a href="http://beta.author.98k.com" target="_blank" rel="nofollow">作者专区</a>
+                <a href="http://home.98k.com" target="_blank" rel="nofollow" class="current">个人中心</a>
+                <a class="fred" href="http://www.98k.com/vip/charge.html" target="_blank">充值￥</a>
+            </div>
+            <div class="secondary">
+                <a class="fb" href="http://www.98k.com/mianfei/">免费小说</a>
+                <a class="fb" href="http://book.98k.com/quanben/c0/c0/b9/u1/p1/v9/s1/t0/ALL.html">全本小说</a>
+                <a href="http://www.98k.com/category/1.html">奇幻·玄幻</a>
+                <a href="http://www.98k.com/category/3.html">武侠·仙侠</a>
+                <a href="http://www.98k.com/category/6.html">历史·军事</a>
+                <a href="http://www.98k.com/category/9.html">都市·娱乐</a>
+                <a href="http://www.98k.com/category/21.html">竞技·同人</a>
+                <a href="http://www.98k.com/category/15.html">科幻·游戏</a>
+                <a href="http://www.98k.com/category/18.html">悬疑·灵异</a>
+            </div>
+        </div>
+    </div>
+    <!--header 结束 -->
+    <div class="cl20"></div>
+    <!-- 头部 结束 -->
+    <!--三栏中间-->
+    <div class="wrap">
+        <div class="box">
+            <script type="text/javascript">
+                function levelIcons(level) {
+                    var isun = "<em class='level_sun'></em>";
+                    var imoon = "<em class='level_moon'></em>";
+                    var istar = "<em class='level_star'></em>";
+                    var icons = "";
+                    var sunNum = Math.floor(level / 16);
+                    if (sunNum > 0) { for (i = 0; i < sunNum; i++) { icons += isun; } }
+                    var moonNum = Math.floor((level - sunNum * 16) / 4);
+                    if (moonNum > 0) { for (i = 0; i < moonNum; i++) { icons += imoon; } }
+                    var starNum = level - sunNum * 16 - moonNum * 4;
+                    if (starNum > 0) { for (i = 0; i < starNum; i++) { icons += istar; } }
+                    document.write(icons);
+                }
+            </script>
+            <div id="bdbind" class="author_info clear">
+                <input type="hidden" id="userLevel" value="1" />
+                <div class="author_pic">
+                    <span class="edit_head"><em></em><a href="/setting/userAvatar.do">编辑头像</a></span>
+                    <img src="~/picture/image_120_120.gif" width="120" height="120">
+                </div>
+                <div class="author_msg">
+                    <div class="au_head clear">
+                        <a class="au_edit" href="/Home/PersonalData"><b></b>个人资料修改</a><h3 class="name"></h3>
+                        <em class="male"></em>
+                        <script type="text/javascript">
+                            var userLevel = 1;
+                            levelIcons(userLevel);
+                        </script><span class="t_sub">(书童)</span>
+                        <span class="vip_0"></span>
+                    </div>
+                    <p id="p1"></p>
+                    <div class="author_data">
+                        <div>98k币：<em class="zh_money"></em><span>0</span><b>[<a href="http://pay.98k.com" class="fred" target="_blank">充值</a>]</b></div>
+                        <div>月票：<span>0</span>张</div>
+                        <div>推荐票：<span>0</span>张</div>
+                        <div>自动订阅：<span>0</span>本<b>[<a href="/billing/autoChapters.do" class="fred">查看</a>]</b></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="myBlock clear">
+                <div class="myMenu">
+                    <ul class="list">
+                        <li><em class="bookshelf"></em><a href="/Home/Booshelfs">我的书架</a></li>
+                        <li><em class="account"></em><a href="/Home/PersonalData">我的账户</a></li>
+                        <li class="active"><em class="my_info"></em><a href="/Home/PersonalData">个人资料</a></li>
+                        <li><em class="megs"></em><a href="/Home/MyMessages">消息通知</a></li>
+                        <li><em class="footsteps"></em><a href="/Home/HistoricalReadings">我的足迹</a></li>
+                        <li><em class="fans_score"></em><a href="/fans/bookFansScore.do">我的积分</a></li>
+                    </ul>
+                </div>
+                <div class="myMain">
+                    <div class="new_chapter">
+                        <div class="tab">
+                            <span>
+                                <a href="/Home/PersonalData">基本信息</a><em class="triangle_down"></em>
+                            </span>|
+                            <span>
+                                <a href="/Home/PersonalImg">修改头像</a><em class="triangle_down"></em>
+                            </span>|
+                            <span class="active">
+                                <a href="/Home/PersonalPwd">修改密码</a><em class="triangle_down"></em>
+                            </span>
+                        </div>
+                        <div class="cl20"></div>
+                        <div class="tabpane">
+                            <input type="hidden" id="UserId" value="">
+                            <div class="infoBlock">
+                                <div class="msgstab">
+                                    <form class="change-password">
+                                        <div class="uc_editpassword">
+                                            <div class="edit_line">
+                                                <div class="edit_tit">昵称：</div>
+                                                <div class="edit_ipt">
+                                                    <span class="fs14"></span>
+                                                </div>
+                                            </div>
+                                            <div class="edit_line">
+                                                <div class="edit_tit">旧密码：</div>
+                                                <div class="edit_ipt">
+                                                    <input type="password" maxlength="16" id="password" name="password" class="ipt_c" value="">
+                                                </div>
+                                            </div>
+                                            <div class="oldpasstip">
+                                                <span class="no-pwd">没有或忘记旧密码？</span>
+                                                <a href="//passport.98k.com/webpassresetcheck" target="_blank" class="change-pwd">更换其他方式重置密码</a>
+                                            </div>
+                                            <div class="edit_line">
+                                                <div class="edit_tit">新密码：</div>
+                                                <div class="edit_ipt">
+                                                    <input type="password" maxlength="16" id="newPasswd" name="newPasswd" class="ipt_c" value="">
+                                                </div>
+                                                <div class="pwtip">密码6-16位。</div>
+                                            </div>
+                                            <div class="edit_line">
+                                                <div class="edit_tit">确认密码：</div>
+                                                <div class="edit_ipt">
+                                                    <input type="password" maxlength="16" id="newPasswd2" name="newPasswd2" class="ipt_c" value="">
+                                                </div>
+                                            </div>
+                                            <div class="pwd-errortip">
+                                                <em class="pwd-icon-no"></em>手机号码错误，请重新操作
+                                            </div>
+                                            <div class="cl0"></div>
+                                        </div>
+                                        <div class="tline">
+                                            <a id="editPass" class="W_btn_a edit_submit" href="javascript:void(0);">保 存</a>
+                                        </div>
+                                        <div class="cl20"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--三栏中间 结束-->
+    <div class="cl0"></div>
+    <!-- 底部 -->
+    <div class="cl20"></div>
+    <div class="wrap foot">
+        <p>
+            <a target="_blank" href="http://www.98k.com/company/about.html">关于98k</a>|
+            <a target="_blank" href="http://www.98k.com/company/job.html">诚聘英才</a>|
+            <a target="_blank" href="http://www.98k.com/company/business.html">商务合作</a>|
+            <a target="_blank" href="http://www.98k.com/company/copyright.html">法律声明</a>|
+            <a target="_blank" href="http://www.98k.com/help/index.html">帮助中心</a>|
+            <a target="_blank" href="http://beta.author.98k.com">作者投稿</a>|
+            <a target="_blank" href="http://www.98k.com/company/contact.html">联系我们</a>|
+            <a target="_blank" href="http://www.98k.com/company/link.html">友情链接</a>|
+            <a target="_blank" href="http://news.98k.com/zhuanti/wlqz/index.html">谨防诈骗</a>|
+            <a target="_blank" href="http://www.98k.com/sitemap.html">网站地图</a>
+        </p>
+        <p><em>Copyright&copy;&nbsp;2008-2010 <a href="http://www.98k.com" class="f66">www.98k.com</a></em></p>
+        <p><em>All Rights Reserved </em>版权所有 深圳创业网络文化科技有限公司</p>
+        <p>京<em>ICP</em>证：<em>080527</em>号&nbsp;《网络文化经营许可证》&nbsp;京<em>ICP</em>备<em>11009265</em>号&nbsp;&nbsp;京网文<em>[2015]2368-459</em>号&nbsp;&nbsp;京公网安备<em>110105005190</em>号</p>
+        <p>作者发布作品时，请遵守国家互联网信息管理办法规定。本站所收录作品、社区话题、书库评论均属其个人行为，不代表本站立场。</p>
+        <em class="l_logo"></em><em class="copyright"></em>
+    </div>
+    <script src="~/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="~/js/require.min.js"></script>
+    <!-- 底部 结束 -->
+</body>
+</html>
+<script>
+    $(function () {
+        var user = '@ViewBag.User';
+        if (user != "") {
+            $(".unload").hide();
+            $(".load").show();
+        }
+        Show();
+    })
+
+    function Show() {
+        $.ajax({
+            url: "/Users/QueryById?Id=" + @ViewBag.UserId,
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                $("#UserId").val(@ViewBag.UserId);
+                $(".fs14").html(data.UserName);
+                $(".name").html(data.UserName);
+                $("#p1").html(data.MyDesc == null ? "暂无简介" : data.MyDesc);
+
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        })
+    }
+
+    $("#password").blur(function () {
+        if ($("#password").val() != @ViewBag.Pwd) {
+            alert("旧密码输入不正确！")
+        }
+    })
+
+    $("#editPass").click(function () {
+        if ($("#newPasswd").val() != $("#newPasswd2").val()) {
+            alert("两次输入不一致!")
+        }
+
+        $.ajax({
+            url: "/Users/UpPwd",
+            data: {
+                UserId: $("#UserId").val(),
+                Pwd: $("#newPasswd").val()
+            },
+            type: "post",
+            success: function (data) {
+                if (data > 0) {
+                    alert("成功");
+                    location.href = "/Home/PersonalData";
+                }
+                else {
+                    alert("失败");
+                }
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        })
+    })
+</script>

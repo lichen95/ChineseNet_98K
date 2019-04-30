@@ -1,0 +1,124 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/css/x-admin.css" media="all">
+</head>
+<body>
+
+    <div class="x-body">
+        <form action="" method="post" class="layui-form layui-form-pane" id="form0">
+            <input type="hidden" name="GradeId" />
+            <input type="hidden" name="CreateDate" />
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    <span class="x-red">*</span>等级名称:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="GradeName" name="GradeName" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name2" class="layui-form-label">
+                    <span class="x-red">*</span>经验值:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="Experience" name="Experience" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="button" class="layui-btn" lay-submit="" lay-filter="update" value="修改" />
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="/lib/layui/layui.js" charset="utf-8">
+    </script>
+    <script src="/js/x-layui.js" charset="utf-8">
+    </script>
+    <script src="/js/jquery.min.js"></script>
+    <script>
+
+        layui.use(['form', 'layer'], function () {
+            $ = layui.jquery;
+            var form = layui.form()
+                , layer = layui.layer;
+
+          $(function () {
+                $.ajax({
+                    url: "/Grades/QueryById?Id="+location.search.substring(4),
+                type: "post",
+                async: false,
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $("[name=GradeId]").val(data.GradeId);
+                    $("[name=GradeName]").val(data.GradeName);
+                    $("[name=Experience]").val(data.Experience);
+                    $("[name=CreateDate]").val(data.CreateDate);
+                }
+            })
+        })
+
+
+
+            //监听提交
+            form.on('submit(update)', function () {
+                var ids = [];
+                var names = [];
+                $("[type=checkbox]:checked").each(function () {
+                    ids.push($(this).val());
+                    names.push($(this).attr("pname"));
+                })
+                console.log(ids);
+                console.log(names);
+                $.ajax({
+                    url: "/Grades/Update",
+                    type: "post",
+                    data: $("#form0").serialize(),
+                    success: function (data) {
+                        console.log(data);
+                        if (data) {
+                            layer.alert("更新成功", { icon: 6 }, function () {
+                                // 获得frame索引
+                                var index = parent.layer.getFrameIndex(window.name);
+                                //关闭当前frame
+                                parent.layer.close(index);
+                                window.parent.location.reload();
+                            });
+                        }
+                        else {
+                            layer.alert("更新失败", { icon: 1 }, function () {
+                                // 获得frame索引
+                                var index = parent.layer.getFrameIndex(window.name);
+                            });
+                        }
+                    },
+                    error: function (e) {
+                        console.log(e);
+                    }
+                })
+            });
+
+
+        });
+    </script>
+</body>
+</html>

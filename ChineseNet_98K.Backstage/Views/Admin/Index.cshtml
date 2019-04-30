@@ -1,0 +1,128 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>98K小说中文网</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="~/Content/images/favicon.ico" mce_href="~/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="~/images/favicon.ico" mce_href="~/images/favicon.ico" type="image/x-icon">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/css/x-admin.css" media="all">
+    <script src="/js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header header header-demo">
+            <div class="layui-main">
+                <div class="admin-logo-box">
+                    <a class="logo" href="#" title="logo">98K小说网</a>
+                    <div class="larry-side-menu">
+                        <i class="fa fa-th-large" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <ul class="layui-nav" lay-filter="">
+                    <li class="layui-nav-item"><img src="/images/logo.png" class="layui-circle" style="border: 2px solid #A9B7B7;" width="35" alt=""></li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">@ViewBag.UName</a>
+                        <dl class="layui-nav-child">
+                            <!-- 二级菜单 -->
+                            <dd><a href="">我的桌面</a></dd>
+                            <dd><a href="/Admin/Login">注销</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="layui-side layui-bg-black x-side" style="left:-200px;">
+            <div class="layui-side-scroll">
+                <ul class="layui-nav layui-nav-tree site-demo-nav" lay-filter="side" id="list"></ul>
+            </div>
+        </div>
+        <div class="layui-tab layui-tab-card site-demo-title x-main" lay-filter="x-tab" lay-allowclose="true" style="left: 0px;border-left: solid 2px #2299ee;">
+            <ul class="layui-tab-title">
+                <li class="layui-this"> 我的桌面 <i class="layui-icon layui-unselect layui-tab-close">ဆ</i> </li>
+            </ul>
+            <div class="layui-tab-content site-demo site-demo-body">
+                <div class="layui-tab-item layui-show">
+                    <iframe frameborder="0" src="/Admin/Welcome" class="x-iframe"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="site-mobile-shade"> </div>
+    </div>
+    <script src="/lib/layui/layui.js"></script>
+    <script src="/js/x-admin.js"></script>
+    <script>
+        $(function () {
+            show();
+        })
+
+        //加载菜单
+        function show() {
+            $.ajax({
+                url: "/Admin/GetPermissionsByAdmin_UserId?Id=" +location.search.substring(4),
+                type: "post",
+                async: false,
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $("[lay-filter=side]").empty();
+                    for (var i = 0; i < data.length; i++) {
+                        var pid = '<li class="layui-nav-item"><a class="javascript:;" href="javascript:void(0);"  onclick="showList(this,' + data[i].PermissionId + ')" > <cite>' + data[i].PermissionName + '</cite> </a> <dl class="layui-nav-child"> </dl> </li>';
+                        $("[lay-filter=side]").append(pid);
+                    }
+                }
+            })
+        }
+
+        //加载二级菜单
+        function showList(obj, id) {
+
+            $.ajax({
+                url: "/Admin/GetPermissionsByPId?PId=" + id,
+                type: "post",
+                async: false,
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $(obj).next().empty();
+                    for (var i = 0; i < data.length; i++) {
+                        var pid = '<dd class=""><a href="javascript:void(0);" _href="' + data[i].URL + '" onclick="load(this)" ><cite>' + data[i].PermissionName + '</cite></a></dd>';
+                        $(obj).next().append(pid);
+                    }
+
+                }
+            })
+        }
+
+        //右侧页面加载
+        function load(obj) {
+            title = $(obj).find('cite').text();
+            url = $(obj).attr('_href');
+            for (var i = 0; i < $('.x-iframe').length; i++) {
+                if ($('.x-iframe').eq(i).attr('src') == url) {
+                    element.tabChange('x-tab', i);
+                    return;
+                }
+            };
+            res = element.tabAdd('x-tab', {
+                title: title,
+                content: '<iframe frameborder="0" src="' + url + '" class="x-iframe"></iframe>'
+            });
+            element.tabChange('x-tab', $('.layui-tab-title li').length - 1);
+            $('.layui-tab-title li').eq(0).find('i').remove();
+        }
+    </script>
+</body>
+</html>
+

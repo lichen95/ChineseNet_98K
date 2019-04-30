@@ -1,0 +1,91 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>DemoViewAsPDF</title>
+    <link rel="stylesheet" href="style.css">
+        <link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+        <script src="script.js"></script>
+    <link href ="~/css/demo.css"  rel ="stylesheet"  />
+</head>
+<BODY>
+    <头>
+        <H1>发票</H1>
+        <地址满足>
+            <p> Jonathan Neal </p>
+            <p> 101 E. Chapman Ave <br> Orange，CA 92866 </p>
+            <p>（800）555-1234 </p>
+        </地址>
+        <span> <img src = "D:\DemoRotativa\DemoRotativa\DemoRotativa\wwwroot\images\Invoice.jpg"  /> <input type = "file"  accept = "image/*" > </span>
+    </报头>
+    <文章>
+        <H1>收件人</H1>
+        <地址满足>
+            <p>演示公司<br> cines o Saineshwar </p>
+        </地址>
+        <table  class = "meta" >
+            <TR>
+                <th> <span contenteditable>发票＃</span> </th>
+                <td> <span contenteditable> 000001 </span> </td>
+            </TR>
+            <TR>
+                <th> <span contenteditable>日期</span> </th>
+                <td> <span contenteditable> 2018年1月1日</span> </td>
+            </TR>
+            <TR>
+                <th> <span contenteditable>到期金额</span> </th>
+                <td> <span id = "prefix"  contenteditable>à¤°</span> <span> 600.00 </span> </td>
+            </TR>
+        </TABLE>
+        <table  class = "inventory" >
+            <THEAD>
+                <TR>
+                    <th> <span contenteditable>项目</span> </th>
+                    <th> <span contenteditable>描述</span> </th>
+                    <th> <span contenteditable> Rate </span> </th>
+                    <th> <span contenteditable>数量</span> </th>
+                    <th> <span contenteditable>价格</span> </th>
+                </ TR>
+            </ THEAD>
+            <TBODY>
+                <TR>
+                    <TD> <a  类= "cut"> - </A> <跨度CONTENTEDITABLE>前端咨询</跨度> </ TD>
+                    <td> <span contenteditable>体验审核</span> </td>
+                    <td> <span data-prefix>à¤°</span> <span contenteditable> 150.00 </ span> </ td>
+                    <td> <span contenteditable> 4 </span> </td>
+                    <td> <span data-prefix>à¤°</span> <span> 600.00 </span> </td>
+                </TR>
+            </TBODY>
+        </TABLE>
+
+        <table  class = "balance" >
+            <TR>
+                <th> <span contenteditable>总计</span> </th>
+                <td> <span data-prefix>à¤°< span> <span> 600.00 </span> </td>
+            </ TR>
+            <TR>
+                <th> <span contenteditable>支付金额</span> </th>
+                <td> <span data-prefix>à¤°</span> <span contenteditable> 0.00 </span> </td>
+            </TR>
+            <TR>
+                <th> <span contenteditable>到期余额</span> </th>
+                <td> <span data-prefix>à¤°</ span> <span> 600.00 </span> </td>
+            </TR>
+        </TABLE>
+    </文章>
+
+    <预留>
+        <h1> <span contenteditable>附加说明</span> </h1>
+        <div contenteditable>
+            <p> 30天后，未付余额将支付1.5％的财务费用。</p>
+        </DIV>
+    </一旁>
+</BODY>
+</HTML>

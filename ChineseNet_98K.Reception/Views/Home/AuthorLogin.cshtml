@@ -1,0 +1,193 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>作者专区-登录</title>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="~/css/author.css" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="~/css/login.css" />
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="~/css/icons.css" />
+    <!--[if lt IE 8]><!-->
+    <link rel="stylesheet" href="~/css/ie7.css">
+    <!--<![endif]-->
+    <script charset="utf-8" src="~/js/x.js"></script>
+</head>
+<body id="loginbg">
+    <div class="au_nav">
+        <div class="au_nav">
+            <div class="au_box" id="loginSign">
+                <div class="au_nav_a">
+                    <a href="http://www.98k.com/" target="_blank">98k首页</a>|
+                    <a href="http://author.98k.com/nzh/editors" target="_blank">编辑介绍</a>|
+                    <a href="http://www.98k.com/company/author.html" target="_blank" class="goodluck">作者福利</a>|
+                    <span name="name"></span>|
+                    <a>退出</a>
+                    <script>
+                        var logtype = "true";
+                        window.zhname = "逆骨苍狼";
+                    </script>
+                </div>
+                <a href="http://author.98k.com/" class="au_logo"></a>
+                <style>
+                    .header_link {
+                        font-size: 16px;
+                        margin-top: 30px;
+                        margin-left: 30px;
+                        background-image: url(http://static.98k.com/author/v2015/images/toplink.gif);
+                        background-position: right 2px;
+                        background-repeat: no-repeat;
+                        padding-right: 20px;
+                        float: left;
+                    }
+
+                        .header_link a {
+                            color: #e74c3c;
+                        }
+                </style>
+                <div class="header_link">
+                    <a target="_blank" href="http://author.98k.com/nau/login"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login_wrap">
+        <div id="loginalert">
+            <span>
+                <span>HI，</span>
+                <span name="name"></span>
+                <span>，您已登录98k，快去写作吧！</span>
+            </span>
+        </div>
+        <div id="formbox">
+            <form class="LoginBox" id="passLogin" style="display: block;">
+                <div class="formtit">输入登录作者专区密码</div>
+                <div class="mobilelnk f_ts">
+                    <a href="javascript:void(0);">
+                        <span class="icon icon-mobile"></span>
+                        <span id="novel"> 短信快捷登录</span>
+                    </a>
+                </div>
+                <div class="iptwarp">
+                    <div class="iptline">
+                        <div class="ipt_box">
+                            <span class="icon icon-lock"></span>
+                            <input name="pwd" type="password" placeholder="作者专区密码" id="authorPwd">
+                        </div>
+                    </div>
+                    <div class="errorbox"></div>
+                    <div class="iptline dycode">
+                        <div class="ipt_box microbox fl">
+                            <input name="imgCode" style="margin-left:10px;" type="text" placeholder="请填写验证码">
+                        </div>
+                        <div class="ipt_imgcode fr" id="cpdycode">
+                            <img src="/">
+                            <a href="javascript:;">换一张</a>
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="errorbox"></div>
+                </div>
+                <div class="cl10"></div>
+                <div class="form_sup f_ts">
+                    <div class="fl"></div>
+                    <div class="fr">
+                        <a href="javascript:void(0);" class="f_gy">忘记密码?</a>
+                    </div>
+                </div>
+                <div class="cl15"></div>
+                <input type="hidden" name="type" value="0" />
+                <input type="hidden" name="UserId" value="" />
+                <input type="button" class="subbtn" value="立即登录" id="PwdLogin">
+            </form>
+            <form class="LoginBox" id="smsLogin" style="display: none;">
+                <div class="formtit">短信快捷登录</div>
+                <div class="mobilelnk f_ts"></div>
+                <div class="iptwarp">
+                    <div class="iptline">
+                        <div class="ipt_box">
+                            <span class="icon icon-mobile"></span>
+                            <input type="text" id="cellnumber" name="mobile" placeholder="请输入手机号">
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="errorbox"></div>
+                    <div class="iptline">
+                        <div class="ipt_box shortbox fl">
+                            <span class="icon icon-lock"></span>
+                            <input name="dyCode" id="smscode" type="text" placeholder="动态密码">
+                        </div>
+                        <div class="ipt_btn fr" id="timerbtn">
+                            <input type="button" value="发送动态密码">
+                        </div>
+                        <div class="ipt_btn fr" id="timerbox"></div>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="errorbox" data-hook="sendcodeerr"></div>
+                </div>
+                <div class="cl10"></div>
+                <div class="form_sup f_ts">
+                    <div class="fl">
+                        <a href="javascript:void(0);" class="f_gn regAuthor">还未申请？立即申请作者</a>
+                    </div>
+                    <div class="fr">
+                        <a href="javascript:void(0);" class="f_gy">返回密码登录>></a>
+                    </div>
+                </div>
+                <div class="cl15"></div>
+                <input type="submit" class="subbtn" value="立即登录">
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="au_box">
+            <p>
+                Copyright<em>©</em>2008-2010 www.98k.com All Rights Reserved
+            </p>
+            <p>版权所有 深圳创业网络文化科技有限公司</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/js/tongji.js"></script>
+    <script type="text/javascript" src="~/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/js/react.min.js"></script>
+    <script type="text/javascript" src="~/js/lib.js"></script>
+</body>
+</html>
+<script src="~/jquery-3.1.1.js"></script>
+<script>
+    $(function () {
+        var name = '@ViewBag.UserName';
+        $("[name=name]").html(name);
+        $("[name=UserId]").val(@ViewBag.UserId);
+    })
+
+    $("#novel").click(function () {
+        $("#passLogin").hide();
+        $("#smsLogin").show();
+    })
+
+    $(".f_gy").click(function () {
+        $("#passLogin").show();
+        $("#smsLogin").hide();
+    })
+
+    $("#PwdLogin").click(function () {
+        $.ajax({
+            url: "/AuthorLR/Login",
+            type: "post",
+            data: $("#passLogin").serialize(),
+            success: function (data) {
+                if (data > 0) {
+                    location.href = "/Home/AuthorIndex";
+                }
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        })
+    })
+</script>.

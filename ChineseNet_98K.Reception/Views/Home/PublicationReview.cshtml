@@ -1,0 +1,299 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script charset="utf-8" src="~/js/x.js"></script>
+    <script src="~/js/hm11.js"></script>
+
+    <meta name="copyright" content="本页版权 www.98k.com 98k小说中文网所有。All Rights Reserved">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://static.98k.com/favicon.ico">
+    <title>98k小说中文网</title>
+    <link rel="stylesheet" href="~/css/basic.min11.css">
+    <link rel="stylesheet" href="~/css/book.min11.css">
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="map.min" src="~/js/map.min11.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="98k" src="~/js/98k.min11.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="widget" src="~/js/widget.min11.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="post.min" src="~/js/post.min11.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bad" src="~/js/bad.min11.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="stater" src="~/js/tongji11.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sidebar" src="~/js/sidebar.min11.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="aclick" src="~/js/aclick.min11.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="logger" src="~/js/logger.min11.js"></script>
+</head>
+<body scriptsign="post" bookid="628887" forumid="138802">
+    <div class="wrap">
+        <div class="head">
+            <div class="head-top clearfix">
+                <div class="logo imgbox fl">
+                    <a href="http://www.98k.com/"><img src="~/images/logo.png" alt="logo"></a>
+                </div><a href="javascript:void(0);" class="back-old-lnk">返回旧版</a>
+                <form id="commSearch" name="searchForm" method="get" action="http://search.98k.com/s" target="_blank">
+                    <div class="search-box fl" data-hook="searchSuggest">
+                        <input class="search-text fl" name="keyword" type="text" placeholder="雪中悍刀行" autocomplete="off" disableautocomplete=""> <input type="submit" class="search-btn fr">
+                        <div class="sres_list" style="display: none;"></div>
+                    </div>
+                </form>
+                <div class="pay fr">
+                    <a class="user_pay" href="http://pay.98k.com/" target="_blank">充值</a>
+                </div>
+
+                <div class="right-wrap-login ud_userTox">
+                    <div class="unlogin ud_unlogin clearfix" style="display: none;">
+                        <div class="login fl"><a class="user_login" href="https://passport.98k.com/">登录</a></div>
+                        <div class="regist fl"><a class="user_register" href="https://passport.98k.com/webreg">注册</a></div>
+                    </div>
+                    <div class="logon ud_loged clearfix" style="">
+                        <div class="user tabA imgbox" style="height: 100%;">
+                            <img class="ud_avatar ud_goUsrCenter" src="~/images/image_120_120.gif" alt="">
+                            <div class="user-blank tabA-float" style="display: none;">
+                                <a href="javascript:void(0);" class="quit ud_logout">退出</a>
+                                <div class="user-name ud_goUsrCenter"><span>费大晨</span><em class="level_star"></em><em class="level_star"></em></div>
+                                <div class="user-info clearfix">
+                                    <div class="user-info-cell ud_money"><span class="count"><b>0</b></span><span class="nature">98k币</span></div>
+                                    <div class="user-info-cell ud_ticket"><span class="count"><b>0</b> 张</span><span class="nature">推荐票</span></div>
+                                    <div class="user-info-cell ud_mticket"><span class="count"><b>0</b> 张</span><span class="nature">月票</span></div>
+                                </div>
+                                <a href="http://pay.98k.com/" class="btn" target="_blank">立即充值</a>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <a href="http://home.98k.com/msgIn.do" class="mes" target="_blank">消息(<span class="ud_umessage">0</span>)</a>
+                        </div>
+                        <div class="shelf"><a href="http://home.98k.com/favoritesBook.do" target="_blank">书架</a></div>
+                        <div class="foot-mark tabA">
+                            <span class="mark clearfix">历史<em class="icon"></em></span>
+                            <div class="tabA-float float-mark clearfix">
+                                <!-- loading -->
+                                <div class="ud_hisloading">
+                                    <span class="item_loading"></span>
+                                </div>
+                                <!-- 没有记录 -->
+                                <div class="ud_noHistory" style="display: none">
+                                    <h2>亲爱的书友，您暂时没有阅读记录~</h2>
+                                    <div class="tips">阅读记录只保存最近阅读的5本小说</div>
+                                    <div class="enter"><a href="http://home.98k.com/favoritesBook.do" target="_blank">进入我的书架</a></div>
+                                </div>
+                                <!-- 有记录 -->
+                                <div class="ud_hasHistory" style="display: none"><ul class="mark-list"></ul></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav clearfix">
+                <div class="menu-left fl">
+                    <a href="http://www.98k.com/">首页<em></em></a> <a href="http://www.98k.com/store.html">书库<em></em></a> <a href="http://www.98k.com/rank.html">排行<em></em></a> <a href="http://www.98k.com/store/c0/c0/b0/u0/p1/v9/s1/t0/u0/i1/ALL.html">完本<em></em></a>
+                    <a href="http://huayu.baidu.com/" target="_blank">花语女生网<em></em></a>
+                    <a href="http://www.98k.com/comic.html" target="_blank">漫画<em></em></a>
+                    <div class="app-menu tabA">
+                        <a href="http://forum.98k.com/releasePost/628887.html?chapterId=0" class="phone">移动端</a>
+                        <div class="app-float tabA-float">
+                            <div class="tit">98k小说 原创精品</div>
+                            <div class="imgbox tabC_wap">
+                                <div class="tabC" style="display: block;">
+                                    <img src="~/images/ad-float.png" alt="">
+                                </div>
+                                <div class="tabC">
+                                    <img src="~/images/ios-float.png" alt="">
+                                </div>
+                                <div class="tabC">
+                                    <img src="~/images/wx-float.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tabT_wap app-down">
+                                <span class="tabT ad active"></span> <span class="tabT ios"></span>
+                                <span class="tabT wx"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-right fr">
+                    <a href="http://author.98k.com/" class="author_zone" target="_blank">作者专区<em></em></a>
+                    <a href="http://game.98k.com/" class="game_center" target="_blank">游戏中心<em></em></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 搜索主内容 -->
+        <div class="crumb"><a href="http://book.98k.com/book/628887.html">无敌剑魂</a> &gt; 发表新帖</div>
+        <div class="forums-html-box clearfix">
+            <div class="book-main fl">
+                <div class="user-head"><img src="~/images/user.png" alt="" width="50" height="50"></div>
+
+                <div class="post-input">
+                    <form id="form0">
+
+                        <input type="hidden" name="NovelId" />
+                        <input type="hidden" name="ChapterId" value="0" />
+                        <input type="hidden" name="UserId" />
+                        @*<div class="form-ipt"><input type="text" placeholder="标题（文字30字，可选填）" id="JpostIpt"></div>*@
+                        <div class="form-text"><textarea name="" cols="30" rows="10" placeholder="想说什么就大胆说出来吧……" id="JpostTextarea" data-maxlen="5000"></textarea></div>
+                        <div class="thr-publish  clearfix">
+                            <div class="fl post-code" id="Jcode">
+                                <input type="text">
+                                <div class="code">
+                                    <img src="~/images/imgcapt" alt="">
+                                    <em class="refresh"></em>
+                                </div>
+                            </div>
+                            <div class="fr">
+                                <div class="emoji" id="Jemoji">
+                                    <div class="emoji-popup" style="display: none;">
+                                        <i class="arrow-t"></i>
+                                        <em class="emoji_em emoji_01" data-tit="[白眼]"></em>
+                                        <em class="emoji_em emoji_02" data-tit="[高兴]"></em>
+                                        <em class="emoji_em emoji_03" data-tit="[汗]"></em>
+                                        <em class="emoji_em emoji_04" data-tit="[呵呵]"></em>
+                                        <em class="emoji_em emoji_05" data-tit="[花花]"></em>
+                                        <em class="emoji_em emoji_06" data-tit="[滑稽]"></em>
+                                        <em class="emoji_em emoji_07  last" data-tit="[哭]"></em>
+                                        <em class="emoji_em emoji_08" data-tit="[困]"></em>
+                                        <em class="emoji_em emoji_09" data-tit="[冷笑]"></em>
+                                        <em class="emoji_em emoji_10" data-tit="[懵]"></em>
+                                        <em class="emoji_em emoji_11" data-tit="[亲亲]"></em>
+                                        <em class="emoji_em emoji_12" data-tit="[生气]"></em>
+                                        <em class="emoji_em emoji_13" data-tit="[受惊]"></em>
+                                        <em class="emoji_em emoji_14 last" data-tit="[调皮]"></em>
+                                        <em class="emoji_em emoji_15 " data-tit="[委屈]"></em>
+                                        <em class="emoji_em emoji_16" data-tit="[笑哭]"></em>
+                                        <em class="emoji_em emoji_17" data-tit="[桃心]"></em>
+                                        <em class="emoji_em emoji_18" data-tit="[鼓掌]"></em>
+                                        <em class="emoji_em emoji_19" data-tit="[抠鼻]"></em>
+                                        <em class="emoji_em emoji_20" data-tit="[偷笑]"></em>
+                                    </div>
+                                </div>
+                                <span id="Jwords"><i class="">0</i>/5000</span>
+                                <div class="btn gray" id="JpostBtn">发表</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="book-side post-r fr">
+                <p>· 经营许可证编号: 京ICP证080527号</p>
+
+                <p>· 尊重网上道德，遵守《全国人大常委会关于维护互联网安全的决定》及中华人民共和国其他各项有关法律法规</p>
+
+                <p>· 严禁发表危害国家安全，破坏民族团结、国家宗教政策和社会稳定，含侮辱、诽谤、教唆、淫秽等内容的作品</p>
+
+                <p>· 承担一切因您的行为而直接或间接导致的民事或刑事法律责任</p>
+
+                <p>· 您在98k书评区发表的作品，98k小说中文网有权在网站内保留、转载、引用或者删除</p>
+
+                <p>· 参与本评论即表明您已经阅读并接受上述条款</p>
+            </div>
+
+        </div>
+        <!-- end搜索主内容 -->
+    </div>
+    <div class="footer">
+
+        <div class="partlink">
+            <div class="wrap">
+                <div class="title">出版合作联系</div>
+                <div class="clearfix">
+                    <div class="mail fl">
+
+                        <div>版权合作联系人：许先生<a href="mailto:xubin@98k.com">xubin@98k.com</a></div>
+
+                        <div>广告合作联系人 : 张女士<a href="mailto:zhangwen@98k.com">zhangwen@98k.com</a></div>
+
+                    </div>
+                    <div class="help-btn">
+                        <a class="btn" href="http://www.98k.com/help/index.html" target="_blank">帮助中心</a>
+                        <p>服务时间：24小时</p>
+                    </div>
+
+                    <div class="b1 foot-cell">
+                        <div class="tit">客服</div>
+                        <div class="qq">965151179</div>
+                        <div class="email"><a href="mailto:zhkf@98k.com">zhkf@98k.com</a></div>
+                    </div>
+                    <div class="b2 foot-cell">
+                        <div class="tit">举报</div>
+                        <div class="tel">4006289988</div>
+                        <div class="email"><a href="mailto:jubao@98k.com">jubao@98k.com</a></div>
+                    </div>
+                    <div class="app foot-blank">
+                        <div class="imgbox fl">
+                            <img src="~/images/app.png" alt="">
+                        </div>
+                        <p>客户端下载</p>
+                    </div>
+
+                    <div class="wchat foot-blank">
+                        <div class="imgbox fl">
+                            <img src="~/images/wx.png" alt="">
+                        </div>
+                        <p>微信公众号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="links"><a href="http://www.98k.com/company/about.html" target="_blank">关于98k</a>|<a href="http://www.zhwenxue.com/join" target="_blank">诚聘英才</a>|<a href="http://www.98k.com/company/business.html" target="_blank">商务合作</a>|<a href="http://www.98k.com/company/copyright.html" target="_blank">法律声明</a>|<a href="http://www.98k.com/help/index.html" target="_blank">帮助中心</a>|<a href="http://author.98k.com/" target="_blank">作者投稿</a>|<a href="http://www.98k.com/company/contact.html" target="_blank">联系我们</a>|<a href="http://www.98k.com/company/link.html" target="_blank">友情链接</a>|<a href="http://news.98k.com/zhuanti/wlqz/index.html" target="_blank">谨防诈骗</a>|<a href="http://www.98k.com/company/sitemap.html" target="_blank">网站地图</a></div>
+            <p>Copyright©<a href="http://www.98k.com/" target="_blank">www.98k.com</a>All Rights Reserved 版权所有 深圳创业网络文化科技有限公司   京ICP证：080527号《网络文化经营许可证》   <a href="http://static.98k.com/images/license/publication-license.jpg" target="_blank">京ICP备11009265号</a>   <a href="http://static.98k.com/images/license/business-license.jpg" target="_blank">京网文[2015]2368-459号</a></p>
+            <p>新出发京零字第朝130010号  丨  统一社会信用代码91110105678221683F  丨 <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502030124" target="_blank">京公网安备  	11010502030124号</a>  丨 <a href="http://www.cyberpolice.cn/wfjb/" target="_blank">公安部网络违法犯罪举报网站</a></p>
+            <p><a href="http://www.98k.com/" target="_blank">98k小说中文</a>,提供<a href="http://www.98k.com/category/1.html" target="_blank">玄幻小说</a>,<a href="http://forum.98k.com/category/9.html" target="_blank">都市小说</a>,<a href="http://huayu.baidu.com/" target="_blank">言情小说</a>等<a href="http://book.98k.com/store/c0/c0/b0/u0/p1/v0/s9/t0/u0/i1/ALL.html" target="_blank">免费小说</a>阅读。作者发布小说作品时，请遵守国家互联网信息管理办法规定。</p>
+            <p>本站所收录小说作品、社区话题、书库评论均属其个人行为，不代表本站立场。</p>
+        </div>
+        <script type="text/javascript" src="~/js/require.min11.js" defer="" async="" data-main="http://rcode.98k.com/v2018/js/map.min"></script>
+    </div>
+
+    <style type="text/css">
+        #index_right_bottom_piclnk {
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            _position: absolute;
+            _top: expression(documentElement.scrollTop+documentElement.clientHeight-250);
+            _left: expression(documentElement.clientWidth-250);
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            padding-top: 15px;
+            z-index: 66666;
+        }
+
+            #index_right_bottom_piclnk .close {
+                background: url(//static.98k.com/v2012/images/fullclose.gif) no-repeat 0 center;
+                cursor: pointer;
+                color: #636363;
+                padding: 0 5px 0 15px;
+                height: 15px;
+                line-height: 15px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+    </style><div id="index_right_bottom_piclnk">
+        <div class="close" data-hook="closeParent">关闭</div>
+        <script type="text/javascript" src="~/js/10080007518211.js"></script><a href="http://game.98k.com/static/gamestart.html?source=ms&amp;zone=16" target="_blank" class="adClickCss" adposition="100800075182" adgroup="59"><img src="~/images/236599833115.jpg" width="250" height="250" border="0"></a>
+    </div><div id="zh_sidebar" class="sidebar" style="right: 50%; margin-right: -650px;"><div id="zh_side_feedback" class="side_feedback"><a href="http://www.98k.com/feedback?backUrl=http%3A%2F%2Fforum.98k.com%2FreleasePost%2F628887.html%3FchapterId%3D0" target="_blank">意见<br>反馈</a></div><div id="zh_side_lt" class="side_zht"><a href="javascript:void(0);" data-lang="zht"></a></div><div class="sidekf"><a href="https://ikefu.baidu.com/web/98k" target="_blank"></a></div><div class="returntop"><a href="javascript:;"></a></div></div>
+</body>
+</html>
+<script src="~/jquery-3.1.1.js"></script>
+<script>
+    function add() {
+        $.ajax({
+            url: "/BookReviews/Add",
+            type: "post",
+            data: $("#form0").serialize(),
+            success: function (data) {
+                console.log(data);
+                if (data > 0) {
+                    alert("发表成功");
+                }
+
+            }
+
+        })
+    }
+</script>

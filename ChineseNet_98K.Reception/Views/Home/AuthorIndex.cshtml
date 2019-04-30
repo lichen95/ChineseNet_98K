@@ -1,0 +1,240 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>作者专区-首页</title>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="~/css/public1.css">
+    <link rel="stylesheet" type="text/css" href="~/css/author1.css">
+    <script charset="utf-8" src="~/js/x.js"></script>
+</head>
+<body type="index" _pgid="138" serialstatus="">
+    <div class="au_nav">
+        <div class="au_box" id="loginSign">
+            <div class="au_nav_a">
+                <a href="/Home/Index" target="_blank">98k首页</a>|
+                <a href="#" target="_blank">编辑介绍</a>|
+                <a href="#" target="_blank" class="goodluck">作者福利</a>|
+                <span id="name"></span>|
+                <a href="/AuthorLR/UnLogin">退出</a>
+            </div>
+            <a href="#" class="au_logo"></a>
+            <script src="~/js/hm.js"></script>
+            <script src="~/js/notice.js"></script>
+            <style>
+                .header_link {
+                    font-size: 16px;
+                    margin-top: 30px;
+                    margin-left: 30px;
+                    background-image: url(http://static.98k.com/author/v2015/images/toplink.gif);
+                    background-position: right 2px;
+                    background-repeat: no-repeat;
+                    padding-right: 20px;
+                    float: left;
+                }
+
+                    .header_link a {
+                        color: #e74c3c;
+                    }
+            </style>
+            <div class="header_link">
+                <a target="_blank" href="/Home/Index"></a>
+            </div>
+        </div>
+    </div>
+    <div class="au_head">
+        <div class="au_box">
+            <div class="au_pic">
+                <img src="~/picture/default_user.jpg">
+                <div class="pic_shade"></div>
+            </div>
+            <div class="au_intro">
+                <div class="au_name">
+                    <span>@ViewBag.Pseudonym</span>
+                    <a href="/Home/AuthorUpdate" title="修改资料" class="auico btn_changename"></a>
+                    <a href="/Home/Messagelist" title="作者信箱" class="auico btn_email"></a>
+                </div>
+                <p><em class="auico buy"></em>昨日订阅:<span>0.0</span></p>
+                <p class="past" id="p1"><em class="auico" id="span1"></em>@(ViewBag.State == 1 ? "作者已审核" : "未审核")</p>
+            </div>
+            <a href="/Home/CreateBooks" title="创建新书" class="buildbook">创建新书</a>
+        </div>
+    </div>
+    <div class="au_box content">
+        <div class="con_nav">
+            <a href="#" class="fr voice"><em class="auico warn"></em>网站公告</a>
+            <a href="/Home/AuthorIndex"><span class="focus">作品库</span> </a>
+            <a href="/Home/AuthorProfits"><span>稿酬查询</span> </a>
+        </div>
+        <div class="con">
+            <div class="radios">
+                <span><input type="radio" name="state" value="-1" checked />全部</span>
+                <span><input type="radio" name="state" value="2" />已完结</span>
+                <span><input type="radio" name="state" value="-1" />连载中</span>
+            </div>
+            <div class="booklist">
+                <ul id="List"></ul>
+            </div>
+            <div style="clear:both" class="pagenumber">
+                <input type="button" value="首页" class="submit" onclick="FirstPage()" />&nbsp;
+                <input type="button" value="上一页" class="submit" onclick="PrivePage()" />&nbsp;
+                <input type="button" value="下一页" class="submit" onclick="NextPage()" />&nbsp;
+                <input type="button" value="尾页" class="submit" onclick="LastPage()" />&nbsp;
+                至第<input type="text" id="toPage" name="pageIndex" value="1" size="3">页&nbsp;<input type="button" class="submit" onclick="tiao()" value="跳转" />
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="au_box">
+            <p>
+                Copyright<em>©</em>2008-2010 www.98k.com All Rights Reserved
+            </p>
+            <p>版权所有 深圳创业网络文化科技有限公司</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/js/tongji.js"></script>
+    <script type="text/javascript" src="~/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="~/js/public.dialog.js"></script>
+    <div class="mdialog" id="publicDialog" style="display:none;">
+        <h2>
+            <a href="javascript:;" title="关闭" class="pub_ico btn_close md_close fr"></a>
+            <span class="md_tit">保存到草稿箱</span>
+        </h2>
+        <div class="mdchange mdlist">
+            <div class="md_tips">操作错误提示信息</div>
+            <p align="center">
+                <span class="btn_c_g btn_move btnSure">确定</span>
+            </p>
+        </div>
+        <div class="mdconfirm mdlist">
+            <div class="md_tips">您好，您刚刚编辑的章节还没有保存，是否保存到草稿箱？</div>
+            <div class="md_btn">
+                <span class="btn_c_g md_sure btnSure" btntype="save">确定</span>
+                <span class="btn_c_g md_cancel btnCancel">取消</span>
+            </div>
+        </div>
+        <div class="mdmove mdlist">
+            <div class="volume select_dom">
+                <p class="select_nav">
+                    <em class="cor_gary">分卷</em>
+                    <em class="voname sel_con"></em>
+                </p>
+                <div class="option"></div>
+            </div>
+            <div class="mdchapter clear">
+                <div class="chaptername select_dom fl">
+                    <em class="cor_gary">章节</em>
+                    <p class="select_nav">
+                        <em class="sel_con"></em>
+                    </p>
+                    <div class="option"></div>
+                </div>
+                <div class="chapterps select_dom fr">
+                    <em class="cor_gary">位置</em>
+                    <p class="select_nav">
+                        <em class="sel_con">章节之前</em>
+                    </p>
+                    <ul class="option">
+                        <li>章节之前</li>
+                        <li>卷末</li>
+                    </ul>
+                </div>
+            </div>
+            <p align="center" class="align"><a href="javascript:;" class="btn_c_g btn_move btnSure">移动</a></p>
+        </div>
+    </div>
+    <div id="publicDialogbg"></div>
+    <script type="text/javascript" src="~/js/pagenumber.js"></script>
+    <script src="~/js/page.js"></script>
+</body>
+</html>
+<script>
+    var pageIndex = 1;
+    var pageCount = 0;
+    var AuthorId = @ViewBag.AuthorId;
+
+    $(function () {
+        if (@ViewBag.State== 1) {
+            $("#p1").removeClass("past");
+            $("#span1").addClass("allow");
+        }
+
+        $("[name=state]").click(function () {
+            show();
+        })
+
+        var name = '@ViewBag.UserName';
+
+        $("#name").html(name);
+
+        show();
+    })
+
+    function show() {
+        $.ajax({
+            url: "/AuthorLR/QueryNovels?AuthorId=" + AuthorId+"&state=" + $("[name=state]:checked").val() + "&pageIndex=" + pageIndex + "&pageSize=5",
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                $("#List").html("");
+                pageIndex = data.PageIndex;
+                pageCount = data.PageCount;
+                for (var i = 0; i < data.Data.length; i++) {
+                    var li = '<li><div class="bookmanage fr"><div class="book_tj"><span>点击<em>0</em></span><span class="store">收藏<em>0</em></span><span>数字<em>49</em></span></div><div class="btn_manage"><a href="/Home/CreateChapters?NovelName=' + data.Data[i].NovelName + '&NId=' + data.Data[i].NovelId + '"><em class="auico manage_a"></em>章节管理</a><a href="/Home/Drafts?Id=' + data.Data[i].NovelId +'"><em class="auico manage_b"></em>存稿箱</a><a href=""><em class="auico manage_c"></em>书评管理</a><a href=""><em class="auico manage_d"></em>更新情况</a><a href=""><em class="auico manage_e"></em>作品数据</a><a href=""><em class="auico manage_f"></em>福利申请</a></div></div><div class="bookinfo"><img class="booklink" src="' + data.Data[i].ImgPath + '"><h2>' + data.Data[i].NovelName + '<em class="number">' + data.Data[i].NovelNum + '</em></h2><div class="lastchapter"></div><div class="bookstate state_blur">初始</div><div class="color_link"><a href="javascript:void(0);" onclick="addappro(' + data.Data[i].NovelId + ',this)" class="cor_a">提交审核&gt;&gt;</a></div><div class="book_btns"><a href="javascript:void(0)" onclick="upd(' + data.Data[i].NovelId + ')"  class="edit">编辑</a><a href="javascript:void(0);" onclick="del(' + data.Data[i].NovelId + ')" class="delbook">删除</a></div></div></li>'
+                    $("#List").append(li);
+                }
+            }
+        })
+    }
+
+    //提交审核
+    function addappro(id, obj) {
+        $.ajax({
+            url: "/authorlr/addapprovals?novelid=" + id,
+            type: "post",
+            datatype: "json",
+            success: function (data) {
+                console.log(data);
+                if (data > 0) {
+                    console.log("成功");
+                    $(obj).parent().parent().parent().find('a').removeAttr('href');
+                    $(obj).parent().parent().parent().find('a').removeAttr('onclick');
+                }
+            }
+        })
+    }
+
+    //编辑
+    function upd(id) {
+        location.href = '/Home/UpdateBooks?Id=' + id;
+    }
+
+    //删除
+    function del(id) {
+        if (confirm("确认删除吗?")) {
+            $.ajax({
+                url: "/Novel/Delete?Id=" + id,
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    if (data > 0) {
+                        location.reload();
+                    }
+                }
+            })
+        }
+    }
+
+    function tiao() {
+        pageIndex = $("[name=pageIndex]").val();
+        show();
+    }
+</script>

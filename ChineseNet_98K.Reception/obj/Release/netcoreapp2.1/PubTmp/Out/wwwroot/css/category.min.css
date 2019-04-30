@@ -1,0 +1,934 @@
+﻿/* zongheng PC 2018 Copyright (c) 2018 (zongheng FETEAM) lastUpdate: 2018-08-16 10:50:24*/
+.link, a {
+    color: #333;
+    text-decoration: none;
+    -webkit-transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    -ms-transition: color .3s ease;
+    transition: color .3s ease
+}
+
+.cat_navbg {
+    height: 180px;
+    background: url('../images/navbg.png');
+    position: relative
+}
+
+.cat_nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 35px;
+    background-color: rgba(0,0,0,.5);
+    padding-top: 15px;
+    padding-left: 25px;
+    width: 1175px
+}
+
+    .cat_nav a {
+        display: inline-block;
+        font-size: 14px;
+        color: #fff;
+        font-weight: 700;
+        line-height: 19px;
+        text-decoration: none;
+        margin-right: 15px;
+        letter-spacing: 1.2px
+    }
+
+        .cat_nav a.current em, .cat_nav a:hover em {
+            background: #d32f2f
+        }
+
+        .cat_nav a:hover, .menu .active a, .menu .cate ul li a:hover, .menu a:hover {
+            color: #d32f2f
+        }
+
+    .cat_nav .phone {
+        padding-left: 21px;
+        background: url(../images/phone.png) no-repeat left 3px
+    }
+
+        .cat_nav .phone:hover {
+            background: url(../images/phone-have.png) no-repeat left 3px
+        }
+
+.more .more-link {
+    font-size: 12px;
+    color: #999;
+    letter-spacing: 1px;
+    line-height: 26px;
+    background: url(../images/more.png) no-repeat right center;
+    padding-right: 8px
+}
+
+    .more .more-link:hover {
+        text-decoration: underline;
+        color: #e84848
+    }
+
+.title {
+    font-family: MicrosoftYaHei;
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+    letter-spacing: 1px;
+    line-height: 40px
+}
+
+.tab-lists {
+    padding: 15px 15px 13px;
+    border: 1px solid #f0f0f0
+}
+
+    .tab-lists .top-title {
+        line-height: 20px
+    }
+
+        .tab-lists .top-title .title {
+            font-size: 16px;
+            color: #333;
+            font-weight: 700;
+            line-height: normal
+        }
+
+    .tab-lists .list-a, .tab-lists li {
+        line-height: 32px;
+        border-bottom: 1px dashed #ccc;
+        font-size: 14px;
+        height: 32px;
+        overflow: hidden
+    }
+
+        .tab-lists .list-box:nth-last-child(1) .list-a, .tab-lists .list-box:nth-last-child(1) .list-b, .tab-lists li:nth-last-child(1) {
+            border-bottom: 0 none
+        }
+
+        .tab-lists li span {
+            float: right;
+            font-family: Arial,Helvetica,sans-serif;
+            font-size: 12px;
+            color: #999
+        }
+
+        .tab-lists li a.author2 {
+            float: right;
+            font-family: Arial,Helvetica,sans-serif;
+            font-size: 12px;
+            color: #999;
+            line-height: 31px;
+            text-align: right;
+            width: 75px
+        }
+
+        .tab-lists .list-a .list_icon, .tab-lists .list-b .list_icon, .tab-lists li .list_icon {
+            width: 17px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            display: inline-block;
+            color: #a9aeb7;
+            margin: 8px 9px 0 0;
+            float: left;
+            overflow: hidden
+        }
+
+            .tab-lists .list-a .list_icon.top1, .tab-lists .list-b .list_icon.top1, .tab-lists li .list_icon.top1 {
+                background: url(../images/num.png) no-repeat;
+                background-size: 22px;
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0
+            }
+
+            .tab-lists .list-a .list_icon.top2, .tab-lists .list-b .list_icon.top2, .tab-lists li .list_icon.top2 {
+                background: #fc7403;
+                color: #fff;
+                width: 16px;
+                margin-right: 10px
+            }
+
+            .tab-lists .list-a .list_icon.top3, .tab-lists .list-b .list_icon.top3, .tab-lists li .list_icon.top3 {
+                background: #f8cc1c;
+                color: #fff;
+                width: 16px;
+                margin-right: 10px
+            }
+
+        .tab-lists li a {
+            color: #333;
+            width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            letter-spacing: 1px;
+            display: inline-block;
+            line-height: 30px
+        }
+
+            .tab-lists .list-a a:hover, .tab-lists li a:hover {
+                color: #e84848
+            }
+
+        .tab-lists li:first-child {
+            height: 88px;
+            overflow: hidden;
+            position: relative
+        }
+
+            .tab-lists li:first-child .title {
+                position: absolute;
+                left: 63px;
+                top: 0;
+                line-height: 1;
+                letter-spacing: 1px;
+                font-weight: 400;
+                font-size: 14px
+            }
+
+            .tab-lists li:first-child .author {
+                position: absolute;
+                left: 63px;
+                top: 24px;
+                line-height: 1;
+                letter-spacing: 1px;
+                color: #999
+            }
+
+            .tab-lists li:first-child .imgbox {
+                height: 68px;
+                width: 51px;
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+                border-radius: 4px;
+                overflow: hidden
+            }
+
+                .tab-lists li:first-child .imgbox a, .tab-lists li:first-child .imgbox img {
+                    width: 100%;
+                    height: 100%
+                }
+
+            .tab-lists li:first-child .cate {
+                position: absolute;
+                left: 63px;
+                top: 46px;
+                color: #999;
+                font-size: 12px
+            }
+
+            .tab-lists li:first-child span {
+                position: absolute;
+                left: 63px;
+                top: 46px
+            }
+
+        .tab-lists li.postion-right {
+            text-align: right
+        }
+
+            .tab-lists li.postion-right .author, .tab-lists li.postion-right .cate, .tab-lists li.postion-right .title {
+                left: auto;
+                right: 0
+            }
+
+            .tab-lists li.postion-right a {
+                width: 115px
+            }
+
+.qtbg_color {
+    background: #f5f5f5
+}
+
+.tab-lists-two .top-title {
+    line-height: 40px;
+    border-bottom: 1px solid #e6e6e6
+}
+
+.book-blank-box .tab-lists-two .top-title .title {
+    font-size: 20px
+}
+
+.tab-lists-two .top-title .title {
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+    letter-spacing: 1px
+}
+
+.tab-lists-two .link {
+    margin-top: 32px;
+    height: 105px
+}
+
+    .tab-lists-two .link p {
+        float: left;
+        width: 332px;
+        font-size: 14px;
+        margin-bottom: 10px
+    }
+
+        .tab-lists-two .link p a:hover {
+            color: #e84848
+        }
+
+    .tab-lists-two .link .bookclass {
+        float: left;
+        margin: 0 5px 0 0;
+        color: #999
+    }
+
+    .tab-lists-two .link .bookname {
+        display: inline-block;
+        width: 240px
+    }
+
+    .tab-lists-two .link p:nth-child(2n) {
+        margin-left: 22px
+    }
+
+.top-one-blank-left, .top-one-blank-right, .top-two-blank-left, .top-two-blank-right {
+    width: 236px
+}
+
+.top-one-blank-left {
+    float: left;
+    width: 957px
+}
+
+    .top-one-blank-left .category {
+        width: 234px;
+        height: 301px;
+        background: #fafafa;
+        border: 1px solid #f0f0f0
+    }
+
+        .top-one-blank-left .category .title {
+            font-size: 16px;
+            font-family: MicrosoftYaHei;
+            font-weight: 700;
+            line-height: 52px;
+            padding-left: 21px;
+            background: #f2f2f2
+        }
+
+.top-two-blank-mid {
+    width: 686px;
+    margin-left: 26px
+}
+
+.mind-book {
+    float: left;
+    width: 326px;
+    height: 110px;
+    margin: 29px 0 0
+}
+
+.top-two-blank-mid .mind-book:nth-child(2n) {
+    margin-left: 22px
+}
+
+.hot-author .author-pic, .limit-book .free-book .free-img, .list-box .list-img, .mind-book .img-book, .top-book .imgbox {
+    width: 77px;
+    height: 101px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 4px;
+    margin-right: 15px;
+    overflow: hidden
+}
+
+    .mind-book .img-book img {
+        width: 77px;
+        height: 101px;
+        border-radius: 4px
+    }
+
+.mind-book .book-info {
+    width: 233px;
+    height: 103px;
+    position: relative
+}
+
+.mind-book .book-info1 {
+    width: 205px
+}
+
+.mind-book .book-info .bookname {
+    line-height: 21px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 7px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.mind-book .bookname a {
+    color: #333
+}
+
+    .mind-book .author a:hover, .mind-book .bookname a:hover, .mind-book .cate a:hover {
+        color: #e84848
+    }
+
+.mind-book .book-info .info {
+    line-height: 24px;
+    color: #444;
+    letter-spacing: .93px;
+    height: 48px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 13px
+}
+
+    .mind-book .book-info .info a {
+        color: #333
+    }
+
+.mind-book .book-info .author {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 1px;
+    width: 125px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.mind-book .author a, .mind-book .cate a {
+    color: #999
+}
+
+.mind-book .book-info .cate {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    line-height: 20px;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    padding: 0 5px
+}
+
+    .mind-book .book-info .cate:hover {
+        border: 1px solid #edacac
+    }
+
+.mind-book .book-info .updatenum {
+    color: #fc7403;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    line-height: 20px;
+    border: 1px solid #fdd5b3;
+    border-radius: 2px;
+    padding: 0 5px
+}
+
+.book-blank-box {
+    width: 936px
+}
+
+    .book-blank-box .mind-book {
+        width: 299px
+    }
+
+    .book-blank-box .mind-book {
+        margin-right: 19px
+    }
+
+        .book-blank-box .mind-book:nth-child(2n) {
+            margin-right: 19px
+        }
+
+        .book-blank-box .mind-book:nth-child(3n) {
+            margin-right: 0
+        }
+
+.cate-cell .lists li {
+    font-size: 14px;
+    line-height: 35px;
+    letter-spacing: 1px;
+    color: #888;
+    width: 210px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+    .cate-cell .lists li a {
+        color: #333
+    }
+
+.cate-cell .lists {
+    padding-bottom: 10px
+}
+
+.new_chapter .title .date {
+    line-height: 26px;
+    position: relative;
+    height: 26px;
+    font-size: 20px;
+    color: #e6e6e6;
+    margin-bottom: 10px
+}
+
+    .new_chapter .title .date span {
+        color: #999;
+        letter-spacing: 1px;
+        cursor: pointer
+    }
+
+        .new_chapter .title .date span.tabT {
+            font-weight: 400
+        }
+
+.new_chapter .date .more {
+    display: none
+}
+
+.new_chapter .date span.tabT.active {
+    color: #333;
+    font-weight: 700
+}
+
+.new_chapter .date .active .more {
+    display: block;
+    font-weight: 400
+}
+
+.tabpanel .tab-head {
+    border-bottom: 1px dotted #ccc;
+    letter-spacing: .86px;
+    line-height: 40px;
+    overflow: hidden;
+    height: 40px;
+    width: 100%
+}
+
+    .tabpanel .tab-head .author {
+        color: #333
+    }
+
+    .tabpanel .main_con li span, .tabpanel .tab-head span {
+        float: left;
+        padding-right: 20px
+    }
+
+    .tabpanel .main_con .kind, .tabpanel .tab-head .kind {
+        width: 60px;
+        padding-right: 15px
+    }
+
+    .tabpanel .main_con .bookname, .tabpanel .tab-head .bookname {
+        width: 235px
+    }
+
+    .tabpanel .main_con .chap, .tabpanel .tab-head .chap {
+        width: 450px
+    }
+
+    .tabpanel .main_con .author, .tabpanel .tab-head .author {
+        width: 155px
+    }
+
+.tabpanel .main_con .author {
+    font-size: 14px
+}
+
+.tabpanel .main_con .count, .tabpanel .tab-head .count {
+    width: 100px
+}
+
+.tabpanel .main_con .time, .tabpanel .tab-head .time {
+    width: 105px;
+    padding-right: 0;
+    text-align: right
+}
+
+.tabpanel .tab-head .time {
+    text-align: center
+}
+
+.tabpanel .main_con .chap .vip, .tabpanel .tab-head .chap .vip {
+    background: url(../images/vip.png) no-repeat center center;
+    width: 16px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-left: 3px
+}
+
+.tabpanel .main_con li {
+    font-size: 14px;
+    border-bottom: 1px dotted #ccc;
+    line-height: 40px;
+    overflow: hidden;
+    height: 40px;
+    letter-spacing: 1px
+}
+
+    .tabpanel .main_con li a {
+        color: #333
+    }
+
+        .tabpanel .main_con li a:hover {
+            color: #e84848
+        }
+
+.tabpanel .main_con .bookname a, .tabpanel .main_con .chap a {
+    max-width: 210px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left;
+    line-height: 40px
+}
+
+.tabpanel .main_con .bookname em, .tabpanel .main_con .chap em {
+    font-size: 12px;
+    color: #d32f2f;
+    letter-spacing: .86px
+}
+
+.tabpanel .main_con .chap a {
+    max-width: 410px
+}
+
+.tabpanel .main_con .author a, .tabpanel .main_con .count, .tabpanel .main_con .kind a {
+    color: #999
+}
+
+.tabpanel .main_con .count, .tabpanel .main_con .time {
+    letter-spacing: 0
+}
+
+.author, .intr {
+    font-size: 12px;
+    color: #999
+}
+
+.top-two-blank .compile {
+    height: 402px;
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
+    border: 1px solid #f0f0f0
+}
+
+    .top-two-blank .compile .title-compile {
+        width: 92px;
+        height: 25px;
+        margin: 12px 0 30px 0;
+        line-height: 25px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        background: url(../images/chtgcvli_lqabnpoaaab4hohlew168.png) no-repeat center
+    }
+
+    .top-two-blank .compile .swiper-list {
+        position: relative;
+        width: 240px;
+        height: 170px
+    }
+
+    .top-two-blank .compile .book_img {
+        margin: 40px 0 16px 0;
+        display: block;
+        text-align: center
+    }
+
+        .top-two-blank .compile .book_img img {
+            width: 110px;
+            height: 146px
+        }
+
+    .top-two-blank .compile .name {
+        display: block;
+        margin: 0 0 9px 0;
+        padding: 0 30px;
+        font-size: 18px;
+        text-align: center;
+        line-height: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #333;
+        letter-spacing: 1px
+    }
+
+    .top-two-blank .compile .author-text {
+        display: block;
+        margin-bottom: 17px;
+        text-align: center;
+        font-size: 13px;
+        color: #666;
+        letter-spacing: .93px
+    }
+
+    .top-two-blank .compile .intr-text {
+        display: block;
+        height: 48px;
+        padding: 0 20px;
+        line-height: 24px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        word-break: normal;
+        letter-spacing: .93px;
+        color: #666;
+        font-size: 13px
+    }
+
+    .top-two-blank .compile .a-link {
+        display: block;
+        margin: 35px auto 0 auto;
+        width: 115px;
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        background: #d32f2f;
+        border-radius: 2px;
+        letter-spacing: 1px
+    }
+
+        .top-two-blank .compile .a-link:hover {
+            background: #e84848
+        }
+
+.swiper-container, .swiper-container1 {
+    position: relative;
+    margin-top: 5px
+}
+
+.swiper-item {
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    cursor: pointer
+}
+
+    .swiper-item img {
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 2px 4px 0 rgba(127,127,127,.5);
+        border-radius: 4px
+    }
+
+.swiper-wrapper {
+    display: none
+}
+
+.compile .itemInfo a.author-text:hover, .compile .itemInfo a.name:hover {
+    color: #e84848
+}
+
+#index_tpic {
+    width: 915px;
+    position: relative;
+    border: 1px solid #f0f0f0;
+    padding: 20px;
+    height: 308px
+}
+
+#index_tpic_big {
+    width: 234px;
+    height: 310px;
+    float: left;
+    overflow: hidden
+}
+
+    #index_tpic_big a {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        display: none
+    }
+
+    #index_tpic_big img {
+        width: 234px;
+        height: 310px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+        border-radius: 4px
+    }
+
+#index_tpic_tab {
+    overflow: hidden;
+    position: absolute;
+    bottom: 20px;
+    left: 278px
+}
+
+    #index_tpic_tab img {
+        opacity: .3;
+        width: 77px;
+        height: 97px
+    }
+
+    #index_tpic_tab a.active img, #index_tpic_tab a:hover img {
+        width: 100%;
+        height: 100%;
+        opacity: 1
+    }
+
+    #index_tpic_tab a {
+        float: left;
+        width: 77px;
+        height: 97px;
+        overflow: hidden;
+        margin-bottom: 7px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+        border-radius: 4px;
+        margin-right: 23px
+    }
+
+        #index_tpic_tab a.active, #index_tpic_tab a:hover {
+            width: 73px;
+            height: 93px;
+            border: 2px solid #e84848
+        }
+
+#index_tpic_binfo {
+    position: absolute;
+    top: 25px;
+    left: 278px
+}
+
+    #index_tpic_binfo p {
+        color: #333;
+        padding-top: 5px;
+        width: 624px;
+        letter-spacing: 1px;
+        height: 53px;
+        line-height: 24px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden
+    }
+
+        #index_tpic_binfo p a {
+            font-size: 14px
+        }
+
+    #index_tpic_binfo h3 a {
+        color: #333;
+        line-height: 24px;
+        font-size: 24px
+    }
+
+    #index_tpic_binfo .author, #index_tpic_binfo .cate {
+        font-size: 14px;
+        margin: 12px 0 23px 0;
+        color: #999;
+        display: inline-block;
+        margin-right: 48px
+    }
+
+        #index_tpic_binfo .author a, #index_tpic_binfo .cate a {
+            font-size: 14px;
+            color: #333
+        }
+
+            #index_tpic_binfo .author a:hover, #index_tpic_binfo .cate a:hover, #index_tpic_binfo h3 a:hover, .tab-lists li.postion-right .author:hover, .tab-lists li.postion-right .cate:hover {
+                color: #e84848
+            }
+
+        #index_tpic_binfo .author span, #index_tpic_binfo .cate span {
+            margin-right: 7px
+        }
+
+    #index_tpic_binfo .chapter {
+        font-size: 12px;
+        color: #999;
+        letter-spacing: 1px;
+        margin-top: 8px
+    }
+
+        #index_tpic_binfo .chapter span {
+            border: 1px solid #e6e6e6;
+            border-radius: 2px;
+            margin-right: 9px;
+            padding: 1px 3px
+        }
+
+        #index_tpic_binfo .chapter a {
+            color: #999
+        }
+
+            #index_tpic_binfo .chapter a:hover {
+                color: #e84848
+            }
+
+.index_tpic_info {
+    display: none
+}
+
+.livelybox {
+    border: 1px solid #f0f0f0;
+    width: 931px;
+    margin-top: 6px;
+    padding-left: 24px;
+    padding-top: 18px;
+    height: 70px
+}
+
+    .livelybox div {
+        display: inline-block;
+        height: 52px;
+        border-right: 1px dotted #ccc;
+        padding-right: 26px;
+        padding-left: 14px;
+        width: 238px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden
+    }
+
+        .livelybox div:last-child {
+            border-right: 0
+        }
+
+    .livelybox .livelytit {
+        width: 30px;
+        height: 30px;
+        background: orange;
+        color: #fff;
+        font-size: 14px;
+        overflow: hidden;
+        padding: 11px;
+        line-height: 16px;
+        letter-spacing: .96px;
+        border: 0;
+        white-space: normal
+    }
+
+    .livelybox span a {
+        color: #a11313;
+        letter-spacing: .86px
+    }
+
+    .livelybox a:hover {
+        color: #e84848
+    }
+
+    .livelybox p {
+        color: #333;
+        letter-spacing: .86px;
+        margin-bottom: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap
+    }

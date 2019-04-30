@@ -1,0 +1,9 @@
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.Entity\bin\Debug\netcoreapp2.1\ChineseNet_98K.Entity.deps.json
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.Entity\bin\Debug\netcoreapp2.1\ChineseNet_98K.Entity.dll
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.Entity\bin\Debug\netcoreapp2.1\ChineseNet_98K.Entity.pdb
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.Entity\obj\Debug\netcoreapp2.1\ChineseNet_98K.Entity.csproj.CoreCompileInputs.cache
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.Entity\obj\Debug\netcoreapp2.1\ChineseNet_98K.Entity.AssemblyInfoInputs.cache
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.Entity\obj\Debug\netcoreapp2.1\ChineseNet_98K.Entity.AssemblyInfo.cs
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.Entity\obj\Debug\netcoreapp2.1\ChineseNet_98K.Entity.dll
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.Entity\obj\Debug\netcoreapp2.1\ChineseNet_98K.Entity.pdb
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.Entity\obj\Debug\netcoreapp2.1\ChineseNet_98K.Entity.csprojAssemblyReference.cache

@@ -1,0 +1,464 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>充值中心</title>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="~/css/basic.css" />
+    <link type="text/css" rel="stylesheet" href="~/css/charge.css" />
+</head>
+<body scriptsign="charge" ref="" payMethod="alipay" channelCode="ICBC-NET-B2C">
+    <!-- 登录部分 -->
+    <div class="logonbox" id="topnavbar">
+        <div class="close" id="hidetbar"></div>
+        <div class="wrap">
+            <div class="default_wrap">
+                <p>
+                    <a href="#" class="homemark">收藏本站</a>|
+                    <a href="http://static.98k.com/m/index.html" target="_blank">手机看98k</a>|
+                    <a href="/Home/Index">98k小说首页</a>
+                </p>
+            </div>
+            <div class="searchbar fl">
+                <div class="search">
+                    <form name="searchForm" method="get" action="/" target="_blank" id="582455024">
+                        <input name="searchType" type="hidden" value="all">
+                        <span class="select">综合<em></em></span>
+                        <span class="input_text"><input name="keyword" type="text" defaultdatavalue="不败战神" autocomplete="off" disableautocomplete="" value=""></span>
+                        <input type="button" class="sousuo" value="搜&nbsp;索">
+                        <div class="listpanel" style="display: none;">
+                            <ul class="selecttext">
+                                <li><a href="javascript:void(0)" type="all">综合</a></li>
+                                <li><a href="javascript:void(0)" type="bookName">书名</a></li>
+                                <li><a href="javascript:void(0)" type="authorName">作者</a></li>
+                                <li><a href="javascript:void(0)" type="keyword">关键字</a></li>
+                                <li><a href="javascript:void(0)" type="description">描述</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--已登录部分 结束 -->
+            <div id="ui_top_nav_dialog" class="d_menu_detail" style="display: none;">
+                <div class="con">
+                    <h3>站点分类</h3>
+                    <p>
+                        <a class="fred" href="/Home/Index">98k小说</a>|
+                        <a href="http://big5.98k.com">繁体版</a>|
+                        <a href="http://m.98k.com">手机版</a>|
+                        <a href="http://huayu.baidu.com">女生</a>|
+                        <a href="http://comic.98k.com">动漫</a>|
+                        <a href="http://game.98k.com">游戏中心</a>|
+                        <a class="fred" href="http://www.98k.com/mianfei/">免费小说</a>|
+                        <a href="http://book.98k.com/quanben/c0/c0/b9/u1/p1/v9/s1/t0/ALL.html">全本小说</a>
+                    </p>
+                    <div class="cl5"></div>
+                    <div class="spline"></div>
+                    <div class="cl5"></div>
+                    <h3>分类频道</h3>
+                    <p>
+                        <a href="http://book.98k.com/category/1.html" target="_blank">奇幻·玄幻</a>|
+                        <a href="http://book.98k.com/category/3.html" target="_blank">武侠·仙侠</a>|
+                        <a href="http://book.98k.com/category/6.html" target="_blank">历史·军事</a>|
+                        <a href="http://book.98k.com/category/9.html" target="_blank">都市·娱乐</a>|
+                        <a href="http://book.98k.com/category/21.html" target="_blank">竞技·同人</a>|
+                        <a href="http://book.98k.com/category/15.html" target="_blank">科幻·游戏</a>|
+                        <a href="http://book.98k.com/category/18.html" target="_blank">悬疑·灵异</a>|
+                        <a href="http://pub.98k.com" target="_blank">图书频道</a>
+                    </p>
+                    <div class="cl5"></div>
+                    <div class="spline"></div>
+                    <div class="cl5"></div>
+                    <h3>互动功能</h3>
+                    <p>
+                        <a class="current" href="http://book.98k.com/vip.html" target="_blank" rel="nofollow">会员</a>|
+                        <a href="http://book.98k.com/store.html" target="_blank">书库</a>|
+                        <a href="http://book.98k.com/rank.html" target="_blank">小说排行榜</a>|
+                        <a href="http://news.98k.com" target="_blank">资讯</a>|
+                        <a href="http://bbs.98k.com" target="_blank">社区</a>|
+                    </p>
+                    <p>
+                        <a class="user_register" href="javascript:void(0)" target="_blank" rel="nofollow">注册帐户</a>|
+                        <a class="forgot" href="javascript:void(0)" target="_blank" rel="nofollow">找回密码</a>|
+                        <a href="http://www.98k.com/help/index.html" target="_blank" rel="nofollow">帮助中心</a>
+                    </p>
+                    <div class="cl10"></div>
+                </div>
+            </div>
+            <div id="topbar_main">
+                <a id="ui_top_nav_button" class="mail d_menu fr" mail_hover="true" href="javascript:void(0);">导航<em class="whitesj"></em></a>
+                <div id="top-user-nav-bar" class="unload">
+                    <div class="right_wrap_unlogin">
+                        <div class="login"><a class="user_login" href="javascript:void(0);">登录</a></div>
+                        <div class="regist"><a class="user_register" href="javascript:void(0);">注册</a></div>
+                    </div>
+                </div>
+                <div id="top-user-nav-bar" class="load" style="display:none;">
+                    <div class="right_wrap">
+                        <div class="info">
+                            <ul>
+                                <li id="user_info" class="name">
+                                    <a class="userImage" href="//home.98k.com" target="_blank">
+                                        <img src="http://static.98k.com/userimage/default/image_120_120.gif">
+                                    </a>
+                                    <a class="nickName" href="//home.98k.com" title="逆骨苍狼" target="_blank">逆骨苍狼</a>
+                                    <em class="userType vip_1" style="display: none;" title="VIP1级用户"></em>
+                                    <em class="whitesj"></em>
+                                    <em class="ver"></em>
+                                </li>
+                                <li class="mail">
+                                    <a id="messagestatus" class="maillink" href="//home.98k.com/msgSys.do" target="_blank"><em class="ui-message-num">0</em></a>
+                                    <em class="ver"></em>
+                                </li>
+                                <li class="shelf">
+                                    <em class="book"></em>
+                                    <a href="//home.98k.com/favoritesBook.do" target="_blank">书架</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="user_info_dialog" class="userinfo box" style="display: none;">
+                            <div class="tx_info">
+                                <a class="userImage" href="//home.98k.com" target="_blank">
+                                    <img src="http://static.98k.com/userimage/default/image_120_120.gif">
+                                </a>
+                            </div>
+                            <div class="set">
+                                <div class="tc">
+                                    <a class="setting" href="//home.98k.com/setting/userInfo.do" target="_blank">账号设置</a>
+                                    <a class="logout" href="javascript:void(0)" onclick="UserManager.logout();return false;">退出</a>
+                                </div>
+                                <p>
+                                    <span class="leval" title="用户等级：2级">
+                                        <span class="level_star"></span>
+                                        <span class="level_star"></span>
+                                    </span>
+                                </p>
+                                <p>
+                                    <a href="//oldbook.98k.com/member/privilege.html" target="_blank">查看我的VIP特权&gt;&gt;</a>
+                                </p>
+                            </div>
+                            <div class="cl15"></div>
+                            <div class="piao">
+                                <p>
+                                    推荐票：<em class="voteNum">0</em>张
+                                    <a href="//oldwww.98k.com/help/zh93.html" target="_blank">
+                                        <span class="tj_ticket"></span>
+                                    </a>
+                                </p>
+                                <p>
+                                    98k币：<em>0</em>
+                                    <span class="zh_money"></span>
+                                    <a href="http://pay.98k.com" target="_blank">[充值]</a>
+                                </p>    <p class="last">月票：<em id="userMonthTicket" data-loaded="1">0</em>张<a href="//oldwww.98k.com/help/zh93.html#q1" target="_blank"><span class="tj_ticket"></span></a></p>
+                            </div>
+                        </div>
+                        <div id="mail_detail" class="mail_detail" style="display: none;">
+                            <div class="title">
+                                <span class="closemail" onclick="$('#mail_detail').hide();"></span>
+                            </div>
+                            <div id="userMessageList" class="con">
+                                <p>
+                                    <a class="userMessageButton" href="//home.98k.com/msgIn.do" target="_blank">查看</a>有<em id="usermessage">(0)</em>条未读站内信息
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cl0"></div>
+                </div>
+            </div>
+            <div class="cl0"></div>
+        </div>
+        <div class="blackline"></div>
+    </div>
+    <!-- 登录部分 结束 -->
+    <div class="header" id="zh_header">
+        <div class="wrap">
+            <div class="nav_left">
+                <p>&mdash; 9 8 K 文 学 旗 下 &mdash;</p>
+                <div><a href="/Home/Index"><img alt="98k小说中文" src="~/picture/logos.png"></a></div>
+            </div>
+            <div class="top_gg">
+                <script type="text/javascript" src="~/js/115866635082.js"></script>
+            </div>
+            <div class="cl10"></div>
+            <div class="menu">
+                <a href="/Home/Index" rel="nofollow">首页</a>
+                <a href="/Home/Stack">书库</a>
+                <a href="/Home/Ranking">小说排行榜</a>
+                <a href="/Home/Login" target="_blank" rel="nofollow">作者专区</a>
+                <a href="/Home/Wallets" target="_blank" rel="nofollow">个人中心</a>
+                <a class="fred" href="/Home/Pay" target="_blank" rel="nofollow">充值￥</a>
+            </div>
+            <div class="secondary">
+                <a class="fb" href="#">免费小说</a>
+                <a class="fb" href="#">全本小说</a>
+                <a href="#">奇幻·玄幻</a>
+                <a href="#">武侠·仙侠</a>
+                <a href="#">历史·军事</a>
+                <a href="#">都市·娱乐</a>
+                <a href="#">竞技·同人</a>
+                <a href="#">科幻·游戏</a>
+                <a href="#">悬疑·灵异</a>
+            </div>
+        </div>
+    </div>
+    <div class="cl20"></div>
+    <div class="wrap">
+        <div class="main">
+            <div class="charge">
+                <div class="charge_card clear">
+                    <span class="active">支付宝充值</span>
+                </div>
+                <div class="charge_con" id="charge_data" chrUnit="" recordUnit="">
+                    <form action="/Alipay/PayRequest" method="post" class="form-horizontal" role="form" onsubmit="return Check()">
+                        <div class="cl20"></div>
+                        <div class="tit"><span class="fs14">充值数额：</span>（1元=10098k币）</div>
+                        <div class="cl15"></div>
+                        <div class="bin charge_choose clear">
+                            <div class='bin_btn active' value="1000">
+                                <div class="btn"><em class="zh_money"></em><span class="fb fs14 value">1000</span>98k币</div>
+                            </div>
+                            <div class='bin_btn' value="3000">
+                                <div class="btn"><em class="zh_money"></em><span class="fb fs14 value">3000</span>98k币</div>
+                            </div>
+                            <div class='bin_btn' value="5000">
+                                <div class="btn"><em class="zh_money"></em><span class="fb fs14 value">5000</span>98k币</div>
+                            </div>
+                            <div class='bin_btn' value="10000">
+                                <div class="btn"><em class="zh_money"></em><span class="fb fs14 value">10000</span>98k币</div>
+                            </div>
+                            <div class='bin_btn' value="100000">
+                                <div class="btn"><em class="zh_money"></em><span class="fb fs14 value">100000</span>98k币</div>
+                            </div>
+                            <div class="cl10"></div>
+                            <div class='bin_btn' value="">
+                                <div class="btn"><input type="text" value="" placeholder="其他" class="text value">98k币</div>
+                            </div>
+                            <span class="fred">（不小于50098k币）</span>
+                        </div>
+                        <div class="cl20"></div>
+                        <div class="spdot"></div>
+                        <p class="pay" id="payReview">亲爱的<span class="name">逆骨苍狼</span>,您需要支付：<span class="money" id="setCofirmMoney">10.00元</span></p>
+                        <div class="cl20"></div>
+                        <p align="center">
+                            <button class="char_btn formpay" style="color:white;">立即充值</button>
+                        </p>
+                        <input type="hidden" name="totalAmout" class="form-control" id="totalAmout" value="" />
+                        <input type="hidden" name="tradeno" class="form-control" id="tradeno" value="" />
+                        <input type="hidden" name="subject" class="form-control" id="subject" value="98k小说中文网" />
+                        <input type="hidden" name="itemBody" class="form-control" id="itemBody" value="98k币充值" />
+                        <input type="hidden" name="id" value="" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="side">
+            <!-- 用户登录-->
+            <div class="loadbox box" id="unlogin">
+                <div id="pay_user_info" class="login login_in" style="background-image: url('http://static.98k.com/v2014/images/charge_lbg.png'); background-position: center top; position: relative;">
+                    <span style="display: block;width: 190px;height: 35px;cursor:pointer;position: absolute;top: 155px;" title="点击登陆" onclick="Login();"></span>
+                    <span style="display:block;width:120px;height:30px;position:absolute;right:0;bottom:0;cursor:pointer;" title="点击注册" onclick="Register();"></span>
+                </div>
+                <div class="qq_denglu">
+                    <div class="wz_qq">
+                        其他方式登录：
+                        <a href="#">QQ登录</a>
+                    </div>
+                </div>
+            </div>
+            <div class="loadbox box" id="login" style="display:none;">
+                <div id="pay_user_info" class="login login_in" style="background-image: none; height: auto; padding-bottom: 20px;">
+                    <div class="imgbox">
+                        <a href="//home.98k.com">
+                            <img src="http://static.98k.com/userimage/default/image_120_120.gif">
+                        </a>
+                    </div>
+                    <h4 class="name">逆骨苍狼</h4>
+                    <p>
+                        <span class="leval" title="用户等级：2级&nbsp;（秀才）"><span class="level_star"></span><span class="level_star"></span></span>
+                    </p>
+                    <p>
+                        <a class="fb fblue" href="//home.98k.com" target="_blank">个人中心&gt;&gt;</a>
+                    </p>
+                    <div class="cl0"></div>
+                    <div class="spdot"></div>
+                    <div class="cl5"></div>
+                    <p class="mar_left15">用户类型：普通用户</p>
+                    <p class="mar_left15">现余98k币：<em class="zh_money"></em> <b class="fb fred">0 </b></p>
+                    <p class="mar_left15">消费积分：<b class="fb fbrown">0</b></p>
+                    <div class="spdot"></div>
+                    <div class="cl10"></div>
+                    <div class="tips">
+                        <span class="man_gray"></span>您还未加入中文网会员
+                    </div>
+                    <div class="cl10"></div>
+                    <p align="center">
+                        <a class="go" href="//oldbook.98k.com/member/buymember.html">开通会员</a>
+                        <a style="margin-left:5px;" class="fb fbrown logout" href="javascript:void(0)">退出登录>></a>
+                    </p>
+                    <div class="cl0"></div>
+                </div>
+                <div class="qq_denglu">
+                    <div class="wz_qq">其他方式登录：<a href="#">QQ登录</a></div>
+                </div>
+            </div>
+            <!-- 用户登录 结束 -->
+            <div class="cl15"></div>
+            <!--客服-->
+            <div class="box newkfstyle">
+                <div class="server-title"><em class="icon-newkf server-timeico"></em>24小时客服中心</div>
+                <ul>
+                    <li>
+                        <em class="icon-newkf server-onlineico"></em><span class="server-side">在线客服</span><em class="icon-newkf server-arrowico"></em><a href="https://ikefu.baidu.com/web/98k" target="_blank" class="server-online">点击咨询</a>
+                    </li>
+                    <li>
+                        <em class="icon-newkf server-phoneico"></em><span class="server-side">客服电话</span><em class="icon-newkf server-arrowico"></em>010-84933768
+                    </li>
+                    <li>
+                        <em class="icon-newkf server-mailico"></em><span class="server-side">客服邮箱</span><em class="icon-newkf server-arrowico"></em><a class="fblack" target="_blank" href="mailto:zhkf@wanmei.com">zhkf@wanmei.com</a>
+                    </li>
+                </ul>
+            </div>
+            <!--客服结束-->
+        </div>
+    </div>
+    <div class="cl20"></div>
+    <div class="wrap foot">
+        <p>
+            <a href="http://www.98k.com/company/about.html" target="_blank" rel="nofollow">关于98k</a>|
+            <a href="http://www.98k.com/company/job.html" target="_blank" rel="nofollow">诚聘英才</a>|
+            <a href="http://www.98k.com/company/business.html" target="_blank" rel="nofollow">商务合作</a>|
+            <a href="http://www.98k.com/company/copyright.html" target="_blank" rel="nofollow">法律声明</a>|
+            <a href="http://www.98k.com/help/index.html" target="_blank" rel="nofollow">帮助中心</a>|
+            <a href="http://beta.author.98k.com" target="_blank" rel="nofollow">作者投稿</a>|
+            <a href="http://www.98k.com/company/contact.html" target="_blank" rel="nofollow">联系我们</a>|
+            <a href="http://www.98k.com/company/link.html" target="_blank" rel="nofollow">友情链接</a>|
+            <a href="http://news.98k.com/zhuanti/wlqz/index.html" target="_blank" rel="nofollow">谨防诈骗</a>|
+            <a href="http://www.98k.com/sitemap.html" target="_blank">网站地图</a>
+        </p>
+        <p><em>Copyright&copy;&nbsp; <a class="f66" href="http://www.98k.com">www.98k.com</a></em></p>
+        <p><em>All Rights Reserved </em>版权所有 深圳创业网络文化科技有限公司，98k<a href="http://www.98k.com" style="margin: 0px;">小说网</a>,提供<a href="http://www.98k.com/category/1.html">玄幻小说</a>,<a href="http://www.98k.com/category/9.html">都市小说</a>,<a href="http://huayu.baidu.com/">言情小说</a>等<a href="http://www.98k.com/mianfei/" style="margin: 0px;">免费小说</a>阅读。</p>
+        <p>京<em>ICP</em>证：<em>080527</em>号&nbsp;《网络文化经营许可证》&nbsp;京<em>ICP</em>备<em>11009265</em>号&nbsp;&nbsp;京网文<em>[2015]2368-459</em>号&nbsp;&nbsp;京公网安备<em>11010502005190</em>号</p>
+        <p>作者发布<a href="http://www.98k.com" style="margin: 0px;">小说</a>作品时，请遵守国家互联网信息管理办法规定。本站所收录小说作品、社区话题、书库评论均属其个人行为，不代表本站立场。</p>
+        <a id='___szfw_logo___' rel="nofollow" href='https://search.szfw.org/cert/l/CX20140716008826008520' target='_blank' style="position:absolute;right:8px;top:75px"><img src='~/picture/sapic.png'></a>
+        <script type='text/javascript'>(function () { document.getElementById('___szfw_logo___').oncontextmenu = function () { return false; } })();</script>
+        <em class="l_logo"></em>
+        <a name="page_bottom"></a>
+    </div>
+    <script src="~/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="~/js/require.min.js"></script>
+</body>
+</html>
+<script>
+    function GetDateNow() {
+        var vNow = new Date();
+        var sNow = "";
+        sNow += String(vNow.getFullYear());
+        sNow += String(vNow.getMonth() + 1);
+        sNow += String(vNow.getDate());
+        sNow += String(vNow.getHours());
+        sNow += String(vNow.getMinutes());
+        sNow += String(vNow.getSeconds());
+        sNow += String(vNow.getMilliseconds());
+        document.getElementById("tradeno").value = sNow;
+    }
+    GetDateNow();
+
+    $(function () {
+        var user = '@ViewBag.User';
+        if (user != "") {
+            $(".unload").hide();
+            $(".load").show();
+            $("#unlogin").hide();
+            $("#login").show();
+        }
+        var money = $("#setCofirmMoney").html();
+        money = money.substr(0, money.lastIndexOf('.'));
+        $("#totalAmout").val(money);
+        $("[name=id]").val(@ViewBag.UserId);
+    })
+
+    function Login()
+    {
+        location.href = "/Home/Login";
+    }
+
+    function Register() {
+        location.href = "/Home/Register";
+    }
+
+    $(".bin_btn").click(function () {
+        $(".bin_btn").removeClass("active");
+        $(this).addClass("active");
+        var num = $(this).attr("value");
+        if (num == "") {
+            $("#setCofirmMoney").html("0.00元");
+            $("#totalAmout").val(0);
+        }
+        else {
+            var money = parseInt(num) / 100;
+            $("#setCofirmMoney").html(money.toFixed(2) + "元");
+            $("#totalAmout").val(money);
+        }
+    })
+
+    $('.text').on('keydown', function () {
+        setTimeout(function () {
+            var num = $(".text").val();
+            if (num == "") {
+                $("#setCofirmMoney").html("0.00元");
+                $("#totalAmout").val(0);
+            }
+            else {
+                var money = parseInt(num) / 100;
+                $("#setCofirmMoney").html(money.toFixed(2) + "元");
+                $("#totalAmout").val(money);
+            }
+        }, 100);
+    });
+
+    function Check() {
+        var user = '@ViewBag.User';
+        if (user == "") {
+            location.href = "/Home/Login";
+            return false;
+        }
+
+        var num = $(".text").val();
+
+        if ($("#totalAmout").val() == "") {
+            return false;
+        }
+
+        if (num != "") {
+            var r = /^\+?[1-9][0-9]*$/;　　//判断是否为正整数
+            if (!r.test(num)) {
+                alert("请输入正整数！");
+                return false;
+            }
+
+            if (num < 500) {
+                alert("充值金额必须大于500！");
+                return false;
+            }
+
+            var a = parseInt(num) % 100;
+            if (a != 0) {
+                alert("充值金额必须为100的倍数！");
+                return false;
+            }
+
+            var money = $("#setCofirmMoney").html();
+            money = money.substr(0, money.lastIndexOf('.'));
+            $("#totalAmout").val(money);
+        }
+    }
+</script>

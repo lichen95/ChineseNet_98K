@@ -1,0 +1,864 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="copyright" content="本页版权 www.98k.com 98k小说中文网所有。All Rights Reserved" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://static.98k.com/favicon.ico" />
+    <title>98k中文网</title>
+    <link rel="stylesheet" href="~/css/basic.min.css" />
+    <link rel="stylesheet" href="~/css/book.min.css" />
+    <script src="~/jquery-3.1.1.js"></script>
+    <script>
+        function ToSearch() {
+            location.href = '/Home/Search?keyword=' + $("[name=keyword]").val();
+        }
+    </script>
+</head>
+<body isDoubleMonthTicketOpen="false" _pgid="5" scriptSign="book" bookId="770753" forumId="212336" bookName="焚天圣尊" catePid="1" donateRate="1" logger="/click/1008/1/770753/F/0/49552802/2018-08-29/50297482/book">
+    <div class="wrap">
+        <div class="head">
+            <div class="head-top clearfix">
+                <div class="logo imgbox fl">
+                    <a href="http://www.98k.com">
+                        <img src="~/picture/logo.png" alt="logo">
+                    </a>
+                </div>
+                @*全文检索11111*@
+                <form id="commSearch" name="searchForm" method="post"
+                      action="" target="_blank">
+                    <div class="search-box fl" data-hook="searchSuggest">
+                        <input class="search-text fl" name="keyword" type="text" placeholder="斗罗大陆" autocomplete="off" disableautocomplete />
+                        <input type="button" onclick="ToSearch()" class="search-btn fr" />
+                    </div>
+                </form>
+                <div class="pay fr">
+                    <a class="user_pay" href="/Home/Pay" target="_blank">充值</a>
+                </div>
+
+                <div class="right-wrap-login ud_userTox">
+                    <div class="unlogin ud_unlogin clearfix">
+                        <div class="login fl"><a class="user_login" href="/Home/Login">登录</a></div>
+                        <div class="regist fl"><a class="user_register" href="/Home/Register">注册</a></div>
+                    </div>
+                    <div class="logon ud_loged clearfix" style="display:none;">
+                        <div class="user tabA imgbox">
+                            <img class="ud_avatar ud_goUsrCenter" src="~/picture/book.png" alt="" target="_blank">
+                            <div class="user-blank tabA-float">
+                                <a href="javascript:void(0);" class="quit ud_logout">退出</a>
+                                <div class="user-name ud_goUsrCenter"><span class="ud_nickName"></span><em class="icon"></em></div>
+                                <div class="user-info clearfix">
+                                    <div class="user-info-cell ud_money">
+                                        <span class="item_loading"></span>
+                                    </div>
+                                    <div class="user-info-cell ud_ticket">
+                                        <span class="item_loading"></span>
+                                    </div>
+                                    <div class="user-info-cell ud_mticket">
+                                        <span class="item_loading"></span>
+                                    </div>
+                                </div>
+                                <a href="/Home/Pay" class="btn" target="_blank">立即充值</a>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <a href="http://home.98k.com/msgIn.do" class="mes" target="_blank">消息(<span class="ud_umessage"></span>)</a>
+                        </div>
+                        <div class="shelf"><a href="/Home/Booshelfs" target="_blank">书架</a></div>
+                        <div class="foot-mark tabA">
+                            <span class="mark clearfix">历史<em class="icon"></em></span>
+                            <div class="tabA-float float-mark clearfix">
+                                <!-- loading -->
+                                <div class="ud_hisloading">
+                                    <span class="item_loading"></span>
+                                </div>
+                                <!-- 没有记录 -->
+                                <div class="ud_noHistory" style="display: none">
+                                    <h2>亲爱的书友，您暂时没有阅读记录~</h2>
+                                    <div class="tips">阅读记录只保存最近阅读的5本小说</div>
+                                    <div class="enter"><a href="http://home.98k.com/favoritesBook.do" target="_blank">进入我的书架</a></div>
+                                </div>
+                                <!-- 有记录 -->
+                                <div class="ud_hasHistory" style="display: none"><ul class="mark-list"></ul></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="nav clearfix">
+                <div class="menu-left fl">
+                    <a href="/Home/Index">首页<em></em></a>
+                    <a href="/Home/Stack">书库<em></em></a>
+                    <a href="/Home/Ranking">排行<em></em></a>
+                    <a href="/Home/End">完本<em></em></a>
+                    <div class="app-menu tabA">
+                        <div class="app-float tabA-float">
+                            <div class="tit">98k小说 原创精品</div>
+                            <div class="imgbox tabC_wap">
+                                <div class="tabC" style="display: block;">
+                                    <img src="~/picture/ad-float.png" alt="">
+                                </div>
+                                <div class="tabC">
+                                    <img src="~/picture/ios-float.png" alt="">
+                                </div>
+                                <div class="tabC">
+                                    <img src="~/picture/wx-float.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tabT_wap app-down">
+                                <span class="tabT ad active"></span>
+                                <span class="tabT ios"></span>
+                                <span class="tabT wx"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-right fr">
+                    <a href="/Home/Login" class="author_zone" target="_blank">作者专区<em></em></a>
+                </div>
+            </div>
+        </div>
+        <!-- 1.	书封页头部广告位 -->
+        <div class="com-recbox" data-sa-d="{" adv_type":"bookDetail00","adv_res":"98k","pos":""}>
+            <script type="text/javascript" src="~/js/240517642435.js"></script>
+        </div>
+        <div class="h20-blank"></div>
+        <!-- 书封页start -->
+        <div class="crumb">
+            当前位置：
+            <a href="/Home/Index"> 首页 </a>><a href="/category/1.html"> 武侠仙侠</a>剑来
+        </div>
+        <div class="book-html-box clearfix">
+            <!-- 书籍详细信息 -->
+            <div class="book-top clearfix">
+                <div class="book-main fl">
+                    <div class="book-detail clearfix">
+                        <div class="book-img fl">
+                            <em class=""></em>
+                            <img id="img1" width="200" height="264">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-name"></div>
+                            <div class="book-label">
+                                <a href="#" class="state" target="_blank"></a>
+                                <a href="#" class="label" target="_blank"></a>
+                                <span id="tag"></span>
+                            </div>
+                            <div class="nums"><span>字数 <i id="count">36.5万 </i> </span> <span>总推荐 <i>508</i> </span> <span>总点击 <i>1.3万</i> </span> <span>周推荐 <i>15</i> </span></div>
+                            <div class="book-dec Jbook-dec hide">
+                                <p id="p1"></p>
+                            </div>
+                            <div class="btn-group">
+                                <a class="btn read-btn" href="javascript:void(0)" target="_blank" onclick="Add1()">开始阅读</a>
+                                <div class="btn store-btn Jaddshelf"><a onclick="Add()">加入书架</a></div>
+                                <div class="fr link-group">
+                                    <a class="all-catalog" target="_blank" href="/Home/Catalogue?Id=@ViewBag.Id"><em></em>全部目录</a>
+                                    <a class="vote" href="javascript:void(0)" onclick="tiao(2)" id="bookDonate_openRecTicket"><em></em>生成PDF</a>
+                                    <a class="orderlink" href="javascript:void(0)" onclick="tiao(1)" target="_blank"><em></em>章节订阅</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-new-chapter">
+                        <h4>最新章节</h4>
+                        <div class="tit"><a href="#" target="_blank" id="new"></a><em></em></div>
+                        <div class="con">    突然响起的钟声打断了陆炎和陆大海的对话。    钟声响起的时候也意味着其他区域都已...</div>
+                        <div class="time">
+                            · 12小时前<br />
+                            · 今日更新0章
+                        </div>
+                    </div>
+                </div>
+                <div class="book-side fr">
+                    <div class="book-author">
+                        <div class="au-head">
+                            <a href="http://home.98k.com/show/userInfo/49552802.html" target="_blank"><img src="~/picture/52e81807251e90ef9114669ea93ea531_120_120.jpeg" alt="风月无界" width="60" height="60" /></a>
+                            <em>签约作家</em>
+                        </div>
+                        <div class="au-name"><a href="http://home.98k.com/show/userInfo/49552802.html" id="author"></a></div>
+                        <div class="au-words">
+                            <span>作品总数<i>2</i></span>
+                            <span>累计字数<i>47.3万</i></span>
+                            <span>本月更新<i>21天</i></span>
+                        </div>
+                        <div class="au-says">
+                            <h4>作者有话说</h4>
+                            <div class="con empty">作者大大正在奋力码字哦~~~</div>
+                        </div>
+                    </div>
+                    <div class="app-in clearfix">
+                        <div class="ewm" data-url="http://dl.98k.com/src/apk?bookId=770753&bookName=%E7%84%9A%E5%A4%A9%E5%9C%A3%E5%B0%8A"><img src="~/picture/wx_book.png" alt="" width="80" height="79"></div>
+                        <div class="txt">
+                            <h3>手机看98k</h3>
+                            <p>新用户免费看7天</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 书籍详细信息 end-->
+            <!-- 2.	一屏下广告位：双倍月票期间可以+放置或者其他活动 -->
+            <div class="com-recbox" data-sa-d="{" adv_type":"bookDetail01","adv_res":"98k","pos":""}">
+                <script type="text/javascript" src="~/js/240517642436.js"></script>
+            </div>
+            <div class="h20-blank"></div>
+            <div class="book-main fl">
+                <!-- 捧场送月票start -->
+                <div class="book-donate clearfix">
+                    <h3 class="h3-tit">
+                        捧场送月票
+                        <a href="//news.98k.com/news/5146.html" target="_blank" class="span_r ad flymillion" data-sa-d="{" page_module":"bookDetail","click_name":"recommond":"vote_type":"月捧场百万九八币拉机横幅","book_id":"672340"}">
+                            <em class="pl_icon"></em>
+                            捧场百万 九八币  包机拉横幅~
+                        </a>
+                    </h3>
+                    <div class="clearfix">
+                        <div class="donate-l fl">
+                            <div class="cel rank clearfix">
+                                <h4 class="fl">
+                                    月票榜排名
+                                    <a href="http://www.98k.com/rank/details.html?rt=1&d=1"><em class="rk_ic"></em></a>
+                                </h4>
+                                <div class="fr rank-r">
+                                    <span>第 <i class="a1">214</i> 名</span><br />
+                                    <span>共 <i class="a2">8</i> 票</span>
+                                    <a href="http://www.98k.com/rank/ypb.html" class="tip"></a>
+                                </div>
+                            </div>
+                            <div class="cel honor clearfix">
+                                <h4 class="fl">本书荣誉<em class="ho_ic"></em></h4>
+                                <div class="fr honor-r">
+                                    <span>
+                                        <i>9月月票榜</i>第<i class="a1">194 </i>名
+                                    </span>
+                                    <br />
+                                    <span>
+                                        <i>8月月票榜</i>第<i class="al">2</i>名
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="donate-r fr">
+                            <h4>
+                                捧场
+                                <div class="more fr">
+                                    <a id="bookDonate_openMore" class="more-link" href="javascript:void(0);" data-sa-d="{" page_module":"bookDetail","click_name":"recommond","vote_type":"更多捧场","book_id":"672340"}">
+                                        更多捧场
+                                        <em></em>
+                                    </a>
+                                </div>
+                            </h4>
+                            <ul class="donate-list" id="bookdetail_donate" data-rate="1">
+                                <li data-type="donate" id="li_1" data-ticket="1" data-zhuit="500" data-sa-d="{" page_module":"bookDetail","click_name":"recommond","vote_type":"捧场500","book_id":"672340"}>
+                                    <div class="li-box clearfix">
+                                        <span class="fl">捧</span>
+                                        <span class="fl">
+                                            <i>1</i>张月票
+                                        </span>
+                                    </div>
+                                    <div class="txt">500 98K币</div>
+                                </li>
+
+                                <li data-type="donate" id="li_2" data-ticket="22" data-zhuit="10000" data-sa-d="{" page_module":"bookDetail","click_name":"recommond","vote_type":"捧场10000","book_id":"672340"}">
+                                    <div class="li-box clearfix">
+                                        <span class="fl">赏</span>
+                                        <span class="fl"> <i>22</i> 张月票</span>
+                                    </div>
+                                    <div class="txt">10000 98K币</div>
+                                </li>
+
+                                <li data-type="donate" id="li_3" data-ticket="220" data-zhuit="100000" data-sa-d="{" page_module":"bookDetail","click_name":"recommond","vote_type":"捧场10000","book_id":"672340">
+                                    <div class="li-box clearfix">
+                                        <span class="fl">盟</span>
+                                        <span class="fl"> <i>220</i> 张月票</span>
+                                    </div>
+                                    <div class="txt">100000 98K币</div>
+                                </li>
+                                <li data-type="donate" id="li_4" data-ticket="2200" data-zhuit="1000000" data-sa-d="{" page_module":"bookDetail","click_name":"recommond","vote_type":"捧场10000","book_id":"672340">
+                                    <div class="li-box clearfix">
+                                        <span class="fl">壕</span>
+                                        <span class="fl"><i>2200</i>张月票</span>
+                                    </div>
+                                    <div class="txt">1000000 98K币</div>
+                                </li>
+                                <li data-type="donate" id="li_5" data-ticket="" data-zhuit="100" data-sa-d="{" page_module":"bookDetail","click_name":"recommond","vote_type":"捧场10000","book_id":"672340">
+                                    <div class="li-box clearfix">
+                                        <span class="fl">RP</span>
+                                        <span class="fl">人品月票</span>
+                                    </div>
+                                    <div class="txt">100 98K币抽月票</div>
+                                </li>
+                                <li data-type="voteDetail" id="li_6" data-zhuit="100" data-sa-d="{" page_module":"bookDetail","click_name":"recommond","vote_type":"投月票","book_id":"672340">
+                                    <div class="li-box clearfix">
+                                        <span class="fl">月</span>
+                                        <span class="fl"> 投月票 </span>
+                                    </div>
+                                    <div class="txt" id="bd_user_monthvotenum">
+                                        剩余月票 <span id="_leavemt">0</span> 张
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="book-donate-voice Jvoicelist">
+                        <em></em>
+                        <ul></ul>
+                    </div>
+                </div>
+                <!-- 捧场送月票end -->
+                <!-- 精彩推荐start -->
+                <div class="book-recommend">
+                    <h3 class="h3-tit">精彩推荐 <span class="span_r exc" id="guess_change"><em class="exc_icon"></em> 换一换</span></h3>
+                    <ul class="book-recommend-list clearfix Jrecommend" style="display:block;">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <!-- 精彩推荐end -->
+                <!-- 圈子start -->
+                <div class="book-forums">
+                    <h3 class="h3-tit clearfix">
+                        <a class="btn fr Jpostbtn" href="javascript:void(0)">我要发帖</a>《焚天圣尊》圈子
+                        <a class="all-in" href="http://forum.98k.com/212336.html" target="_blank">全部帖子<i id="JthreadNum"></i><em class="arrow-r"></em></a>
+                    </h3>
+                    <div class="forums-host" id="JleaderList" style="display:none">
+                        <!-- <i>暂无圈主</i>  -->
+                        <i>圈主：</i>
+                    </div>
+                    <div class="forums-txt" id="Jforums-txt">
+                        <div class="fail">
+                            加载失败,
+                            <i class="jfail">点击重新载入~</i>
+                        </div>
+                    </div>
+                </div>
+                <!-- 圈子end -->
+            </div>
+            <div class="book-side fr">
+                <div class="tab-lists">
+                    <div class="top-title clearfix">
+                        <div class="title fl">粉丝星值榜</div>
+                        <div class="mz fr">盟主<i> 0</i> </div>
+                    </div>
+                    <div class="lists">
+                        <ul>
+                            <li class="list-a">
+                                <span class="star star3"></span>
+                                <em class="list_icon top1">1</em>
+                                <a href="http://home.98k.com/show/userInfo/49552802.html" target="_blank" title="《焚天圣尊》星值积分：2698 星值等级：少侠">风月无界</a>
+                            </li>
+                            <li class="list-a">
+                                <span class="star star3"></span>
+                                <em class="list_icon top2">2</em>
+                                <a href="http://home.98k.com/show/userInfo/48275208.html" target="_blank" title="《焚天圣尊》星值积分：2000 星值等级：少侠">迪拜拾荒者</a>
+                            </li>
+                            <li class="list-a">
+                                <span class="star star2"></span>
+                                <em class="list_icon top3">3</em>
+                                <a href="http://home.98k.com/show/userInfo/49698074.html" target="_blank" title="《焚天圣尊》星值积分：1820 星值等级：弟子">书友56266949</a>
+                            </li>
+                            <li class="list-a">
+                                <span class="star star2"></span>
+                                <em class="list_icon ">4</em>
+                                <a href="http://home.98k.com/show/userInfo/47834264.html" target="_blank" title="《焚天圣尊》星值积分：1692 星值等级：弟子">北海秦</a>
+                            </li>
+                            <li class="list-a">
+                                <span class="star star2"></span>
+                                <em class="list_icon ">5</em>
+                                <a href="http://home.98k.com/show/userInfo/49647852.html" target="_blank" title="《焚天圣尊》星值积分：1365 星值等级：弟子">孤鹰傲空</a>
+                            </li>
+                            <li class="list-a">
+                                <span class="star star2"></span>
+                                <em class="list_icon ">6</em>
+                                <a href="http://home.98k.com/show/userInfo/49572805.html" target="_blank" title="《焚天圣尊》星值积分：1226 星值等级：弟子">团结的蚂蚁</a>
+                            </li>
+                            <li class="list-a">
+                                <span class="star star1"></span>
+                                <em class="list_icon ">7</em>
+                                <a href="http://home.98k.com/show/userInfo/49955545.html" target="_blank" title="《焚天圣尊》星值积分：970 星值等级：学徒">书友56513301</a>
+                            </li>
+                            <li class="list-a">
+                                <span class="star star1"></span>
+                                <em class="list_icon ">8</em>
+                                <a href="http://home.98k.com/show/userInfo/50240590.html" target="_blank" title="《焚天圣尊》星值积分：820 星值等级：学徒">书友56782487</a>
+                            </li>
+                            <li class="list-a">
+                                <span class="star star1"></span>
+                                <em class="list_icon ">9</em>
+                                <a href="http://home.98k.com/show/userInfo/49955325.html" target="_blank" title="《焚天圣尊》星值积分：790 星值等级：学徒">帝皇霸主</a>
+                            </li>
+                            <li class="list-a">
+                                <span class="star star1"></span>
+                                <em class="list_icon ">10</em>
+                                <a href="http://home.98k.com/show/userInfo/49901978.html" target="_blank" title="《焚天圣尊》星值积分：705 星值等级：学徒">DISSLOVE</a>
+                            </li>
+                            <li class="list-a">
+                                <span class="star star1"></span>
+                                <em class="list_icon ">11</em>
+                                <a href="http://home.98k.com/show/userInfo/11900197.html" target="_blank" title="《焚天圣尊》星值积分：692 星值等级：学徒">罗玛</a>
+                            </li>
+                            <li class="list-a">
+                                <span class="star star1"></span>
+                                <em class="list_icon ">12</em>
+                                <a href="http://home.98k.com/show/userInfo/49145280.html" target="_blank" title="《焚天圣尊》星值积分：600 星值等级：学徒">得之我月</a>
+                            </li>
+                            <li class="list-a">
+                                <span class="star star1"></span>
+                                <em class="list_icon ">13</em>
+                                <a href="http://home.98k.com/show/userInfo/49963155.html" target="_blank" title="《焚天圣尊》星值积分：500 星值等级：学徒">鬼迷心窍了</a>
+                            </li>
+                            <li class="list-a">
+                                <span class="star star1"></span>
+                                <em class="list_icon ">14</em>
+                                <a href="http://home.98k.com/show/userInfo/40037410.html" target="_blank" title="《焚天圣尊》星值积分：500 星值等级：学徒">闻墨醉</a>
+                            </li>
+                            <li class="list-a">
+                                <span>无</span>
+                                <em class="list_icon ">15</em>
+                                <a href="http://home.98k.com/show/userInfo/49439215.html" target="_blank" title="《焚天圣尊》星值积分：392 星值等级：无">七十三名泉</a>
+                            </li>
+                        </ul>
+                        <div class="more star-more">
+                            <a class="more-link" href="http://www.98k.com/bookfans/770753.html" target="_blank">查看更多<em></em></a>
+                        </div>
+                    </div>
+                    <div class="star-first clearfix Jstar-first">
+                        <div class="fl"></div>
+                        <a class="fr star-first-head" href="//home.98k.com/show/userInfo/49033258.html">
+                            <img src="http://static.98k.com/userimage//7b/86/7b86447c70d3d5bfa71b8abc47e2323e_120_120.jpeg" alt="" width="50" height="50" />
+                            <em class="star star7"></em>
+                        </a>
+                    </div>
+                </div>
+                <!-- 此处月票榜 -->
+                <!-- 月票榜start -->
+                <div class="tab-lists">
+                    <div class="top-title clearfix">
+                        <div class="title fl">月票榜</div>
+                        <div class="more fr">
+                            <a class="more-link" href="http://www.98k.com/rank/details.html?rt=1&d=1" target="_blank">更多<em></em></a>
+                        </div>
+                    </div>
+                    <div class="lists">
+                        <ul id="monthTicketRankList"></ul>
+                    </div>
+                </div>
+                <!--3.书封页下角(月票榜下)：宽度固定，高度不限制-->
+                <div class="com-recbox" data-sa-d="{" adv_type":"bookDetail01","adv_res":"98k","pos":""}">
+                    <script type="text/javascript" src="http://static.98k.com/upload/hzds/column/240517642437.js"></script>
+                </div>
+            </div>
+        </div>
+        <!-- 书封end -->
+    </div>
+    <div class="footer">
+        <div class="partlink">
+            <div class="wrap">
+                <div class="title">出版合作联系</div>
+                <div class="clearfix">
+                    <div class="mail fl">
+                        <div>版权合作联系人：许先生<a href="mailto:xubin@98k.com">xubin@98k.com</a></div>
+                        <div>广告合作联系人：张女士<a href="mailto:zhangwen@98k.com">zhangwen@98k.com</a></div>
+                    </div>
+                    <div class="help-btn">
+                        <a class="btn" href="http://www.98k.com/help/index.html" target="_blank">帮助中心</a>
+                        <p>服务时间：24小时</p>
+                    </div>
+                    <div class="b1 foot-cell">
+                        <div class="tit">客服</div>
+                        <div class="qq">965151179</div>
+                        <div class="email"><a href="mailto:zhkf@98k.com">zhkf@98k.com</a></div>
+                    </div>
+                    <div class="b2 foot-cell">
+                        <div class="tit">举报</div>
+                        <div class="tel">4006289988</div>
+                        <div class="email"><a href="mailto:jubao@98k.com">jubao@98k.com</a></div>
+                    </div>
+                    <div class="app foot-blank">
+                        <div class="imgbox fl">
+                            <img src="~/picture/app.png" alt="">
+                        </div>
+                        <p>客户端下载</p>
+                    </div>
+                    <div class="wchat foot-blank">
+                        <div class="imgbox fl">
+                            <img src="~/picture/wx.png" alt="">
+                        </div>
+                        <p>微信公众号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="links">
+                <a href="http://www.98k.com/company/about.html" target="_blank">关于98k</a>|
+                <a href="http://www.zhwenxue.com/join" target="_blank">诚聘英才</a>|
+                <a href="http://www.98k.com/company/business.html" target="_blank">商务合作</a>|
+                <a href="http://www.98k.com/company/copyright.html" target="_blank">法律声明</a>|
+                <a href="http://www.98k.com/help/index.html" target="_blank">帮助中心</a>|
+                <a href="http://author.98k.com" target="_blank">作者投稿</a>|
+                <a href="http://www.98k.com/company/contact.html" target="_blank">联系我们</a>|
+                <a href="http://www.98k.com/company/link.html" target="_blank">友情链接</a>|
+                <a href="http://news.98k.com/zhuanti/wlqz/index.html" target="_blank">谨防诈骗</a>|
+                <a href="http://www.98k.com/company/sitemap.html" target="_blank">网站地图</a>
+            </div>
+            <p>
+                Copyright©<a href="http://www.98k.com" target="_blank">www.98k.com</a>All Rights Reserved 版权所有 深圳创业网络文化科技有限公司   京ICP证：080527号《网络文化经营许可证》
+                <a href="http://static.98k.com/images/license/publication-license.jpg" target="_blank">京ICP备11009265号</a>
+                <a href="http://static.98k.com/images/license/business-license.jpg" target="_blank">京网文[2015]2368-459号</a>
+            </p>
+            <p>新出发京零字第朝130010号  丨  统一社会信用代码91110105678221683F  丨 <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502030124" target="_blank">京公网安备  	11010502030124号</a>  丨 <a href="http://www.cyberpolice.cn/wfjb/" target="_blank">公安部网络违法犯罪举报网站</a></p>
+            <p><a href="http://www.98k.com" target="_blank">98k小说中文</a>,提供<a href="http://www.98k.com/category/1.html" target="_blank">玄幻小说</a>,<a href="/category/9.html" target="_blank">都市小说</a>,<a href="http://huayu.baidu.com" target="_blank">言情小说</a>等<a href="http://book.98k.com/store/c0/c0/b0/u0/p1/v0/s9/t0/u0/i1/ALL.html" target="_blank">免费小说</a>阅读。作者发布小说作品时，请遵守国家互联网信息管理办法规定。</p>
+            <p>本站所收录小说作品、社区话题、书库评论均属其个人行为，不代表本站立场。</p>
+        </div>
+        <script type="text/javascript" src="~/js/require.min.js" defer async data-main="http://rcode.98k.com/v2018/js/map.min"></script>
+        <script src="~/jquery-3.1.1.js"></script>
+    </div>
+    <div id="cntvlive-is-installed"></div>
+    <link href="http://static.98k.com/zhuanti/2014/active/style/hd.css?20150818" rel="stylesheet" type="text/css" />
+    <div id="icanfly"></div>
+    <div id="donateDetailDialog" class="ui_widget_section">
+        <div class="ui_shadow"></div>
+        <div class="ui_widget_box" style="width:550px;height:400px;margin-left:-275px; margin-top:-200px;" data-tabindex="1">
+            <div class="ui_widget_tab">
+                <span>捧场</span>
+                <span>月票</span>
+                <span>推荐票</span>
+            </div>
+            <div class="ui_widget_tab_con">
+                <div>
+                    <div class="donated_con">
+                        <div class="donated_con_t">
+                            <div class="fl donated_con_tit">
+                                账户余额
+                                <span class="dd_ul_money">0</span>
+                                个98K币
+                            </div>
+                            <div class="fr donated_con_tr">
+                                <a href="//home.98k.com/billing/donateRecord.do" target="_blank">查看我的捧场记录</a>
+                            </div>
+                        </div>
+                        <div class="donated_con_selbox">
+                            <ul class="selecter" data-type="money">
+                                <li class="active" data-animation="100">
+                                    <p>100 98K币</p>
+                                    <span> 抽月票</span>
+                                </li>
+                                <li data-amount="500">
+                                    <p>500 98K币</p>
+                                    <span>1 抽月票</span>
+                                </li>
+                                <li data-amount="5000">
+                                    <p>5000 98K币</p>
+                                    <span>10+1 抽月票</span>
+                                </li>
+                                <li data-amount="10000">
+                                    <p>10,000 98K币</p>
+                                    <span>20+2 抽月票</span>
+                                </li>
+                                <li data-amount="100000">
+                                    <p>100,000 98K币</p>
+                                    <span>200+20 抽月票</span>
+                                </li>
+                                <li data-amount="1000000">
+                                    <p>1,000,000 98K币</p>
+                                    <span>2000+200 抽月票</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="donated_btnbox">
+                            <p id="DD_info_donated_btnbox">本次打赏100 98K币，随机抽取1张月票</p>
+                            <a class="donated_submit" data--action="donate">确定捧场</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="donated_con">
+                        <div class="donated_con_t">
+                            <div class="fl donated_con_tit">
+                                目前剩余月票
+                                <span class="dd_ul_money">0</span>
+                                张
+                            </div>
+                            <div class="fr donated_con_tr">
+                                <a href="//home.98k.com/footprint/monthVote.do" target="_blank">查看我的投月票记录</a>
+                            </div>
+                        </div>
+                        <div class="donated_con_selbox">
+                            <ul class="selecter" data-type="monthTicket">
+                                <li class="active" data-ticketnum="1">
+                                    <div>
+                                        <b style="font-size:18px;vertical-align:bottom;">1</b>
+                                        <p style="letter-spacing:1px;">张月票</p>
+                                    </div>
+                                </li>
+                                <li class="dd_ul_mtn_data" data-ticketnum="0">
+                                    <div>
+                                        剩余全
+                                        <b style="letter-spacing:1px;">部月票</b>
+                                    </div>
+                                </li>
+                                <li class="customnum" data-ticketnum="0">
+                                    <input type="text" data-type="monthTicket" />
+                                    <span class="placeholder">自定义</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="donated_btnbox">
+                            <a class="donated_submit unclick" data--action="voteMonthTickets">投月票</a>
+                            <p>
+                                <a class="t_gary" href="//wwww.98k.com/rank/ypb.html" target="_blank">月票规则</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="donated_con">
+                        <div class="donated_con_t">
+                            <div class="fl donated_con_tit">
+                                目前剩余推荐票
+                                <span class="dd_ul_rtn">0</span>
+                                张
+                            </div>
+                            <div class="fl donated_con_tr">
+                                <a href="//home.98k.com/myOperate.do" target="_blank">查看我的投推荐票记录</a>
+                            </div>
+                        </div>
+                        <div class="donated_con_selbox">
+                            <ul class="selecter" data-type="recommendTicket">
+                                <li class="active" data-ticketnum="1">
+                                    <div>
+                                        <b style="font-size:18px;vertical-align:bottom">1</b>
+                                        <b style="letter-spacing:1px;">张推荐票</b>
+                                    </div>
+                                </li>
+                                <li class="dd_ul_rtn_data" data-ticketnum="0">
+                                    <div>
+                                        剩余全
+                                        <b style="letter-spacing:1px;">部推荐票</b>
+                                    </div>
+                                </li>
+                                <li class="customnum" data-ticketnum="0">
+                                    <input type="text" data-type="recommendTicket" />
+                                    <span class="placeholder">自定义</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="donated_btnbox">
+                            <a class="donated_submit unclick" data--action="voteRecommendTicket">推荐票</a>
+                            <p>
+                                <a class="t_gary" href="//www.98k.com.com/help/zh93.html" target="_blank">推荐票规则</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui_widget_close"></div>
+            <div class="ui_widget_tabloading"></div>
+        </div>
+    </div>
+
+    @* 提示信息 *@
+    <div id="ui_widget" class="ui_widget_section point" style="z-index:900000;display:none;">
+        <div class="ui_shadow"></div>
+        <div class="ui_widget_box brds" style="width:360px;height:225px;margin-left:-180px;margin-top:-112.5px;">
+            <div class="ui_widget_tit">提示</div>
+            <div class="ui_widget_con clearfix">
+                <div class="ui_widget_contxt">
+                    <p class="contit">
+                        您的账户余额为:
+                        <span class="t_red" id="span01"> </span>
+                        98K币！
+                    </p>
+                    <p class="concon">
+                        账户余额不足，还差
+                        <span class="t_red" id="span02"></span>
+                        ,请
+                        <a class="t_red" href="#" onclick="javascript:userutil.charge()">充值</a>后再捧场
+                    </p>
+                </div>
+                <div class="ui_widget_conbtn clearfix">
+                    <button id="ui_widget_message_1543746266006_confirm" class="confirm" data-cb="confirm" onclick="onL()">确定</button>
+                    <button id="ui_widget_message_1543746266006_cancel" class="cancel" data-cb="cancel" onclick="quX()">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var yue = 0;//余额
+    var que = 0;//差钱
+    var uid = @ViewBag.UserId;
+    var authorId = 6;
+    var novelId=@ViewBag.Id;
+    $(function () {
+        $("#bookdetail_donate").children().click(function () {
+            if (uid == 0) {
+                location.href = '/Home/Login';
+                return;
+            }
+            var money = parseInt($(this).attr("data-zhuit"));
+            $.ajax({
+                url: "/Wallets/GetUser?Userid=" + uid,
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    yue = data.Balance;
+                    $("#span01").html(yue);
+                    if (yue >= money) {
+                        $.ajax({
+                            url: "/Author_attendances/UptWallets?userId=" + uid + "&authorId=" + authorId + "&num=" + money + "&novelId=" + novelId + "&typeId=1",
+                            type: "post",
+                            dataType: "json",
+                            success: function (data) {
+                                console.log(data);
+                                if (data > 0) {
+                                    alert("打赏成功");
+                                }
+                            }
+                        })
+                    }
+                    else {
+                        que = money - yue;
+                        $("#span02").html(que);
+                        $("#ui_widget").show();
+                    }
+                }
+            })
+        });
+    })
+
+    //确定按钮
+    function onL() {
+        location.href = "/Home/Pay"
+    }
+
+    //取消按钮
+    function quX() {
+        $("#ui_widget").hide();
+    }
+
+    $(function () {
+        var user = '@ViewBag.User';
+        if (user != "") {
+            $(".unlogin").hide();
+            $(".logon").show();
+            var state = '@ViewBag.State';
+            if (state == 0) {
+                $(".author_zone").attr("href", "/Home/ApplyWriter");
+            }
+            if (state == 1) {
+                $(".author_zone").attr("href", "/Home/AuthorLogin");
+            }
+        }
+        Show();
+    })
+
+    function Show() {
+        $.ajax({
+            url: "/Novel/QueryById?Id=" +@ViewBag.Id,
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                $(".book-name").html(data.NovelName + ' <em class="sign"></em><em class="vip"></em>');
+                $(".state").html(data.State==1?"连载中":"已完结");
+                $(".label").html(data.TypeNameOne);
+                $("#img1").prop("src", data.ImgPath);
+                $("#img1").prop("alt", data.NovelName);
+                $("#p1").html(data.NovelDesc);
+                $("#new").html(data.ChapterName);
+                var Lable = (data.LabelName).split(',');
+                for (var i = 0; i < Lable.length; i++) {
+                    var a = '<a href="#" target="_blank">' + Lable[i] + '</a>';
+                    $("#tag").append(a);
+                }
+                if (data.Count<10000) {
+                    $("#count").html(data.Count);
+                }
+                else {
+                    $("#count").html(data.Count/10000 + "万");
+                }
+                authorId = data.AuthorId;
+                $("#author").html(data.UserName);
+                $("#type").html(data.TypeNameOne);
+                $("#name").html(" >" + data.NovelName);
+                $(".read-btn").prop('href', "/Home/Chapter?Id=" + data.NovelId + "&RId=" + 1);
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        })
+    }
+    //添加书架
+    function Add() {
+        if (uid == 0) {
+            location.href = '/Home/Login';
+            return;
+        }
+        $.ajax({
+            url: "/Bookshelf/AddBookshelf?uid=" + uid+"&nid="+@ViewBag.Id,
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                if (data > 0) {
+                    alert("添加书架成功！");
+                } else {
+                    alert("添加书架失败！");
+                }
+            }
+        })
+    }
+    //添加最近阅读
+    function Add1() {
+        if (uid == 0) {
+            location.href = '/Home/Login';
+            return;
+        }
+        $.ajax({
+            url: "/Bookshelf/AddRead?uid=" + uid+"&nid="+@ViewBag.Id,
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                if (data > 0) {
+                    //alert("添加最近阅读成功！");
+                } else {
+                    //alert("添加最近阅读失败！");
+                }
+            }
+        })
+    }
+
+    function a() {
+        noclose = t.call(o), !0 !== noclose && o.close()
+    }
+
+    //跳转章节订阅 与生成pdf
+    function tiao(type) {
+        if (uid == 0) {
+            location.href = '/Home/Login';
+            return;
+        }
+        if (type == 1) {
+            location.href = '/Home/Subscribes?NId=@ViewBag.Id';
+        }
+        if (type == 2) {
+             location.href = '/Novel/DemoPageMarginsPDF?NId=@ViewBag.Id';
+        }
+    }
+</script>

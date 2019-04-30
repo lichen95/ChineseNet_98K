@@ -1,0 +1,733 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*.au_nav{ background-color:#fff; padding:18px 0 17px;}
+.au_nav .au_logo{ display:block; background:url(../images/logo1.png) no-repeat; width:142px; height:35px; vertical-align:middle;}*/
+.au_create {
+    background-color: #f0f1f2;
+    padding: 20px 0 60px;
+}
+
+.au_c_con {
+    padding: 40px 65px;
+    background-color: #fff;
+}
+
+.au_c_tit {
+    border-bottom: 4px solid #f7f7f7;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    font-family: Microsoft YaHei;
+}
+
+    .au_c_tit .note {
+        color: #333;
+        font-size: 14px;
+        float: right;
+        background-position: -12px 0;
+        padding-left: 25px;
+    }
+
+        .au_c_tit .note:hover {
+            color: #1abc9c
+        }
+
+    .au_c_tit span {
+        font-size: 18px;
+        border-bottom: 4px solid #f7f7f7;
+        padding: 0 5px 9px;
+        line-height: 28px;
+        margin-right: 15px;
+    }
+
+        .au_c_tit span.focus {
+            border-bottom: 4px solid #1abc9c;
+        }
+
+    .au_c_tit a {
+        color: #666;
+    }
+
+        .au_c_tit a:hover {
+            color: #1abc9c;
+        }
+/*step*/
+.au_c_step {
+    height: 50px;
+    overflow: hidden;
+    margin-top: 40px;
+    font-family: "Microsoft YaHei";
+}
+
+    .au_c_step span {
+        float: left;
+        color: #333;
+        width: 290px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background-color: #eaeaea;
+    }
+
+    .au_c_step .focus {
+        color: #fff;
+        background-color: #1abc9c;
+    }
+
+    .au_c_step .step_arr {
+        background-image: url(../images/stepwpbg.png);
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 50px;
+    }
+
+    .au_c_step .focus .step_arr {
+        background-image: url(../images/stepbg.png);
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 50px;
+    }
+
+    .au_c_step .focus .fr {
+        background-position: right top;
+    }
+
+    .au_c_step .focus .fl {
+        background-position: left top;
+    }
+/*au_c_change*/
+.au_c_change {
+    color: #333;
+    margin-top: 40px;
+    font-family: "Microsoft YaHei";
+}
+
+    .au_c_change li {
+        padding: 10px 0;
+    }
+
+    .au_c_change .au_c_t {
+        width: 200px;
+        line-height: 40px;
+        font-size: 14px;
+        text-align: right;
+    }
+
+    .au_c_change .au_c_c {
+        width: 600px;
+        line-height: 40px;
+        margin-left: 10px;
+        position: relative;
+    }
+
+    .au_c_change .au_c_num {
+        font-size: 24px;
+        color: #1abc9c;
+    }
+
+    .au_c_change .au_text, .au_c_change .au_yzm {
+        border: 1px solid #d9d9d9;
+        padding: 0 10px;
+        line-height: 38px;
+        height: 38px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .au_c_change .au_text {
+        width: 360px;
+    }
+
+    .au_c_change .au_yzm {
+        width: 220px;
+    }
+
+    .au_c_change .btn_gb {
+        display: block;
+        margin-top: 40px;
+        border-radius: 3px;
+        border: 1px solid #1abc9c;
+        background-color: #1abc9c;
+        font-size: 18px;
+        color: #fff;
+        width: 380px;
+        line-height: 48px;
+        height: 48px;
+        text-align: center;
+        cursor: pointer;
+        font-family: "Microsoft YaHei";
+    }
+
+    .au_c_change .readtip {
+        color: #e74c3c;
+        line-height: 20px;
+        font-size: 12px;
+        padding: 5px 0 0;
+        font-family: "SimSun";
+    }
+
+    .au_c_change .ps_a {
+        position: absolute;
+        left: 0;
+        top: 40px;
+    }
+
+    .au_c_change .readtip .fh_gth {
+        margin-left: 20px;
+    }
+
+    .au_c_change .readtip a:hover {
+        text-decoration: underline;
+    }
+
+    .au_c_change .sentrand {
+        font-size: 14px;
+        width: 120px;
+        display: inline-block;
+        height: 38px;
+        line-height: 38px;
+        text-align: center;
+        margin-left: 21px;
+    }
+
+    .au_c_change .disabled {
+        cursor: not-allowed;
+        background-color: #999;
+        border: 1px solid #999;
+    }
+
+    .au_c_change .stepstaic {
+        padding-left: 128px;
+    }
+
+    .au_c_change .succfont {
+        font-size: 18px;
+        color: #1abc9c;
+        line-height: 36px;
+    }
+/*au_c_form*/
+.au_c_form {
+    margin-top: 30px;
+}
+
+    .au_c_form .greenbtn {
+        background-color: #1abc9c;
+        border: 1px solid #1abc9c;
+        color: #fff;
+        border-radius: 3px;
+    }
+
+    .au_c_form li {
+        padding: 10px 0;
+    }
+
+    .au_c_form .selli {
+        position: relative;
+        z-index: 9;
+    }
+
+    .au_c_form .au_c_t {
+        width: 120px;
+        text-align: right;
+        font-size: 14px;
+        color: #333;
+        line-height: 40px;
+        padding-right: 10px;
+    }
+
+        .au_c_form .au_c_t em {
+            color: #a0202d;
+            padding-right: 5px;
+            font-size: 16px;
+            font-family: "SimSun"
+        }
+
+    .au_c_form .au_c_c {
+        width: 720px;
+        position: relative;
+    }
+
+    .au_c_form .au_text, .au_c_form .au_des {
+        line-height: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .au_c_form .au_text {
+        color: #333;
+        border: 1px solid #d9d9d9;
+        width: 370px;
+        padding: 0 10px;
+    }
+
+    .au_c_form .au_des {
+        border: 1px solid #fff;
+        color: #c6c6c6;
+        width: 380px;
+        padding: 0 0 0 10px;
+    }
+
+    .au_c_form .sex {
+        width: 80px;
+    }
+
+    .au_c_form .au_tip {
+        font-size: 12px;
+        color: #c6c6c6;
+        padding: 8px 0 0;
+    }
+
+    .au_c_form .au_align {
+        text-align: center;
+    }
+
+    .au_c_form .through {
+        background-position: 8px -81px;
+        height: 40px;
+        width: 40px;
+        padding-left: 8px;
+        display: none;
+    }
+
+    .au_c_form .au_text {
+        width: 370px;
+        padding: 0 10px;
+        line-height: 38px;
+        height: 38px;
+        font-size: 14px;
+        color: #333;
+        border: 1px solid #d9d9d9;
+    }
+
+    .au_c_form p {
+        line-height: 20px;
+    }
+
+.au_wan {
+    font-size: 14px;
+}
+
+.au_c_form .au_error {
+    color: #ff0000;
+    font-size: 12px;
+    margin: 8px 0 0 0;
+    line-height: 20px;
+    display: none;
+}
+
+.au_c_form .au_warn {
+    padding: 8px 0 0;
+    font-size: 12px;
+    color: #333;
+    margin-left: -10px;
+}
+
+.au_cor_gay {
+    font-size: 12px;
+    color: #999;
+    padding: 0;
+}
+
+.au_c_form .label {
+    font-size: 14px;
+    color: #333;
+    margin-right: 20px;
+    line-height: 40px;
+}
+
+.au_c_form .not-allowed {
+    cursor: not-allowed;
+    color: #999;
+}
+
+.au_select {
+    position: relative;
+    margin-right: 12px;
+}
+
+    .au_select .au_s_nav {
+        border: 1px solid #d9d9d9;
+        width: 168px;
+        line-height: 40px;
+        height: 40px;
+        overflow: hidden;
+        padding-left: 20px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .au_select .au_s_list {
+        border: 1px solid #d9d9d9;
+        border-top: none;
+        width: 188px;
+        position: absolute;
+        left: 0;
+        top: 41px;
+        background: #fff;
+        display: none;
+    }
+
+        .au_select .au_s_list li {
+            line-height: 40px;
+            height: 40px;
+            overflow: hidden;
+            padding: 0 0 0 20px;
+        }
+
+            .au_select .au_s_list li:hover {
+                background-color: #f2f2f2;
+                cursor: pointer;
+            }
+
+.au_key {
+    font-size: 14px;
+    margin-right: -60px;
+}
+
+    .au_key a {
+        line-height: 40px;
+        border: 1px solid #1abc9c;
+        background-color: #fff;
+        position: relative;
+        padding: 12px 12px;
+        border-radius: 3px;
+        color: #000;
+        margin-right: 15px;
+    }
+
+    .au_key .delkey {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    }
+
+    .au_key .add_btn {
+        padding: 12px 42px;
+    }
+
+.au_keys {
+    background-color: #f7f7f7;
+    border: 1px solid #d9d9d9;
+    padding: 10px 10px 15px;
+    width: 465px;
+    margin-top: 15px;
+    position: relative;
+}
+
+    .au_keys .akeys {
+        max-height: 125px;
+        overflow: auto;
+    }
+
+    .au_keys a {
+        float: left;
+        line-height: 40px;
+        border: 1px solid #d9d9d9;
+        background-color: #fff;
+        position: relative;
+        padding: 0 15px;
+        border-radius: 3px;
+        color: #000;
+        margin: 15px 10px 0 0;
+    }
+
+        .au_keys a.focus {
+            border: 1px solid #1abc9c;
+        }
+
+    .au_keys .choice {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-bottom-right-radius: 3px;
+    }
+
+    .au_keys .custom {
+        border: none;
+        line-height: 40px;
+        height: 40px;
+        padding: 0 12px 0 0;
+        width: 6em;
+        font-size: 14px;
+    }
+
+    .au_keys .addkey {
+        border-left: 1px solid #d9d9d9;
+        margin-right: -6px;
+        position: relative;
+    }
+
+    .au_keys .closekey {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+.upload {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    display: block;
+}
+
+    .upload .file {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        zoom: 1;
+        overflow: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        cursor: pointer;
+    }
+
+.uploadarea {
+    position: relative;
+    height: 220px;
+    display: none;
+    z-index: 2;
+}
+
+    .uploadarea .uploaderror, .uploadarea .uploading {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 160px;
+    }
+
+.uploaderror {
+    height: 130px;
+    padding-top: 80px;
+    border: 1px solid #d9d9d9;
+    text-align: center;
+    display: none;
+}
+
+    .uploaderror .au_tip {
+        padding-left: 30px;
+    }
+
+.uploading img {
+    width: 160px;
+    height: 212px;
+}
+
+.uploading .auloading {
+    position: absolute;
+    left: 0;
+    top: 202px;
+    height: 10px;
+    background-color: #1abc9c;
+    display: none;
+}
+
+.uploading .savebook {
+    display: none;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.au_c_form .bookintro {
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    padding: 5px;
+    width: 480px;
+    height: 100px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #333;
+    resize: none;
+}
+
+.submitintro {
+    height: 56px;
+    padding: 15px 0 10px;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+
+    .submitintro .nextstep {
+        font-size: 18px;
+        padding: 15px 115px;
+        cursor: pointer;
+        transition: all 0.3s linear;
+    }
+
+        .submitintro .nextstep:hover {
+            background-color: #1e9581;
+        }
+
+    .submitintro .addstore {
+        font-size: 16px;
+        color: #1abc9c;
+        margin: 18px 0 0 35px;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+.au_c_form .upload {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+    .au_c_form .upload .file {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        zoom: 1;
+        overflow: hidden;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        cursor: pointer;
+    }
+
+.au_c_form .change, .au_c_form .unbind {
+    text-decoration: underline;
+}
+
+.au_c_form .unbind {
+    margin-left: 25px;
+}
+
+.au_c_form .facetip {
+    margin: 18px 0 18px;
+}
+
+.au_c_form .face {
+    width: 302px;
+    border-right: 1px dashed #d9d9d9;
+    padding-right: 25px;
+    margin-right: 25px;
+}
+
+.au_c_form .noimg, .au_c_form .hasimg {
+    border: 1px solid #d9d9d9;
+    width: 300px;
+}
+
+.au_c_form .noimg {
+    padding-top: 55px;
+    height: 120px;
+}
+
+.au_c_form .hasimg {
+    height: 175px;
+    position: relative;
+}
+
+.au_c_form .zz_left, .au_c_form .zz_right {
+    width: 46px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    background-color: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    zoom: 1;
+}
+
+.au_c_form .zz_left {
+    left: 0;
+}
+
+.au_c_form .zz_right {
+    right: 0;
+}
+
+.au_c_form .hasimg img {
+    width: 300px;
+    height: 175px;
+}
+
+.au_c_form .lookface {
+    width: 140px;
+    position: relative;
+    height: 175px;
+}
+
+    .au_c_form .lookface .pic {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border: none;
+    }
+
+    .au_c_form .lookface .imgborder {
+        background: url(../images/face.png) no-repeat;
+        width: 140px;
+        height: 140px;
+        margin-top: -143px;
+        position: relative;
+        z-index: 2;
+    }
+
+.au_c_form .saveface {
+    margin-top: 18px;
+}
+
+.au_c_form .introself {
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+    display: inline-block;
+    width: 478px;
+    color: #333;
+    line-height: 20px;
+    height: 80px;
+    resize: none;
+    margin-right: 10px;
+}
+
+.au_c_form .fonttip {
+    color: #999;
+    font-size: 12px;
+}
+
+.au_c_form .submitupload {
+    font-size: 18px;
+    display: block;
+    width: 384px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.au_c_form .unbindtip {
+    width: 235px;
+    height: 42px;
+    background: url(../images/bindtip.png) no-repeat;
+    padding-left: 8px;
+    position: absolute;
+    top: 29px;
+    left: 256px;
+    z-index: 999;
+}
+
+    .au_c_form .unbindtip p {
+        font-size: 12px;
+        line-height: 20px;
+        color: #333;
+        padding-top: 13px;
+    }

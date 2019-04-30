@@ -1,0 +1,16 @@
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.DAL.deps.json
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.DAL.dll
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.DAL.pdb
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.Common.dll
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.Entity.dll
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.IDAL.dll
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.Common.pdb
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.Entity.pdb
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.IDAL.pdb
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.DAL.csprojAssemblyReference.cache
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.DAL.csproj.CoreCompileInputs.cache
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.DAL.AssemblyInfoInputs.cache
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.DAL.AssemblyInfo.cs
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.DAL.csproj.CopyComplete
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.DAL.dll
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.DAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.DAL.pdb

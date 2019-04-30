@@ -1,0 +1,353 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AuthorRegister</title>
+    <meta name="renderer" content="webkit">
+    <link href="~/css/author.css" rel="stylesheet" />
+    <link href="~/css/login.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="reg_map">
+        <div class="au_nav">
+            <div class="au_box" id="loginSign">
+                <div class="au_nav_a">
+                    <a href="/Home/Index" target="_blank">98k首页</a>|
+                    <a href="http://author.98k.com/nzh/editors" target="_blank">编辑介绍</a>|
+                    <a href="http://www.98k.com/company/author.html" target="_blank" class="goodluck">作者福利</a>|
+                    <span id="name"></span>|
+                    <a href="javascript:location.href=&#39;http://passport.98k.com/logout.do?callback=&#39;+encodeURIComponent(&#39;http://author.98k.com&#39;)+&#39;&amp;rnd=&#39;+new Date().getTime()">退出</a>
+                    <script>
+                        var logtype = "true";
+                        window.zhname = "智障小黑妹";
+                    </script>
+                </div>
+                <a href="http://author.98k.com" class="au_logo"></a>
+            </div>
+        </div>
+    </div>
+    <div class="cl20"></div>
+    <div class="reg_wrap">
+        <div class="stepline">
+            <div class="overbox">
+                <span class="step" style="text-indent:15px">注册通行证</span>
+                <span class="step">接受协议</span>
+                <span class="step active" style="margin-left:-4px">填写资料</span>
+                <span class="step" style="text-indent:-25px">注册成功</span>
+            </div>
+        </div>
+        <div class="reg_cbox">
+            <div class="reg_tab">
+                <div class="botline"></div>
+                <span id="pRegister" class="active" data-regway="regway_phone">手机号注册</span>
+                <span id="eRgister" data-regway="regway_mail">邮箱注册</span>
+                <a href="http://author.98k.com/nau/register" style="float:right; font-size:14px; color:#1abc9c; letter-spacing:1px;font-family:" Microsoft YaHei";line-height:40px;">返回<em style="letter-spacing:-2px; padding-left:2px;">>></em></a>
+            </div>
+            <div class="regform_wrap">
+                @* 作者手机注册 *@
+                <div class="regway regway_phone">
+                    <form id="form0">
+                        <div class="reg_iptline checkdata" data-box="Pseudonym" title="笔名">
+                            <div class="ipt_tit">
+                                <span class="must">*</span> 笔名
+                            </div>
+                            <div class="ipt_r">
+                                <div class="ipt_box">
+                                    <input data-bustype="rm" type="text" name="Pseudonym" placeholder="请输入笔名" value="">
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="Pseudonym"></div>
+                                <div class="itip">*不可是数字和特殊字符，只可以是汉字</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="reg_iptline checkdata" data-box="QQ" title="QQ">
+                            <div class="ipt_tit">
+                                <span class="must">*</span> QQ
+                            </div>
+                            <div class="ipt_r">
+                                <div class="ipt_box">
+                                    <input type="text" name="QQ" placeholder="请输入QQ号" value="">
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="QQ"></div>
+                                <div class="itip">5~12位数字</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="reg_iptline checkdata" data-box="Phone" title="手机号">
+                            <div class="ipt_tit">
+                                <span class="must">*</span> 手机号
+                            </div>
+                            <div class="ipt_r">
+                                <div class="ipt_box">
+                                    <input type="text" id="cellnumber" name="Phone" placeholder="请输入手机号" value="">
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="Phone" data-errcode="106"></div>
+                                <div class="itip">11位数字</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        @*<div class="reg_iptline checkdata" data-box="dyCode" title="验证码">
+                                <div class="ipt_tit"><span class="must">*</span> 验证码</div>
+                                <div class="ipt_r">
+                                    <div class="ipt_box shortbox fl" style="margin-right:5px"><input name="dyCode" id="smscode" type="text" placeholder="验证码" value=""></div>
+                                    <div class="ipt_btn fl" id="timerbtn"><input type="button" data-hook="getsmscode" data-bustype="rm" value="发送验证码"></div>
+                                    <div class="ipt_btn fl" id="timerbox"></div>
+                                    <div class="iright"></div>
+                                    <div class="cl"></div>
+                                    <div class="jerror" name="dyCode" data-hook="sendcodeerr"></div>
+                                    <div class="itip">超过60秒，请重新输入验证码</div>
+                                </div>
+                                <div class="cl"></div>
+                            </div>*@
+                        <div class="reg_iptline checkdata" data-box="Password" title="密码">
+                            <div class="ipt_tit">
+                                <span class="must">*</span> 作者专区登录密码
+                            </div>
+                            <div class="ipt_r">
+                                <div class="ipt_box">
+                                    <input type="Password" name="Password" placeholder="请输入密码" value="">
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="Password" data-errcode="106"></div>
+                                <div class="itip">6~16位英文字母(区分大小写)或数字，数字字母需同时出现</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="reg_iptline checkdata" data-box="rePwd" title="确认密码">
+                            <div class="ipt_tit">
+                                <span class="must">*</span> 再次确认密码
+                            </div>
+                            <div class="ipt_r">
+                                <div class="ipt_box">
+                                    <input type="password" name="rePwd" placeholder="请再次输入密码" value="">
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="rePwd" data-errcode="106"></div>
+                                <div class="itip">6~16位英文字母(区分大小写)或数字，数字字母需同时出现</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="reg_iptline">
+                            <div class="ipt_tit"></div>
+                            <div class="ipt_r">
+                                <input type="hidden" name="UserId" value="">
+                                <input type="button" name="" value="确认提交" class="reg_submit" onclick="addA()">
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                    </form>
+                </div>
+                @* 作者邮箱注册 *@
+                <div class="regway regway_mail" style="display:none">
+                    <form action="/" method="post" id="form_ereg">
+                        <input type="hidden" name="UserId" />
+                        <div class="reg_iptline checkdata" data-box="pseudonym" title="笔名">
+                            <div class="ipt_tit"><span class="must">*</span> 笔名</div>
+                            <div class="ipt_r">
+                                <div class="ipt_box"><input data-bustype="re" type="text" name="Pseudonym" placeholder="请输入笔名" value=""></div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="pseudonym"></div>
+                                <div class="itip">1-12个字符，汉字、数字、字母开头，可包含下划线</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="reg_iptline checkdata" data-box="qq" title="QQ">
+                            <div class="ipt_tit"><span class="must">*</span> QQ</div>
+                            <div class="ipt_r">
+                                <div class="ipt_box"><input type="text" name="QQ" placeholder="请输入QQ号" value=""></div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="qq"></div>
+                                <div class="itip">5~12位数字</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="reg_iptline checkdata" data-box="email" title="邮箱地址">
+                            <div class="ipt_tit"><span class="must">*</span> 邮箱</div>
+                            <div class="ipt_r">
+                                <div class="ipt_box"><input type="text" id="mailaddress" name="Email" placeholder="请输入邮箱地址" value=""></div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="email" data-errcode="107"></div>
+                                <div class="itip">QQ邮箱</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="reg_iptline checkdata" data-box="dyCode" title="验证码">
+                            <div class="ipt_tit"><span class="must">*</span> 验证码</div>
+                            <div class="ipt_r">
+                                <div class="ipt_box shortbox fl" style="margin-right:5px"><input name="Yzm" id="smscode" type="text" placeholder="验证码" value=""></div>
+                                <div class="ipt_btn fl" id="mailtimerbtn"><input type="button" data-hook="getmailcode" data-bustype="re" onclick="sendYzm()" value="发送验证码"></div>
+                                <div class="ipt_btn fl" id="mailtimerbox"></div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="Yzm" data-hook="mail_sendcodeerr"></div>
+                                <div class="itip">超过60秒，请重新输入验证码</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="reg_iptline checkdata" data-box="pwd" title="密码">
+                            <div class="ipt_tit"><span class="must">*</span> 作者专区登录密码</div>
+                            <div class="ipt_r">
+                                <div class="ipt_box"><input type="password" name="Password" placeholder="请输入密码" value=""></div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="pwd"></div>
+                                <div class="itip">6~16位英文字母(区分大小写)或数字，数字字母需同时出现</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="reg_iptline checkdata" data-box="rePwd" title="确认密码">
+                            <div class="ipt_tit"><span class="must">*</span> 再次确认密码</div>
+                            <div class="ipt_r">
+                                <div class="ipt_box"><input type="password" name="Password0" placeholder="请再次输入密码" value=""></div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="rePwd"></div>
+                                <div class="itip">6~16位英文字母(区分大小写)或数字，数字字母需同时出现</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        <div class="reg_iptline">
+                            <div class="ipt_tit"></div>
+                            <div class="ipt_r"><input type="button" onclick="addAuthorByEmail()" value="确认提交" class="reg_submit"></div>
+                            <div class="cl"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="au_box">
+            <p>
+                Copyright<em>©</em>2008-2010 www.98k.com All Rights Reserved
+            </p>
+            <p>版权所有 深圳创业网络文化科技有限公司</p>
+        </div>
+    </div>
+</body>
+</html>
+<script src="~/jquery-3.1.1.js"></script>
+<script>
+    $(function () {
+        var name = '@ViewBag.UserName';
+        $("#name").html(name);
+        $("[name=UserId]").val(@ViewBag.UserId);
+
+        $("[name=Pseudonym]").blur(function () {
+            QueryByPseudonym();
+        })
+    })
+
+    $("#eRgister").click(function () {
+        $(".regway_phone").hide();
+        $("#pRegister").removeClass("active");
+        $(".regway_mail").show();
+        $("#eRgister").addClass("active");
+    })
+
+    $("#pRegister").click(function () {
+        $(".regway_phone").show();
+        $("#pRegister").addClass("active");
+        $(".regway_mail").hide();
+        $("#eRgister").removeClass("active");
+    })
+
+    function addA() {
+        var pwd1 = $("[name=Password]").val();
+        var pwd2 = $("[name=rePwd]").val();
+
+        if (pwd1 != pwd2) {
+            alert("两次密码不一致");
+            return;
+        }
+        else {
+            $.ajax({
+                url: "/AuthorLR/AuthorAdd",
+                type: "post",
+                data: $("#form0").serialize(),
+                success: function (data) {
+                    if (data > 0) {
+                        location.href = "/Home/AuthorIndex";
+                    }
+                    else {
+                        alert("注册失败");
+                    }
+                }
+            })
+        }
+    }
+    //验证重复笔名
+    function QueryByPseudonym() {
+        $.ajax({
+            url: "/Email/QueryByPseudonym?Pseudonym=" + $("[name=Pseudonym]").val(),
+            type: "post",
+            success: function (data) {
+                console.log(data);
+                if (data > 0) {
+                    alert("笔名重复,请重新输入");
+                }
+                else {
+
+                }
+            }
+        })
+    }
+
+    //发送邮箱验证码
+    function sendYzm() {
+        $.ajax({
+            url: "/Email/lead?qqEmail=" + $("[name=Email]").val(),
+            type: "post",
+            success: function (data) {
+                console.log(data);
+                if (data) {
+
+                }
+                else {
+
+                }
+            }
+        })
+    }
+    //邮箱注册
+    function addAuthorByEmail() {
+        var pwd1 = $("#form_ereg").children("[name=Password]").val();
+        var pwd2 = $("#form_ereg").children("[name=Password0]").val();
+        if (pwd1 != pwd2) {
+            alert("两次密码不一致");
+            return;
+        }
+        $.ajax({
+            url: "/Email/AuthorAdd",
+            type: "post",
+            data: $("#form_ereg").serialize(),
+            success: function (data) {
+                if (data > 0) {
+                    location.href = "/Home/AuthorIndex";
+                }
+                else if (data == -1)
+                {
+                    alert("验证码不正确");
+                }
+                else {
+                    alert("注册失败");
+                }
+            }
+        })
+    }
+</script>

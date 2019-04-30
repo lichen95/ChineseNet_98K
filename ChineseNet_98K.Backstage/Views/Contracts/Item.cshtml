@@ -1,0 +1,229 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/css/x-admin.css" media="all">
+</head>
+<body>
+
+    <div class="x-body">
+        <form action="" method="post" class="layui-form layui-form-pane" id="form0">
+            <input type="hidden" name="AuthorId" />
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    作者笔名:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" disabled="disabled" id="PermissionName" name="Pseudonym" required="" lay-verify="required"
+                           value="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    真实姓名:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" disabled="disabled" id="PermissionName" name="Name" required="" lay-verify="required"
+                           value="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    手机号:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" disabled="disabled" id="PermissionName" name="Phone" required="" lay-verify="required"
+                           value="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    电子邮件:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" disabled="disabled" id="PermissionName" name="Email" required="" lay-verify="required"
+                           value="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    QQ号码:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" disabled="disabled" id="PermissionName" name="QQ" required="" lay-verify="required"
+                           value="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    身份证号:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" disabled="disabled" id="PermissionName" name="IdCard" required="" lay-verify="required"
+                           value="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    地址:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" disabled="disabled" id="PermissionName" name="Address" required="" lay-verify="required"
+                           value="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    邮编:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" disabled="disabled" id="PermissionName" name="Postcode" required="" lay-verify="required"
+                           value="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    是否签约:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" disabled="disabled" id="PermissionName" name="IsContract" required="" lay-verify="required"
+                           value="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    账号状态:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" disabled="disabled" id="PermissionName" name="State" required="" lay-verify="required"
+                           value="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    作者简介:
+                </label>
+                <div class="layui-input-inline">
+                    <textarea disabled="disabled" name="AuthorDesc"></textarea>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    身份证图片:
+                </label>
+                <div class="layui-input-inline">
+                    <img id="showIdCardPath" width="400" height="500" />
+                    @*<input type="text" disabled="disabled" id="PermissionName" name="CreateDate" required="" lay-verify="required"
+                value="" autocomplete="off" class="layui-input">*@
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    创建日期:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" disabled="disabled" id="PermissionName" name="CreateDate" required="" lay-verify="required"
+                           value="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    主要作品:
+                </label>
+                <div class="layui-input-inline">
+                    <textarea disabled="disabled" name="AuthorBooks" cols="20" rows="10" ></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="button" class="layui-btn" lay-submit="" lay-filter="update" value="通过" onclick="upd(2)" />
+                    <input type="button" class="layui-btn" lay-submit="" lay-filter="update" value="不通过" onclick="upd(1)" />
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <script src="/lib/layui/layui.js" charset="utf-8">
+    </script>
+    <script src="/js/x-layui.js" charset="utf-8">
+    </script>
+    <script src="/js/jquery.min.js"></script>
+    <script>
+
+        layui.use(['form', 'layer'], function () {
+            $ = layui.jquery;
+            var form = layui.form()
+                , layer = layui.layer;
+          $(function () {
+                $.ajax({
+                    url: "/Contracts/QueryById?Id="+@ViewBag.AId,
+                type: "post",
+                async: false,
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $("[name=AuthorId]").val(data.AuthorId);
+                    $("[name=Name]").val(data.Name);
+                    $("[name=Pseudonym]").val(data.Pseudonym);
+                    $("[name=Phone]").val(data.Phone);
+                    $("[name=Email]").val(data.Email);
+                    $("[name=QQ]").val(data.QQ);
+                    $("[name=IdCard]").val(data.IdCard);
+                    $("[name=AuthorDesc]").val(data.AuthorDesc);
+                    $("[name=Address]").val(data.Address);
+                    $("[name=Postcode]").val(data.Postcode);
+                    $("[name=IsContract]").val(data.IsContract == 0 ? "否" : "是");
+                    $("[name=CreateDate]").val(data.CreateDate);
+                    $("#showIdCardPath").prop("src",data.IdCardPath);
+                    $("[name=State]").val(data.State == 0 ? "禁用" : "启用");
+                    $("[name=AuthorBooks]").html(data.AuthorBooks);
+                }
+            })
+        })
+
+        });
+        //监听提交
+        function upd(state) {
+            $.ajax({
+                url: "/Contracts/Update?Id=" + @ViewBag.Id+"&AuthorId=" + $("[name=AuthorId]").val() + "&State=" + state,
+                type: "post",
+                success: function (data) {
+                    console.log(data);
+                    if (data) {
+                        layer.alert("更新成功", { icon: 6 }, function () {
+                            // 获得frame索引
+                            var index = parent.layer.getFrameIndex(window.name);
+                            //关闭当前frame
+                            parent.layer.close(index);
+                            window.parent.location.reload();
+                        });
+                    }
+                    else {
+                        layer.alert("更新失败", { icon: 1 }, function () {
+                            // 获得frame索引
+                            var index = parent.layer.getFrameIndex(window.name);
+                        });
+                    }
+                },
+                error: function (e) {
+                    console.log(e);
+                }
+            })
+        }
+    </script>
+</body>
+</html>

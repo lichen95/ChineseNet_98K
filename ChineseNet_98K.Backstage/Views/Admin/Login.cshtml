@@ -1,0 +1,54 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>98K小说中文网登录</title>
+    <link rel="icon" href="~/images/favicon.ico" mce_href="~/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="~/images/favicon.ico" mce_href="~/images/favicon.ico" type="image/x-icon">
+    <link href="~/css/login.css" rel="stylesheet" />
+    <script src="~/lib/layui/layui.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+</head>
+<body class="login-bg">
+    <canvas id="fullstarbg">你的浏览器不支持canvas标签</canvas>
+    <div class="login">
+        <div class="message">98K小说中文网登录</div>
+        <div id="darkbannerwrap"></div>
+        <form class="layui-form" action="/Admin/Login" method="post">
+            <input name="UserName" placeholder="用户名" type="text" lay-filter="UserName" lay-verify="required" class="layui-input">
+            <hr class="hr15">
+            <input name="UserPwd" lay-verify="required" lay-filter="UserPwd" placeholder="密码" type="password" class="layui-input">
+            <hr class="hr15">
+
+            <input value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit">
+            <hr class="hr20">
+        </form>
+    </div>
+    <!-- 底部结束 -->
+</body>
+</html>
+<script>
+    layui.use(['form'], function () {
+        $ = layui.jquery;
+        var form = layui.form(),
+            layer = layui.layer;
+
+        //监听提交
+        form.on('submit(UserName)', function () {
+            if ($("[name=UserName]").val() == "")
+                return false;
+        });
+
+        //监听提交
+        form.on('submit(UserPwd)', function () {
+            if ($("[name=UserPwd]").val() == "")
+                return false;
+        });
+    });
+</script>

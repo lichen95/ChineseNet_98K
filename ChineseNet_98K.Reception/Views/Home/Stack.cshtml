@@ -1,0 +1,459 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="copyright" content="本页版权 www.98k.com 98k中文网所有。All Rights Reserved" />
+    <meta name="renderer" content="webkit">
+    <title>小说_小说推荐_好看的完本免费小说推荐- 98k中文网</title>
+    <link rel="stylesheet" href="~/css/basic.min1.css" />
+    <link rel="stylesheet" href="~/css/store.min1.css" />
+    <link href="~/layui/css/layui.css" rel="stylesheet" />
+    <script src="~/jquery-3.1.1.js"></script>
+    <script>
+        function ToSearch() {
+            location.href = '/Home/Search?keyword=' + $("[name=keyword]").val();
+        }
+    </script>
+</head>
+<body monkeyId="98k-store" store="store" categoryId="0" bookType="0" childCategoryId="0" vip="9" serialStatus="9" totalWord="0" firstChar="ALL" order="0" pageNum="1" _pgid="4" updateTime="0" isGraphic="1" scriptSign="store">
+    <!-- 重要，原来body的自定义属性请全部保留 -->
+    <div class="wrap">
+        <div class="head">
+            <div class="head-top clearfix">
+                <div class="logo imgbox fl">
+                    <a href="/Home/Index">
+                        <img src="~/picture/logo.png" alt="logo">
+                    </a>
+                </div>
+                @*全文检索*@
+                <form id="commSearch" name="searchForm" method="post" action="" target="_blank">
+                    <div class="search-box fl" data-hook="searchSuggest">
+                        <input class="search-text fl" name="keyword" type="text" placeholder="斗罗大陆" autocomplete="off" disableautocomplete /> <input type="button" onclick="ToSearch()" class="search-btn fr" />
+                    </div>
+                </form>
+                <div class="pay fr">
+                    <a class="user_pay" href="/Home/Pay" target="_blank">充值</a>
+                </div>
+                <div class="right-wrap-login ud_userTox">
+                    <div class="unlogin ud_unlogin clearfix">
+                        <div class="login fl"><a class="user_login" href="/Home/Login">登录</a></div>
+                        <div class="regist fl"><a class="user_register" href="/Home/Register">注册</a></div>
+                    </div>
+                    <div class="logon ud_loged clearfix" style="display:none;">
+                        <div class="user tabA imgbox">
+                            <img class="ud_avatar ud_goUsrCenter" src="~/picture/book.png" alt="" target="_blank">
+                            <div class="user-blank tabA-float">
+                                <a href="javascript:void(0);" class="quit ud_logout">退出</a>
+                                <div class="user-name ud_goUsrCenter"><span class="ud_nickName"></span><em class="icon"></em></div>
+                                <div class="user-info clearfix">
+                                    <div class="user-info-cell ud_money">
+                                        <span class="item_loading"></span>
+                                    </div>
+                                    <div class="user-info-cell ud_ticket">
+                                        <span class="item_loading"></span>
+                                    </div>
+                                    <div class="user-info-cell ud_mticket">
+                                        <span class="item_loading"></span>
+                                    </div>
+                                </div>
+                                <a href="/Home/Pay" class="btn" target="_blank">立即充值</a>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <a href="/Home/MyMessages" class="mes" target="_blank">消息(<span class="ud_umessage"></span>)</a>
+                        </div>
+                        <div class="shelf"><a href="/Home/Booshelfs" target="_blank">书架</a></div>
+                        <div class="foot-mark tabA">
+                            <span class="mark clearfix"> <a href="/AuthorLR/UnLogin" class="quit ud_logout">退出</a><em class="icon"></em></span>
+                            <div class="tabA-float float-mark clearfix">
+                                <!-- loading -->
+                                <div class="ud_hisloading">
+                                    <span class="item_loading"></span>
+                                </div>
+                                <!-- 没有记录 -->
+                                <div class="ud_noHistory" style="display: none">
+                                    <h2>亲爱的书友，您暂时没有阅读记录~</h2>
+                                    <div class="tips">阅读记录只保存最近阅读的5本小说</div>
+                                    <div class="enter"><a href="http://home.98k.com/favoritesBook.do" target="_blank">进入我的书架</a></div>
+                                </div>
+                                <!-- 有记录 -->
+                                <div class="ud_hasHistory" style="display: none"><ul class="mark-list"></ul></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav clearfix">
+                <div class="menu-left fl">
+                    <a href="/Home/Index">首页<em></em></a>
+                    <a class="active" href="/Home/Stack">书库<em></em></a>
+                    <a href="/Home/Ranking">排行<em></em></a>
+                    <div class="app-menu tabA">
+                        <div class="app-float tabA-float">
+                            <div class="tit">98k小说 原创精品</div>
+                            <div class="imgbox tabC_wap">
+                                <div class="tabC" style="display: block;">
+                                    <img src="~/picture/ad-float.png" alt="">
+                                </div>
+                                <div class="tabC">
+                                    <img src="~/picture/ios-float.png" alt="">
+                                </div>
+                                <div class="tabC">
+                                    <img src="~/picture/wx-float.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tabT_wap app-down">
+                                <span class="tabT ad active"></span>
+                                <span class="tabT ios"></span>
+                                <span class="tabT wx"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-right fr">
+                    <a href="/Home/Login" class="author_zone" target="_blank">作者专区<em></em></a>
+                </div>
+            </div>
+        </div>
+        <!-- 1.	书库头部广告位 -->
+        <div class="com-recbox">
+            <script type="text/javascript" src="~/js/240517642433.js"></script>
+        </div>
+        <div class="h20-blank"></div>
+        <!-- 书库主内容 -->
+        <!-- 顶部复选区 -->
+        <div class="bookstore_tbox">
+            <div class="bookstore_select">
+                <div class="select_con">
+                    <!-- 作品分类 -->
+                    <div class="kind">
+                        <div class="bz">作品分类：</div>
+                        <div id="showTId1" class="nr br sub"></div>
+                        <div class="spline"></div>
+                        <div class="sublevel">
+                            <div class="bz"> </div>
+                            <div id="showTId2" class="nr br"></div>
+                        </div>
+                    </div>
+                    <!-- 写作进度 -->
+                    <div class="kind">
+                        <div class="bz">写作进度：</div>
+                        <div id="showState" class="nr br">
+                            <a class="current store" href="javascript:void(0)" onclick="getState(this)" serialstatus="-1">全部</a>
+                            <a class="store" href="javascript:void(0)" onclick="getState(this)" serialstatus="1">连载中</a>
+                            <a class="store" href="javascript:void(0)" onclick="getState(this)" serialstatus="2">已完结</a>
+                        </div>
+                        <div class="cl0"></div>
+                    </div>
+                    <!-- 作品字数 -->
+                    <div class="kind">
+                        <div class="bz">作品字数：</div>
+                        <div id="showWordSize" class="nr br">
+                            <a class="current store" href="javascript:void(0)" onclick="getWordSize(this)" minSize="-1" maxSize="-1">全部</a>
+                            <a class="store" href="javascript:void(0)" onclick="getWordSize(this)" minSize="0" maxSize="30">30万字以下</a>
+                            <a class="store" href="javascript:void(0)" onclick="getWordSize(this)" minSize="30" maxSize="50">30万-50万</a>
+                            <a class="store" href="javascript:void(0)" onclick="getWordSize(this)" minSize="50" maxSize="100">50万-100万</a>
+                            <a class="store" href="javascript:void(0)" onclick="getWordSize(this)" minSize="100" maxSize="200">100万-200万</a>
+                            <a class="store" href="javascript:void(0)" onclick="getWordSize(this)" minSize="200" maxSize="5000">200万以上</a>
+                        </div>
+                        <div class="cl0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h15-blank"></div>
+        <!-- 下拉复选区 -->
+        <div class="bookstore_sort sort">
+            <div class="kind">
+                <div class="bz">排序方式：</div>
+                <div id="showOrder" class="nr">
+                    <div class="sort_form">
+                        <a href="javascript:void(0)" class="sort_select store" onclick="px(this)" order="1">总字数</a>
+                    </div>
+                    <div class="sort_form">
+                        <a href="javascript:void(0)" class="sort_select store" onclick="px(this)" order="2">更新时间</a>
+                    </div>
+                </div>
+                <div class="cl0"></div>
+            </div>
+        </div>
+        <!-- 书籍列表区 图文模式 -->
+        <div class="store_list_wrap">
+            <div class="store_collist"></div>
+            <!-- 分页 -->
+            <div class="h20-blank"></div>
+            <div id="page" class="layui-elem-field layui-field-title"></div>
+        </div>
+        <div class="h40-blank"></div>
+        <!-- end书库主内容 -->
+    </div>
+    <div class="footer">
+        <div class="partlink">
+            <div class="wrap">
+                <div class="title">出版合作联系</div>
+                <div class="clearfix">
+                    <div class="mail fl">
+                        <div>版权合作联系人：许先生<a href="#">xubin@98k.com</a></div>
+                        <div>广告合作联系人：张女士<a href="#">zhangwen@98k.com</a></div>
+                    </div>
+                    <div class="help-btn">
+                        <a class="btn" href="#" target="_blank">帮助中心</a>
+                        <p>服务时间：24小时</p>
+                    </div>
+                    <div class="b1 foot-cell">
+                        <div class="tit">客服</div>
+                        <div class="qq">965151179</div>
+                        <div class="email"><a href="#">zhkf@98k.com</a></div>
+                    </div>
+                    <div class="b2 foot-cell">
+                        <div class="tit">举报</div>
+                        <div class="tel">4006289988</div>
+                        <div class="email"><a href="#">jubao@98k.com</a></div>
+                    </div>
+                    <div class="app foot-blank">
+                        <div class="imgbox fl">
+                            <img src="~/picture/app.png" alt="">
+                        </div>
+                        <p>客户端下载</p>
+                    </div>
+                    <div class="wchat foot-blank">
+                        <div class="imgbox fl">
+                            <img src="~/picture/wx.png" alt="">
+                        </div>
+                        <p>微信公众号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="links">
+                <a href="#" target="_blank">关于98k</a>|
+                <a href="#" target="_blank">诚聘英才</a>|
+                <a href="#" target="_blank">商务合作</a>|
+                <a href="#" target="_blank">法律声明</a>|
+                <a href="#" target="_blank">帮助中心</a>|
+                <a href="#" target="_blank">作者投稿</a>|
+                <a href="#" target="_blank">联系我们</a>|
+                <a href="#" target="_blank">友情链接</a>|
+                <a href="#" target="_blank">谨防诈骗</a>|
+                <a href="#" target="_blank">网站地图</a>
+            </div>
+            <p>
+                Copyright©<a href="http://www.98k.com" target="_blank">www.98k.com</a>
+                All Rights Reserved 版权所有 深圳创业网络文化科技有限公司   京ICP证：080527号《网络文化经营许可证》
+                <a href="http://static.98k.com/images/license/publication-license.jpg" target="_blank">京ICP备11009265号</a>
+                <a href="http://static.98k.com/images/license/business-license.jpg" target="_blank">京网文[2015]2368-459号</a>
+            </p>
+            <p>
+                新出发京零字第朝130010号  丨  统一社会信用代码91110105678221683F  丨
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502030124" target="_blank">京公网安备  	11010502030124号</a>  丨
+                <a href="http://www.cyberpolice.cn/wfjb/" target="_blank">公安部网络违法犯罪举报网站</a>
+            </p>
+            <p>
+                <a href="http://www.98k.com" target="_blank">98k小说中文</a>,提供
+                <a href="http://www.98k.com/category/1.html" target="_blank">玄幻小说</a>,
+                <a href="/category/9.html" target="_blank">都市小说</a>,
+                <a href="http://huayu.baidu.com" target="_blank">言情小说</a>等
+                <a href="http://book.98k.com/store/c0/c0/b0/u0/p1/v0/s9/t0/u0/i1/ALL.html" target="_blank">免费小说</a>阅读。作者发布小说作品时，请遵守国家互联网信息管理办法规定。
+            </p>
+            <p>本站所收录小说作品、社区话题、书库评论均属其个人行为，不代表本站立场。</p>
+        </div>
+        <script src="~/js/require.min1.js"></script>
+    </div>
+</body>
+</html>
+<script src="~/layui/layui.all.js"></script>
+<script>
+    var typeIdOne = -1;//一级分类
+    var typeIdTwo = -1;//二级分类
+    var state = -1;//连载完结
+    var minSize = -1;//字数
+    var maxSize = -1;//字数
+    var order = 0;//排序方式
+    var PageIndex = 1;
+
+    function ToSearch() {
+        location.href = '/Home/Search?keyword=' + $("[name=keyword]").val();
+    }
+
+        
+
+    $(".ud_goUsrCenter").click(function () {
+        location.href = "/Home/Booshelfs";
+    })
+
+    $(function () {
+        var user = '@ViewBag.User';
+        if (user != "") {
+            $(".unlogin").hide();
+            $(".logon").show();
+            var state = '@ViewBag.State';
+            if (state == 0) {
+                $(".author_zone").attr("href", "/Home/ApplyWriter");
+            }
+            if (state == 1) {
+                var author = '@ViewBag.Author';
+                if (author=="") {
+                    $(".author_zone").attr("href", "/Home/AuthorLogin");
+                }
+                else {
+                    $(".author_zone").attr("href", "/Home/AuthorIndex");
+                }
+            }
+        }
+
+        $.ajax({
+            url: "/AuthorLR/GetTypeByid?Id=0",
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                $(".sub").append(' <a class="current store" href="javascript:void(0)" onclick="showTId2(this)" categoryid="-1" >全部作品</a> ');
+                for (var i = 0; i < data.length; i++) {
+                    var a = ' <a class="store" href="javascript:void(0)" onclick="showTId2(this)" categoryid="' + data[i].TypeId + '">' + data[i].TypeName + '<em></em></a>  ';
+                    $(".sub").append(a);
+                }
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        });
+
+        show(PageIndex);
+    })
+
+    //加载二级
+    function showTId2(obj) {
+        typeIdOne = $(obj).attr("categoryid");
+        $(".sub").find('a').prop("class", "store");
+        $(obj).prop("class", "current store");
+        if (typeIdOne == -1) {
+            $("#showTId2").hide();
+            typeIdTwo = -1;
+            show(PageIndex);
+        }
+        else {
+            $("#showTId2").show();
+        }
+
+        $.ajax({
+            url: "/AuthorLR/GetTypeByid?Id=" + typeIdOne,
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                $("#showTId2").html("");
+                $("#showTId2").append(' <a class="current store" href="javascript:void(0)" onclick="getTId2(this)" categoryid="-1" >全部作品</a> ');
+                for (var i = 0; i < data.length; i++) {
+                    var a = ' <a class="store" href="javascript:void(0)" onclick="getTId2(this)" categoryid="' + data[i].TypeId + '">' + data[i].TypeName + '<em></em></a>  ';
+                    $("#showTId2").append(a);
+                }
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        });
+
+        show(PageIndex);
+    }
+
+    //获取二级ID
+    function getTId2(obj) {
+        typeIdTwo = $(obj).attr("categoryid");
+        console.log(typeIdTwo);
+        $("#showTId2").find('a').prop("class", "store");
+        $(obj).prop("class", "current store");
+        show(PageIndex);
+    }
+
+    //获取协作状态
+    function getState(obj) {
+        $("#showState").find('a').prop("class", "store");
+        $(obj).prop("class", "current store");
+        state = $(obj).attr("serialstatus");
+        show(PageIndex);
+    }
+
+    //获取字数
+    function getWordSize(obj) {
+        $("#showWordSize").find('a').prop("class", "store");
+        $(obj).prop("class", "current store");
+        minSize = $(obj).attr("minSize");
+        maxSize = $(obj).attr("maxSize");
+        show(PageIndex);
+    }
+
+    //获取排序方式
+    function px(obj) {
+        $("#showOrder").find('a').prop("class", "sort_select store");
+        $(obj).prop("class", "sort_select store on");
+        order = $(obj).attr("order");
+        console.log(order);
+        show(PageIndex);
+    }
+
+
+        //获取小说信息
+    function show(PageIndex) {
+        var laypage = layui.laypage
+            , layer = layui.layer;
+            $.ajax({
+                url: "/Novel/ShowNovel?typeIdOne=" + typeIdOne + "&typeIdTwo=" + typeIdTwo + "&state=" + state + "&minSize=" + minSize + "&maxSize=" + maxSize + "&order=" + order + "&pageIndex=" + PageIndex + "&pageSize=20",
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    $(".store_collist").html("");
+                    for (var i = 0; i < data.Data.length; i++) {
+                        var time = data.Data[i].NewTime;
+                        var a = time.substr(0, 5);
+                        var b = time.replace(a, " ");
+                        var c = b.substr(0, 12);
+                        var d = c.replace("T", " ");
+                        if (i % 2 == 0) {
+                            var div = '<div class="bookbox fl">'
+                                + '<div class="bookimg"><a href="/Home/Details?Id=' + data.Data[i].NovelId + '" target="_blank"><img src="' + data.Data[i].ImgPath + '" alt="' + data.Data[i].NovelName + '"></a></div>'
+                                + '<div class="bookinfo">'
+                                + '<div class="bookname"><a href="/Home/Details?Id=' + data.Data[i].NovelId + '" target="_blank">' + data.Data[i].NovelName + '</a></div>'
+                                + '<div class="bookilnk"><a href="#" target="_blank">' + data.Data[i].UserName + '</a>| <a href="#" target="_blank">' + data.Data[i].TypeNameOne + '</a> | <span>' + (data.Data[i].State == 2 ? "已完结" : "连载中") + '</span> | <span>更新时间' + d + '</span></div>'
+                                + '<div class="bookintro">' + data.Data[i].NovelDesc + '</div>'
+                                + '<div class="bookupdate"><a href="#" class="fl">最新章节：' + data.Data[i].ChapterName + '</a><span class="rank_d_b_time"></span></div></div></div>';
+                        }
+                        else {
+                            var div = '<div class="bookbox fr">'
+                                + '<div class="bookimg"><a href="/Home/Details?Id=' + data.Data[i].NovelId + '" target="_blank"><img src="' + data.Data[i].ImgPath + '" alt="' + data.Data[i].NovelName + '"></a></div>'
+                                + '<div class="bookinfo">'
+                                + '<div class="bookname"><a href="/Home/Details?Id=' + data.Data[i].NovelId + '" target="_blank">' + data.Data[i].NovelName + '</a></div>'
+                                + '<div class="bookilnk"><a href="#" target="_blank">' + data.Data[i].UserName + '</a>| <a href="#" target="_blank">' + data.Data[i].TypeNameOne + '</a> | <span>' + (data.Data[i].State == 1 ? "连载中" : "已完结") + '</span> | <span>更新时间' + d + '</span></div>'
+                                + '<div class="bookintro">' + data.Data[i].NovelDesc + '</div>'
+                                + '<div class="bookupdate"><a href="#" class="fl">最新章节：' + data.Data[i].ChapterName + '</a><span class="rank_d_b_time"></span></div></div></div>'
+                                + '<div class="dotline"></div>';
+                        }
+                        $(".store_collist").append(div);
+                    }
+
+                    laypage.render({
+                        elem: 'page',
+                        count: data.PageCount,    //总页数
+                        curr: PageIndex,     //当前页
+                        groups: 5,      //连续显示分页数
+                        limit: 20,
+                        theme: '#FF5722',
+                        layout: ['count', 'prev', 'page', 'next', 'refresh', 'skip'],
+                        jump: function (e, first) {
+                            if (!first) { //一定要加此判断，否则初始时会无限刷新
+                                PageIndex = e.curr;
+                                show(PageIndex);
+                            }
+                        }
+                    });
+                },
+                error: function (e) {
+                    console.log(e);
+                }
+            });
+        }
+</script>

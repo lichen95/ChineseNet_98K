@@ -1,0 +1,365 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <UserSecretsId>13bb2664-3cb0-4838-903e-090ad69c31b4</UserSecretsId>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="wwwroot\CookieHelper.cs" />
+    <Compile Include="wwwroot\DI.cs" />
+    <Compile Include="wwwroot\HttpContext.cs" />
+    <Compile Include="wwwroot\NoteHelper.cs" />
+    <Compile Include="wwwroot\StaticHttpContextExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Content\Client.cs" />
+    <Content Include="Models\WordFiter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\author.css" />
+    <None Include="wwwroot\css\basic.min.css" />
+    <None Include="wwwroot\css\icons.css" />
+    <None Include="wwwroot\css\ie7.css" />
+    <None Include="wwwroot\css\index.min.css" />
+    <None Include="wwwroot\css\login.css" />
+    <None Include="wwwroot\css\passport.css" />
+    <None Include="wwwroot\css\rank.min.css" />
+    <None Include="wwwroot\css\store.min.css" />
+    <None Include="wwwroot\fonts\icomoon.eot" />
+    <None Include="wwwroot\fonts\icomoon.svg" />
+    <None Include="wwwroot\fonts\icomoon.ttf" />
+    <None Include="wwwroot\fonts\icomoon.woff" />
+    <None Include="wwwroot\images\01.png" />
+    <None Include="wwwroot\images\02.png" />
+    <None Include="wwwroot\images\03.png" />
+    <None Include="wwwroot\images\04.png" />
+    <None Include="wwwroot\images\05.png" />
+    <None Include="wwwroot\images\06.png" />
+    <None Include="wwwroot\images\07.png" />
+    <None Include="wwwroot\images\08.png" />
+    <None Include="wwwroot\images\09.png" />
+    <None Include="wwwroot\images\10.png" />
+    <None Include="wwwroot\images\11.png" />
+    <None Include="wwwroot\images\12.png" />
+    <None Include="wwwroot\images\13.png" />
+    <None Include="wwwroot\images\14.png" />
+    <None Include="wwwroot\images\15.png" />
+    <None Include="wwwroot\images\16.png" />
+    <None Include="wwwroot\images\17.png" />
+    <None Include="wwwroot\images\18.png" />
+    <None Include="wwwroot\images\19.png" />
+    <None Include="wwwroot\images\20.png" />
+    <None Include="wwwroot\images\ad-have.png" />
+    <None Include="wwwroot\images\ad.png" />
+    <None Include="wwwroot\images\author-zone-have.png" />
+    <None Include="wwwroot\images\author-zone.png" />
+    <None Include="wwwroot\images\backold_btn.png" />
+    <None Include="wwwroot\images\backtop_w.png" />
+    <None Include="wwwroot\images\bindtip.png" />
+    <None Include="wwwroot\images\book_ic3.png" />
+    <None Include="wwwroot\images\cate01.png" />
+    <None Include="wwwroot\images\cate02.png" />
+    <None Include="wwwroot\images\cate03.png" />
+    <None Include="wwwroot\images\cate04.png" />
+    <None Include="wwwroot\images\cate05.png" />
+    <None Include="wwwroot\images\cate06.png" />
+    <None Include="wwwroot\images\cate07.png" />
+    <None Include="wwwroot\images\cateico.png" />
+    <None Include="wwwroot\images\chrome.png" />
+    <None Include="wwwroot\images\closeselect.png" />
+    <None Include="wwwroot\images\crown-hover.png" />
+    <None Include="wwwroot\images\crown.png" />
+    <None Include="wwwroot\images\c_rank1.png" />
+    <None Include="wwwroot\images\c_rank2.png" />
+    <None Include="wwwroot\images\c_rank3.png" />
+    <None Include="wwwroot\images\delbook.png" />
+    <None Include="wwwroot\images\down.png" />
+    <None Include="wwwroot\images\ed.png" />
+    <None Include="wwwroot\images\err.png" />
+    <None Include="wwwroot\images\fire.png" />
+    <None Include="wwwroot\images\firefox.png" />
+    <None Include="wwwroot\images\game-have.png" />
+    <None Include="wwwroot\images\game-icon.png" />
+    <None Include="wwwroot\images\graphicon.png" />
+    <None Include="wwwroot\images\graphonicon.png" />
+    <None Include="wwwroot\images\head_bg.jpg" />
+    <None Include="wwwroot\images\ico.png" />
+    <None Include="wwwroot\images\icon-login.png" />
+    <None Include="wwwroot\images\icon-register.png" />
+    <None Include="wwwroot\images\icon01.png" />
+    <None Include="wwwroot\images\icon02.png" />
+    <None Include="wwwroot\images\ico_c.png" />
+    <None Include="wwwroot\images\ico_err.png" />
+    <None Include="wwwroot\images\ico_err2.png" />
+    <None Include="wwwroot\images\ico_right.png" />
+    <None Include="wwwroot\images\ie10.png" />
+    <None Include="wwwroot\images\indexsparr.png" />
+    <None Include="wwwroot\images\ios-have.png" />
+    <None Include="wwwroot\images\ios.png" />
+    <None Include="wwwroot\images\listicon.png" />
+    <None Include="wwwroot\images\listonicon.png" />
+    <None Include="wwwroot\images\listtype.png" />
+    <None Include="wwwroot\images\loading.gif" />
+    <None Include="wwwroot\images\loginbg.jpg" />
+    <None Include="wwwroot\images\logo.png" />
+    <None Include="wwwroot\images\lv1.gif" />
+    <None Include="wwwroot\images\lv2.gif" />
+    <None Include="wwwroot\images\lv3.gif" />
+    <None Include="wwwroot\images\lv4.gif" />
+    <None Include="wwwroot\images\lv5.gif" />
+    <None Include="wwwroot\images\mail.png" />
+    <None Include="wwwroot\images\more.png" />
+    <None Include="wwwroot\images\nobook.png" />
+    <None Include="wwwroot\images\none.png" />
+    <None Include="wwwroot\images\nopay.png" />
+    <None Include="wwwroot\images\pay.png" />
+    <None Include="wwwroot\images\phone-have.png" />
+    <None Include="wwwroot\images\phone.png" />
+    <None Include="wwwroot\images\points.png" />
+    <None Include="wwwroot\images\q.png" />
+    <None Include="wwwroot\images\qq.png" />
+    <None Include="wwwroot\images\radius_pic.png" />
+    <None Include="wwwroot\images\rank-ico.png" />
+    <None Include="wwwroot\images\rankdot.png" />
+    <None Include="wwwroot\images\reg_hr.png" />
+    <None Include="wwwroot\images\search.png" />
+    <None Include="wwwroot\images\search2-have.png" />
+    <None Include="wwwroot\images\search2.png" />
+    <None Include="wwwroot\images\selectbg.png" />
+    <None Include="wwwroot\images\shape-have.png" />
+    <None Include="wwwroot\images\shape.png" />
+    <None Include="wwwroot\images\sidebar.png" />
+    <None Include="wwwroot\images\stepbg.png" />
+    <None Include="wwwroot\images\stepbg_3.png" />
+    <None Include="wwwroot\images\stepwpbg.png" />
+    <None Include="wwwroot\images\stepwpbg_3.png" />
+    <None Include="wwwroot\images\sub_header.png" />
+    <None Include="wwwroot\images\tel.png" />
+    <None Include="wwwroot\images\tips.png" />
+    <None Include="wwwroot\images\titlebg.png" />
+    <None Include="wwwroot\images\up.png" />
+    <None Include="wwwroot\images\vip.png" />
+    <None Include="wwwroot\images\widget_close.png" />
+    <None Include="wwwroot\js\0ebad7c4e54a4485ae0f532ae3590c6d.js" />
+    <None Include="wwwroot\js\240517642411.js" />
+    <None Include="wwwroot\js\240517642419.js" />
+    <None Include="wwwroot\js\240517642421.js" />
+    <None Include="wwwroot\js\240517642422.js" />
+    <None Include="wwwroot\js\240517642423.js" />
+    <None Include="wwwroot\js\240517642424.js" />
+    <None Include="wwwroot\js\240517642431.js" />
+    <None Include="wwwroot\js\240517642433.js" />
+    <None Include="wwwroot\js\242154161363.js" />
+    <None Include="wwwroot\js\68e484447df7491b852694e6062cac83.js" />
+    <None Include="wwwroot\js\es5.min.js" />
+    <None Include="wwwroot\js\jquery-3.1.1.js" />
+    <None Include="wwwroot\js\jquery.min.js" />
+    <None Include="wwwroot\js\lib.js" />
+    <None Include="wwwroot\js\login.js" />
+    <None Include="wwwroot\js\logins.js" />
+    <None Include="wwwroot\js\react.min.js" />
+    <None Include="wwwroot\js\register.js" />
+    <None Include="wwwroot\js\require.min.js" />
+    <None Include="wwwroot\js\tongji.js" />
+    <None Include="wwwroot\picture\00454cc72bf76f26f1c9e95bf9e788f8.jpeg" />
+    <None Include="wwwroot\picture\0168edebf02b34940f18b0de0a8c9e43.jpeg" />
+    <None Include="wwwroot\picture\06378087189c8b9ff1fa5c8e53e4d92e.jpeg" />
+    <None Include="wwwroot\picture\0b4fc57f2dbd6af16938e6359d43f212.jpeg" />
+    <None Include="wwwroot\picture\0bd86ca2d0c2a79ca98c7382d5cba676.jpeg" />
+    <None Include="wwwroot\picture\0db790e08bf1d950556f89f08458ceac.jpeg" />
+    <None Include="wwwroot\picture\0e4faad91762bcc6a81d8529203dad16.jpeg" />
+    <None Include="wwwroot\picture\0fddc69f461118459249d8b7c6ff5bef.jpeg" />
+    <None Include="wwwroot\picture\11c88a33eb8443dd4f09189a1c20fa1c.jpeg" />
+    <None Include="wwwroot\picture\1346464039295.jpg" />
+    <None Include="wwwroot\picture\1371571190862.jpg" />
+    <None Include="wwwroot\picture\1375718139765.jpg" />
+    <None Include="wwwroot\picture\1420784238526.jpg" />
+    <None Include="wwwroot\picture\1438797020681.jpg" />
+    <None Include="wwwroot\picture\1442471761232.jpg" />
+    <None Include="wwwroot\picture\1445749599581.jpg" />
+    <None Include="wwwroot\picture\1447383799333.jpg" />
+    <None Include="wwwroot\picture\1449025519645.jpg" />
+    <None Include="wwwroot\picture\1454398331469.jpg" />
+    <None Include="wwwroot\picture\1478bae0ea368fbf86f42ffc781e8cf3.jpeg" />
+    <None Include="wwwroot\picture\1479374099098.jpg" />
+    <None Include="wwwroot\picture\1484039970922.jpg" />
+    <None Include="wwwroot\picture\1493810345930.jpg" />
+    <None Include="wwwroot\picture\1494293371661.jpg" />
+    <None Include="wwwroot\picture\1495632099254.jpg" />
+    <None Include="wwwroot\picture\1496047229306.jpg" />
+    <None Include="wwwroot\picture\1496234539057.jpg" />
+    <None Include="wwwroot\picture\1498823214127.jpg" />
+    <None Include="wwwroot\picture\1535079644650.png" />
+    <None Include="wwwroot\picture\1542177793881.png" />
+    <None Include="wwwroot\picture\1542177919491.png" />
+    <None Include="wwwroot\picture\1542177968569.png" />
+    <None Include="wwwroot\picture\1542178032387.png" />
+    <None Include="wwwroot\picture\199735498a09b6198d8319e4494d2a67.jpeg" />
+    <None Include="wwwroot\picture\1b8487533311f72c149d365dde2183a5.jpeg" />
+    <None Include="wwwroot\picture\1b951b6c6d624e1eab37a0e2f82f8b05.jpeg" />
+    <None Include="wwwroot\picture\1d6c96440c2cdc2569c3b2ada8605979.jpeg" />
+    <None Include="wwwroot\picture\1f62e9805bcac81a8fba436fb6b9bd07.jpeg" />
+    <None Include="wwwroot\picture\2217f25655ca37e3289b9be30b07fa86.jpeg" />
+    <None Include="wwwroot\picture\22b917ac7734d0cba647730dcf8db692.jpeg" />
+    <None Include="wwwroot\picture\232b2ec59cb356faa0d5f655af5e3206.jpeg" />
+    <None Include="wwwroot\picture\272bee8164f74f70b1d20b3c59b4fe09.jpeg" />
+    <None Include="wwwroot\picture\2a4a1b1419a075326109983ac0244344.jpeg" />
+    <None Include="wwwroot\picture\2c1fe294306eea58638e7d07a12a7628.jpeg" />
+    <None Include="wwwroot\picture\2d22e36a6256c3240de002f45c3edb18.jpeg" />
+    <None Include="wwwroot\picture\30ecae9752beb2dcd14137148a151e96.jpeg" />
+    <None Include="wwwroot\picture\3494380cadc441e9a1905407541fcd4b.gif" />
+    <None Include="wwwroot\picture\34b90a2d08bc3b155b439291883e59e6.jpeg" />
+    <None Include="wwwroot\picture\3535a8355cdd89d859ba314e912bf3f9.jpeg" />
+    <None Include="wwwroot\picture\3a4ba467f2f4f026dcd365f19bbfb2c7.jpeg" />
+    <None Include="wwwroot\picture\3afb9c7868d596fba27ead40de199332.jpeg" />
+    <None Include="wwwroot\picture\3afc6170bde832c56c77fa5d3176732c.jpeg" />
+    <None Include="wwwroot\picture\3b52cbfab62efa11c89417a7159724c4.jpeg" />
+    <None Include="wwwroot\picture\3f2c4ecbffe8042c4befa3c1863f232e.jpeg" />
+    <None Include="wwwroot\picture\3fe94e7c92e11b1a10eae0ad08a76ce0.jpeg" />
+    <None Include="wwwroot\picture\3ffe7347ba0803741191694e85825498.jpeg" />
+    <None Include="wwwroot\picture\445ba3ec1eb3fe958a6f80c65c2c36cc.jpeg" />
+    <None Include="wwwroot\picture\47860a684ccf4bac9533d907095f105a.gif" />
+    <None Include="wwwroot\picture\47c7042b86ed7cdae89da44809b37bf9.jpeg" />
+    <None Include="wwwroot\picture\4e4365153e3f2903a2dda28e0a98247c.jpeg" />
+    <None Include="wwwroot\picture\509cca03a076f678c3f9c20fe19509ef.jpeg" />
+    <None Include="wwwroot\picture\51412c6fa97ce045bc178d0b2648510a.jpeg" />
+    <None Include="wwwroot\picture\51c7432ab6e19a94c61d424023ef48d6.jpeg" />
+    <None Include="wwwroot\picture\54a69728528c2bc029b83085e6c24113.jpeg" />
+    <None Include="wwwroot\picture\54df6733d90293dccf36ec29f3d1c816.jpeg" />
+    <None Include="wwwroot\picture\5695fb9108ec0f35521d9fea55c3bf21.jpeg" />
+    <None Include="wwwroot\picture\571bd9681419e2e00bb13bdfb1fc1b09.jpeg" />
+    <None Include="wwwroot\picture\59cef0d916d04bd377c07e7b077b7210.jpeg" />
+    <None Include="wwwroot\picture\5ffba917cebcb281fd8b66c37ef6f053.jpeg" />
+    <None Include="wwwroot\picture\62d5acddc3c75ab1836efaf1b7d15057.jpeg" />
+    <None Include="wwwroot\picture\69bbf801804f05ffb9dee462b5b0543a.jpeg" />
+    <None Include="wwwroot\picture\6a692b29b8e7eb5ae0793409156dad87.jpeg" />
+    <None Include="wwwroot\picture\6cc18b90d5e444bb1c8283e644a06d57.jpeg" />
+    <None Include="wwwroot\picture\6de2532c6b8209d25b96fe75ef1584d7.jpeg" />
+    <None Include="wwwroot\picture\6debfc8416de6b1afef5d659f1682d3c.jpeg" />
+    <None Include="wwwroot\picture\7485885_120_120.jpg" />
+    <None Include="wwwroot\picture\74c1e91fbad4d3a83410882e8b9ff04b.jpeg" />
+    <None Include="wwwroot\picture\750e965319e52b46c122077e3a167e16.jpeg" />
+    <None Include="wwwroot\picture\754da55c07b25470b27c06a9593dfce0.jpeg" />
+    <None Include="wwwroot\picture\7b4ce3c8013072c43497ad3641db1aef.jpeg" />
+    <None Include="wwwroot\picture\7c9e28e690ef36a348e6d2a42885e1e5.jpeg" />
+    <None Include="wwwroot\picture\7cf21d5a98c91c2545b99e25ac4b1e4b.jpeg" />
+    <None Include="wwwroot\picture\7e4becfc2f6a8bf1235ac3e1e9b89974.jpeg" />
+    <None Include="wwwroot\picture\8100ed48c21c761d5b0a20abb7e2f550.jpeg" />
+    <None Include="wwwroot\picture\8200e79178cf6674d8144690c06d1d4b.jpeg" />
+    <None Include="wwwroot\picture\8354a2fab2ab076a2024d57c3601e19a.jpeg" />
+    <None Include="wwwroot\picture\85bf2a1453e273de35c40d0e9d761064.jpeg" />
+    <None Include="wwwroot\picture\877ca4baa79da67e03fd0e6172ffca2e.jpeg" />
+    <None Include="wwwroot\picture\889197165aa8d98ccc81ef546f4ae7b5.jpeg" />
+    <None Include="wwwroot\picture\88c51ca041dcfb7230b35afdc5c85d8e.jpeg" />
+    <None Include="wwwroot\picture\88feaae409ac5c93d5f34cb19b6d3e30.jpeg" />
+    <None Include="wwwroot\picture\8939fe50e43228deb192d975e1250d92.jpeg" />
+    <None Include="wwwroot\picture\893bdbec9b6a631c79fb7bee491dd3f0.jpeg" />
+    <None Include="wwwroot\picture\8e1c1cb0b6930e404bcf344a01bd8470.jpeg" />
+    <None Include="wwwroot\picture\8f871285c20a84a090397bb875e24f7d.jpeg" />
+    <None Include="wwwroot\picture\9206989aeb5e91ed3b5c8849b0505ecd.jpeg" />
+    <None Include="wwwroot\picture\93487fa980e149b96d99969716428968.jpeg" />
+    <None Include="wwwroot\picture\93905ffce0641044fe021ea981c1bada.jpeg" />
+    <None Include="wwwroot\picture\94cec79bed88b0987ac7eb1fded78384.jpeg" />
+    <None Include="wwwroot\picture\957c519c76ebeb37438ed909230811aa.jpeg" />
+    <None Include="wwwroot\picture\990565e811299ec11a126e9e64e4a651.jpeg" />
+    <None Include="wwwroot\picture\9b336b1444092b771279d5fb001d5eb4.jpeg" />
+    <None Include="wwwroot\picture\9d00337c58f7673af1812469acaac4e6.jpeg" />
+    <None Include="wwwroot\picture\a0091a1f768553f990c2ff4101e3bd13.jpeg" />
+    <None Include="wwwroot\picture\a7e9e9e784bc773d9bf6b4e4811b4376.jpeg" />
+    <None Include="wwwroot\picture\ad-float.png" />
+    <None Include="wwwroot\picture\adffc0359e89fdbf70d27cfd6dfe2924.jpeg" />
+    <None Include="wwwroot\picture\af3b4de7befa72a66728dcdf4efdad9a.jpeg" />
+    <None Include="wwwroot\picture\afb04d8565fc825fb88725223b618abc.jpeg" />
+    <None Include="wwwroot\picture\app.png" />
+    <None Include="wwwroot\picture\b0c5af5b3ca214b123f388789c0e9514.jpeg" />
+    <None Include="wwwroot\picture\b1785da4f50346fdcb762279ffec0d60.jpeg" />
+    <None Include="wwwroot\picture\b3c226e2ea48d0718f08ede2442918c1.jpeg" />
+    <None Include="wwwroot\picture\b859325698b6a35da21e4463fb644f81.jpeg" />
+    <None Include="wwwroot\picture\b96826d1a2abf96a81baaab0dbe5883e.jpeg" />
+    <None Include="wwwroot\picture\book.png" />
+    <None Include="wwwroot\picture\c0ba873bedbe3cbcfab33226254ef090.jpeg" />
+    <None Include="wwwroot\picture\c4e84bba052f559a79897e10b5a4c71b.jpeg" />
+    <None Include="wwwroot\picture\c76d291ae49effd128b67426957add23.jpeg" />
+    <None Include="wwwroot\picture\c7db8828e713b28aab2df7912ba40638.jpeg" />
+    <None Include="wwwroot\picture\c93e1e4d928cd54c114c962f06209d74.jpeg" />
+    <None Include="wwwroot\picture\cebf0502d07545e75ca457768aacf677.jpeg" />
+    <None Include="wwwroot\picture\cf5cc83ca5ad0570d5009f5b815303ef.jpeg" />
+    <None Include="wwwroot\picture\d014abd109e2b0278a4df7a92b0d3c44.jpeg" />
+    <None Include="wwwroot\picture\d2642a41a853c18dfc9753d1715c2205.jpeg" />
+    <None Include="wwwroot\picture\d4571940f5b707603e632d833fc0033c.jpeg" />
+    <None Include="wwwroot\picture\d6d0836b64ecd4e9fb8db33dd5d9f00b.jpeg" />
+    <None Include="wwwroot\picture\d969eba144998562b965334095c3bf3e.jpeg" />
+    <None Include="wwwroot\picture\dc1ee69e963652229f5613fb818d2aff.jpeg" />
+    <None Include="wwwroot\picture\dc52975b76b1392fa6e40ee80a62cb82.jpeg" />
+    <None Include="wwwroot\picture\dda14c1117ea5076663a515a2048e3a8.jpeg" />
+    <None Include="wwwroot\picture\ddc32049d473cf2ba4763048f981fe12.jpeg" />
+    <None Include="wwwroot\picture\e2abae72fb28c4628a67ed0d0aa10df0.jpeg" />
+    <None Include="wwwroot\picture\e2c75da8c1206c4ce4bff38270822aef.jpeg" />
+    <None Include="wwwroot\picture\e46c8885e35597444adf7272ef212071.jpeg" />
+    <None Include="wwwroot\picture\e47273de23fa349cd2c5c25d627153fb.jpeg" />
+    <None Include="wwwroot\picture\e93b23ab12396a25d17f71019ba16734.jpeg" />
+    <None Include="wwwroot\picture\eb12cc3b70c4c985105aa815daa62464.jpeg" />
+    <None Include="wwwroot\picture\eb18ee9b55d14e24ac3ef4525f0d49cb.jpeg" />
+    <None Include="wwwroot\picture\ec192457eded50cf5006050b80a75a19.jpeg" />
+    <None Include="wwwroot\picture\ec608b8170cffa689d25fb7ccefb41bb.jpeg" />
+    <None Include="wwwroot\picture\enterzh.jpg" />
+    <None Include="wwwroot\picture\f1295f50d2895267e7dcee184d242119.jpeg" />
+    <None Include="wwwroot\picture\f3329f80cd2ee342d1ed96ec53e24b9c.jpeg" />
+    <None Include="wwwroot\picture\f44196e7741b557dc2edac2252ae1b51.jpeg" />
+    <None Include="wwwroot\picture\fae38c68465555046d95f56484f4c6be.png" />
+    <None Include="wwwroot\picture\ios-float.png" />
+    <None Include="wwwroot\picture\logo-zongheng.png" />
+    <None Include="wwwroot\picture\logo.png" />
+    <None Include="wwwroot\picture\wx-float.png" />
+    <None Include="wwwroot\picture\wx.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Alipay.AopSdk.Core" Version="2.3.1" />
+    <PackageReference Include="Alipay.AopSdk.F2FPay.AspnetCore" Version="2.2.7" />
+    <PackageReference Include="AopSdk" Version="1.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.2105168" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="nest" Version="6.4.0" />
+    <PackageReference Include="Rotativa.AspNetCore" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChineseNet_98K.BLL\ChineseNet_98K.BLL.csproj" />
+    <ProjectReference Include="..\ChineseNet_98K.Common\ChineseNet_98K.Common.csproj" />
+    <ProjectReference Include="..\ChineseNet_98K.DAL\ChineseNet_98K.DAL.csproj" />
+    <ProjectReference Include="..\ChineseNet_98K.Entity\ChineseNet_98K.Entity.csproj" />
+    <ProjectReference Include="..\ChineseNet_98K.IBLL\ChineseNet_98K.IBLL.csproj" />
+    <ProjectReference Include="..\ChineseNet_98K.IDAL\ChineseNet_98K.IDAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="aliyun-net-sdk-core">
+      <HintPath>..\ChineseNet_98K.Common\Lib\aliyun-net-sdk-core.dll</HintPath>
+    </Reference>
+    <Reference Include="aliyun-net-sdk-dysmsapi">
+      <HintPath>..\ChineseNet_98K.Common\Lib\aliyun-net-sdk-dysmsapi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\upload\" />
+    <Folder Include="wwwroot\Rotativa\" />
+  </ItemGroup>
+
+</Project>

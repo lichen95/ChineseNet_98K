@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('http://static.zongheng.com/author/v2015/fonts/icomoon.eot');
+    src: url('http://static.zongheng.com/author/v2015/fonts/icomoon.eot') format('embedded-opentype'), url('http://static.zongheng.com/author/v2015/fonts/icomoon.ttf') format('truetype'), url('http://static.zongheng.com/author/v2015/fonts/icomoon.woff') format('woff'), url('http://static.zongheng.com/author/v2015/fonts/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mobile:before {
+    content: "\e600";
+}
+
+.icon-lock:before {
+    content: "\e601";
+}

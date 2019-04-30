@@ -1,0 +1,516 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script charset="utf-8" src="~/js/xd.js"></script>
+
+    <script src="~/js/hmd.js"></script>
+    @*使htpps中可以调用http <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">*@
+    <meta name="copyright" content="本页版权98k中文网所有。All Rights Reserved">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://static.98k.com/favicon.ico">
+    <title>最强透视_ 章节订阅 - 98k小说中文网</title>
+    <meta name="keywords" content="最强透视章节订阅,">
+    <meta name="description" content="98k小说中文网最新更新最强透视,本章内容为的全文阅读页,最强透视最新章节免费阅读,页面无弹窗,访问速度快尽在98k小说中文网。">
+    <link rel="stylesheet" href="~/css/basic.mind.css">
+    <link rel="stylesheet" href="~/css/order.mind.css">
+    @*<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="map.min" src="~/js/map.mind.js"></script>
+        <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="98k" src="~/js/98k.mind.js"></script>
+        <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="widget" src="~/js/widget.mind.js"></script>
+        <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="order.min" src="~/js/order.mind.js"></script>
+        <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bad" src="~/js/bad.mind.js"></script>
+        <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="stater" src="~/js/tongjid.js"></script>
+        <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sidebar" src="~/js/sidebar.mind.js"></script>
+        <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="aclick" src="/aclick.mind.js"></script>
+        <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="logger" src="~/js/logger.mind.js"></script>*@
+    <script src="~/jquery-3.1.1.js"></script>
+    <script>
+        var xzNum = 0;//选择章节
+        var xWordNum = 0;//选择字数
+        var money = 0;//需要多少kb
+        var yue = 0;//余额
+        var que = 0;//差钱
+        var novelId = @ViewBag.NId;//小说ID
+        var authorId =@ViewBag.AuthorId ;//作者ID
+        var userId = @ViewBag.User.UserId;//用户ID
+
+        $(function () {
+            ShowNovel();
+            show();
+            showYue();
+            //选择
+            $("[name=ck]").change(function () {
+                alert(1)
+                $(this).prop("checked", "checked");
+                getNum();
+            })
+            //全选
+            $("#tome_1").click(function () {
+                $("[name=ck]").prop("checked", $(this).prop("checked"));
+                getNum();
+                if (!$(this).prop("checked")) {
+                    money = 0;
+                    xzNum = 0;//选择章节
+                    xWordNum = 0;//选择字数
+                    $("#oform_money").html(money);
+                    $("#showXZNum").html(xzNum);
+                    $("#showXWordNum").html(xWordNum);
+                }
+            })
+            //选择10 50 100 全部
+            $("[name=xz]").click(function () {
+                money = 0;
+                xzNum = 0;//选择章节
+                xWordNum = 0;//选择字数
+                $("#oform_money").html(money);
+                $("#showXZNum").html(xzNum);
+                $("#showXWordNum").html(xWordNum);
+                var num = $("[name=xz]").val();
+                var state = $(this).prop("checked");
+                //四个复选框只能选一个
+                $('#listxz').find('input[type=checkbox]').not(this).each(function () {
+                    $(this).prop("checked", false);
+                })
+
+
+                for (var i = 0; i < num; i++) {
+                    $("#ck" + (i + 1) + "").prop("checked", state);
+                }
+                getNum();
+            })
+            //确定订阅
+            $("#orderButton").click(function () {
+                if (xzNum > 0) {
+                    $("#OrderConfirmDialog").show();
+                    $("#order-data-num").html(xzNum);
+                    $("#order-data-money").html(money);
+                    if (money > yue) {
+                        $("#order-tip-error").show();
+                        $("#order-btn-goorder").hide();
+                    }
+                    else {
+                        $("#order-tip-error").hide();
+                        $("#order-btn-goorder").show();
+                    }
+                }
+                else {
+                    alert("请选择要订阅的章节");
+                }
+
+            })
+
+            //确认
+            $("#order-btn-goorder").click(function () {
+                var cids = [];
+                $("[name=ck]").each(function () {
+                    if ($(this).prop("checked")) {
+                        cids.push($(this).val());
+                    }
+
+                })
+                console.log(cids);
+                $.ajax({
+                    url: "/Author_attendances/SubscribesAdd?userId=" + userId+"&authorId=" + authorId + "&num=" + money + "&novelId=" + novelId + "&typeId=2&cids=" + cids,
+                    type: "post",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data);
+                        if (data > 0) {
+                            alert("订阅成功");
+                            location.href = '/Home/Catalogue?Id=' + novelId;
+                        }
+                    }
+                })
+            })
+            //去充值
+            $("#order-btn-charge").click(function () {
+                location.href = "/Home/Pay"
+            })
+            //取消按钮
+            $("#OrderConfirmDialog_close").click(function () {
+                $("#OrderConfirmDialog").hide();
+            })
+
+        })
+        //计算字数 章节
+        function getNum() {
+            $("[name=ck]").each(function () {
+                if ($(this).prop("checked")) {
+                    xWordNum += parseInt($(this).attr("data-wordnum"))
+                    xzNum += 1;
+                    money += parseInt($(this).attr("data-price"))
+                }
+            })
+            $("#oform_money").html(money);
+            $("#showXZNum").html(xzNum);
+            $("#showXWordNum").html(xWordNum);
+        }
+        //加载章节信息
+        function show() {
+            var wordNum = 0;
+            $.ajax({
+                url: "/Subscribes/GetChaptersByNovelId?NovelId=" + novelId + "&UserId=" + userId,
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $("#order-sel-lastall").val(data.length);
+                    $("#showCNum").html(data.length);
+                    for (var i = 0; i < data.length; i++) {
+                        var li = '<li class="chapterLine " data-cid="7018332" data-price="15" data-buy="0" data-index="' + (i + 1) + '"><label><div class="checkbox"><input id="ck' + (i + 1) + '" name="ck"  value="' + data[i].ChapterId + '" data-cid="' + data[i].NovelId + '" data-price="' + (Math.round((data[i].WordSize / 1000) * 5)) + '" data-wordnum="' + data[i].WordSize + '" data-index="' + (i + 1) + '" type="checkbox" data-n10="true" data-n50="true" data-n100="true" data-n929="true"><em class="checkbox"></em></div><div class="chapterName"><span>' + data[i].ChapterName + '</span></div><div class="chapterWn">' + data[i].WordSize + '</div><div class="chapterPrice">' + (Math.round((data[i].WordSize / 1000) * 5)) + '</div><div class="orderStatus">' + (data[i].orderStatus == 1 ? "已订阅" : "未订阅") + '</div></label><div class="holder"></div></li>'
+                        wordNum += data[i].WordSize;
+                        $("#List").append(li);
+                    }
+                    $("#showWordNum").html(wordNum);
+                }
+            })
+        }
+        //全文检索
+        function ToSearch() {
+            location.href = '/Home/Search?keyword=' + $("[name=keyword]").val();
+        }
+        //显示小说详情
+        function ShowNovel() {
+            $.ajax({
+                url: "/Novel/QueryById?Id=" + novelId,
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $("#showNovelName").html(data.NovelName);
+                    $("#showNewChapter").html(data.ChapterName);
+                    $("#showAuthor").html(data.UserName);
+                    $("#showNovelName1").html(data.NovelName);
+                    $("#showTypeNameOne").html(data.TypeNameOne);
+
+                    //计算时间差
+                    var FormatDate = getDateTimeStamp(data.NewTime.replace("T", " "));
+                    var ReleaseTime = getDateDiff(FormatDate);
+                    $("#showNewTime").html(ReleaseTime);
+                },
+                error: function (e) {
+                    console.log(e);
+                }
+            })
+        }
+
+        //获取余额
+        function showYue() {
+            $.ajax({
+                url: "/Wallets/GetUser?Userid=" + userId,
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    yue = data.Balance;
+                    $("#showYue").html(yue);
+                }
+            })
+        }
+
+        //js函数代码：字符串转换为时间戳
+        function getDateTimeStamp(dateStr) {
+            return Date.parse(dateStr.replace(/-/gi, "/"));
+        }
+
+        //计算时差
+        function getDateDiff(dateTimeStamp) {
+            var minute = 1000 * 60;
+            var hour = minute * 60;
+            var day = hour * 24;
+            var halfamonth = day * 15;
+            var month = day * 30;
+            var now = new Date().getTime();
+            var diffValue = now - dateTimeStamp;
+            if (diffValue < 0) {
+                //若日期不符则弹窗口告之,结束日期不能小于开始日期！
+            }
+            var monthC = diffValue / month;
+            var weekC = diffValue / (7 * day);
+            var dayC = diffValue / day;
+            var hourC = diffValue / hour;
+            var minC = diffValue / minute;
+            if (monthC >= 1) {
+                result = parseInt(monthC) + "个月前";
+            }
+            else if (weekC >= 1) {
+                result = parseInt(weekC) + "周前";
+            }
+            else if (dayC >= 1) {
+                result = parseInt(dayC) + "天前";
+            }
+            else if (hourC >= 1) {
+                result = parseInt(hourC) + "个小时前";
+            }
+            else if (minC >= 1) {
+                result = parseInt(minC) + "分钟前";
+            } else
+                result = "刚刚";
+            return result;
+        }
+    </script>
+</head>
+<body scriptsign="order" data-frcid="7018332" data-frtype="" bookid="401507">
+    <div class="wrap">
+        <div class="head">
+            <div class="head-top clearfix">
+                <div class="logo imgbox fl">
+                    <a href="http://www.98k.com/" data-sa-d="{&quot;click_name&quot;:&quot;98k_logo&quot;,&quot;page_module&quot;:&quot;98k_logo&quot;}"><img src="~/images/logo.png" alt="logo"></a>
+                </div>
+                @*全文检索*@
+                <form id="commSearch" name="searchForm" method="post" action="" target="_blank">
+                    <div class="search-box fl" data-hook="searchSuggest">
+                        <input class="search-text fl" name="keyword" type="text" placeholder="斗罗大陆" autocomplete="off" disableautocomplete /> <input type="button" onclick="ToSearch()" class="search-btn fr" />
+                    </div>
+                </form>
+                <div class="pay fr">
+                    <a class="user_pay" href="http://pay.98k.com/" target="_blank" data-sa-c="{&quot;event&quot;:&quot;clickSelf&quot;}" data-sa-d="{&quot;click_name&quot;:&quot;charge&quot;}">充值</a>
+                </div>
+                <div class="right-wrap-login ud_userTox">
+                    <div class="unlogin ud_unlogin clearfix" style="display: none;">
+                        <div class="login fl"><a class="user_login" href="https://passport.98k.com/">登录</a></div>
+                        <div class="regist fl"><a class="user_register" href="https://passport.98k.com/webreg">注册</a></div>
+                    </div>
+                    <div class="logon ud_loged clearfix" style="">
+                        <div class="user tabA imgbox">
+                            <img class="ud_avatar ud_goUsrCenter" src="~/images/image_120_120.gif" alt="" target="_blank">
+                            <div class="user-blank tabA-float">
+                                <a href="javascript:void(0);" class="quit ud_logout">退出</a>
+                                <div class="user-name ud_goUsrCenter"><span>费大晨</span><em class="level_star"></em></div>
+                                <div class="user-info clearfix">
+                                    <div class="user-info-cell ud_money"><span class="count"><b>0</b></span><span class="nature">98k币</span></div>
+                                    <div class="user-info-cell ud_ticket"><span class="count"><b>0</b> 张</span><span class="nature">推荐票</span></div>
+                                    <div class="user-info-cell ud_mticket"><span class="count"><b>0</b> 张</span><span class="nature">月票</span></div>
+                                </div>
+                                <a href="http://pay.98k.com/" class="btn" target="_blank">立即充值</a>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <a href="http://home.98k.com/msgIn.do" class="mes" target="_blank" data-sa-c="{&quot;event&quot;:&quot;clickSelf&quot;}" data-sa-d="{&quot;click_name&quot;:&quot;message&quot;}">消息(<span class="ud_umessage">0</span>)</a>
+                        </div>
+                        <div class="shelf"><a href="http://home.98k.com/favoritesBook.do" target="_blank" data-sa-c="{&quot;event&quot;:&quot;clickSelf&quot;}" data-sa-d="{&quot;click_name&quot;:&quot;shelf&quot;}">书架</a></div>
+                        <div class="foot-mark tabA">
+                            <span class="mark clearfix">历史<em class="icon"></em></span>
+                            <div class="tabA-float float-mark clearfix">
+                                <!-- loading -->
+                                <div class="ud_hisloading">
+                                    <span class="item_loading"></span>
+                                </div>
+                                <!-- 没有记录 -->
+                                <div class="ud_noHistory" style="display: none">
+                                    <h2>亲爱的书友，您暂时没有阅读记录~</h2>
+                                    <div class="tips">阅读记录只保存最近阅读的5本小说</div>
+                                    <div class="enter"><a href="http://home.98k.com/favoritesBook.do" target="_blank">进入我的书架</a></div>
+                                </div>
+                                <!-- 有记录 -->
+                                <div class="ud_hasHistory" style="display: none"><ul class="mark-list"></ul></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav clearfix">
+                <div class="menu-left fl">
+                    <a class="active" href="http://www.98k.com/" data-sa-d="{&quot;click_name&quot;:&quot;firstNav&quot;,&quot;page_module&quot;:&quot;homePage&quot;,&quot;nav_type&quot;:&quot;home&quot;}">首页<em></em></a>
+                    <a href="http://book.98k.com/store.html" data-sa-d="{&quot;click_name&quot;:&quot;firstNav&quot;,&quot;page_module&quot;:&quot;homePage&quot;,&quot;nav_type&quot;:&quot;bookStore&quot;}">书库<em></em></a> <a href="http://book.98k.com/rank.html" data-sa-d="{&quot;click_name&quot;:&quot;firstNav&quot;,&quot;page_module&quot;:&quot;homePage&quot;,&quot;nav_type&quot;:&quot;paihang&quot;}">排行<em></em></a>
+                    <a href="http://book.98k.com/store/c0/c0/b0/u0/p1/v9/s1/t0/u0/i1/ALL.html" data-sa-d="{&quot;click_name&quot;:&quot;firstNav&quot;,&quot;page_module&quot;:&quot;homePage&quot;,&quot;nav_type&quot;:&quot;wanben&quot;}">完本<em></em></a>
+                    <a href="http://huayu.baidu.com/" target="_blank" data-sa-d="{&quot;click_name&quot;:&quot;firstNav&quot;,&quot;page_module&quot;:&quot;homePage&quot;,&quot;nav_type&quot;:&quot;flowerGirl&quot;}">花语女生网<em></em></a>
+                    <a href="http://www.98k.com/comic.html" target="_blank" data-sa-d="{&quot;click_name&quot;:&quot;firstNav&quot;,&quot;page_module&quot;:&quot;homePage&quot;,&quot;nav_type&quot;:&quot;comic&quot;}">漫画<em></em></a>
+                    <div class="app-menu tabA">
+                        <a href="http://book.98k.com/orderchapter?bookId=401507&amp;frcid=7018332&amp;frType=chapter" class="phone">移动端</a>
+                        <div class="app-float tabA-float">
+                            <div class="tit">98k小说 原创精品</div>
+                            <div class="imgbox tabC_wap">
+                                <div class="tabC" style="display: block;">
+                                    <img src="~/images/ad-float.png" alt="">
+                                </div>
+                                <div class="tabC">
+                                    <img src="~/images/ios-float.png" alt="">
+                                </div>
+                                <div class="tabC">
+                                    <img src="~/images/wx-float.png" alt="">
+                                </div>
+                            </div>
+                            <div class="tabT_wap app-down">
+                                <span class="tabT ad active"></span> <span class="tabT ios"></span>
+                                <span class="tabT wx"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-right fr">
+                    <a href="http://author.98k.com/" class="author_zone" data-sa-d="{&quot;click_name&quot;:&quot;authorArea&quot;,&quot;page_module&quot;:&quot;homePage&quot;}" target="_blank">作者专区<em></em></a>
+                    <a href="http://game.98k.com/" class="game_center" data-sa-d="{&quot;click_name&quot;:&quot;gameCenter&quot;,&quot;page_module&quot;:&quot;homePage&quot;}" target="_blank">游戏中心<em></em></a>
+                </div>
+            </div>
+        </div>
+        <!-- 广告位  begin -->
+        <div class="advert">
+            <!-- <script type="text/javascript" src=" http://static.98k.com/upload/hzds/column/240517642449.js"></script> -->
+            <!-- 测试环境js -->
+            <!-- <script type="text/javascript" src=" http://static.98k.com/upload/hzds/column/242157192882.js"></script> -->
+        </div>
+        <!-- 广告位  end -->
+        <div class="crumb">当前位置： <a href="/Home/Index"> 首页 </a>&gt; <a href="#" id="showTypeNameOne">都市娱乐 </a> &gt;<a href="#" id="showNovelName1">最强透视</a></div>
+    </div>
+    <!-- 目录页（购买）开始 -->
+    <div class="container">
+        <div class="book-meta">
+            <h1 id="showNovelName"></h1>
+            <p>
+                <span><i>作者：</i><a href="#" target="_blank"><span id="showAuthor"></span></a></span>
+                <span><i>更新时间：</i><span id="showNewTime"></span></span>
+                <span><i>最新章节：</i><span id="showNewChapter"></span></span>
+            </p>
+        </div>
+        <div class="order_titbox">
+            <span class="vipbox">VIP</span> 章节订阅
+        </div>
+        <div id="quick_select_panel" class="quickbuy_box clearfix" style="display: block;">
+            <div>
+                <p class="buyimg"></p>
+                <p>快速购买入口</p>
+            </div>
+            <div class="buychapter-box">
+                <p>@*从*@<span id="firstChapter">@*第103章 神秘的棋盘*@</span>@*开始*@</p>
+                <ul id="listxz" class="cf quickbuy-chapter">
+                    <li>
+                        <label>
+                            <input class="muchapter-checkbox" id="ckTop10" name="xz" value="10" type="checkbox" data-price="150" data-length="10" data-wordnum="32042">
+                            <em class="checkbox"></em>
+                            <b>后续10章</b>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="muchapter-checkbox" id="ckTop50" name="xz" value="50" type="checkbox" data-price="750" data-length="50" data-wordnum="158574">
+                            <em class="checkbox"></em>
+                            <b>后续50章</b>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="muchapter-checkbox" id="ckTop100" name="xz" value="100" type="checkbox" data-price="1500" data-length="100" data-wordnum="317168">
+                            <em class="checkbox"></em>
+                            <b>后续100章</b>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="muchapter-checkbox" name="xz" value="" type="checkbox" id="order-sel-lastall" data-price="13225" data-length="929" data-wordnum="2793182">
+                            <em class="checkbox"></em>
+                            <b>后续全部章节</b>
+                        </label>
+                    </li>
+                    <li>付费阅读VIP章节，支持正版，支持作者！</li>
+                </ul>
+            </div>
+        </div>
+        <!-- list -->
+        <div class="order_pagebox" id="">
+            <div id="order_chapterlist_wrap" class="order_chapter_wrap" style="display: block;">
+                <h2 class="order_tips">请选择您要购买的章节</h2>
+                <div class="order_list_tit">
+                    <div class="chapterName">VIP章节名称</div>
+                    <div class="chapterWn">字数</div>
+                    <div class="chapterPrice">价格(98k币)</div>
+                    <div class="orderStatus">订阅状态</div>
+                </div>
+                <!-- index -->
+                <div class="order_chapter_inner tome_box" data-tomeid="901261">
+                    <!-- for tome -->
+                    <div class="tome_line">
+                        <label class="tomeSelect" for="tome_1">
+                            <input class="tome-checkbox" id="tome_1" data-tomeid="901261" value="901261" data-tomelength="929" type="checkbox" data-price="13225" data-length="929" data-wordnum="2793182">
+                            <em class="checkbox"></em>
+                            <h4 class="tomeName">正文</h4>
+                            <span class="tomeOrderInfo">
+                                共<span id="showCNum"></span>
+                                章·本卷共
+                                <span id="showWordNum">2793182</span>字
+                                <span class="icon vip"></span>
+                            </span>
+                        </label>
+                        <div class="tomeSlider" id="slide_tomeId_1">
+                            <span>收起</span>
+                            <em></em>
+                        </div>
+                    </div>
+                    <ul id="List" class="chapterSelect slide_tomeId_1"></ul>
+                    <div class="orderSign" data-orderlength="0" data-tomeid="901261"></div>
+                </div>
+            </div>
+            <div id="order_chapterlist_loading" style="display: none;">929/929</div>
+        </div>
+    </div>
+    <div class="order_panel">
+        <div class="wrap">
+            <div class="fl">
+                <label>
+                    <input class="all" id="select_all" type="checkbox" data-price="13225" data-length="929" data-wordnum="2793182">全部章节
+                    <em class="checkbox"></em>
+                </label>
+                <b>已选择</b>
+                <em id="oform_length"><span id="showXZNum">0</span>章</em>
+                共
+                <span id="oform_txtnum"><span id="showXWordNum">0</span>字</span>
+                <!--                 <span class="neednotpay">
+                （共有 <span id="oform_ordered">0</span> 章已订阅，将不再重复扣费）
+                </span> -->
+            </div>
+            <div class="fr">
+                <a id="orderButton" class="order_notready order_confirm" href="javascript:">确认订阅</a>
+            </div>
+            <p class="oform_moneybox">
+                <span>当前剩余: <span id="showYue" class="oform_usermoney">0</span> 98k币</span>
+                <span class="oform_needbox"><b>订阅需要支付:</b> <em id="oform_money">0</em> 98k币</span>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/js/require.mind.js" defer="" async="" data-main="http://rcode.98k.com/v2018/js/map.min"></script>
+
+    <style type="text/css">
+        #index_right_bottom_piclnk {
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            _position: absolute;
+            _top: expression(documentElement.scrollTop+documentElement.clientHeight-250);
+            _left: expression(documentElement.clientWidth-250);
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            padding-top: 15px;
+            z-index: 66666;
+        }
+
+            #index_right_bottom_piclnk .close {
+                background: url(//static.98k.com/v2012/images/fullclose.gif) no-repeat 0 center;
+                cursor: pointer;
+                color: #636363;
+                padding: 0 5px 0 15px;
+                height: 15px;
+                line-height: 15px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+    </style>
+    <div id="index_right_bottom_piclnk" style="display: none;">
+        <div class="close" data-hook="closeParent" id="btnClose">关闭</div>
+        <script type="text/javascript" src="~/js/100800075182d.js"></script><a href="" target="_blank" class="adClickCss" adposition="100800075182" adgroup="59"><img src="~/images/236599833115d.jpg" width="250" height="250" border="0"></a>
+    </div><div id="zh_sidebar" class="sidebar" style="right: 50%; margin-right: -650px;"><div id="zh_side_feedback" class="side_feedback"><a href="#" target="_blank">意见<br>反馈</a></div><div id="zh_side_lt" class="side_zht"><a href="javascript:void(0);" data-lang="zht"></a></div><div class="sidekf"><a href="#" target="_blank"></a></div><div class="returntop" style="display: none;"><a href="javascript:;" onclick="window.scrollTo(0,0);">返回顶部</a></div></div>
+
+    <div id="OrderConfirmDialog" class="ui_widget_section">
+        <div class="ui_shadow"></div>
+        <div class="ui_widget_box"><div class="ui_widget_tit">订阅VIP章节</div><div class="ui_widget_con clearfix"><div class="orderWin_wrap"><div class="orderInfo"><ul>   <li class="ordernum">本次订阅：共 <b id="order-data-num">--</b> 章节</li>   <li class="orderpaynum">本次订阅将消耗 <b id="order-data-money">--</b> 98k币</li></ul></div><div class="ordertips"><div class="orderError" id="order-tip-error"><em></em>余额不足</div><div id="order-tip-money" class="orderwn_usermoney"></div></div><div class="ui_widget_conbtn clearfix">   <button class="confirm" id="order-btn-goorder" data-cb="confirm">确认支付</button>   <button class="confirm" id="order-btn-charge" data-cb="confirm">去充值</button></div></div></div><div class="ui_widget_close" id="OrderConfirmDialog_close" data-cb="close"></div><div class="ui_widget_customloading"></div></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\资料\\资料\\案例\\98K小说阅读网\\98k1.1\\ChineseNet_98K_.NetCore\\ChineseNet_98K.Entity\\ChineseNet_98K.Entity.csproj": {}
+  },
+  "projects": {
+    "F:\\资料\\资料\\案例\\98K小说阅读网\\98k1.1\\ChineseNet_98K_.NetCore\\ChineseNet_98K.Entity\\ChineseNet_98K.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\资料\\资料\\案例\\98K小说阅读网\\98k1.1\\ChineseNet_98K_.NetCore\\ChineseNet_98K.Entity\\ChineseNet_98K.Entity.csproj",
+        "projectName": "ChineseNet_98K.Entity",
+        "projectPath": "F:\\资料\\资料\\案例\\98K小说阅读网\\98k1.1\\ChineseNet_98K_.NetCore\\ChineseNet_98K.Entity\\ChineseNet_98K.Entity.csproj",
+        "packagesPath": "C:\\Users\\59428\\.nuget\\packages\\",
+        "outputPath": "F:\\资料\\资料\\案例\\98K小说阅读网\\98k1.1\\ChineseNet_98K_.NetCore\\ChineseNet_98K.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\59428\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "System.ComponentModel": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

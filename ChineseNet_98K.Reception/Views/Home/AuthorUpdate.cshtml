@@ -1,0 +1,326 @@
+﻿
+@{
+    Layout = null;
+}
+@model ChineseNet_98K.Entity.Authors
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AuthorUpdate</title>
+    <link href="~/css/author.css" rel="stylesheet" />
+    <link href="~/css/login.css" rel="stylesheet" />
+    <script src="~/jquery-3.1.1.js"></script>
+    <style>
+        .reg_iptline checkdata {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+    <script>
+        $(function () {
+
+            show();
+             //上传图片
+             $("#sq").change(function () {
+                 var formData = new FormData($("#form1")[0]);
+                 $.ajax({
+                     url: "/AuthorLR/UploadFiles",
+                     data: formData,
+                     contentType: false,
+                     processData: false,
+                     cache: false,
+                     type: 'post',
+                     success: function (d) {
+                         console.log(d);
+                         $("#showImg").prop("src", d);
+                         $("[name=IdCardPath]").val(d);
+                     }
+                 })
+             });
+         })
+
+         function show() {
+             //反填作者信息
+             $.ajax({
+                 url: "/AuthorLR/GetAuthorByid?Id=" + @ViewBag.AuthorId,
+                 type: "post",
+                 async: false,
+                 dataType: "json",
+                 success: function (d) {
+                     console.log(d);
+                     $("[name=AuthorId]").val(d.AuthorId);
+                     $("[name=UserId]").val(d.UserId);
+                     $("[name=Name]").val(d.Name);
+                     $("#showImg").prop("src", d.IdCardPath);
+                     $("[name=Pseudonym]").val(d.Pseudonym);
+                     $("[name=Phone]").val(d.Phone);
+                     $("[name=Email]").val(d.Email);
+                     $("[name=QQ]").val(d.QQ);
+                     $("[name=IdCard]").val(d.IdCard);
+                     $("[name=Address]").val(d.Address);
+                     $("[name=Postcode]").val(d.Postcode);
+                     $("[name=AuthorDesc]").val(d.AuthorDesc);
+                     $("[name=Password]").val(d.Password);
+                     $("[name=IsContract]").val(d.IsContract);
+                     $("[name=CreateDate]").val(d.CreateDate);
+                     $("[name=State]").val(d.State);
+                 }
+             })
+         }
+         function UpdateA() {
+             $.ajax({
+                 url: "/AuthorLR/Update",
+                 type: "post",
+                 data: $("#form1").serialize(),
+                 success: function (data) {
+                     console.log(data);
+                     if (data) {
+                         alert("修改成功");
+                         location.href = "/Home/AuthorIndex";
+                     }
+                     else {
+                         alert("修改失败");
+                         location.href = "/Home/AuthorUpdate";
+                     }
+                 }
+             })
+         }
+    </script>
+</head>
+<body>
+    <div class="reg_map">
+        <div class="au_nav">
+            <div class="au_box" id="loginSign">
+                <div class="au_nav_a">
+                    <a href="/Home/Index" target="_blank">98k首页</a>|
+                    <a href="#" target="_blank">编辑介绍</a>|
+                    <a href="#" target="_blank" class="goodluck">作者福利</a>|
+                    <span>费大晨</span>|
+                    <a href="http://author.98k.com/loginout">退出</a>
+
+                </div>
+                <a href="http://author.98k.com/" class="au_logo"></a>
+                <style>
+                    .header_link {
+                        font-size: 16px;
+                        margin-top: 30px;
+                        margin-left: 30px;
+                        background-image: url(http://static.98k.com/author/v2015/images/toplink.gif);
+                        background-position: right 2px;
+                        background-repeat: no-repeat;
+                        padding-right: 20px;
+                        float: left;
+                    }
+
+                        .header_link a {
+                            color: #e74c3c;
+                        }
+                </style><div class="header_link"><a target="_blank" href="http://author.98k.com/home"></a></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="cl20"></div>
+    <div class="reg_wrap">
+        <div class="reg_cbox">
+            <div class="reg_tab">
+                <div class="botline"></div>
+                <span class="active">修改资料</span> <a href="/Home/AuthorUptPwd">修改密码</a>
+                <a href="http://author.98k.com/" style="float:right; font-size:14px; color:#1abc9c; letter-spacing:1px;font-family:&#39;Microsoft YaHei&#39;;line-height:40px;">返回<em style="letter-spacing:-2px; padding-left:2px;">&gt;&gt;</em></a>
+            </div>
+            <div class="regform_wrap">
+                <div class="regway regway_phone">
+                    <form action="" method="post" id="form1" enctype="multipart/form-data">
+                        <input type="hidden" name="AuthorId" placeholder="">
+                        <input type="hidden" name="IsContract" placeholder="">
+                        <input type="hidden" name="UserId" placeholder="">
+                        <input type="hidden" name="Password" placeholder="">
+                        <input type="hidden" name="State" placeholder="">
+                        <input type="hidden" name="CreateDate" placeholder="">
+                        @* 真实姓名 *@
+                        <div class="reg_iptline checkdata" data-box="Name" title="真实姓名">
+                            <div class="ipt_tit">
+                                <span class="must">*</span> 真实姓名
+                            </div>
+                            <div class="ipt_r">
+                                <div class="ipt_box">
+                                    <input type="text" name="AuthorId" hidden="hidden" />
+                                    <input data-bustype="him" type="text" name="Name" placeholder="请输入真实姓名">
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="Name"></div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        @* 身份证复印件 *@
+                        <div class="reg_iptline checkdata" data-box="IdCardPath" title="上传身份复印件">
+                            <div class="ipt_tit">
+                                <span class="must">*</span> 上传身份复印件
+                            </div>
+                            <div class="ipt_r" style="height:150px;width:150px">
+                                <div class="ipt_box">
+                                    <input id="sq" type="file" name="file" />
+                                    <input type="hidden" name="IdCardPath" />
+                                    <img id="showImg" width="100" height="100" />
+
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="IdCardPath"></div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        @* 笔名 *@
+                        <div class="reg_iptline checkdata" data-box="Pseudonym" title="笔名">
+                            <div class="ipt_tit">
+                                <span class="must">*</span> 笔名
+                            </div>
+                            <div class="ipt_r">
+                                <div class="ipt_box">
+                                    <input data-bustype="him" type="text" name="Pseudonym" placeholder="请输入笔名">
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="Pseudonym"></div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        @* 手机号 *@
+                        <div class="reg_iptline checkdata" data-box="Phone" title="手机号">
+                            <div class="ipt_tit">
+                                <span class="must">*</span> 手机号
+                            </div>
+                            <div class="ipt_r">
+                                <div class="ipt_box">
+                                    <input data-bustype="him" type="text" name="Phone" placeholder="请输入手机号">
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="Phone"></div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        @* 邮箱 *@
+                        <div class="reg_iptline checkdata" data-box="Email" title="邮箱">
+                            <div class="ipt_tit">
+                                <span class="must">*</span> 邮箱
+                            </div>
+                            <div class="ipt_r">
+                                <div class="ipt_box">
+                                    <input data-bustype="him" type="text" name="Email" placeholder="请输入邮箱">
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="Email"></div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        @* QQ *@
+                        <div class="reg_iptline checkdata" data-box="QQ" title="QQ">
+                            <div class="ipt_tit">
+                                <span class="must">*</span> QQ
+                            </div>
+                            <div class="ipt_r">
+                                <div class="ipt_box">
+                                    <input type="text" name="QQ" placeholder="请输入QQ号">
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="QQ"></div>
+
+                                <div class="itip">5~12位数字</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        @*身份证 *@
+                        <div class="reg_iptline checkdata" data-box="IdCard" title="身份证号">
+                            <div class="ipt_tit">
+                                <span class="must">*</span> 身份证号
+                            </div>
+                            <div class="ipt_r">
+                                <div class="ipt_box">
+                                    <input type="text" name="IdCard" placeholder="请输入身份证">
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="IdCard"></div>
+
+                                <div class="itip">5~12位数字</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        @* 联系地址 *@
+                        <div class="reg_iptline" data-box="Address" data-rqd="false" title="联系地址">
+                            <div class="ipt_tit">联系地址</div>
+                            <div class="ipt_r">
+                                <div class="ipt_box">
+                                    <input type="text" name="Address" placeholder="联系地址">
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="Address"></div>
+
+                                <div class="itip">1-50个字符</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        @* 邮编 *@
+                        <div class="reg_iptline checkdata" data-box="Postcode" data-rqd="false" title="邮政编码">
+                            <div class="ipt_tit">邮政编码</div>
+                            <div class="ipt_r">
+                                <div class="ipt_box">
+                                    <input type="text" name="Postcode" placeholder="邮政编码">
+                                </div>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="Postcode"></div>
+
+                                <div class="itip">6位数字格式</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        @* 作者简介 *@
+                        <div class="reg_iptline" data-box="AuthorDesc" title="作者简介">
+                            <div class="ipt_tit">作者简介</div>
+                            <div class="ipt_r">
+                                <div class="fl">
+                                    <textarea type="text" name="AuthorDesc" placeholder="写一段话来介绍自己吧" class="introself"></textarea>
+                                </div>
+                                <span class="inputNum"><span id="infoLength">0</span>/100</span>
+                                <div class="iright"></div>
+                                <div class="cl"></div>
+                                <div class="jerror" name="AuthorDesc"></div>
+                                <div class="itip">1-100个字符</div>
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                        @* 提交按钮 *@
+                        <div class="reg_iptline">
+                            <div class="ipt_tit"></div>
+                            <div class="ipt_r">
+                                <input type="button" value="确认提交" class="reg_submit" onclick="UpdateA()">
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="au_box">
+            <p>
+                Copyright<em>©</em>2008-2010 www.98k.com All Rights Reserved
+            </p>
+            <p>版权所有 深圳创业网络文化科技有限公司</p>
+        </div>
+    </div>
+    <script src="~/Content/js/tongji.js"></script>
+    <script src="~/Content/js/jquery.min.js"></script>
+    <script src="~/Content/js/es5.min.js"></script>
+</body>
+</html>

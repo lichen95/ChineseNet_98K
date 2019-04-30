@@ -1,0 +1,165 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Drafts</title>
+    <meta name="renderer" content="webkit">
+    <link href="~/css/public.css" rel="stylesheet" />
+    <script src="~/jquery-3.1.1.js"></script>
+    <script>
+
+        show();
+
+        function show() {
+            $.ajax({
+                url: "/AuthorLR/QueryChapters?NId=@ViewBag.NId",
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $("#Showid").empty();
+                    for (var i = 0; i < data.length; i++) {
+                        var li = '<li class="clear tr" >'
+                            + '<div class="td art_name"><div class="artname">' + data[i].VolumeId + '<p>' + data[i].ChapterName + '</p></div></div>'
+                            + '<div class="td art_num">' + data[i].WordSize + '</div>'
+                            + '<div class="td art_levl">' + data[i].IsVIP + '</div>'
+                            + '<div class="td art_time">' + data[i].State + '</div>'
+                            + '<div class="td art_submit">' + data[i].CreateDate + '</div>'
+                            + ' <a class="exchange" href="/Home/ChatersUpt?NId=' + data[i].NovelId + '&CId=' + data[i].ChapterId +'">编辑</a> <a class="delart" href="#" onclick="del(' + data[i].NovelId + ',' + data[i].ChapterId + ')">删除</a></li>'
+                        $("#Showid").append(li);
+                     
+                    }
+                }
+            })    
+        }
+        
+        /*删除*/
+        function del(id,ids) {
+            if (confirm('确认要删除吗？')) {
+                $.ajax({
+                    url: "/AuthorLR/DelChapters?id=" + id + "&ids=" + ids,
+                    type: "post",
+                    success: function (data) {
+                        console.log(data);
+                        if (data) {
+                            location.reload();
+                        }
+                        else {
+                            alert("error");
+                        }
+                    }
+                })
+            }
+        }
+         
+    </script>
+    <style>
+        body, p, ul, li, h1, h2, h3, em, input, td {
+            padding: 0;
+            margin: 0;
+        }
+
+        .au_draft .table {
+            font-size: 12px;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="au_nav">
+  
+        <div class="au_box" id="loginSign">
+            <div class="au_nav_a">
+                <a href="http://www.98k.com" target="_blank">98k首页</a>|
+                <a href="/nzh/editors" target="_blank">编辑介绍</a>|
+                <a href="http://www.98k.com/company/author.html" target="_blank" class="goodluck">作者福利</a>
+
+                |<span>迷人张</span>|
+                <a href="http://author.98k.com/loginout">退出</a>
+
+            </div>
+            <a href="http://author.98k.com" class="au_logo"></a>
+            <script src="http://author.98k.com/nzh/header/notice"></script>
+        </div>
+    </div>
+    <div class="au_box">
+        <div class="au_draft">
+            <div class="draft_tit">
+                <a href="/Home/AuthorIndex" class="backup">返回<em>>></em></a><em class="ico_draft"></em>存稿箱
+            </div>
+            <div class="draft_nav">
+                <span class="focus">草稿箱</span>
+                @*<span>定时发布</span>*@
+            </div>
+            <div class="draft_hide">
+                <div class="draft_boxs clear">                   
+                    <div class="draftbox fl">
+                        <div class="inline tr clear">
+                            <div class="td art_name">卷名 / 章节名</div>
+                            <div class="td art_num">字数</div>
+                            <div class="td art_levl">级别</div>
+                            <div class="td art_time">保存类型</div>
+                            <div class="td art_submit">保存时间</div>
+                            <div class="td art_manage">操作</div>                    
+                        </div>
+                        <ul id="Showid" class="table" >                         
+                            @*<li class="clear tr" >
+                                <div class="td art_name">
+                                    <div class="artname">
+                                        VolumeId
+                                        <p>ChapterName</p>
+                                    </div>
+                                </div>
+                                <div class="td art_num">WordSize</div>
+                                <div class="td art_levl">IsVIP</div>
+                                <div class="td art_time">State</div>
+                                <div class="td art_submit">CreateDate</div>
+                                <a href="" class="exchange">修改</a>
+                                <a href="" class="delart">删除</a>
+                            </li>*@                               
+                        </ul>
+                        <div class="pagenumber">
+                            总计 记录
+                            <a href="" class="page_prev last">上一页</a>
+                            <a href="" class="now">1</a>
+                            <a href="" class="page_next last">下一页</a>
+                            至 第
+                            <input class="jumpvalue" maxlength="3" value="1" type="text" />
+                            页&nbsp;
+                            <input class="submit" value="跳转" type="button" />
+                        </div>
+                    </div>                                          
+                    @*<div class="draftbox fl">
+                        <div class="nothing" style="height:231px;line-height:231px;">
+                            您当前无定时发布章节（┬_┬）
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="au_box">
+            <p>
+                Copyright<em>©</em>2008-2010 www.98k.com All Rights Reserved
+            </p>
+            <p>版权所有 深圳创业网络文化科技有限公司</p>
+        </div>
+    </div>
+    @*<script type="text/javascript" src="http://static.98k.com/v2_0/js/tongji.js"></script>*@
+    @*<script type="text/javascript" src="http://static.98k.com/author/v2015/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://static.98k.com/author/v2015/js/public.dialog.js"></script>
+    <script type="text/javascript" src="http://static.98k.com/author/v2015/js/msgdraft.js"></script>*@
+</body>
+</html>

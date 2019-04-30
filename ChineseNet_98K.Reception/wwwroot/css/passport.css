@@ -1,0 +1,114 @@
+﻿/*reset及 clear*/
+body{font-family:"Arial","Microsoft JhengHei";font-size: 12px;overflow-x:hidden;}
+i,em{font-style:normal}
+img{border:0 none;vertical-align:top;max-width: 100%}
+h1,h2,h3,h4,h5,h6{font-weight: normal}
+body,p,em,span,ul,li,h1,input{padding: 0;margin:0;list-style: none;}
+::-ms-clear{display: none;}
+::-ms-reveal{display: none;}
+.fl{float: left;}
+.fr{float:right;}
+
+.box{border:1px solid #d9d9d9;}
+.cl0{clear:both;height:0;font-size:0;}
+.wrap{width:980px;margin:0 auto;}
+.pass_header{height:75px;clear:both;overflow:hidden}
+.passbg{background:#f1f2f3;padding:28px 0px;}
+/*头部导航*/
+.pass_logo{float:left;width:178px;margin:15px auto auto 12px; }
+.pass_link{float:right;margin:38px 20px auto auto;color:#526584;display: inline-block;padding:0 5px; line-height:22px;font-family:Tahoma;}
+.pass_link a{color:#fff;background:#526584;display: inline-block;padding:0 15px; text-decoration: none;margin-left:20px;}
+.pass_ad{float:left;width:560px;height:410px;overflow: hidden;}
+
+/*页尾*/
+.foot{padding:20px 0;position:relative;font-size:12px;}
+.foot p{text-align:center;line-height:24px;color:#888;}
+.foot p a{color:#888;margin:0 6px;text-decoration: none;}
+.foot p a:hover{color:#b12821;}
+
+/*登录*/
+.login{background: #fff;width:350px;float:left;padding:25px;}
+.login-style{height: 20px;line-height: 20px;font-size: 20px;color: #333;}
+.login-s-msg,.login-s-user{cursor: pointer;}
+.login-s-active{border-bottom: 4px solid #a3212e; padding-bottom: 5px;}
+.login-s-line{color: #ddd; border-left:1px solid #ddd;width:1px;margin:0 50px;}
+.login-box{margin-top:30px;display: none;}
+.login-box>p{position: relative;line-height: 40px;padding-bottom: 20px;}
+#checkphone{display: none;}
+.login-box p a{color: #777;text-decoration: none;}
+.login-box p a:hover{text-decoration: underline;}
+.login-box .checkbox{font-size: 12px;color:#777;line-height: 20px;padding-bottom:8px;}
+.icon-phone,.icon-safe,.icon-password,.icon-check,.icon-checked{background-image:url(../images/icon-login.png);background-repeat: no-repeat;width:14px;height:18px;}
+.icon-phone,.icon-safe,.icon-password{position: absolute;left:15px;top:11px;}
+.icon-safe{background-position:0 -25px;display:inline-block;}
+.icon-password{background-position:0 -51px;}
+.icon-phone{background-position:0 -1px;}
+.icon-check{background-position:0 -84px;height:13px; display:inline-block; vertical-align: middle;margin-right:5px;}
+.icon-checked{background-position:0 -108px;}
+.clear-value{font-size: 12px;color:#777;font-family: "KaiTi";cursor: pointer;position: absolute;right:6px;top:2px;display: none;}
+.login-text{font-size: 14px;color: #777;line-height: 38px;height:38px;padding:0 10px 0 40px;width:300px;}
+.login-t-side{width:170px;margin-right:20px;}
+.btn-red{background-color: #a5232e;border-radius:3px;color: #fff;text-align: center;}
+.btn-sent{width:108px; display: inline-block;line-height: 40px;height: 40px; cursor: pointer;}
+.btn-sent.sentend{cursor: text;background-color: gray;}
+.btn-submit{border:none;font-size: 18px;line-height: 50px;display: block;width: 100%;cursor: pointer;}
+.login-tips{position: relative;}
+.error-area{height: 32px;padding:3px 0;line-height:16px;font-size: 12px;color:#d90c20;}
+.error-tip{display: none;}
+.login-tips a{color:#777;text-decoration:none;}
+.login-tips a:hover{text-decoration:underline;}
+.error-more{overflow: hidden;height: 40px;display: none;}
+/*注册*/
+#head{width:980px;margin: 15px auto 0;height: 60px;overflow: hidden;font-family:"Microsoft JhengHei"}
+#head .reg-logo-phone{font-size: 20px;color:#777;border-left:1px solid #c9c9c9;padding-left: 18px;margin-left:152px;height: 24px;margin-top:20px;}
+#head .reg-login{color:#666;margin-top:20px;height: 33px;line-height: 33px;font-size: 12px;}
+#head .go-login{display: inline-block;border:1px solid #dddddd;background-color: #f7f7f7;color:#666;text-decoration: none;border-radius:3px;padding: 0 18px;margin-left:5px;font-weight:700;}
+.reg-line{background:url(../images/reg_hr.png) no-repeat center top;height:20px;}
+.reg-form{width: 980px;margin:0 auto;font-family:"Microsoft JhengHei"}
+.reg-step{margin-left: 210px;display: none;}
+.reg-step p{line-height: 40px; height:40px; padding-bottom: 30px; position: relative;clear:left;font-size: 14px;color: #777;overflow: hidden;}
+.last-step{margin:0 auto;}
+.last-step p{text-align: center;font-size: 20px;color:#777;}
+.last-step .readmore{margin:10px auto 0; text-decoration: none;}
+.next-step .placeerror{position: absolute;top:-20px;left:0;line-height: 20px;}
+.jump-step{text-align: right;font-size: 14px;color: #777;margin-left:106px;width:350px;line-height: 30px;cursor: pointer;}
+.reg-step-tit{height: 60px;position: relative;margin:40px 0 40px 300px;}
+.reg-step-line{width:400px;height:2px;background-color:#ccc;position: absolute;left:0;top:50%;z-index: 0;}
+.reg-step-tit ul{margin-right:-220px;position: relative;}
+.reg-step-tit li{background:#fff url(../images/icon-register.png) no-repeat 10px -245px;float: left;width:80px;height: 60px;position: relative;margin-right:90px;}
+.reg-step-tit .active{background-position:10px -184px;}
+.reg-step-num-a,.reg-step-num-b,.reg-step-num-c{width:60px;height: 60px;margin:0 auto;}
+.reg-step-num-a{background:url(../images/icon-register.png) no-repeat;}
+.reg-step-num-b{background:url(../images/icon-register.png) no-repeat 0 -61px;}
+.reg-step-num-c{background:url(../images/icon-register.png) no-repeat 0 -122px;}
+.reg-ic-succ{background:url(../images/icon-register.png) no-repeat 0 -307px;width: 150px;height: 150px;margin:98px auto 0;}
+
+
+.reg-form input{border:1px solid #ddd;padding:12px 10px;width:330px;font-size: 14px;margin-right:20px;vertical-align: middle;margin-left:0;}
+.reg-form input.side{width:200px;float:none;}
+.reg-form input:focus{outline:1px solid #ccc;}
+.reg-form label{width:85px;text-align: right;margin-right:20px;}
+.reg-step .placeholder{font-size: 12px;position: absolute;left:105px;top:40px;line-height: 30px;}
+.reg-step .placeerror{font-size: 12px; color: #d90c20; display: none;}
+.reg-step .placesucc{color: green;}
+.reg-step .reg-w-side{width:110px;height: 40px;margin-right:20px;display: inline-block;}
+.reg-step .reg-w-btn{background-color: #a5232e;color: #fff;font-size: 14px;line-height: 40px;text-align: center;border-radius:3px;cursor:pointer;}
+.reg-step .reg-w-btn.sentend{background-color: gray;cursor: not-allowed;}
+.reg-step .send-once{background-color:#777; cursor: default;}
+.reg-red-btn{background-color:#a5232e;border-radius: 3px;font-size: 18px;color: #fff;margin-left:105px;cursor: pointer;width:350px;line-height: 50px;text-align: center;margin-top:30px;display: block;position: relative;}
+
+.reg-dialog{background-color: rgba(0,0,0,.4);position: absolute;left:0;top:0;width:100%;height:100%;font-family:" Microsoft YaHei";display: none;}
+.reg-dialog .reg-d-con{width:290px;height: 308px;background-color:#fff;border-radius:8px;padding: 20px;position: absolute;left:50%;top:50%;margin:-174px 0 0 -165px;}
+.reg-dialog .user-info{text-align: center;}
+.user-info .user-img{width:60px;height: 60px;border-radius:50%;border:1px solid #e6e6e6;}
+.user-info p{color:#777;font-size: 20px;height: 60px;line-height: 28px;overflow: hidden;}
+.reg-dialog .user-tips{color: #333;font-size: 14px;}
+.reg-dialog .user-btns{padding:20px 0;}
+.user-btns a{display: block;height: 50px;line-height: 50px;text-align: center;text-decoration: none;border-radius:3px;font-size: 18px;}
+.user-btns .user-btn-sure{background-color:#a5232e;color:#fff;margin-bottom: 20px;border:1px solid #a5232e;}
+.user-btns .user-btn-cancel{background-color:#fff;border:1px solid #a5232e;color:#a5232e;margin-bottom: 20px;}
+
+.reg-step .reg-check{padding-left:105px;width:350px;line-height:22px;margin-top:10px;font-size:12px;}
+.reg-check .check-input{width:20px;margin-right:5px}
+.reg-red-btn.gray{background:#ccc}
+.reg-check a{text-decoration: none;color:#A11313}

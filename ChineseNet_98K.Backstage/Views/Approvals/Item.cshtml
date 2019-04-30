@@ -1,0 +1,130 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Item</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/css/x-admin.css" media="all">
+</head>
+<body>
+
+    <div class="x-body">
+        <form action="" method="post" class="layui-form layui-form-pane" id="form0"></form>
+        <div class="layui-form-item">
+            <label for="name1" class="layui-form-label">审核意见</label>
+            <div class="layui-input-inline">
+              <textarea name="ApprovalMessage"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+
+            <div class="layui-input-block">
+                <input type="button" class="layui-btn" lay-submit="" onclick="add(2)" lay-filter="update" value="同意" />
+                <input type="button" class="layui-btn" lay-submit="" onclick="add(1)" lay-filter="update" value="拒绝" />
+            </div>
+        </div>
+
+    </div>
+    <script src="/lib/layui/layui.js" charset="utf-8">
+    </script>
+    <script src="/js/x-layui.js" charset="utf-8">
+    </script>
+    <script src="/js/jquery.min.js"></script>
+    <script>
+        layui.use(['form', 'layer'], function () {
+            $ = layui.jquery;
+            var form = layui.form()
+                , layer = layui.layer;
+          $(function () {
+              $.ajax({
+                  url: "/Approvals/GetData?TypeId=" + @ViewBag.TypeId + "&NovelId=" + @ViewBag.NovelId + "&ChapterId=" + @ViewBag.ChapterId,
+                type: "post",
+                async: false,
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    if (@ViewBag.TypeId == 1) {
+                        var div = '<input type="hidden" name="Id" value="' + @ViewBag.ApprovalId + '" /><div class="layui-form-item"><label for="name1" class="layui-form-label">书号</label><div class="layui-input-inline">'
+                                + '<label for="name1" class="layui-form-label">' + data.NovelNum + '</label></div></div>'
+                           + '<div class="layui-form-item"><label for="name1" class="layui-form-label">书名</label><div class="layui-input-inline">'
+                                + '<label for="name1" class="layui-form-label">' + data.NovelName + '</label></div></div>'
+                                + '<div class="layui-form-item"><label for="name1" class="layui-form-label">封面</label><div class="layui-input-inline">'
+                                + '<label for="name1" class="layui-form-label">' + data.ImgPath + '</label></div></div>'
+                                + '<div class="layui-form-item"><label for="name1" class="layui-form-label">作者笔名</label><div class="layui-input-inline">'
+                                + '<label for="name1" class="layui-form-label">' + data.UserName + '</label></div></div>'
+                                + '<div class="layui-form-item"><label for="name1" class="layui-form-label">所属频道</label><div class="layui-input-inline">'
+                                + '<label for="name1" class="layui-form-label">' + data.TypeNameOne + '</label></div></div>'
+                                + '<div class="layui-form-item"><label for="name1" class="layui-form-label">所属类型</label><div class="layui-input-inline">'
+                                + '<label for="name1" class="layui-form-label">' + data.TypeNameTwo + '</label></div></div>'
+                                + '<div class="layui-form-item"><label for="name1" class="layui-form-label">标签</label><div class="layui-input-inline">'
+                                + '<label for="name1" class="layui-form-label">' + data.LabelName + '</label></div></div>'
+                                + '<div class="layui-form-item"><label for="name1" class="layui-form-label">小说描述</label><div class="layui-input-inline">'
+                                + '<label for="name1" class="layui-form-label">' + data.NovelName + '</label></div></div>'
+                                + '<div class="layui-form-item"><label for="name1" class="layui-form-label">作者寄语</label><div class="layui-input-inline">'
+                                + '<label for="name1" class="layui-form-label">' + data.AuthorMessage + '</label></div></div>'
+                            $("#form0").append(div);
+                    }
+                    if (@ViewBag.TypeId == 2) {
+                        var div = '<input type="hidden" name="Id" value="' + @ViewBag.ApprovalId + '" /><div class="layui-form-item"><label for="name1" class="layui-form-label">章节名称</label><div class="layui-input-inline">'
+                            + '<label for="name1" class="layui-form-label">' + data.ChapterName + '</label></div></div>'
+                            + '<div class="layui-form-item"><label for="name1" class="layui-form-label">是否VIP章节</label><div class="layui-input-inline">'
+                            + '<label for="name1" class="layui-form-label">' + data.IsVIP + '</label></div></div>'
+                            + '<div class="layui-form-item"><label for="name1" class="layui-form-label">创建时间</label><div class="layui-input-inline">'
+                            + '<label for="name1" class="layui-form-label">' + data.CreateDate + '</label></div></div>'
+                            + '<div class="layui-form-item"><label for="name1" class="layui-form-label">字数</label><div class="layui-input-inline">'
+                            + '<label for="name1" class="layui-form-label">' + data.WordSize + '</label></div></div>'
+                            + '<div class="layui-form-item"><label for="name1" class="layui-form-label">章节内容</label><div class="layui-input-inline">'
+                            + '<p>' + data.ChapterContent + '</p>'
+                            + '<div class="layui-form-item"><label for="name1" class="layui-form-label">作者想说</label><div class="layui-input-inline">'
+                            + '<p>' + data.AuthorDesc + '</p>'
+                        $("#form0").append(div);
+                    } 
+                }
+            })
+        })
+        });
+        function add(state) {
+            if ($("[name=ApprovalMessage]").val() == "") {
+                alert("审批意见不能为空!");
+                return;
+            }
+            $.ajax({
+                url: "/Approvals/Update?Id=" + $("[name=Id]").val() + "&State=" + state + "&ApprovalMessage=" + $("[name=ApprovalMessage]").val() + "&NovelId=" +@ViewBag.NovelId+"&ChapterId="+@ViewBag.ChapterId,
+                type: "post",
+                success: function (data) {
+                    console.log(data);
+                    if (data) {
+                        layer.alert("审批成功", { icon: 6 }, function () {
+                            // 获得frame索引
+                            var index = parent.layer.getFrameIndex(window.name);
+                            //关闭当前frame
+                            parent.layer.close(index);
+                            window.parent.location.reload();
+                        });
+                    }
+                    else {
+                        layer.alert("审批失败", { icon: 1 }, function () {
+                            // 获得frame索引
+                            var index = parent.layer.getFrameIndex(window.name);
+                        });
+                    }
+                },
+                error: function (e) {
+                    console.log(e);
+                }
+            })
+        }
+    </script>
+</body>
+</html>

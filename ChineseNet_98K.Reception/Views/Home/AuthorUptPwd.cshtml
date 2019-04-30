@@ -1,0 +1,154 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AuthorUptPwd</title>
+    <meta name="renderer" content="webkit">
+    <link href="~/css/author1.css" rel="stylesheet" />
+    <link href="~/css/login.css" rel="stylesheet" />
+    <script src="~/js/x.js"></script>
+    <script src="~/jquery-3.1.1.js"></script>
+</head>
+<body>
+    <div class="reg_map">
+
+        <div class="au_nav">
+            <div class="au_box" id="loginSign">
+                <div class="au_nav_a">
+                    <a href="http://www.98k.com/" target="_blank">98k首页</a>|
+                    <a href="http://author.98k.com/nzh/editors" target="_blank">编辑介绍</a>|
+                    <a href="http://www.98k.com/company/author.html" target="_blank" class="goodluck">作者福利</a>
+
+                    |<span>费大晨</span>|
+                    <a href="http://author.98k.com/loginout">退出</a>
+
+                </div>
+                <a href="http://author.98k.com/" class="au_logo"></a>
+                <script src="./作者专区-修改密码_files/hm.js.下载"></script>
+                <script src="./作者专区-修改密码_files/notice"></script>
+                <style>
+                    .header_link {
+                        font-size: 16px;
+                        margin-top: 30px;
+                        margin-left: 30px;
+                        background-image: url(http://static.98k.com/author/v2015/images/toplink.gif);
+                        background-position: right 2px;
+                        background-repeat: no-repeat;
+                        padding-right: 20px;
+                        float: left;
+                    }
+
+                        .header_link a {
+                            color: #e74c3c;
+                        }
+                </style><div class="header_link"><a target="_blank" href="http://author.98k.com/home/pwdmodify/show"></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="cl20"></div>
+    <div class="reg_wrap">
+
+
+        <div class="reg_cbox">
+            <div class="reg_tab">
+                <div class="botline"></div>
+                <a href="/Home/AuthorUpdate">修改资料</a>
+                <span class="active">修改密码</span>
+                <a href="http://author.98k.com/home" style="float:right; font-size:14px; color:#1abc9c; letter-spacing:1px;font-family:&#39;Microsoft YaHei&#39;;line-height:40px;">返回<em style="letter-spacing:-2px; padding-left:2px;">&gt;&gt;</em></a>
+            </div>
+            <div class="regform_wrap">
+                <form action="" method="post" id="form1">
+                    <input type="hidden" name="AuthorId" value="@ViewBag.AuthorId">
+                    <div class="reg_iptline checkdata" data-box="Password1" title="当前密码">
+                        <div class="ipt_tit"><span class="must">*</span> 当前密码</div>
+                        <div class="ipt_r">
+                            <div class="ipt_box"><input type="password" name="Password1" placeholder="请您输入当前密码"></div>
+                            <div class="iright"></div>
+                            <div class="cl"></div>
+                            <div class="jerror" name="Password1"></div>
+
+                            <div class="itip">6~16位英文字母(区分大小写)或数字</div>
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="reg_iptline checkdata" data-box="Password" title="新密码">
+                        <div class="ipt_tit"><span class="must">*</span> 新密码</div>
+                        <div class="ipt_r">
+                            <div class="ipt_box"><input type="password" name="Password" placeholder="请您设置新密码"></div>
+                            <div class="iright"></div>
+                            <div class="cl"></div>
+                            <div class="jerror" name="Password"></div>
+
+                            <div class="itip">6~16位英文字母(区分大小写)或数字，数字字母需同时出现</div>
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="reg_iptline checkdata" data-box="reNewPwd" title="确认新密码">
+                        <div class="ipt_tit"><span class="must">*</span> 确认新密码</div>
+                        <div class="ipt_r">
+                            <div class="ipt_box"><input type="password" name="reNewPwd" placeholder="请您再次输入设置的新密码"></div>
+                            <div class="iright"></div>
+                            <div class="cl"></div>
+                            <div class="jerror" name="reNewPwd"></div>
+
+                            <div class="itip">6~16位英文字母(区分大小写)或数字，数字字母需同时出现</div>
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="cl10"></div>
+                    <div class="reg_iptline">
+                        <div class="ipt_tit"></div>
+                        <div class="ipt_r"><input id="editAutgorPwds" type="submit" value="确认提交" class="reg_submit"></div>
+                        <div class="cl"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="au_box">
+            <p>
+                Copyright<em>©</em>2008-2010 www.98k.com All Rights Reserved
+            </p>
+            <p>版权所有 深圳创业网络文化科技有限公司</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $("#Password").blur(function () {
+        if ($("#Password").val() != @ViewBag.Pwd) {
+            alert("旧密码输入不正确！")
+        }
+    })
+
+    $("#editAutgorPwds").click(function () {
+        if ($("#newpwd").val() != $("#reNewPwd").val()) {
+            alert("两次输入不一致!");
+        }
+
+        $.ajax({
+            url: "/AuthorLR/AuthorUptpwd",
+            data: $("#form1").serialize(),
+            type: "post",
+            success: function (data) {
+                if (data > 0) {
+                    alert("成功");
+                    location.href = "/Home/AuthorIndex";
+                }
+                else {
+                    alert("失败");
+                }
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        })
+    })
+</script>

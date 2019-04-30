@@ -1,0 +1,752 @@
+html, body {
+    height: 100%;
+    font-family: 'Microsoft Yahei';
+}
+
+input, .ipt_box, .reg_tab span {
+    transition: all 0.3s linear
+}
+
+#loginbg {
+    background: url(http://static.zongheng.com/author/v2015/images/loginbg.jpg) center top no-repeat;
+}
+
+.login_wrap {
+    height: 500px;
+}
+
+#formbox {
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    width: 330px;
+    padding: 20px 25px;
+    height: 320px;
+    position: absolute;
+    left: 50%;
+    margin-left: 110px;
+    top: 160px;
+    box-shadow: 2px 5px 35px #e1d7be
+}
+
+#loginalert {
+    font-size: 14px;
+    color: #575757;
+    position: absolute;
+    left: 50%;
+    margin-left: 110px;
+    top: 110px;
+}
+/*footer*/
+.footer {
+    color: #a8a8a8;
+    font-size: 12px;
+    text-align: center;
+    padding: 38px 0 40px;
+}
+
+    .footer p {
+        line-height: 24px;
+        text-align: center;
+    }
+
+        .footer p em {
+            font-family: Arial;
+            padding-right: 5px;
+        }
+
+.errorbox {
+    background: url(../images/ico_err.png) no-repeat center left;
+    padding: 3px 20px;
+    font-size: 14px;
+    color: #e74c3c;
+    display: none;
+    clear: both;
+}
+
+.cl10 {
+    clear: both;
+    height: 10px;
+    overflow: hidden;
+}
+
+.cl20 {
+    clear: both;
+    height: 20px;
+    overflow: hidden;
+}
+
+/*nav*/
+body {
+    background: #f0f1f2
+}
+/*nav*/
+.au_nav {
+    height: 70px;
+    width: 100%;
+    background: #fff;
+    z-index: 9;
+    box-shadow: 2px 2px 2px #ccc
+}
+
+.au_box {
+    padding-top: 0px
+}
+
+.au_nav_a {
+    float: right;
+    text-align: right;
+    color: #ddd;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 31px;
+}
+
+    .au_nav_a a, .au_nav_a span {
+        color: #333;
+        margin: 0 10px;
+    }
+
+        .au_nav_a a:hover {
+            color: #1abc9c;
+        }
+
+        .au_nav_a a.goodluck {
+            color: #e74c3c;
+        }
+
+.au_nav .au_logo {
+    background: url(../images/logo1.png) no-repeat;
+    width: 142px;
+    height: 35px;
+    float: left;
+    margin-top: 18px;
+}
+
+input[placeholder], [placeholder], *[placeholder] {
+    color: #b2b2b2;
+}
+
+.formtit {
+    font-size: 18px;
+    line-height: 35px;
+    color: #333;
+    height: 35px;
+}
+
+.mobilelnk {
+    text-align: right;
+    line-height: 20px;
+    font-size: 12px;
+    height: 20px;
+}
+
+    .mobilelnk a {
+        color: #1aaf95;
+    }
+
+    .mobilelnk .icon {
+        font-size: 12px;
+    }
+
+.iptline {
+    padding: 8px 0;
+}
+
+.ipt_box {
+    border: 1px solid #e0e0e0;
+    width: 328px;
+    height: 38px;
+}
+
+    .ipt_box input {
+        height: 28px;
+        line-height: 28px;
+        outline: none;
+        color: #333;
+        font-size: 14px;
+        border: none;
+        background: none;
+        padding: 0;
+        float: left;
+        margin: 5px 0;
+        vertical-align: middle;
+        width: 280px;
+    }
+
+    .ipt_box .icon {
+        font-size: 20px;
+        line-height: 28px;
+        width: 28px;
+        height: 28px;
+        margin: 5px;
+        float: left;
+        text-align: center;
+        color: #b2b2b2;
+    }
+
+    .ipt_box.current {
+        border: 1px solid #1fc8ab;
+    }
+
+    .ipt_box.shortbox {
+        width: 195px;
+    }
+
+        .ipt_box.shortbox input {
+            width: 150px;
+        }
+
+    .ipt_box.microbox {
+        width: 165px;
+    }
+
+        .ipt_box.microbox input {
+            width: 120px;
+        }
+
+    .ipt_box.current .icon {
+        color: #1fc8ab;
+    }
+
+.ipt_btn {
+    width: 120px;
+}
+
+.ipt_imgcode {
+    width: 150px;
+}
+
+    .ipt_imgcode a {
+        float: right;
+        color: #939393;
+        font-size: 12px;
+        line-height: 40px;
+        margin-right: 8px;
+    }
+
+.ipt_btn input {
+    background: #1fc8ab;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 0;
+    border: 0;
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    cursor: pointer;
+}
+
+    .ipt_btn input:hover {
+        background: #1d9580
+    }
+
+.ipt_btn div {
+    background: #bbb;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 0;
+    border: 0;
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+}
+
+#timerbox {
+    display: none;
+}
+
+.dycode {
+    display: none
+}
+
+.iptwarp {
+    clear: both;
+    zoom: 1;
+    min-height: 80px;
+}
+
+.formerror {
+    background: url(../images/ico_err2.png) 10px 14px no-repeat #fefed0;
+    color: #e74c3c;
+    margin: 20px 55px 20px 180px;
+    padding: 10px 0px 10px 30px
+}
+
+.unlogtit {
+    font-size: 18px;
+    line-height: 80px;
+    color: #1abc9c;
+    padding: 0 5px;
+}
+
+.unloginfo {
+    font-size: 14px;
+    line-height: 30px;
+    color: #333;
+    padding: 0 5px
+}
+
+.f_gn {
+    color: #1fc8ab;
+}
+
+.f_gy {
+    color: #a3a3a3;
+}
+
+.f_red {
+    color: red
+}
+
+.f_ts {
+    font-family: 宋体
+}
+
+.cl {
+    clear: both;
+}
+
+.cl10 {
+    clear: both;
+    height: 10px;
+    overflow: hidden;
+}
+
+.cl15 {
+    clear: both;
+    height: 15px;
+    overflow: hidden;
+}
+
+.form_sup {
+    font-size: 12px;
+}
+
+.subbtn {
+    background: #1fc8ab;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 0;
+    border: 0;
+    display: block;
+    width: 330px;
+    height: 48px;
+    line-height: 48px;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Microsoft Yahei';
+    border-radius: 2px;
+}
+
+    .subbtn:hover {
+        background: #1d9580
+    }
+
+.reg_wrap {
+    width: 1000px;
+    margin: auto;
+}
+
+.maptxt {
+    color: #999;
+    font-size: 16px;
+    line-height: 40px
+}
+
+.reg_map {
+    width: 100%;
+}
+
+.stepline, .stepline3 {
+    height: 50px;
+    overflow: hidden;
+}
+
+    .stepline .overbox {
+        width: 120%;
+        margin-left: -18px;
+        background: url(../images/stepwpbg.png) repeat-x;
+        height: 50px;
+    }
+
+.step {
+    ;
+    width: 258px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    color: #333;
+    line-height: 50px;
+    text-indent: -10px
+}
+
+    .step.active {
+        width: 270px;
+        background: url(../images/stepbg.png);
+        color: #fff;
+    }
+
+.stepline3 .overbox {
+    width: 120%;
+    margin-left: -18px;
+    background: url(../images/stepwpbg_3.png) repeat-x -7px top;
+    height: 50px;
+}
+
+.stepline3 .step {
+    ;
+    width: 345px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    color: #333;
+    line-height: 50px;
+    text-indent: -10px
+}
+
+    .stepline3 .step.active {
+        width: 362px;
+        background: url(../images/stepbg_3.png);
+        color: #fff;
+    }
+
+
+.reg_tab {
+    width: 870px;
+    margin: 25px auto;
+    height: 50px;
+    line-height: 46px
+}
+
+.botline {
+    height: 46px;
+    border-bottom: 4px solid #f7f7f7;
+    position: absolute;
+    width: 870px;
+}
+
+.reg_tab span, .reg_tab a {
+    padding: 0 15px;
+    height: 46px;
+    border-bottom: 4px solid #f7f7f7;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    color: #333;
+}
+
+    .reg_tab span.active {
+        border-bottom: 4px solid #1abc9c;
+        cursor: default;
+    }
+
+
+.reg_cbox {
+    border: 1px solid #eaeaea;
+    clear: both;
+    padding: 10px;
+    padding-bottom: 40px;
+    background: #fff
+}
+
+    .reg_cbox .txtin {
+        font-size: 14px;
+        color: #333;
+    }
+
+        .reg_cbox .txtin h3 {
+            font-size: 16px;
+            line-height: 60px;
+            height: 60px;
+            text-align: center;
+        }
+
+        .reg_cbox .txtin p {
+            margin: 30px 45px;
+            line-height: 26px;
+        }
+
+.agreebtn {
+    width: 300px;
+    margin: auto;
+    padding: 20px
+}
+
+    .agreebtn .confirm, .agreebtn .disagree {
+        width: 114px;
+        height: 44px;
+        border: 1px solid #eaeaea;
+        text-align: center;
+        line-height: 42px;
+        color: #fff;
+        padding: 0;
+        font-size: 18px;
+        background: #1abc9c;
+        float: left;
+        font-family: 微软雅黑;
+        cursor: pointer;
+    }
+
+    .agreebtn .disagree {
+        background: #fff;
+        color: #333;
+        float: right;
+    }
+
+.reg_iptline {
+    margin: 20px auto;
+    padding-left: 30px;
+}
+
+    .reg_iptline .ipt_tit {
+        float: left;
+        width: 190px;
+        height: 40px;
+        text-align: right;
+        line-height: 40px;
+    }
+
+        .reg_iptline .ipt_tit .must {
+            color: #a0202d;
+            font-family: 宋体;
+        }
+
+    .reg_iptline .ipt_r {
+        float: left;
+        margin-left: 15px;
+    }
+
+        .reg_iptline .ipt_r .curname {
+            font-size: 24px;
+            color: #1abc9c;
+            line-height: 40px
+        }
+
+        .reg_iptline .ipt_r .itip {
+            padding: 5px;
+            color: #c6c6c6;
+            font-size: 12px;
+        }
+
+        .reg_iptline .ipt_r .iright {
+            background: url(../images/ico_right.png) center no-repeat;
+            width: 40px;
+            height: 40px;
+            float: left;
+            display: none;
+        }
+
+        .reg_iptline .ipt_r .ierror, .reg_iptline .ipt_r .jerror {
+            background: url(../images/ico_err.png) 1px 9px no-repeat;
+            padding: 3px 20px;
+            font-size: 12px;
+            color: #e74c3c;
+            padding-top: 8px;
+            clear: both;
+        }
+
+        .reg_iptline .ipt_r .jerror {
+            display: none;
+        }
+
+.reg_submit {
+    background: #1fc8ab;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 0;
+    border: 0;
+    display: block;
+    width: 362px;
+    height: 50px;
+    line-height: 50px;
+    outline: none;
+    font-family: 微软雅黑;
+    cursor: pointer;
+    border-radius: 2px
+}
+
+    .reg_submit:hover {
+        background: #1d9580
+    }
+
+.reg_iptline .ipt_box {
+    float: left;
+    width: 350px;
+    padding-left: 10px;
+}
+
+    .reg_iptline .ipt_box input {
+        width: 340px;
+    }
+
+.reg_iptline textarea.introself {
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+    display: inline-block;
+    width: 478px;
+    color: #333;
+    line-height: 20px;
+    height: 80px;
+    resize: none;
+    margin-right: 10px;
+}
+
+.ipt_err {
+    border: 1px solid red;
+    color: red;
+}
+
+.reg_iptline .ipt_box.shortbox {
+    width: 225px;
+}
+
+
+.reg_iptline .au_des {
+    border: 1px solid #fff;
+    color: #c6c6c6;
+    width: 360px;
+    ;
+    line-height: 40px;
+    height: 40px;
+}
+
+.reg_iptline .btn_fg, .reg_iptline .btn_blur {
+    color: #1abc9c;
+    font-weight: normal;
+    font-size: 14px;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+.reg_iptline .btn_blur {
+    color: #999;
+    cursor: not-allowed;
+}
+
+.reg_iptline .unbindtip {
+    width: 235px;
+    height: 42px;
+    background: url(../images/bindtip.png) no-repeat;
+    padding-left: 8px;
+    position: absolute;
+    top: 32px;
+    left: 226px;
+    z-index: 999;
+    display: none;
+}
+
+    .reg_iptline .unbindtip p {
+        font-size: 12px;
+        line-height: 20px;
+        color: #333;
+        padding-top: 13px;
+        background: url(../images/ico_err.png) 1px 15px no-repeat;
+        padding-left: 20px;
+        text-align: left;
+    }
+/*成功*/
+.regform_wrap .stepstaic {
+    padding-left: 128px;
+    padding-top: 40px;
+}
+
+.regform_wrap .succfont {
+    font-size: 18px;
+    color: #1abc9c;
+    line-height: 36px;
+}
+
+.pub_ico {
+    background-image: url(http://static.zongheng.com/author/v2015/images/ico_c.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.staic_succ {
+    background-position: 0 -522px;
+    width: 36px;
+    height: 36px;
+    margin-right: 5px;
+}
+
+.regform_wrap .btn_gb {
+    display: block;
+    margin-top: 40px;
+    border-radius: 3px;
+    border: 1px solid #1abc9c;
+    background-color: #1abc9c;
+    font-size: 18px;
+    color: #fff;
+    width: 380px;
+    line-height: 48px;
+    height: 48px;
+    text-align: center;
+    cursor: pointer;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+.au_select {
+    position: relative;
+    margin-right: 12px;
+}
+
+    .au_select .au_s_nav {
+        border: 1px solid #d9d9d9;
+        width: 168px;
+        line-height: 40px;
+        height: 40px;
+        overflow: hidden;
+        padding-left: 20px;
+        cursor: pointer;
+    }
+
+    .au_select .au_s_list {
+        border: 1px solid #d9d9d9;
+        border-top: none;
+        width: 188px;
+        position: absolute;
+        left: 0;
+        top: 41px;
+        background: #fff;
+        display: none;
+    }
+
+        .au_select .au_s_list li {
+            line-height: 40px;
+            height: 40px;
+            overflow: hidden;
+            padding: 0 0 0 20px;
+        }
+
+            .au_select .au_s_list li:hover {
+                background-color: #f2f2f2;
+                cursor: pointer;
+            }
+
+.arr_select {
+    width: 40px;
+    height: 40px;
+    background-image: url(http://static.zongheng.com/author/v2015/images/ico_c.png?1112);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    background-position: 0 -120px;
+}
+
+.inputNum {
+    font-size: 12px;
+    color: #999;
+    padding: 0;
+    float: left;
+    vertical-align: bottom;
+    margin-top: 80px;
+}

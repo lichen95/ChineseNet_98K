@@ -1,0 +1,12 @@
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.IDAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.IDAL.deps.json
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.IDAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.IDAL.dll
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.IDAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.IDAL.pdb
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.IDAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.Entity.dll
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.IDAL\bin\Debug\netcoreapp2.1\ChineseNet_98K.Entity.pdb
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.IDAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.IDAL.csprojAssemblyReference.cache
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.IDAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.IDAL.csproj.CoreCompileInputs.cache
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.IDAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.IDAL.AssemblyInfoInputs.cache
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.IDAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.IDAL.AssemblyInfo.cs
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.IDAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.IDAL.csproj.CopyComplete
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.IDAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.IDAL.dll
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.IDAL\obj\Debug\netcoreapp2.1\ChineseNet_98K.IDAL.pdb

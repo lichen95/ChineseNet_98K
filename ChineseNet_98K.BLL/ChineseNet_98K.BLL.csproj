@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChineseNet_98K.Entity\ChineseNet_98K.Entity.csproj" />
+    <ProjectReference Include="..\ChineseNet_98K.IBLL\ChineseNet_98K.IBLL.csproj" />
+    <ProjectReference Include="..\ChineseNet_98K.IDAL\ChineseNet_98K.IDAL.csproj" />
+  </ItemGroup>
+
+</Project>

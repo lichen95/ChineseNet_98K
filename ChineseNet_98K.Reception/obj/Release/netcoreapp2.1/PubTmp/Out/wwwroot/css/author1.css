@@ -1,0 +1,774 @@
+﻿@charset "utf-8";
+/*css reset */
+body, div, h1, h2, h3, h4, ul, li, p, span, em, input, a {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, em {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+/*public*/
+body {
+    background-color: #fff;
+}
+
+.au_box {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.auico {
+    background-image: url(../images/ico.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clear:before, .clear:after {
+    display: table;
+    content: "";
+}
+
+.clear:after {
+    clear: both;
+}
+
+.clear {
+    zoom: 1;
+}
+/*head*/
+.au_head {
+    background: url(../images/head_bg.jpg) no-repeat center top;
+    height: 195px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 25px;
+}
+
+    .au_head .au_pic {
+        float: left;
+        width: 170px;
+        height: 170px;
+        position: relative;
+        margin: 0 70px 0 3px;
+        display: inline;
+    }
+
+        .au_head .au_pic img {
+            width: 136px;
+            height: 136px;
+            border-radius: 50%;
+            margin: 17px 0 0 17px;
+        }
+
+        .au_head .au_pic .pic_shade {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: url(../images/radius_pic.png) no-repeat;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: block;
+        }
+
+    .au_head .au_intro {
+        padding-top: 10px;
+    }
+
+        .au_head .au_intro .au_name {
+            color: #535353;
+            font-size: 34px;
+            line-height: 48px;
+            padding-bottom: 20px;
+        }
+
+        .au_head .au_intro .btn_changename {
+            width: 38px;
+            height: 39px;
+            background-position: -1px -2px;
+            margin: 0 0 0 40px;
+        }
+
+        .au_head .au_intro .btn_email {
+            width: 38px;
+            height: 39px;
+            background-position: -98px -2px;
+            margin-left: 18px;
+        }
+
+        .au_head .au_intro .btn_email_new {
+            width: 40px;
+            height: 39px;
+            background-position: -46px -2px;
+            margin-left: 18px;
+        }
+
+        .au_head .au_intro .btn_changename:hover {
+            background-position: -1px -405px;
+        }
+
+        .au_head .au_intro .btn_email:hover {
+            background-position: -98px -405px;
+        }
+
+        .au_head .au_intro .btn_email_new:hover {
+            background-position: -46px -405px;
+        }
+
+        .au_head .au_intro p {
+            line-height: 42px;
+            color: #64544d;
+            font-size: 18px;
+            font-weight: bold;
+            -webkit-font-smoothing: antialiased;
+        }
+
+            .au_head .au_intro p span {
+                padding: 0 5px;
+            }
+
+            .au_head .au_intro p .num_pc {
+                margin-left: 50px;
+            }
+
+        .au_head .au_intro .buy {
+            background-position: -1px -56px;
+            width: 28px;
+            height: 22px;
+            margin-right: 14px;
+        }
+
+        .au_head .au_intro .allow {
+            background-position: -3px -95px;
+            width: 32px;
+            height: 28px;
+            margin-right: 10px;
+        }
+
+        .au_head .au_intro p.past {
+            color: #e74c3c;
+        }
+
+        .au_head .au_intro .past .auico {
+            background-position: -48px -95px;
+            width: 32px;
+            height: 29px;
+            margin-right: 10px;
+        }
+
+.buildbook {
+    font-size: 28px;
+    color: #fff;
+    width: 210px;
+    height: 60px;
+    display: block;
+    line-height: 55px;
+    text-align: center;
+    background-color: #1abc9c;
+    position: absolute;
+    top: 95px;
+    right: 0;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+}
+
+    .buildbook:hover {
+        background-color: #1e9581;
+    }
+/*content*/
+.content {
+    margin-top: 20px;
+}
+
+    .content .con_nav {
+        line-height: 24px;
+        border-bottom: 4px solid #f7f7f7;
+        height: 32px;
+        padding-bottom: 6px;
+    }
+
+        .content .con_nav span {
+            cursor: pointer;
+            color: #999;
+            font-size: 26px;
+            padding: 0 5px 8px;
+            margin-right: 30px;
+        }
+
+            .content .con_nav span.focus {
+                color: #333;
+                border-bottom: 4px solid #1abc9c;
+            }
+
+        .content .con_nav .voice {
+            font-size: 18px;
+            color: #999;
+        }
+
+        .content .con_nav .warn {
+            background-position: -60px -145px;
+            width: 26px;
+            height: 26px;
+            margin-right: 6px;
+        }
+
+    .content .radios {
+        height: 24px;
+        overflow: hidden;
+        margin-top: 20px;
+        padding: 0 0 0 5px;
+    }
+
+        .content .radios span {
+            float: left;
+            margin-right: 45px;
+            display: inline;
+            cursor: pointer;
+        }
+
+        .content .radios .mn_radio {
+            background-position: -30px -147px;
+            width: 22px;
+            height: 22px;
+            margin-right: 5px;
+        }
+
+        .content .radios .focus .mn_radio {
+            background-position: -1px -147px;
+        }
+
+    .content .nobooklist {
+        background: url(../images/nobook.png) no-repeat center;
+        height: 272px;
+        text-align: center;
+        font-size: 18px;
+        color: #333;
+        line-height: 30px;
+        padding-top: 128px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .content .booklist {
+    }
+
+        .content .booklist .nothingtip {
+            color: #939393;
+            padding: 15px 20px;
+        }
+
+        .content .booklist .signlogo {
+            background-position: -7px -230px;
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+        }
+
+        .content .booklist .viplogo {
+            background-position: -48px -230px;
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+        }
+
+        .content .booklist li {
+            position: relative;
+            padding: 20px 0;
+            border-bottom: 2px solid #f2f2f2;
+            height: 215px;
+        }
+
+        .content .booklist .unread {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 160px;
+            height: 215px;
+            background: url(../images/delbook.png) no-repeat center;
+            overflow: hidden;
+            z-index: 3;
+        }
+
+        .content .booklist .not-allow {
+            width: 28px;
+            height: 28px;
+            background-position: -100px -56px;
+            margin-right: 5px;
+        }
+
+        .content .booklist .unread_tip {
+            z-index: 4;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 40px;
+            overflow: hidden;
+        }
+
+            .content .booklist .unread_tip .btn_red {
+                font-size: 18px;
+                font-family: "Microsoft YaHei";
+                color: #fff;
+                background-color: #e74c3c;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 120px;
+                height: 30px;
+                line-height: 28px;
+                text-align: center;
+                z-index: 2;
+            }
+
+            .content .booklist .unread_tip .btn_green {
+                font-size: 12px;
+                color: #fff;
+                background-color: #1abc9c;
+                line-height: 30px;
+                height: 30px;
+                position: absolute;
+                top: 0;
+                right: -186px;
+                padding: 0 15px;
+            }
+
+        .content .booklist .bookinfo {
+            color: #333;
+        }
+
+            .content .booklist .bookinfo img {
+                width: 160px;
+                height: 215px;
+                border: none 0;
+                border-radius: 4px;
+            }
+
+        .content .booklist .booklink {
+            float: left;
+            width: 160px;
+            height: 215px;
+            margin-right: 20px;
+            display: inline;
+        }
+
+    .content .bookinfo h2 {
+        font-size: 24px;
+        padding-bottom: 15px;
+        margin-right: -30px;
+    }
+
+    .content .bookinfo a {
+        color: #333;
+    }
+
+        .content .bookinfo a:hover {
+            color: #16a085;
+        }
+
+    .content .bookinfo h2 .number {
+        font-size: 16px;
+        color: #999;
+        font-family: Arial;
+        padding-left: 15px;
+    }
+
+    .content .bookinfo .lastchapter {
+        line-height: 28px;
+        font-size: 16px;
+        padding-bottom: 5px;
+        height: 28px;
+        overflow: hidden;
+    }
+
+    .content .bookinfo .bookstate {
+        line-height: 28px;
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    .content .bookinfo .state_blur {
+        color: #939393;
+    }
+
+    .content .bookinfo .book_btns {
+        position: absolute;
+        left: 180px;
+        bottom: 22px;
+    }
+
+        .content .bookinfo .book_btns a {
+            background-color: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 3px;
+            float: left;
+            width: 115px;
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+            font-size: 18px;
+        }
+
+    .content .bookinfo .edit {
+        margin-right: 16px;
+    }
+
+        .content .bookinfo .edit:hover {
+            background-color: #1abc9c;
+            border: 1px solid #1abc9c;
+            color: #fff;
+        }
+
+    .content .bookinfo .delbook:hover {
+        background-color: #d0d0d0;
+        border: 1px solid #d0d0d0;
+        color: #fff;
+    }
+
+    .content .unuse .bookinfo a, .content .unuse .bookinfo a:hover {
+        background: #f7f7f7;
+        border: 1px solid #f7f7f7;
+        color: #999;
+        cursor: not-allowed;
+    }
+
+    .content .notlink {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 8;
+        overflow: hidden;
+        background-color: #fff;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+
+    .content .bookinfo .color_link {
+        line-height: 28px;
+        padding: 10px 0 0px;
+        font-size: 18px;
+        color: #939393;
+    }
+
+    .content .bookinfo .cor_a {
+        color: #16a085;
+    }
+
+    .content .bookmanage {
+        width: 410px;
+    }
+
+        .content .bookmanage .book_tj {
+            height: 52px;
+            overflow: hidden;
+            padding-left: 10px;
+        }
+
+            .content .bookmanage .book_tj span {
+                width: 100px;
+                text-align: center;
+                color: #939393;
+                font-size: 15px;
+                line-height: 24px;
+                float: left;
+                display: inline;
+            }
+
+            .content .bookmanage .book_tj em {
+                font-size: 16px;
+                font-family: Arial;
+                display: block;
+                line-height: 28px;
+            }
+
+        .content .bookmanage .store {
+            margin: 0 8px;
+        }
+
+        .content .bookmanage .btn_manage {
+            margin-top: -4px;
+            margin-right: -12px;
+        }
+
+    .content .btn_manage a {
+        font-size: 18px;
+        float: left;
+        width: 191px;
+        text-indent: 42px;
+        height: 43px;
+        line-height: 43px;
+        background: #fff;
+        border: 1px solid #eaeaea;
+        position: relative;
+        margin: 10px 12px 0 0;
+        display: inline;
+        color: #333;
+        border-radius: 3px;
+    }
+
+        .content .btn_manage a:hover {
+            background: #1abc9c;
+            border: 1px solid #1abc9c;
+            color: #fff;
+        }
+
+    .content .btn_manage .auico {
+        width: 25px;
+        height: 43px;
+        margin-right: 12px;
+    }
+
+    .content .btn_manage .manage_a {
+        background-position: 0px -270px;
+    }
+
+    .content .btn_manage .manage_b {
+        background-position: -35px -272px;
+    }
+
+    .content .btn_manage .manage_c {
+        background-position: -72px -271px;
+    }
+
+    .content .btn_manage .manage_d {
+        background-position: -112px -272px;
+    }
+
+    .content .btn_manage .manage_e {
+        background-position: -155px -272px;
+    }
+
+    .content .btn_manage .manage_f {
+        background-position: -200px -271px;
+    }
+
+    .content .btn_manage a:hover .manage_a {
+        background-position: 0px -329px;
+    }
+
+    .content .btn_manage a:hover .manage_b {
+        background-position: -35px -328px;
+    }
+
+    .content .btn_manage a:hover .manage_c {
+        background-position: -72px -328px;
+    }
+
+    .content .btn_manage a:hover .manage_d {
+        background-position: -112px -326px;
+    }
+
+    .content .btn_manage a:hover .manage_e {
+        background-position: -155px -330px;
+    }
+
+    .content .btn_manage a:hover .manage_f {
+        background-position: -200px -329px;
+    }
+
+    .content .btn_manage .paper {
+        text-indent: 0;
+        margin: 0;
+        background-position: -8px -191px;
+        width: 32px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        position: absolute;
+        top: -12px;
+        left: 120px;
+    }
+
+    .content .unuse .btn_manage a {
+        cursor: not-allowed;
+        background: #f7f7f7;
+        border: 1px solid #efefef;
+        color: #999;
+    }
+
+    .content .unuse .manage_a, .content .unuse .manage_b, .content .unuse .manage_c, .content .unuse .manage_d, .content .unuse .manage_e {
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+    }
+
+    .content .unuse .btn_manage a:hover .manage_a {
+        background-position: 0px -270px;
+    }
+
+    .content .unuse .btn_manage a:hover .manage_b {
+        background-position: -35px -272px;
+    }
+
+    .content .unuse .btn_manage a:hover .manage_c {
+        background-position: -72px -271px;
+    }
+
+    .content .unuse .btn_manage a:hover .manage_d {
+        background-position: -112px -272px;
+    }
+
+    .content .unuse .btn_manage a:hover .manage_e {
+        background-position: -155px -272px;
+    }
+/*pay*/
+.paylist {
+    position: relative;
+    overflow: hidden;
+}
+
+    .paylist .payloading, .paylist .paynone {
+        margin-top: 120px;
+        width: 100%;
+        height: 226px;
+        padding: 40px 0 40px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .paylist .paynone {
+        background: url(../images/nopay.png) no-repeat center top;
+        padding: 80px 0 100px;
+    }
+
+    .paylist .balance {
+        padding: 150px 0 150px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .paylist .pay_search {
+        margin-top: 20px;
+    }
+
+    .paylist .sel_con {
+        line-height: 38px;
+        color: #333;
+    }
+
+    .paylist .choose_submit {
+        height: 40px;
+        line-height: 40px;
+        width: 122px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .paylist .select_nav {
+        padding: 0 5px 0 10px;
+        cursor: pointer;
+    }
+
+    .paylist .chooseyear, .paylist .choosemon, .paylist .choosebook {
+        position: relative;
+        border: 1px solid #e3e3e3;
+    }
+
+    .paylist .option {
+        width: 100%;
+        margin: 0 -1px;
+        z-index: 3;
+    }
+
+        .paylist .option li {
+            padding: 0 10px;
+        }
+
+    .paylist .chooseyear {
+        width: 110px;
+    }
+
+    .paylist .choosemon {
+        width: 92px;
+        margin: 0 10px 0 10px;
+    }
+
+    .paylist .choosebook {
+        margin-right: 20px;
+        width: 250px;
+    }
+
+    .paylist table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 12px;
+        color: #333;
+        display: table;
+    }
+
+    .paylist td {
+        border: 1px solid #d2d2d2;
+        white-space: 0;
+        text-align: center;
+        height: 45px;
+        overflow: hidden;
+    }
+
+    .paylist .td_tit td {
+        background-color: #f2f2f2;
+        font-size: 14px;
+        color: #666;
+    }
+/*敏感词提示*/
+.sensitive {
+    padding: 0 20px 20px 14px;
+    position: relative;
+    display: none;
+}
+
+    .sensitive .senspad {
+        background-color: #fff5bb;
+        font-family: SimSun;
+        font-size: 12px;
+        color: #333;
+        line-height: 24px;
+        padding: 10px;
+    }
+
+    .sensitive .strong {
+        color: #e74c3c;
+        padding-left: 10px;
+    }
+
+        .sensitive .strong em {
+            padding: 0 5px 0 0;
+        }
+
+    .sensitive .ico_err {
+        background-position: -14px -52px;
+        width: 15px;
+        height: 16px;
+        margin: 0 5px 0 0;
+        background-image: url(../images/ico_c.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+    }

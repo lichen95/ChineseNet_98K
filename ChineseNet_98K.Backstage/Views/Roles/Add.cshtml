@@ -1,0 +1,119 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/css/x-admin.css" media="all">
+    <script src="/js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="x-body">
+        <form action="" method="post" class="layui-form layui-form-pane" id="form0">
+            <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red">*</span>角色名
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="RoleName" name="RoleName" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">
+                    拥有权限
+                </label>
+                <table class="layui-table layui-input-block">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="layui-input-block" id="divTab">
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="button" class="layui-btn" lay-submit="" lay-filter="add" value="增加" />
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="/lib/layui/layui.js" charset="utf-8">
+    </script>
+    <script src="/js/x-layui.js" charset="utf-8">
+    </script>
+    <script>
+
+       $(function () {
+         $.ajax({
+            url: "/Permissions/GetPermissions?PId=-1",
+            type: "post",
+            async: false,
+            dataType: "json",
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    var tr = '<input name="id[]" type="checkbox" value="' + data[i].PermissionId + '" pname="' + data[i].PermissionName + '" />' + data[i].PermissionName
+                    $("#divTab").append(tr);
+                }
+
+            }
+            })
+        })
+
+        layui.use(['form', 'layer'], function () {
+            $ = layui.jquery;
+            var form = layui.form()
+                , layer = layui.layer;
+
+            //监听提交
+            form.on('submit(add)', function () {
+                var ids = [];
+                var names = [];
+                $("[type=checkbox]:checked").each(function () {
+                    ids.push($(this).val());
+                    names.push($(this).attr("pname"));
+                })
+
+                $.ajax({
+                    url: "/Roles/Add?PermissionIds=" + ids + "&PermissionNames=" + names + "&RoleName=" + $("[name=RoleName]").val(),
+                    type: "post",
+                    success: function (data) {
+                        if (data) {
+                            layer.alert("增加成功", { icon: 6 }, function () {
+                                // 获得frame索引
+                                var index = parent.layer.getFrameIndex(window.name);
+                                //关闭当前frame
+                                parent.layer.close(index);
+                                window.parent.location.reload();
+                            });
+                        }
+                        else {
+                            layer.msg('增加失败!', { icon: 2, time: 1000 });
+                        }
+                    },
+                    error: function (e) {
+                        console.log(e);
+                    }
+                })
+            });
+        });
+    </script>
+</body>
+</html>
+

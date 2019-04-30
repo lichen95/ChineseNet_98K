@@ -1,0 +1,383 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>作者专区-编辑书籍</title>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="~/css/public.css">
+    <link rel="stylesheet" type="text/css" href="~/css/modify.css">
+    @* 使htpps中可以调用http*@
+    @*<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">*@
+    <script src="~/jquery-3.1.1.js"></script>
+    <script src="~/js/jquery.form.js"></script>
+    <script>
+        //显示关键字div
+        function showLabelName() {
+            $("#LabelNameDiv").show();
+        }
+
+        //添加标签
+        function addLabel() {
+            console.log();
+            if ($("#LabelName_Show_").children().length <= 4) {
+                var label = $("[name=label]").val();
+                var a = '<a href="javascript:;"><span class="keyval">' + label + '</span><em class="delkey pub_ico" onclick="guan(this)" ></em></a>'
+                $("#LabelName_Show_").append(a);
+                $("[name=label]").val("")
+            }
+            else {
+                alert("最多5个");
+            }
+            insertLN();
+        }
+
+        //关闭标签
+        function guan(obj) {
+            console.log($(obj).parent()[0]);
+            $(obj).parent().remove();
+            insertLN();
+        }
+
+        //关闭div
+        function gg() {
+            $("#LabelNameDiv").hide();
+        }
+
+        //写入标签信息到input
+        function insertLN() {
+            var name = [];
+            $("#LabelName_Show_").find("span").each(function () {
+                name.push($(this).html());
+            })
+            console.log(name);
+            $("[name=labelname]").val(name);
+        }
+
+        window.onload = function () {
+            //获取文本内容和长度函数
+            function txtCount(el) {
+                var val = el.value;
+                var eLen = val.length;
+                return eLen;
+            }
+
+            var el = document.getElementById('NovelDesc');
+            el.addEventListener('input', function () {
+                var len = txtCount(this); //   调用函数
+                document.getElementById('showWordNum').innerHTML = len;
+            });
+
+            el.addEventListener('propertychange', function () {//兼容IE
+                var len = txtCount(this); //   调用函数
+                document.getElementById('showWordNum').innerHTML = len;
+            });
+
+            var el1 = document.getElementById('AuthorMessage');
+            el1.addEventListener('input', function () {
+                var len1 = txtCount(this); //   调用函数
+                document.getElementById('showWordNum1').innerHTML = len1;
+            });
+
+            el1.addEventListener('propertychange', function () {//兼容IE
+                var len1 = txtCount(this); //   调用函数
+                document.getElementById('showWordNum1').innerHTML = len1;
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="au_nav">
+        <div class="au_box" id="loginSign">
+            <div class="au_nav_a">
+                <a href="/Home/Index" target="_blank">98k首页</a>|
+                <a href="/nzh/editors" target="_blank">编辑介绍</a>|
+                <a href="http://www.98k.com/company/author.html" target="_blank" class="goodluck">作者福利</a>|
+                <span>狂傲小书生</span>|
+                <a href="http://author.98k.com/loginout">退出</a>
+            </div>
+            <a href="http://author.98k.com" class="au_logo"></a>
+            <script src="~/js/a6c20f12591c470b94b702b28a48018a.js"></script>
+        </div>
+    </div>
+    <form id="form0" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="AuthorId" />
+        <div class="au_create">
+            <div class="au_box">
+                <div class="au_c_con">
+                    <div class="au_c_tit">
+                        <a href="/book/notice" target="_blank" class="note pub_ico">投稿须知</a>
+                        <span class="focus">作品信息</span>
+                    </div>
+                    <div class="au_c_form">
+                        <ul>
+                            <li class="clear">
+                                <div class="au_c_t fl"><em>*</em>书名：</div>
+                                <div class="au_c_c fl">
+                                    <p class="clear"><input type="text" placeholder="请输入您要创建的书名" class="au_text bookvalue fl" maxlength="12" name="NovelName" value='' /><em class="pub_ico through fl"></em></p>
+                                    <p class="au_error"><em class="ico_err pub_ico"></em>您输入的书名格式有误</p>
+                                    <p class="au_tip">1-12个字符</p>
+                                </div>
+                            </li>
+                            <li class="clear selli">
+                                <div class="au_c_t fl"><em>*</em>类别：</div>
+                                <div class="au_c_c fl">
+                                    <div class="au_select fl select_dom kindlist_ul">
+                                        <select id="Select1" class="au_s_nav select_nav" name="TypeIdOne">
+                                            <option value="0">选择类型</option>
+                                        </select>
+                                        <ul class="au_s_list option" style="display:none;"></ul>
+                                    </div>
+                                    <div class="au_select fl select_dom kindlist_li">
+                                        <select class="au_s_nav select_nav" id="TypeIdTwo" name="TypeIdTwo">
+                                            <option value="0">选择类型</option>
+                                        </select>
+                                        <ul class="au_s_list option " style="display:none;"></ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="clear">
+                                <div class="au_c_t fl"><em>*</em>作品关键字：</div>
+                                <div class="au_c_c fl">
+                                    <input type="hidden" name="labelname" value="" />
+                                    <div class="au_key" id="LabelName_Show">
+                                        <div id="LabelName_Show_" style="display:inline"></div>
+                                        <a href="javascript:;" class="add_btn greenbtn" onclick="showLabelName()">添加</a>
+                                    </div>
+                                    <div id="LabelNameDiv" class="au_keys" style="display:none;">
+                                        <em class="pub_ico closekey" onclick="gg()"></em>
+                                        <p>选择关键字：</p>
+                                        <div class="akeys clear">
+                                            <a href="javascript:;" class="keyword"><input type="text" placeholder="自定义关键字" class="custom" name="label" title="输入自定义关键字" maxlength="6" /><em class="addkey pub_ico" title="添加" onclick="addLabel()"></em></a>
+                                        </div>
+                                    </div>
+                                    <p class="au_tip">1-5个关键词，单个关键词1-6位字符</p>
+                                </div>
+                            </li>
+                            <li class="clear">
+                                <div class="au_c_t fl">上传封面：</div>
+                                <div class="au_c_c fl">
+                                    <input type="hidden" name="ImgPath" />
+                                    <img class="loadimg" id="showImg" width="150" height="200" />
+                                    <input type="file" style="opacity:0.5;" class="upload greenbtn" id="files" name="files" />
+                                    <a href="javascript:void(0);" onclick="doUpload()" class="upload greenbtn" id="upload">点击上传</a>
+                                    <div class="uploadarea">
+                                        <div class="uploading">
+                                            <img class="loadimg" id="showImg" />
+                                            <div class="auloading"></div>
+                                        </div>
+                                        <div class="uploaderror">
+                                            <p class="au_error" style="display:block;"><em class="ico_err pub_ico"></em><em class="error_font">图片大小不要超过100K</em></p>
+                                        </div>
+                                    </div>
+                                    <p class="au_cor_gay">1、只能上传规格为240*320像素的小于100K的JPG图片</p>
+                                    <p class="au_cor_gay">2、禁止上传任何有黄色、暴力、血腥、恐怖、广告宣传或者不适合公众欣赏的封面，一经发现即做禁书处理</p>
+                                    <p class="au_cor_gay">3、作品封面由用户个人制作并上传，基于此产生的法律责任本站不承担连带责任。</p>
+                                </div>
+                            </li>
+                            <li class="clear">
+                                <div class="au_c_t fl"><em>*</em>内容简介：</div>
+                                <div class="au_c_c fl">
+                                    <div class="textarea">
+                                        <textarea placeholder="请在此输入作品简介" class="bookintro" id="NovelDesc" maxlength="400" name="NovelDesc" onKeyDown='if (this.value.length>=400){event.returnValue=false}'></textarea>
+                                        <em class="au_cor_gay"><span id="showWordNum">0</span>/400</em>
+                                        <p class="au_tip">1-400位字符</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="clear">
+                                <div class="au_c_t fl">作品寄语：</div>
+                                <div class="au_c_c fl">
+                                    <div class="textarea">
+                                        <textarea placeholder="请在此输入作品寄语" class="bookintro" maxlength="20" id="AuthorMessage" name="AuthorMessage" onKeyDown='if (this.value.length>=20){event.returnValue=false}'></textarea>
+                                        <em class="au_cor_gay"><span id="showWordNum1">0</span>/20</em>
+                                        <p class="au_tip">1-20位字符</p>
+                                    </div>
+                                    <div class="submitintro">
+                                        <a href="javascript:void(0);" onclick="AddBook()" class="nextstep greenbtn fl">保存</a>
+                                    </div>
+                                    <p class="au_wan"><em class="ico_err pub_ico"></em>说明</p>
+                                    <p class="au_cor_gay">1、作品名字应与内容相符，不具有文学性、故意夸大其词的广告性、政治性、恶搞性或淫亵性作品名将会被删除。</p>
+                                    <p class="au_cor_gay">2、上传的作品内容必须与符合98k收录标准，不符合收录标准的作品将被禁阅或删除。</p>
+                                    <p class="au_cor_gay">3、新作品将在48小时内审核完毕（节假日顺延），请建立完后立即上传章节，凡章节低于三章或少于3000字一般不会通过审核。</p>
+                                    <p class="au_cor_gay">4、98k小说中文网有权将该作品推荐给合作伙伴宣传或转载，以便为作者寻找更多带来收益的机会，不另行专门告知。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" name="NovelId" />
+        <input type="hidden" name="NovelNum" />
+        <input type="hidden" name="State" />
+        <input type="hidden" name="CreateDate" />
+
+    </form>
+    <div class="footer">
+        <div class="au_box">
+            <p>
+                Copyright<em>©</em>2008-2010 www.98k.com All Rights Reserved
+            </p>
+            <p>版权所有 深圳创业网络文化科技有限公司</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/js/tongji.js"></script>
+    <script type="text/javascript" src="~/js/public.dialog.js"></script>
+    <script type="text/javascript" src="~/js/public.js"></script>
+    <script type="text/javascript" src="~/js/creatbook.js"></script>
+    <script src="~/js/plupload.full.min.js"></script>
+    <script src="~/js/upload.js"></script>
+</body>
+</html>
+<script>
+    var aid = @ViewBag.Author.AuthorId;
+
+    $("[name=AuthorId]").val(aid);
+
+    $(function () {
+        //下拉
+        $.ajax({
+            url: "/AuthorLR/GetTypeByid?Id=0",
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    var op = '<option value="' + data[i].TypeId + '">' + data[i].TypeName + '</option>'
+                    $("[name=TypeIdOne]").append(op);
+                }
+            }
+        })
+
+        $.ajax({
+            url: "/Novel/QueryById?Id=" +@ViewBag.Id,
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                $("[name=NovelId]").val(data.NovelId);
+                $("[name=NovelNum]").val(data.NovelNum);
+                $("[name=NovelName]").val(data.NovelName);
+                $("[name=AuthorId]").val(data.AuthorId);
+                $("[name=NovelDesc]").html(data.NovelDesc);
+                $("[name=labelname]").val(data.LabelName);
+                $("[name=ImgPath]").val(data.ImgPath);
+                $("#showImg").attr("src", data.ImgPath);
+                $("[name=AuthorMessage]").html(data.AuthorMessage);
+                $("[name=TypeIdOne]").val(data.TypeIdOne);
+                $("[name=TypeIdOne]").change();
+                $("[name=State]").val(data.State);
+                $("[name=CreateDate]").val(data.CreateDate);
+
+                //$("[name=TypeIdTwo]").val(data.TypeIdTwo);
+
+
+                $("#TypeIdTwo").each(function () {
+                    console.log(this.children);
+
+                    console.log(this.children.length);
+                    //this.children().prop("selected", true);
+                    //$(this).prop("selected",true );
+                })
+                $("[name=TypeIdTwo]").val(data.TypeIdTwo);
+
+                var labels = data.LabelName.split(',');
+                for (var i = 0; i < labels.length; i++) {
+                    var a = '<a href="javascript:;"><span class="keyval">' + labels[i] + '</span><em class="delkey pub_ico" onclick="guan(this)" ></em></a>'
+                    $("#LabelName_Show_").append(a);
+                }
+            }
+        })
+
+        //下拉
+        $("[name=TypeIdOne]").change(function () {
+            if ($("[name=TypeIdOne]").val() != 0) {
+                $.ajax({
+                    url: "/AuthorLR/GetTypeByid?Id=" + $("[name=TypeIdOne]").val(),
+                    type: "post",
+                    dataType: "json",
+                    success: function (data) {
+                        $("[name=TypeIdTwo]").empty();
+                        $("[name=TypeIdTwo]").append('<option>选择类型</option>')
+                        for (var i = 0; i < data.length; i++) {
+                            var op = '<option value="' + data[i].TypeId + '">' + data[i].TypeName + '</option>'
+                            $("[name=TypeIdTwo]").append(op);
+                        }
+                    }
+                })
+            }
+        })
+    })
+
+
+    //上传图片
+    function doUpload() {
+        var fileUpload = $("#files").get(0);
+        var files = fileUpload.files;
+        var data = new FormData();
+        for (var i = 0; i < files.length; i++) {
+            data.append(files[i].name, files[i]);
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "/AuthorLR/UploadFiles",
+            contentType: false,
+            processData: false,
+            data: data,
+            success: function (message) {
+                $("#showImg").attr("src", message);
+                $("[name=ImgPath]").val(message);
+            },
+            error: function () {
+                console.log("There was error uploading files!");
+            }
+        });
+
+     //$.ajax({
+     //           type: 'post',
+     //           url: interfac_url_content.Account_Login,
+     //           data: JSON.stringify(json),
+     //           contentType: 'application/json',
+     //           beforeSend: function () {
+     //               Loading("请稍等，数据提交中... ...");
+     //           },
+     //       //必须有这项的配置，不然cookie无法发送至服务端
+     //         xhrFields: {
+     //                 withCredentials: true
+     //               },
+     //           success: function (json) {
+     //               $.unblockUI();
+     //               if (handleajaxresult(json)) {
+     //                   data=json.data;
+     //                   setCookie("Account",data.Account);
+     //                   window.location.href = "index.html#/pages/staff/index.html";
+     //               }
+     //           }
+     //       });
+
+    }
+
+    //编辑书籍
+    function AddBook() {
+        $.ajax({
+            url: "/Novel/Update",
+            data: $("#form0").serialize(),
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                if (data > 0) {
+                    alert("更新成功");
+                    location.href = '/Home/AuthorIndex';
+                }
+                else {
+                    alert("error");
+                }
+            }
+        })
+    }
+</script>

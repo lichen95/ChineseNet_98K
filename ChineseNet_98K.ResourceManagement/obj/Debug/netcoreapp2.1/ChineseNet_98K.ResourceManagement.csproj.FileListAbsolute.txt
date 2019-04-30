@@ -1,0 +1,14 @@
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\bin\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.deps.json
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\bin\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.runtimeconfig.json
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\bin\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.runtimeconfig.dev.json
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\bin\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.dll
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\bin\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.pdb
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\obj\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.csprojAssemblyReference.cache
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\obj\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.csproj.CoreCompileInputs.cache
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\obj\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.RazorAssemblyInfo.cache
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\obj\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.RazorAssemblyInfo.cs
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\obj\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.AssemblyInfoInputs.cache
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\obj\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.AssemblyInfo.cs
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\obj\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.RazorTargetAssemblyInfo.cache
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\obj\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.dll
+F:\14.大实训\98K小说阅读网\98k1.1\ChineseNet_98K_.NetCore\ChineseNet_98K.ResourceManagement\obj\Debug\netcoreapp2.1\ChineseNet_98K.ResourceManagement.pdb

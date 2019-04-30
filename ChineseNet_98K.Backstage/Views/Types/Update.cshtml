@@ -1,0 +1,127 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddTypes</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/css/x-admin.css" media="all">
+</head>
+<body>
+    <div class="x-body">
+        <form action="" method="post" class="layui-form layui-form-pane" id="form0">
+            <input type="hidden" name="TypeId" />
+            <input type="hidden" name="CreateDate" />
+            <div class="layui-form-item">
+                <label for="name1" class="layui-form-label">
+                    <span class="x-red">*</span>类型名称:
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="TypeName" name="TypeName" required="" lay-verify="required"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="name3" class="layui-form-label">
+                    <span class="x-red">*</span>父级Pid:
+                </label>
+                <div class="layui-input-inline">
+                    <select name="PId" autocomplete="off" lay-filter="PId" class="layui-input">
+                        <option value="0">--父级--</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="button" class="layui-btn" lay-submit="" lay-filter="add" value="更新" />
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="/lib/layui/layui.js" charset="utf-8">
+    </script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/x-layui.js" charset="utf-8">
+    </script>
+    <script>
+
+        layui.use(['form', 'layer', 'laydate'], function () {
+            $ = layui.jquery;
+            var form = layui.form()
+                , layer = layui.layer;
+            laydate = layui.laydate;//日期插件
+
+            $(function () {
+                $.ajax({
+                    url: "/Types/GetTypesByPId?PId=0",
+                    type: "post",
+                    dataType: "json",
+                    contentType: 'application/json',
+                    success: function (data) {
+                        console.log(data);
+                        for (var i = 0; i < data.length; i++) {
+                            var op = '<option value="' + data[i].TypeId + '">' + data[i].TypeName+'</option>'
+                            $("[name=PId]").append(op);
+                        }
+                        form.render('select');
+                        $.ajax({
+                     url: "/Types/QueryById?Id="+location.search.substring(4),
+                    type: "post",
+                    dataType: "json",
+                    contentType: 'application/json',
+                    success: function (data) {
+                        console.log(data);
+                        $("[name=TypeName]").val(data.TypeName);
+                        $("[name=PId]").val(data.PId);
+                        $("[name=CreateDate]").val(data.CreateDate);
+                        $("[name=TypeId]").val(data.TypeId);
+                        form.render('select');
+                    }
+                })
+                    }
+                })
+
+             })
+
+            form.on('submit(add)', function () {
+                $.ajax({
+                    url: "/Types/Update",
+                    type: "post",
+                    data: $("#form0").serialize(),
+                    dataType: "json",
+                    success: function (data) {
+                        if (data) {
+                            layer.alert("更新成功", { icon: 6 }, function () {
+                                // 获得frame索引
+                                var index = parent.layer.getFrameIndex(window.name);
+                                window.parent.location.reload();
+                                //关闭当前frame
+                                parent.layer.close(index);
+                            });
+                        }
+                        else {
+                            layer.msg('更新失败!', { icon: 2, time: 1000 });
+                        }
+                    },
+                    error: function (e) {
+                        console.log(e);
+                    }
+                })
+            });
+        });
+    </script>
+</body>
+</html>
+

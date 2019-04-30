@@ -1,0 +1,912 @@
+﻿/*通用*/
+.foot .copyright {
+    background: url(../images/copyright.gif) no-repeat;
+    width: 112px;
+    height: 40px;
+    position: absolute;
+    right: 15px;
+    top: 70px;
+}
+
+.clear:before, .clear:after, .charge_con .tit:before, .charge_con .tit:after {
+    display: table;
+    content: '';
+}
+
+.clear:after, .charge_con .tit:after {
+    clear: both;
+}
+
+.clear, .charge_con .tit {
+    zoom: 1;
+}
+
+.fblack, a.fblack:link, a.fblack:visited {
+    color: #333;
+}
+
+.spdot {
+    border-bottom: 1px dashed #d8d8d8;
+    margin: 6px 0 0;
+    height: 1px;
+    overflow: hidden;
+}
+
+.zh_money {
+    background: url(../images/author_icon.gif) no-repeat 0 -16px;
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.quest {
+    background: url(../images/author_icon.gif) no-repeat 0 -59px;
+    width: 17px;
+    height: 17px;
+    float: left;
+    margin-top: 9px;
+    margin-right: 3px;
+}
+
+/*结构*/
+.side {
+    width: 210px;
+    float: left;
+}
+
+.main {
+    width: 760px;
+    float: right;
+}
+
+/* 客服 */
+.service {
+    color: #85848c;
+    background: #f9f9f9;
+    font-size: 12px;
+    padding: 15px 5px 15px 8px;
+    line-height: 20px;
+}
+
+    .service em, .service span b.arrow {
+        background: url(../images/author_icon.gif) no-repeat;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        vertical-align: middle;
+    }
+
+    .service p {
+        font-size: 16px;
+        font-family: "微软雅黑";
+        text-align: center;
+        color: #303030;
+        border-bottom: 1px dashed #d8d8d8;
+        padding: 5px 0 10px;
+        margin-bottom: 10px;
+    }
+
+        .service p .icon {
+            background-position: -94px -50px;
+            width: 16px;
+            height: 16px;
+            padding-right: 5px;
+        }
+
+    .service span {
+        display: block;
+        font-family: Arial, Helvetica, sans-serif,"宋体";
+        padding: 3px 0;
+    }
+
+        .service span em {
+            width: 14px;
+            height: 14px;
+            margin-right: 5px;
+        }
+
+        .service span b.arrow {
+            width: 5px;
+            height: 6px;
+            background-position: -60px -90px;
+            margin: 0 4px;
+        }
+
+        .service span .sidekf_qq {
+            background-position: -120px -51px;
+        }
+
+        .service span .sidekf_tel {
+            background-position: -141px -51px;
+        }
+
+        .service span .sidekf_mail {
+            background-position: -162px -51px;
+        }
+
+        .service span .sidekf_bbs {
+            background-position: -183px -51px;
+        }
+/*最新客服2016-9-20*/
+.newkfstyle {
+    padding: 15px 5px 15px 8px;
+}
+
+.icon-newkf {
+    background-image: url(../images/icon-kf.png);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.server-timeico {
+    width: 19px;
+    height: 20px;
+    background-position: -125px 0;
+    margin-left: 3px;
+    vertical-align: top;
+}
+
+.server-onlineico {
+    width: 18px;
+    height: 18px;
+    background-position: -125px -24px;
+    margin-right: 3px;
+}
+
+.server-qqico {
+    width: 18px;
+    height: 18px;
+    background-position: -125px -48px;
+    margin-right: 3px;
+}
+
+.server-phoneico {
+    width: 18px;
+    height: 18px;
+    background-position: -125px -72px;
+    margin-right: 3px;
+}
+
+.server-mailico {
+    width: 18px;
+    height: 18px;
+    background-position: -125px -95px;
+    margin-right: 3px;
+}
+
+.server-arrowico {
+    width: 8px;
+    height: 8px;
+    background-position: -155px -6px;
+    margin-right: 3px;
+}
+
+.newkfstyle .server-title {
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    color: #303030;
+    border-bottom: 1px dashed #d8d8d8;
+    padding: 5px 0 10px;
+    margin-bottom: 10px;
+}
+
+.newkfstyle .server-time {
+    margin: 0 8px 0 5px;
+}
+
+.newkfstyle li {
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #303030;
+    font-family: "Arial";
+}
+
+    .newkfstyle li .server-side {
+        width: 4em;
+        margin-right: 3px;
+        display: inline-block;
+        color: #85848c;
+        font-family: "SimSun";
+    }
+
+    .newkfstyle li a {
+        color: #303030;
+    }
+
+    .newkfstyle li .server-online {
+        color: #b01f2e;
+        font-family: "SimSun";
+        font-size: 14px;
+    }
+/* 登录 */
+.loadbox {
+    overflow: hidden;
+}
+
+    .loadbox .login {
+        background-color: #f9f9f9;
+        height: 300px;
+        padding: 5px 10px 0;
+        overflow: hidden;
+    }
+
+    .loadbox h2 {
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px dashed #d8d8d8;
+        color: #666666;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .loadbox table {
+        margin: 12px 0 0 0;
+        width: 188px;
+    }
+
+        .loadbox table td {
+            padding: 6px 0;
+        }
+
+            .loadbox table td.log_tit {
+                width: 45px;
+                color: #666;
+                font-size: 13px;
+                text-align: right;
+                padding-right: 5px;
+            }
+
+            .loadbox table td .input_text {
+                width: 140px;
+                height: 24px;
+                line-height: 24px;
+                border: 1px solid #cacecb;
+            }
+
+            .loadbox table td.yzm .input_text {
+                width: 80px;
+                float: left;
+                margin-right: 5px;
+            }
+
+            .loadbox table td.yzm img {
+                width: 52px;
+                height: 25px;
+                cursor: pointer;
+            }
+
+            .loadbox table td em {
+                vertical-align: middle;
+                margin-right: 5px;
+                margin-top: 0;
+            }
+
+    .loadbox .login_button {
+        padding-top: 10px;
+    }
+
+        .loadbox .login_button .submit, .loadbox .login_button .sign_up {
+            background: url(../images/author_icon.gif) no-repeat;
+            border: none;
+            font-weight: bold;
+            float: left;
+            height: 28px;
+            width: 86px;
+        }
+
+        .loadbox .login_button .submit {
+            color: #fff;
+            margin-right: 8px;
+            cursor: pointer;
+            background-position: 0 -250px;
+        }
+
+        .loadbox .login_button .sign_up {
+            width: 90px;
+            background-position: -94px -250px;
+            color: #666;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 28px;
+            text-align: center;
+        }
+
+    .loadbox .login_in {
+        padding: 15px 10px 0 15px;
+    }
+
+        .loadbox .login_in .imgbox {
+            float: left;
+            height: 68px;
+            width: 68px;
+            margin-right: 10px;
+        }
+
+            .loadbox .login_in .imgbox img {
+                border: 1px solid #CCCCCC;
+                height: 64px;
+                width: 64px;
+                padding: 1px;
+            }
+
+        .loadbox .login_in .name {
+            font-size: 13px;
+            font-weight: normal;
+            color: #381d08;
+        }
+
+        .loadbox .login_in .name, .loadbox .login p {
+            line-height: 22px;
+        }
+
+        .loadbox .login_in p {
+            color: #666666;
+        }
+
+    .loadbox .login p em {
+        vertical-align: text-bottom;
+    }
+
+    .loadbox .login_in .tips {
+        height: 35px;
+        background-color: #e4e8ea;
+        color: #303030;
+        line-height: 35px;
+        padding-left: 10px;
+        border-radius: 3px;
+    }
+
+        .loadbox .login_in .tips span.man {
+            background: url(../images/author_icon.gif) no-repeat 0 -104px;
+            display: inline-block;
+            height: 17px;
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .loadbox .login_in .tips span.man_gray {
+            background: url(../images/author_icon.gif) no-repeat 0 -125px;
+            display: inline-block;
+            height: 17px;
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+    .loadbox .login_in .go {
+        background: url(../images/author_icon.gif) 0 -215px;
+        height: 28px;
+        width: 112px;
+        display: inline-block;
+        color: #fff;
+        font-weight: bold;
+        line-height: 28px;
+        text-decoration: none;
+    }
+
+    .loadbox .qq_denglu .wz_qq {
+        border-top: 1px dashed #a5a6a6;
+        margin: 0 15px;
+        text-align: center;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .loadbox .qq_denglu a {
+        display: inline-block;
+        width: 54px;
+        height: 22px;
+        line-height: 18px;
+        vertical-align: middle;
+        background: url(../images/qq.gif) no-repeat;
+        padding-left: 20px;
+        font-weight: bold;
+        color: #494f56;
+        text-decoration: none;
+    }
+
+/*内容*/
+.charge {
+    border-left: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.charge_card {
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    background: #ecf0f2;
+}
+
+    .charge_card span {
+        border-right: 1px solid #d8d8d8;
+        color: #526584;
+        padding: 0 14px;
+        font-weight: bold;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        float: left;
+        cursor: pointer;
+        height: 61px;
+        line-height: 61px;
+    }
+
+        .charge_card span a:link, .charge_card span a:visited {
+            color: #526584;
+            display: block
+        }
+
+        .charge_card span.msg a:link, .charge_card span.msg a:visited {
+            color: red;
+            display: inline-block;
+            margin: 0 5px
+        }
+
+        .charge_card span.last {
+            border-right: 0 none;
+            _padding-right: 15px;
+        }
+
+        .charge_card span.active {
+            border-top: 2px solid #365060;
+            border-left: 1px solid #d8d8d8;
+            margin-left: -1px;
+            color: #333;
+            font-size: 14px;
+            position: relative;
+            margin-top: -7px;
+            height: 66px;
+            line-height: 68px;
+            background: #fff;
+            border-bottom: 1px solid #fff;
+            margin-bottom: -1px;
+            padding: 0 20px;
+        }
+
+            .charge_card span.active a:link, .charge_card span.active a:visited {
+                color: #333;
+            }
+
+        .charge_card span.last.active {
+            border-right: 1px solid #d8d8d8;
+            padding: 0 24px;
+            margin-right: -1px;
+            position: relative;
+        }
+
+.charge_con {
+    padding: 30px 20px;
+    min-height: 393px;
+    height: auto !important;
+    height: 393px;
+}
+
+    .charge_con .tit {
+        color: #61625e;
+        line-height: 26px;
+    }
+
+        .charge_con .tit span.fs14 {
+            line-height: 26px;
+            float: left;
+        }
+
+        .charge_con .tit span#payReview {
+            float: right;
+        }
+
+.charge .bin, .charge .bank, .charge .card {
+    padding: 0 0 10px 10px;
+    _padding-left: 2px;
+    line-height: 32px;
+    color: #797979;
+}
+
+.charge .bank {
+    float: left;
+}
+
+.bin .bin_btn, .card .card_btn {
+    width: 104px;
+    height: 32px;
+    line-height: 32px;
+    background: #f9f9f9;
+    border: 1px solid #d8d8d8;
+    text-align: center;
+    float: left;
+    color: #797979;
+    font-family: Arial, Helvetica, sans-serif,"宋体";
+    margin: 0 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+    .bin .bin_btn .btn, .card .card_btn .btn {
+        border: 1px solid #f9f9f9;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .bin .bin_btn .zh_money {
+        margin-right: 2px;
+        margin-top: -4px;
+        _margin: 9px 2px 9px 0;
+        vertical-align: middle;
+    }
+
+    .bin .bin_btn.active, .bank .bank_btn.active, .card .card_btn.active {
+        border: 1px solid #c53244;
+        background: url(../images/act.gif) no-repeat right bottom #fff;
+        color: #c53244;
+    }
+
+        .bin .bin_btn.active .btn, .bank .bank_btn.active .btn, .card .card_btn.active .btn {
+            border: 1px solid #c53244;
+        }
+
+    .bin .bin_btn .btn .text {
+        width: 56px;
+        float: left;
+        border: 0 none;
+        height: 30px;
+        line-height: 30px;
+        border-right: 1px solid #d8d8d8;
+        text-align: center;
+        color: #797979;
+    }
+
+.bin .active .btn .text {
+    border-right: 1px solid #c53244;
+    color: #c53244;
+}
+
+.bank .bank_btn {
+    cursor: pointer;
+    border: 1px solid #d8d8d8;
+    text-align: center;
+    float: left;
+    margin: 5px;
+    _margin: 3px;
+    height: 42px;
+    _width: 132px;
+}
+
+    .bank .bank_btn .btn {
+        border: 1px solid #fff;
+        height: 40px;
+        position: relative;
+    }
+
+    .bank .bank_btn.active .btn b {
+        background: url(../images/act.gif) no-repeat right bottom #fff;
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+.charge .pay {
+    padding: 15px 20px;
+    color: #303030;
+    font-size: 14px;
+}
+
+.charge .tips {
+    line-height: 24px;
+    color: #797979;
+}
+
+.charge .pay .money {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #b1202d;
+}
+
+.charge .char_btn {
+    background: url(../images/author_icon.gif) no-repeat 0 -165px;
+    width: 220px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    text-decoration: none;
+}
+
+    .charge .char_btn:link, .charge .char_btn:visited {
+        color: #fff;
+        font-size: 18px;
+        font-family: "微软雅黑";
+        display: block;
+    }
+
+.others {
+    float: left;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+    .others a:link, .others a:visited {
+        color: #526584;
+    }
+
+.charge .btns {
+    text-align: center;
+    padding: 20px 0;
+}
+
+    .charge .btns a {
+        width: 104px;
+        height: 80px;
+        margin: 0 15px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        padding-top: 24px;
+        background: url(../images/charge.gif) no-repeat;
+    }
+
+        .charge .btns a.index {
+            background-position: 0 0;
+        }
+
+        .charge .btns a.gopay {
+            background-position: -134px 0;
+        }
+
+        .charge .btns a.note {
+            background-position: -268px 0;
+        }
+
+.pay_success {
+    padding: 86px 0 87px 240px;
+}
+
+    .pay_success .succ {
+        background: url(../images/suc.gif) no-repeat left center;
+        padding-left: 40px;
+    }
+
+        .pay_success .succ p, .pay_faild .fail p {
+            font-size: 16px;
+            color: #303030;
+            line-height: 24px;
+        }
+
+.pay_faild {
+    padding: 95px 0 90px 240px;
+}
+
+    .pay_faild .fail {
+        background: url(../images/fail.gif) no-repeat left center;
+        padding-left: 40px;
+    }
+
+        .pay_faild .fail p {
+            line-height: 26px
+        }
+
+            .pay_faild .fail p a {
+                font-weight: bold;
+                color: #863402;
+            }
+
+.charge_con input.name {
+    width: 180px;
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid #d8d8d8;
+    padding: 0 5px;
+}
+
+.card .card_btn {
+    width: 158px;
+}
+
+.charge_card span.hot, .charge_card span.msg {
+    border: 0 none;
+    font-size: 14px;
+    padding-left: 20px;
+    cursor: text;
+}
+
+    .charge_card span.hot b {
+        width: 17px;
+        height: 17px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        background: url(../images/author_icon.gif) no-repeat -52px -125px;
+        margin-right: 5px;
+        margin-top: -4px;
+        _margin: 22px 5px 22px 0;
+        vertical-align: middle;
+    }
+
+.charge_card span.msg {
+    font-weight: normal;
+    color: #303030;
+}
+
+/*弹出框*/
+.alertmsg {
+    width: 470px;
+    height: 340px;
+    border: 1px solid #c4c5c7;
+    background: #fff;
+}
+
+    .alertmsg .tipsbg {
+        height: 34px;
+        line-height: 34px;
+        background: #c4c5c7;
+        color: #666;
+        font-size: 14px;
+    }
+
+        .alertmsg .tipsbg .tips {
+            padding-left: 20px;
+            font-weight: bold;
+        }
+
+        .alertmsg .tipsbg .close {
+            background: url(../images/x.gif) no-repeat;
+            width: 14px;
+            height: 12px;
+            text-indent: -9999px;
+            float: right;
+            margin: 10px 13px 0 0;
+        }
+
+    .alertmsg .msg {
+        padding: 40px 10px 0;
+    }
+
+        .alertmsg .msg .warn {
+            color: #333;
+            font-weight: bold;
+            font-size: 14px;
+            padding-left: 30px;
+        }
+
+            .alertmsg .msg .warn img {
+                vertical-align: middle;
+                padding-right: 10px;
+            }
+
+        .alertmsg .msg .go {
+            border-top: 1px dashed #c4c5c7;
+            padding-top: 10px;
+        }
+
+            .alertmsg .msg .go p {
+                color: #333;
+                line-height: 22px;
+                padding-left: 30px;
+            }
+
+        .alertmsg .msg .sumitbg {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+            .alertmsg .msg .sumitbg a {
+                width: 137px;
+                height: 35px;
+                font-size: 14px;
+                line-height: 35px;
+                text-align: center;
+                color: #fff;
+                text-decoration: none;
+                display: inline-block;
+                margin: 0 22px;
+                background: url(../images/author_icon.gif) no-repeat
+            }
+
+                .alertmsg .msg .sumitbg a.done {
+                    background-position: 0 -355px;
+                }
+
+                .alertmsg .msg .sumitbg a.pro {
+                    background-position: 0 -395px;
+                }
+
+        .alertmsg .msg .info {
+            padding-left: 30px;
+            font-size: 14px;
+        }
+
+/*微信支付*/
+.wxp_con {
+    padding: 20px;
+    font-family: 微软雅黑;
+}
+
+.wx_tit {
+    border: 1px solid #e2e2e2;
+    height: 40px;
+    overflow: hidden;
+}
+
+    .wx_tit .fr {
+        font-size: 16px;
+        color: #666666;
+        font-family: 微软雅黑;
+        padding-right: 10px;
+        line-height: 40px
+    }
+
+#wx_money {
+    color: #e63624;
+    font-size: 30px;
+}
+
+.scancode_left {
+    width: 232px;
+    float: left;
+    display: inline;
+    margin: 15px auto auto 30px;
+}
+
+.scancode {
+    border: 1px solid #e2e2e2;
+    width: 230px;
+    height: 225px;
+    text-align: center;
+}
+
+.scancode_tit {
+    font-size: 12px;
+    height: 30px;
+    background: url(../images/scan_time.png) no-repeat 5px 8px #f6f6f6;
+    text-indent: 20px;
+    line-height: 30px;
+    text-align: left;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+#wxfrm {
+    margin: 17px auto;
+}
+
+.wxscantip {
+    width: 110px;
+    height: 40px;
+    background: url(../images/scan.png) no-repeat 5px 8px;
+    padding-left: 40px;
+    line-height: 16px;
+    text-align: left;
+    margin: 5px auto;
+    padding-top: 5px;
+}
+
+.wx_pic {
+    background: url(../images/weixin_tip.png) no-repeat;
+    width: 215px;
+    height: 278px;
+    float: right;
+    display: inline;
+    margin: 10px 47px auto auto;
+}
+
+.wx_reswp {
+    text-align: center;
+    line-height: 30px
+}
+
+.bin_btn p.fb5 {
+    background: url(../images/fb5.png) no-repeat;
+    width: 35px;
+    height: 22px;
+    position: absolute;
+    right: -15px;
+    top: -12px;
+}
